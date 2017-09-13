@@ -1,0 +1,537 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		49798C331F68CEC8003C0CEB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49798C321F68CEC8003C0CEB /* AppDelegate.swift */; };
+		49798C351F68CEC8003C0CEB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49798C341F68CEC8003C0CEB /* ViewController.swift */; };
+		49798C381F68CEC8003C0CEB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49798C361F68CEC8003C0CEB /* Main.storyboard */; };
+		49798C3A1F68CEC8003C0CEB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 49798C391F68CEC8003C0CEB /* Assets.xcassets */; };
+		49798C3D1F68CEC8003C0CEB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49798C3B1F68CEC8003C0CEB /* LaunchScreen.storyboard */; };
+		49798C481F68CEC9003C0CEB /* Razorback_TransitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49798C471F68CEC9003C0CEB /* Razorback_TransitTests.swift */; };
+		49798C531F68CEC9003C0CEB /* Razorback_TransitUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49798C521F68CEC9003C0CEB /* Razorback_TransitUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		49798C441F68CEC9003C0CEB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 49798C271F68CEC8003C0CEB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 49798C2E1F68CEC8003C0CEB;
+			remoteInfo = "Razorback Transit";
+		};
+		49798C4F1F68CEC9003C0CEB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 49798C271F68CEC8003C0CEB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 49798C2E1F68CEC8003C0CEB;
+			remoteInfo = "Razorback Transit";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		49798C2F1F68CEC8003C0CEB /* Razorback Transit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Razorback Transit.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		49798C321F68CEC8003C0CEB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		49798C341F68CEC8003C0CEB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		49798C371F68CEC8003C0CEB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		49798C391F68CEC8003C0CEB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		49798C3C1F68CEC8003C0CEB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		49798C3E1F68CEC8003C0CEB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		49798C431F68CEC9003C0CEB /* Razorback TransitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Razorback TransitTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		49798C471F68CEC9003C0CEB /* Razorback_TransitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Razorback_TransitTests.swift; sourceTree = "<group>"; };
+		49798C491F68CEC9003C0CEB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		49798C4E1F68CEC9003C0CEB /* Razorback TransitUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Razorback TransitUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		49798C521F68CEC9003C0CEB /* Razorback_TransitUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Razorback_TransitUITests.swift; sourceTree = "<group>"; };
+		49798C541F68CEC9003C0CEB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		49798C2C1F68CEC8003C0CEB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		49798C401F68CEC9003C0CEB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		49798C4B1F68CEC9003C0CEB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		49798C261F68CEC8003C0CEB = {
+			isa = PBXGroup;
+			children = (
+				49798C311F68CEC8003C0CEB /* Razorback Transit */,
+				49798C461F68CEC9003C0CEB /* Razorback TransitTests */,
+				49798C511F68CEC9003C0CEB /* Razorback TransitUITests */,
+				49798C301F68CEC8003C0CEB /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		49798C301F68CEC8003C0CEB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				49798C2F1F68CEC8003C0CEB /* Razorback Transit.app */,
+				49798C431F68CEC9003C0CEB /* Razorback TransitTests.xctest */,
+				49798C4E1F68CEC9003C0CEB /* Razorback TransitUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		49798C311F68CEC8003C0CEB /* Razorback Transit */ = {
+			isa = PBXGroup;
+			children = (
+				49798C321F68CEC8003C0CEB /* AppDelegate.swift */,
+				49798C341F68CEC8003C0CEB /* ViewController.swift */,
+				49798C361F68CEC8003C0CEB /* Main.storyboard */,
+				49798C391F68CEC8003C0CEB /* Assets.xcassets */,
+				49798C3B1F68CEC8003C0CEB /* LaunchScreen.storyboard */,
+				49798C3E1F68CEC8003C0CEB /* Info.plist */,
+			);
+			path = "Razorback Transit";
+			sourceTree = "<group>";
+		};
+		49798C461F68CEC9003C0CEB /* Razorback TransitTests */ = {
+			isa = PBXGroup;
+			children = (
+				49798C471F68CEC9003C0CEB /* Razorback_TransitTests.swift */,
+				49798C491F68CEC9003C0CEB /* Info.plist */,
+			);
+			path = "Razorback TransitTests";
+			sourceTree = "<group>";
+		};
+		49798C511F68CEC9003C0CEB /* Razorback TransitUITests */ = {
+			isa = PBXGroup;
+			children = (
+				49798C521F68CEC9003C0CEB /* Razorback_TransitUITests.swift */,
+				49798C541F68CEC9003C0CEB /* Info.plist */,
+			);
+			path = "Razorback TransitUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		49798C2E1F68CEC8003C0CEB /* Razorback Transit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 49798C571F68CEC9003C0CEB /* Build configuration list for PBXNativeTarget "Razorback Transit" */;
+			buildPhases = (
+				49798C2B1F68CEC8003C0CEB /* Sources */,
+				49798C2C1F68CEC8003C0CEB /* Frameworks */,
+				49798C2D1F68CEC8003C0CEB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Razorback Transit";
+			productName = "Razorback Transit";
+			productReference = 49798C2F1F68CEC8003C0CEB /* Razorback Transit.app */;
+			productType = "com.apple.product-type.application";
+		};
+		49798C421F68CEC9003C0CEB /* Razorback TransitTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 49798C5A1F68CEC9003C0CEB /* Build configuration list for PBXNativeTarget "Razorback TransitTests" */;
+			buildPhases = (
+				49798C3F1F68CEC9003C0CEB /* Sources */,
+				49798C401F68CEC9003C0CEB /* Frameworks */,
+				49798C411F68CEC9003C0CEB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				49798C451F68CEC9003C0CEB /* PBXTargetDependency */,
+			);
+			name = "Razorback TransitTests";
+			productName = "Razorback TransitTests";
+			productReference = 49798C431F68CEC9003C0CEB /* Razorback TransitTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		49798C4D1F68CEC9003C0CEB /* Razorback TransitUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 49798C5D1F68CEC9003C0CEB /* Build configuration list for PBXNativeTarget "Razorback TransitUITests" */;
+			buildPhases = (
+				49798C4A1F68CEC9003C0CEB /* Sources */,
+				49798C4B1F68CEC9003C0CEB /* Frameworks */,
+				49798C4C1F68CEC9003C0CEB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				49798C501F68CEC9003C0CEB /* PBXTargetDependency */,
+			);
+			name = "Razorback TransitUITests";
+			productName = "Razorback TransitUITests";
+			productReference = 49798C4E1F68CEC9003C0CEB /* Razorback TransitUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		49798C271F68CEC8003C0CEB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = "Andrew Beers";
+				TargetAttributes = {
+					49798C2E1F68CEC8003C0CEB = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = G3446S9BE4;
+						ProvisioningStyle = Automatic;
+					};
+					49798C421F68CEC9003C0CEB = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = G3446S9BE4;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 49798C2E1F68CEC8003C0CEB;
+					};
+					49798C4D1F68CEC9003C0CEB = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = G3446S9BE4;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 49798C2E1F68CEC8003C0CEB;
+					};
+				};
+			};
+			buildConfigurationList = 49798C2A1F68CEC8003C0CEB /* Build configuration list for PBXProject "Razorback Transit" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 49798C261F68CEC8003C0CEB;
+			productRefGroup = 49798C301F68CEC8003C0CEB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				49798C2E1F68CEC8003C0CEB /* Razorback Transit */,
+				49798C421F68CEC9003C0CEB /* Razorback TransitTests */,
+				49798C4D1F68CEC9003C0CEB /* Razorback TransitUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		49798C2D1F68CEC8003C0CEB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				49798C3D1F68CEC8003C0CEB /* LaunchScreen.storyboard in Resources */,
+				49798C3A1F68CEC8003C0CEB /* Assets.xcassets in Resources */,
+				49798C381F68CEC8003C0CEB /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		49798C411F68CEC9003C0CEB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		49798C4C1F68CEC9003C0CEB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		49798C2B1F68CEC8003C0CEB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				49798C351F68CEC8003C0CEB /* ViewController.swift in Sources */,
+				49798C331F68CEC8003C0CEB /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		49798C3F1F68CEC9003C0CEB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				49798C481F68CEC9003C0CEB /* Razorback_TransitTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		49798C4A1F68CEC9003C0CEB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				49798C531F68CEC9003C0CEB /* Razorback_TransitUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		49798C451F68CEC9003C0CEB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 49798C2E1F68CEC8003C0CEB /* Razorback Transit */;
+			targetProxy = 49798C441F68CEC9003C0CEB /* PBXContainerItemProxy */;
+		};
+		49798C501F68CEC9003C0CEB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 49798C2E1F68CEC8003C0CEB /* Razorback Transit */;
+			targetProxy = 49798C4F1F68CEC9003C0CEB /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		49798C361F68CEC8003C0CEB /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				49798C371F68CEC8003C0CEB /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		49798C3B1F68CEC8003C0CEB /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				49798C3C1F68CEC8003C0CEB /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		49798C551F68CEC9003C0CEB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		49798C561F68CEC9003C0CEB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		49798C581F68CEC9003C0CEB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = G3446S9BE4;
+				INFOPLIST_FILE = "Razorback Transit/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "arcu.Razorback-Transit";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		49798C591F68CEC9003C0CEB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = G3446S9BE4;
+				INFOPLIST_FILE = "Razorback Transit/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "arcu.Razorback-Transit";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		49798C5B1F68CEC9003C0CEB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = G3446S9BE4;
+				INFOPLIST_FILE = "Razorback TransitTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "arcu.Razorback-TransitTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Razorback Transit.app/Razorback Transit";
+			};
+			name = Debug;
+		};
+		49798C5C1F68CEC9003C0CEB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = G3446S9BE4;
+				INFOPLIST_FILE = "Razorback TransitTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "arcu.Razorback-TransitTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Razorback Transit.app/Razorback Transit";
+			};
+			name = Release;
+		};
+		49798C5E1F68CEC9003C0CEB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = G3446S9BE4;
+				INFOPLIST_FILE = "Razorback TransitUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "arcu.Razorback-TransitUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = "Razorback Transit";
+			};
+			name = Debug;
+		};
+		49798C5F1F68CEC9003C0CEB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = G3446S9BE4;
+				INFOPLIST_FILE = "Razorback TransitUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "arcu.Razorback-TransitUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = "Razorback Transit";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		49798C2A1F68CEC8003C0CEB /* Build configuration list for PBXProject "Razorback Transit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				49798C551F68CEC9003C0CEB /* Debug */,
+				49798C561F68CEC9003C0CEB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		49798C571F68CEC9003C0CEB /* Build configuration list for PBXNativeTarget "Razorback Transit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				49798C581F68CEC9003C0CEB /* Debug */,
+				49798C591F68CEC9003C0CEB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		49798C5A1F68CEC9003C0CEB /* Build configuration list for PBXNativeTarget "Razorback TransitTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				49798C5B1F68CEC9003C0CEB /* Debug */,
+				49798C5C1F68CEC9003C0CEB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		49798C5D1F68CEC9003C0CEB /* Build configuration list for PBXNativeTarget "Razorback TransitUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				49798C5E1F68CEC9003C0CEB /* Debug */,
+				49798C5F1F68CEC9003C0CEB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 49798C271F68CEC8003C0CEB /* Project object */;
+}
