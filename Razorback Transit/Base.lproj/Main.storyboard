@@ -1,14 +1,18 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="OBJ-Of-uMR">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Live Map View-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" userLabel="Live Map View" customClass="LiveMapViewController" customModule="Razorback_Transit" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,11 +20,134 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FNK-fQ-0Ow" userLabel="LiveWebView">
+                                <rect key="frame" x="-0.5" y="20" width="375" height="598"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="FNK-fQ-0Ow" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" constant="-69" id="7K3-4h-dSb"/>
+                            <constraint firstItem="FNK-fQ-0Ow" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="DjF-qU-zAh"/>
+                            <constraint firstItem="FNK-fQ-0Ow" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="20" id="Jar-sh-HHs"/>
+                            <constraint firstItem="FNK-fQ-0Ow" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="iUl-su-us9"/>
+                        </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Live Map" id="NbO-at-b1M"/>
+                    <connections>
+                        <outlet property="LiveWebView" destination="FNK-fQ-0Ow" id="kWl-7S-bAI"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1006" y="-267"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="y4q-Dg-uah">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="OBJ-Of-uMR" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="heN-Oa-39B">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="kqe-PS-TrK"/>
+                        <segue destination="0h5-8k-NyT" kind="relationship" relationship="viewControllers" id="rm3-J0-EFx"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MFp-jc-Ptt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="32.799999999999997" y="76.911544227886068"/>
+        </scene>
+        <!--Schedule Web View Controller-->
+        <scene sceneID="zdK-QU-SkM">
+            <objects>
+                <viewController id="uSc-Wa-nJX" customClass="ScheduleWebViewController" customModule="Razorback_Transit" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="6cG-qr-CpQ"/>
+                        <viewControllerLayoutGuide type="bottom" id="fd5-XL-Esx"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="VQr-Pc-FXx">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iOV-la-v4R" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2892" y="522.18890554722645"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="tws-7a-nHy">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="0h5-8k-NyT" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="XK1-vj-BUM"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="9a2-6E-vco">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="oD4-A8-WqC" kind="relationship" relationship="rootViewController" id="Yrc-KU-MTa"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iwF-Xv-6df" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1006" y="520"/>
+        </scene>
+        <!--Schedule List View Controller-->
+        <scene sceneID="esi-IE-MNw">
+            <objects>
+                <tableViewController id="oD4-A8-WqC" customClass="ScheduleListViewController" customModule="Razorback_Transit" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="DJB-3e-PP2">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="ScheduleTableViewCell" selectionStyle="default" indentationWidth="10" reuseIdentifier="ScheduleTableViewCell" id="hFx-e9-bMm" customClass="ScheduleTableViewCell" customModule="Razorback_Transit" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="hFx-e9-bMm" id="Xkp-Db-K4N">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HzN-vs-OAR" userLabel="Map Name">
+                                            <rect key="frame" x="-0.5" y="-0.5" width="375" height="44"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="HzN-vs-OAR" firstAttribute="height" secondItem="Xkp-Db-K4N" secondAttribute="height" id="3Ie-ZF-Ryy"/>
+                                        <constraint firstItem="HzN-vs-OAR" firstAttribute="centerX" secondItem="Xkp-Db-K4N" secondAttribute="centerX" id="XpO-Tu-1Ce"/>
+                                        <constraint firstItem="HzN-vs-OAR" firstAttribute="centerY" secondItem="Xkp-Db-K4N" secondAttribute="centerY" id="kyG-US-db8"/>
+                                        <constraint firstItem="HzN-vs-OAR" firstAttribute="width" secondItem="Xkp-Db-K4N" secondAttribute="width" id="xm8-L7-2kt"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="ContentView" destination="Xkp-Db-K4N" id="x1C-XF-k7w"/>
+                                    <outlet property="MapNameLabel" destination="HzN-vs-OAR" id="TKN-v3-4nI"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="oD4-A8-WqC" id="57r-S3-pCG"/>
+                            <outlet property="delegate" destination="oD4-A8-WqC" id="U9c-CY-jGy"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="Xvs-RO-aDu"/>
+                    <connections>
+                        <outlet property="ScheduleListTableView" destination="DJB-3e-PP2" id="qcJ-WF-itG"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RV4-MR-3Jr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1883" y="517"/>
         </scene>
     </scenes>
 </document>

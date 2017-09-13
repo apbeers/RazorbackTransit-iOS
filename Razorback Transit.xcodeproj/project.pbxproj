@@ -7,8 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		491E24431F68F9B300B5F2A0 /* ScheduleListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 491E24421F68F9B300B5F2A0 /* ScheduleListViewController.swift */; };
+		4955E4931F68FB6700586CC1 /* ScheduleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4955E4921F68FB6700586CC1 /* ScheduleTableViewCell.swift */; };
+		496C17F61F68DC5D003E51A4 /* ScheduleWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 496C17F51F68DC5D003E51A4 /* ScheduleWebViewController.swift */; };
+		496C18021F68DD16003E51A4 /* 35-TAN.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 496C17F81F68DD16003E51A4 /* 35-TAN.pdf */; };
+		496C18031F68DD16003E51A4 /* 13-ROUTE-13.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 496C17F91F68DD16003E51A4 /* 13-ROUTE-13.pdf */; };
+		496C18041F68DD16003E51A4 /* 48-REMOTEEXPRESS.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 496C17FA1F68DD16003E51A4 /* 48-REMOTEEXPRESS.pdf */; };
+		496C18051F68DD16003E51A4 /* 26-RED.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 496C17FB1F68DD16003E51A4 /* 26-RED.pdf */; };
+		496C18061F68DD16003E51A4 /* 44-PURPLE.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 496C17FC1F68DD16003E51A4 /* 44-PURPLE.pdf */; };
+		496C18071F68DD16003E51A4 /* 33-ORANGE.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 496C17FD1F68DD16003E51A4 /* 33-ORANGE.pdf */; };
+		496C18081F68DD16003E51A4 /* 11-GREEN.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 496C17FE1F68DD16003E51A4 /* 11-GREEN.pdf */; };
+		496C18091F68DD16003E51A4 /* 07-DICKSONST.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 496C17FF1F68DD16003E51A4 /* 07-DICKSONST.pdf */; };
+		496C180A1F68DD16003E51A4 /* 17-BROWN.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 496C18001F68DD16003E51A4 /* 17-BROWN.pdf */; };
+		496C180B1F68DD16003E51A4 /* 22-BLUE.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 496C18011F68DD16003E51A4 /* 22-BLUE.pdf */; };
+		496C18131F68DD3B003E51A4 /* 05-TANREDUCED.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 496C180D1F68DD3A003E51A4 /* 05-TANREDUCED.pdf */; };
+		496C18141F68DD3B003E51A4 /* 06-REDREDUCED.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 496C180E1F68DD3B003E51A4 /* 06-REDREDUCED.pdf */; };
+		496C18151F68DD3B003E51A4 /* 04-PURPLEREDUCED.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 496C180F1F68DD3B003E51A4 /* 04-PURPLEREDUCED.pdf */; };
+		496C18161F68DD3B003E51A4 /* 03-ORANGEREDUCED.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 496C18101F68DD3B003E51A4 /* 03-ORANGEREDUCED.pdf */; };
+		496C18171F68DD3B003E51A4 /* 01-GREENREDUCED.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 496C18111F68DD3B003E51A4 /* 01-GREENREDUCED.pdf */; };
+		496C18181F68DD3B003E51A4 /* 02-BLUEREDUCED.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 496C18121F68DD3B003E51A4 /* 02-BLUEREDUCED.pdf */; };
 		49798C331F68CEC8003C0CEB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49798C321F68CEC8003C0CEB /* AppDelegate.swift */; };
-		49798C351F68CEC8003C0CEB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49798C341F68CEC8003C0CEB /* ViewController.swift */; };
+		49798C351F68CEC8003C0CEB /* LiveMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49798C341F68CEC8003C0CEB /* LiveMapViewController.swift */; };
 		49798C381F68CEC8003C0CEB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49798C361F68CEC8003C0CEB /* Main.storyboard */; };
 		49798C3A1F68CEC8003C0CEB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 49798C391F68CEC8003C0CEB /* Assets.xcassets */; };
 		49798C3D1F68CEC8003C0CEB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49798C3B1F68CEC8003C0CEB /* LaunchScreen.storyboard */; };
@@ -34,9 +53,28 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		491E24421F68F9B300B5F2A0 /* ScheduleListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduleListViewController.swift; sourceTree = "<group>"; };
+		4955E4921F68FB6700586CC1 /* ScheduleTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduleTableViewCell.swift; sourceTree = "<group>"; };
+		496C17F51F68DC5D003E51A4 /* ScheduleWebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduleWebViewController.swift; sourceTree = "<group>"; };
+		496C17F81F68DD16003E51A4 /* 35-TAN.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "35-TAN.pdf"; sourceTree = "<group>"; };
+		496C17F91F68DD16003E51A4 /* 13-ROUTE-13.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "13-ROUTE-13.pdf"; sourceTree = "<group>"; };
+		496C17FA1F68DD16003E51A4 /* 48-REMOTEEXPRESS.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "48-REMOTEEXPRESS.pdf"; sourceTree = "<group>"; };
+		496C17FB1F68DD16003E51A4 /* 26-RED.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "26-RED.pdf"; sourceTree = "<group>"; };
+		496C17FC1F68DD16003E51A4 /* 44-PURPLE.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "44-PURPLE.pdf"; sourceTree = "<group>"; };
+		496C17FD1F68DD16003E51A4 /* 33-ORANGE.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "33-ORANGE.pdf"; sourceTree = "<group>"; };
+		496C17FE1F68DD16003E51A4 /* 11-GREEN.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "11-GREEN.pdf"; sourceTree = "<group>"; };
+		496C17FF1F68DD16003E51A4 /* 07-DICKSONST.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "07-DICKSONST.pdf"; sourceTree = "<group>"; };
+		496C18001F68DD16003E51A4 /* 17-BROWN.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "17-BROWN.pdf"; sourceTree = "<group>"; };
+		496C18011F68DD16003E51A4 /* 22-BLUE.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "22-BLUE.pdf"; sourceTree = "<group>"; };
+		496C180D1F68DD3A003E51A4 /* 05-TANREDUCED.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "05-TANREDUCED.pdf"; sourceTree = "<group>"; };
+		496C180E1F68DD3B003E51A4 /* 06-REDREDUCED.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "06-REDREDUCED.pdf"; sourceTree = "<group>"; };
+		496C180F1F68DD3B003E51A4 /* 04-PURPLEREDUCED.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "04-PURPLEREDUCED.pdf"; sourceTree = "<group>"; };
+		496C18101F68DD3B003E51A4 /* 03-ORANGEREDUCED.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "03-ORANGEREDUCED.pdf"; sourceTree = "<group>"; };
+		496C18111F68DD3B003E51A4 /* 01-GREENREDUCED.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "01-GREENREDUCED.pdf"; sourceTree = "<group>"; };
+		496C18121F68DD3B003E51A4 /* 02-BLUEREDUCED.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "02-BLUEREDUCED.pdf"; sourceTree = "<group>"; };
 		49798C2F1F68CEC8003C0CEB /* Razorback Transit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Razorback Transit.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		49798C321F68CEC8003C0CEB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		49798C341F68CEC8003C0CEB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		49798C341F68CEC8003C0CEB /* LiveMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveMapViewController.swift; sourceTree = "<group>"; };
 		49798C371F68CEC8003C0CEB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		49798C391F68CEC8003C0CEB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		49798C3C1F68CEC8003C0CEB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -74,6 +112,36 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		496C17F71F68DCE6003E51A4 /* RegularSchedules */ = {
+			isa = PBXGroup;
+			children = (
+				496C17F81F68DD16003E51A4 /* 35-TAN.pdf */,
+				496C17F91F68DD16003E51A4 /* 13-ROUTE-13.pdf */,
+				496C17FA1F68DD16003E51A4 /* 48-REMOTEEXPRESS.pdf */,
+				496C17FB1F68DD16003E51A4 /* 26-RED.pdf */,
+				496C17FC1F68DD16003E51A4 /* 44-PURPLE.pdf */,
+				496C17FD1F68DD16003E51A4 /* 33-ORANGE.pdf */,
+				496C17FE1F68DD16003E51A4 /* 11-GREEN.pdf */,
+				496C17FF1F68DD16003E51A4 /* 07-DICKSONST.pdf */,
+				496C18001F68DD16003E51A4 /* 17-BROWN.pdf */,
+				496C18011F68DD16003E51A4 /* 22-BLUE.pdf */,
+			);
+			name = RegularSchedules;
+			sourceTree = "<group>";
+		};
+		496C180C1F68DD29003E51A4 /* ReducedSchedules */ = {
+			isa = PBXGroup;
+			children = (
+				496C180D1F68DD3A003E51A4 /* 05-TANREDUCED.pdf */,
+				496C180E1F68DD3B003E51A4 /* 06-REDREDUCED.pdf */,
+				496C180F1F68DD3B003E51A4 /* 04-PURPLEREDUCED.pdf */,
+				496C18101F68DD3B003E51A4 /* 03-ORANGEREDUCED.pdf */,
+				496C18111F68DD3B003E51A4 /* 01-GREENREDUCED.pdf */,
+				496C18121F68DD3B003E51A4 /* 02-BLUEREDUCED.pdf */,
+			);
+			name = ReducedSchedules;
+			sourceTree = "<group>";
+		};
 		49798C261F68CEC8003C0CEB = {
 			isa = PBXGroup;
 			children = (
@@ -97,12 +165,17 @@
 		49798C311F68CEC8003C0CEB /* Razorback Transit */ = {
 			isa = PBXGroup;
 			children = (
-				49798C321F68CEC8003C0CEB /* AppDelegate.swift */,
-				49798C341F68CEC8003C0CEB /* ViewController.swift */,
+				496C180C1F68DD29003E51A4 /* ReducedSchedules */,
+				496C17F71F68DCE6003E51A4 /* RegularSchedules */,
+				49798C341F68CEC8003C0CEB /* LiveMapViewController.swift */,
+				496C17F51F68DC5D003E51A4 /* ScheduleWebViewController.swift */,
+				491E24421F68F9B300B5F2A0 /* ScheduleListViewController.swift */,
 				49798C361F68CEC8003C0CEB /* Main.storyboard */,
 				49798C391F68CEC8003C0CEB /* Assets.xcassets */,
+				49798C321F68CEC8003C0CEB /* AppDelegate.swift */,
 				49798C3B1F68CEC8003C0CEB /* LaunchScreen.storyboard */,
 				49798C3E1F68CEC8003C0CEB /* Info.plist */,
+				4955E4921F68FB6700586CC1 /* ScheduleTableViewCell.swift */,
 			);
 			path = "Razorback Transit";
 			sourceTree = "<group>";
@@ -233,7 +306,23 @@
 			buildActionMask = 2147483647;
 			files = (
 				49798C3D1F68CEC8003C0CEB /* LaunchScreen.storyboard in Resources */,
+				496C18151F68DD3B003E51A4 /* 04-PURPLEREDUCED.pdf in Resources */,
+				496C180A1F68DD16003E51A4 /* 17-BROWN.pdf in Resources */,
+				496C18041F68DD16003E51A4 /* 48-REMOTEEXPRESS.pdf in Resources */,
+				496C18181F68DD3B003E51A4 /* 02-BLUEREDUCED.pdf in Resources */,
+				496C18141F68DD3B003E51A4 /* 06-REDREDUCED.pdf in Resources */,
+				496C18081F68DD16003E51A4 /* 11-GREEN.pdf in Resources */,
+				496C18061F68DD16003E51A4 /* 44-PURPLE.pdf in Resources */,
+				496C18051F68DD16003E51A4 /* 26-RED.pdf in Resources */,
+				496C18131F68DD3B003E51A4 /* 05-TANREDUCED.pdf in Resources */,
+				496C180B1F68DD16003E51A4 /* 22-BLUE.pdf in Resources */,
 				49798C3A1F68CEC8003C0CEB /* Assets.xcassets in Resources */,
+				496C18091F68DD16003E51A4 /* 07-DICKSONST.pdf in Resources */,
+				496C18021F68DD16003E51A4 /* 35-TAN.pdf in Resources */,
+				496C18161F68DD3B003E51A4 /* 03-ORANGEREDUCED.pdf in Resources */,
+				496C18171F68DD3B003E51A4 /* 01-GREENREDUCED.pdf in Resources */,
+				496C18071F68DD16003E51A4 /* 33-ORANGE.pdf in Resources */,
+				496C18031F68DD16003E51A4 /* 13-ROUTE-13.pdf in Resources */,
 				49798C381F68CEC8003C0CEB /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -259,7 +348,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				49798C351F68CEC8003C0CEB /* ViewController.swift in Sources */,
+				496C17F61F68DC5D003E51A4 /* ScheduleWebViewController.swift in Sources */,
+				4955E4931F68FB6700586CC1 /* ScheduleTableViewCell.swift in Sources */,
+				49798C351F68CEC8003C0CEB /* LiveMapViewController.swift in Sources */,
+				491E24431F68F9B300B5F2A0 /* ScheduleListViewController.swift in Sources */,
 				49798C331F68CEC8003C0CEB /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -414,11 +506,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = G3446S9BE4;
 				INFOPLIST_FILE = "Razorback Transit/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				LLVM_LTO = NO;
+				LLVM_LTO = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = "arcu.Razorback-Transit";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -427,13 +521,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = G3446S9BE4;
-				GCC_OPTIMIZATION_LEVEL = s;
+				GCC_OPTIMIZATION_LEVEL = 3;
 				INFOPLIST_FILE = "Razorback Transit/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				LLVM_LTO = NO;
+				LLVM_LTO = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = "arcu.Razorback-Transit";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
@@ -514,6 +610,7 @@
 				49798C591F68CEC9003C0CEB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		49798C5A1F68CEC9003C0CEB /* Build configuration list for PBXNativeTarget "Razorback TransitTests" */ = {
 			isa = XCConfigurationList;
@@ -522,6 +619,7 @@
 				49798C5C1F68CEC9003C0CEB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		49798C5D1F68CEC9003C0CEB /* Build configuration list for PBXNativeTarget "Razorback TransitUITests" */ = {
 			isa = XCConfigurationList;
@@ -530,6 +628,7 @@
 				49798C5F1F68CEC9003C0CEB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
