@@ -22,7 +22,7 @@ class LiveMapViewController: UIViewController, WKUIDelegate {
         webView = WKWebView(frame: LiveWebView.bounds, configuration: WKWebViewConfiguration())
         LiveWebView.addSubview(webView)
         // "http://campusmaps.uark.edu/embed/routes"
-        guard let url = URL(string: "https://www.apple.com") else {
+        guard let url = URL(string: "http://campusmaps.uark.edu/embed/routes") else {
             return
         }
         let request = URLRequest(url: url)

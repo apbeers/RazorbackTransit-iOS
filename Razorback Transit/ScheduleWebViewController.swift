@@ -9,7 +9,7 @@
 import UIKit
 import WebKit
 
-class ScheduleWebViewController: UIViewController, WKUIDelegate {
+class ScheduleWebViewController: UIViewController, WKUIDelegate, UIScrollViewDelegate {
 
 
     @IBOutlet weak var ScheduleWebView: UIView!
@@ -21,6 +21,7 @@ class ScheduleWebViewController: UIViewController, WKUIDelegate {
         super.viewDidLoad()
         
         webView = WKWebView(frame: ScheduleWebView.bounds, configuration: WKWebViewConfiguration())
+        webView.scrollView.delegate = self
         ScheduleWebView.addSubview(webView)
         
         guard let pdf = Bundle.main.url(forResource: mapName, withExtension: "pdf") else {
@@ -29,23 +30,14 @@ class ScheduleWebViewController: UIViewController, WKUIDelegate {
         
         let request = URLRequest(url: pdf)
         webView.load(request)
-        
-        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+
     }
     
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    func viewForZooming(in scrollView: UIScrollView) -> UIView? {
+        return nil
     }
-    */
-
 }
