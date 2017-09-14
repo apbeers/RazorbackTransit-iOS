@@ -1,5 +1,5 @@
 //
-//  ScheduleTableViewCell.swift
+//  CustomTableViewCell.swift
 //  Razorback Transit
 //
 //  Created by Andrew Beers on 9/13/17.
@@ -8,11 +8,11 @@
 
 import UIKit
 
-class ScheduleTableViewCell: UITableViewCell {
-
+class CustomTableViewCell: UITableViewCell {
     
     @IBOutlet weak var MapNameLabel: UILabel!
     @IBOutlet weak var ContentView: UIView!
+
     
     override func awakeFromNib() {
         super.awakeFromNib()

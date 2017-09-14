@@ -1,5 +1,5 @@
 //
-//  ScheduleWebViewController.swift
+//  ParkingMapViewController.swift
 //  Razorback Transit
 //
 //  Created by Andrew Beers on 9/13/17.
@@ -9,28 +9,24 @@
 import UIKit
 import WebKit
 
-class ScheduleWebViewController: UIViewController, WKUIDelegate {
+class ParkingMapViewController: UIViewController {
 
-
-    @IBOutlet weak var ScheduleWebView: UIView!
-
+    
+    @IBOutlet weak var ParkingMapWebView: UIView!
     var webView: WKWebView!
-    var mapName: String!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        webView = WKWebView(frame: ScheduleWebView.bounds, configuration: WKWebViewConfiguration())
-        ScheduleWebView.addSubview(webView)
+        webView = WKWebView(frame: ParkingMapWebView.bounds, configuration: WKWebViewConfiguration())
+        ParkingMapWebView.addSubview(webView)
         
-        guard let pdf = Bundle.main.url(forResource: mapName, withExtension: "pdf") else {
+        guard let pdf = Bundle.main.url(forResource: "parkmap", withExtension: "pdf") else {
             return
         }
-        
+
         let request = URLRequest(url: pdf)
         webView.load(request)
-        
-        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
@@ -38,6 +34,7 @@ class ScheduleWebViewController: UIViewController, WKUIDelegate {
         // Dispose of any resources that can be recreated.
     }
     
+
     /*
     // MARK: - Navigation
 

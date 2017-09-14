@@ -17,9 +17,12 @@ class LiveMapViewController: UIViewController, WKUIDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.navigationItem.title = "Bust Routes"
+        
         webView = WKWebView(frame: LiveWebView.bounds, configuration: WKWebViewConfiguration())
         LiveWebView.addSubview(webView)
-        guard let url = URL(string: "http://campusmaps.uark.edu/embed/routes") else {
+        // "http://campusmaps.uark.edu/embed/routes"
+        guard let url = URL(string: "https://www.apple.com") else {
             return
         }
         let request = URLRequest(url: url)

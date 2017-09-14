@@ -8,24 +8,28 @@
 
 /* Begin PBXBuildFile section */
 		491E24431F68F9B300B5F2A0 /* ScheduleListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 491E24421F68F9B300B5F2A0 /* ScheduleListViewController.swift */; };
-		4955E4931F68FB6700586CC1 /* ScheduleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4955E4921F68FB6700586CC1 /* ScheduleTableViewCell.swift */; };
-		496C17F61F68DC5D003E51A4 /* ScheduleWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 496C17F51F68DC5D003E51A4 /* ScheduleWebViewController.swift */; };
-		496C18021F68DD16003E51A4 /* 35-TAN.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 496C17F81F68DD16003E51A4 /* 35-TAN.pdf */; };
-		496C18031F68DD16003E51A4 /* 13-ROUTE-13.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 496C17F91F68DD16003E51A4 /* 13-ROUTE-13.pdf */; };
-		496C18041F68DD16003E51A4 /* 48-REMOTEEXPRESS.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 496C17FA1F68DD16003E51A4 /* 48-REMOTEEXPRESS.pdf */; };
-		496C18051F68DD16003E51A4 /* 26-RED.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 496C17FB1F68DD16003E51A4 /* 26-RED.pdf */; };
-		496C18061F68DD16003E51A4 /* 44-PURPLE.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 496C17FC1F68DD16003E51A4 /* 44-PURPLE.pdf */; };
-		496C18071F68DD16003E51A4 /* 33-ORANGE.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 496C17FD1F68DD16003E51A4 /* 33-ORANGE.pdf */; };
-		496C18081F68DD16003E51A4 /* 11-GREEN.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 496C17FE1F68DD16003E51A4 /* 11-GREEN.pdf */; };
-		496C18091F68DD16003E51A4 /* 07-DICKSONST.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 496C17FF1F68DD16003E51A4 /* 07-DICKSONST.pdf */; };
-		496C180A1F68DD16003E51A4 /* 17-BROWN.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 496C18001F68DD16003E51A4 /* 17-BROWN.pdf */; };
-		496C180B1F68DD16003E51A4 /* 22-BLUE.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 496C18011F68DD16003E51A4 /* 22-BLUE.pdf */; };
-		496C18131F68DD3B003E51A4 /* 05-TANREDUCED.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 496C180D1F68DD3A003E51A4 /* 05-TANREDUCED.pdf */; };
-		496C18141F68DD3B003E51A4 /* 06-REDREDUCED.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 496C180E1F68DD3B003E51A4 /* 06-REDREDUCED.pdf */; };
-		496C18151F68DD3B003E51A4 /* 04-PURPLEREDUCED.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 496C180F1F68DD3B003E51A4 /* 04-PURPLEREDUCED.pdf */; };
-		496C18161F68DD3B003E51A4 /* 03-ORANGEREDUCED.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 496C18101F68DD3B003E51A4 /* 03-ORANGEREDUCED.pdf */; };
-		496C18171F68DD3B003E51A4 /* 01-GREENREDUCED.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 496C18111F68DD3B003E51A4 /* 01-GREENREDUCED.pdf */; };
-		496C18181F68DD3B003E51A4 /* 02-BLUEREDUCED.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 496C18121F68DD3B003E51A4 /* 02-BLUEREDUCED.pdf */; };
+		492F69A51F6A2003009C895C /* ParkingMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 492F69A41F6A2003009C895C /* ParkingMapViewController.swift */; };
+		492F69A81F6A22AF009C895C /* parkmap.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 492F69A71F6A22AF009C895C /* parkmap.pdf */; };
+		492F69AA1F6A2FCE009C895C /* ScheduleWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 492F69A91F6A2FCE009C895C /* ScheduleWebViewController.swift */; };
+		4955E4931F68FB6700586CC1 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4955E4921F68FB6700586CC1 /* CustomTableViewCell.swift */; };
+		495784661F6A4B16001B4539 /* BLUE-22.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 4957845C1F6A4B16001B4539 /* BLUE-22.pdf */; };
+		495784671F6A4B16001B4539 /* TAN-35.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 4957845D1F6A4B16001B4539 /* TAN-35.pdf */; };
+		495784681F6A4B16001B4539 /* ROUTE-13.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 4957845E1F6A4B16001B4539 /* ROUTE-13.pdf */; };
+		495784691F6A4B16001B4539 /* REMOTEEXPRESS-48.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 4957845F1F6A4B16001B4539 /* REMOTEEXPRESS-48.pdf */; };
+		4957846A1F6A4B16001B4539 /* RED-26.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 495784601F6A4B16001B4539 /* RED-26.pdf */; };
+		4957846B1F6A4B16001B4539 /* PURPLE-44.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 495784611F6A4B16001B4539 /* PURPLE-44.pdf */; };
+		4957846C1F6A4B16001B4539 /* ORANGE-33.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 495784621F6A4B16001B4539 /* ORANGE-33.pdf */; };
+		4957846D1F6A4B16001B4539 /* GREEN-11.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 495784631F6A4B16001B4539 /* GREEN-11.pdf */; };
+		4957846E1F6A4B16001B4539 /* DICKSONST-07.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 495784641F6A4B16001B4539 /* DICKSONST-07.pdf */; };
+		4957846F1F6A4B16001B4539 /* BROWN-17.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 495784651F6A4B16001B4539 /* BROWN-17.pdf */; };
+		495784711F6A4F29001B4539 /* RouteMapTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 495784701F6A4F29001B4539 /* RouteMapTableViewController.swift */; };
+		495784731F6A5087001B4539 /* RouteMapWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 495784721F6A5087001B4539 /* RouteMapWebViewController.swift */; };
+		496C18131F68DD3B003E51A4 /* TANREDUCED-05.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 496C180D1F68DD3A003E51A4 /* TANREDUCED-05.pdf */; };
+		496C18141F68DD3B003E51A4 /* REDREDUCED-06.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 496C180E1F68DD3B003E51A4 /* REDREDUCED-06.pdf */; };
+		496C18151F68DD3B003E51A4 /* PURPLEREDUCED-04.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 496C180F1F68DD3B003E51A4 /* PURPLEREDUCED-04.pdf */; };
+		496C18161F68DD3B003E51A4 /* ORANGEREDUCED-03.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 496C18101F68DD3B003E51A4 /* ORANGEREDUCED-03.pdf */; };
+		496C18171F68DD3B003E51A4 /* GREENREDUCED-01.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 496C18111F68DD3B003E51A4 /* GREENREDUCED-01.pdf */; };
+		496C18181F68DD3B003E51A4 /* BLUEREDUCED-02.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 496C18121F68DD3B003E51A4 /* BLUEREDUCED-02.pdf */; };
 		49798C331F68CEC8003C0CEB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49798C321F68CEC8003C0CEB /* AppDelegate.swift */; };
 		49798C351F68CEC8003C0CEB /* LiveMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49798C341F68CEC8003C0CEB /* LiveMapViewController.swift */; };
 		49798C381F68CEC8003C0CEB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49798C361F68CEC8003C0CEB /* Main.storyboard */; };
@@ -54,24 +58,28 @@
 
 /* Begin PBXFileReference section */
 		491E24421F68F9B300B5F2A0 /* ScheduleListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduleListViewController.swift; sourceTree = "<group>"; };
-		4955E4921F68FB6700586CC1 /* ScheduleTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduleTableViewCell.swift; sourceTree = "<group>"; };
-		496C17F51F68DC5D003E51A4 /* ScheduleWebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduleWebViewController.swift; sourceTree = "<group>"; };
-		496C17F81F68DD16003E51A4 /* 35-TAN.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "35-TAN.pdf"; sourceTree = "<group>"; };
-		496C17F91F68DD16003E51A4 /* 13-ROUTE-13.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "13-ROUTE-13.pdf"; sourceTree = "<group>"; };
-		496C17FA1F68DD16003E51A4 /* 48-REMOTEEXPRESS.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "48-REMOTEEXPRESS.pdf"; sourceTree = "<group>"; };
-		496C17FB1F68DD16003E51A4 /* 26-RED.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "26-RED.pdf"; sourceTree = "<group>"; };
-		496C17FC1F68DD16003E51A4 /* 44-PURPLE.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "44-PURPLE.pdf"; sourceTree = "<group>"; };
-		496C17FD1F68DD16003E51A4 /* 33-ORANGE.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "33-ORANGE.pdf"; sourceTree = "<group>"; };
-		496C17FE1F68DD16003E51A4 /* 11-GREEN.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "11-GREEN.pdf"; sourceTree = "<group>"; };
-		496C17FF1F68DD16003E51A4 /* 07-DICKSONST.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "07-DICKSONST.pdf"; sourceTree = "<group>"; };
-		496C18001F68DD16003E51A4 /* 17-BROWN.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "17-BROWN.pdf"; sourceTree = "<group>"; };
-		496C18011F68DD16003E51A4 /* 22-BLUE.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "22-BLUE.pdf"; sourceTree = "<group>"; };
-		496C180D1F68DD3A003E51A4 /* 05-TANREDUCED.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "05-TANREDUCED.pdf"; sourceTree = "<group>"; };
-		496C180E1F68DD3B003E51A4 /* 06-REDREDUCED.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "06-REDREDUCED.pdf"; sourceTree = "<group>"; };
-		496C180F1F68DD3B003E51A4 /* 04-PURPLEREDUCED.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "04-PURPLEREDUCED.pdf"; sourceTree = "<group>"; };
-		496C18101F68DD3B003E51A4 /* 03-ORANGEREDUCED.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "03-ORANGEREDUCED.pdf"; sourceTree = "<group>"; };
-		496C18111F68DD3B003E51A4 /* 01-GREENREDUCED.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "01-GREENREDUCED.pdf"; sourceTree = "<group>"; };
-		496C18121F68DD3B003E51A4 /* 02-BLUEREDUCED.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "02-BLUEREDUCED.pdf"; sourceTree = "<group>"; };
+		492F69A41F6A2003009C895C /* ParkingMapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ParkingMapViewController.swift; path = ../ParkingMapViewController.swift; sourceTree = "<group>"; };
+		492F69A71F6A22AF009C895C /* parkmap.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = parkmap.pdf; sourceTree = "<group>"; };
+		492F69A91F6A2FCE009C895C /* ScheduleWebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduleWebViewController.swift; sourceTree = "<group>"; };
+		4955E4921F68FB6700586CC1 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
+		4957845C1F6A4B16001B4539 /* BLUE-22.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "BLUE-22.pdf"; sourceTree = "<group>"; };
+		4957845D1F6A4B16001B4539 /* TAN-35.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "TAN-35.pdf"; sourceTree = "<group>"; };
+		4957845E1F6A4B16001B4539 /* ROUTE-13.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "ROUTE-13.pdf"; sourceTree = "<group>"; };
+		4957845F1F6A4B16001B4539 /* REMOTEEXPRESS-48.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "REMOTEEXPRESS-48.pdf"; sourceTree = "<group>"; };
+		495784601F6A4B16001B4539 /* RED-26.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "RED-26.pdf"; sourceTree = "<group>"; };
+		495784611F6A4B16001B4539 /* PURPLE-44.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "PURPLE-44.pdf"; sourceTree = "<group>"; };
+		495784621F6A4B16001B4539 /* ORANGE-33.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "ORANGE-33.pdf"; sourceTree = "<group>"; };
+		495784631F6A4B16001B4539 /* GREEN-11.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "GREEN-11.pdf"; sourceTree = "<group>"; };
+		495784641F6A4B16001B4539 /* DICKSONST-07.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "DICKSONST-07.pdf"; sourceTree = "<group>"; };
+		495784651F6A4B16001B4539 /* BROWN-17.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "BROWN-17.pdf"; sourceTree = "<group>"; };
+		495784701F6A4F29001B4539 /* RouteMapTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RouteMapTableViewController.swift; sourceTree = "<group>"; };
+		495784721F6A5087001B4539 /* RouteMapWebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RouteMapWebViewController.swift; sourceTree = "<group>"; };
+		496C180D1F68DD3A003E51A4 /* TANREDUCED-05.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "TANREDUCED-05.pdf"; sourceTree = "<group>"; };
+		496C180E1F68DD3B003E51A4 /* REDREDUCED-06.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "REDREDUCED-06.pdf"; sourceTree = "<group>"; };
+		496C180F1F68DD3B003E51A4 /* PURPLEREDUCED-04.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "PURPLEREDUCED-04.pdf"; sourceTree = "<group>"; };
+		496C18101F68DD3B003E51A4 /* ORANGEREDUCED-03.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "ORANGEREDUCED-03.pdf"; sourceTree = "<group>"; };
+		496C18111F68DD3B003E51A4 /* GREENREDUCED-01.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "GREENREDUCED-01.pdf"; sourceTree = "<group>"; };
+		496C18121F68DD3B003E51A4 /* BLUEREDUCED-02.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "BLUEREDUCED-02.pdf"; sourceTree = "<group>"; };
 		49798C2F1F68CEC8003C0CEB /* Razorback Transit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Razorback Transit.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		49798C321F68CEC8003C0CEB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		49798C341F68CEC8003C0CEB /* LiveMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveMapViewController.swift; sourceTree = "<group>"; };
@@ -112,19 +120,29 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		492F69A61F6A221D009C895C /* Maps */ = {
+			isa = PBXGroup;
+			children = (
+				492F69A71F6A22AF009C895C /* parkmap.pdf */,
+				496C180C1F68DD29003E51A4 /* ReducedSchedules */,
+				496C17F71F68DCE6003E51A4 /* RegularSchedules */,
+			);
+			name = Maps;
+			sourceTree = "<group>";
+		};
 		496C17F71F68DCE6003E51A4 /* RegularSchedules */ = {
 			isa = PBXGroup;
 			children = (
-				496C17F81F68DD16003E51A4 /* 35-TAN.pdf */,
-				496C17F91F68DD16003E51A4 /* 13-ROUTE-13.pdf */,
-				496C17FA1F68DD16003E51A4 /* 48-REMOTEEXPRESS.pdf */,
-				496C17FB1F68DD16003E51A4 /* 26-RED.pdf */,
-				496C17FC1F68DD16003E51A4 /* 44-PURPLE.pdf */,
-				496C17FD1F68DD16003E51A4 /* 33-ORANGE.pdf */,
-				496C17FE1F68DD16003E51A4 /* 11-GREEN.pdf */,
-				496C17FF1F68DD16003E51A4 /* 07-DICKSONST.pdf */,
-				496C18001F68DD16003E51A4 /* 17-BROWN.pdf */,
-				496C18011F68DD16003E51A4 /* 22-BLUE.pdf */,
+				4957845C1F6A4B16001B4539 /* BLUE-22.pdf */,
+				4957845D1F6A4B16001B4539 /* TAN-35.pdf */,
+				4957845E1F6A4B16001B4539 /* ROUTE-13.pdf */,
+				4957845F1F6A4B16001B4539 /* REMOTEEXPRESS-48.pdf */,
+				495784601F6A4B16001B4539 /* RED-26.pdf */,
+				495784611F6A4B16001B4539 /* PURPLE-44.pdf */,
+				495784621F6A4B16001B4539 /* ORANGE-33.pdf */,
+				495784631F6A4B16001B4539 /* GREEN-11.pdf */,
+				495784641F6A4B16001B4539 /* DICKSONST-07.pdf */,
+				495784651F6A4B16001B4539 /* BROWN-17.pdf */,
 			);
 			name = RegularSchedules;
 			sourceTree = "<group>";
@@ -132,12 +150,12 @@
 		496C180C1F68DD29003E51A4 /* ReducedSchedules */ = {
 			isa = PBXGroup;
 			children = (
-				496C180D1F68DD3A003E51A4 /* 05-TANREDUCED.pdf */,
-				496C180E1F68DD3B003E51A4 /* 06-REDREDUCED.pdf */,
-				496C180F1F68DD3B003E51A4 /* 04-PURPLEREDUCED.pdf */,
-				496C18101F68DD3B003E51A4 /* 03-ORANGEREDUCED.pdf */,
-				496C18111F68DD3B003E51A4 /* 01-GREENREDUCED.pdf */,
-				496C18121F68DD3B003E51A4 /* 02-BLUEREDUCED.pdf */,
+				496C180D1F68DD3A003E51A4 /* TANREDUCED-05.pdf */,
+				496C180E1F68DD3B003E51A4 /* REDREDUCED-06.pdf */,
+				496C180F1F68DD3B003E51A4 /* PURPLEREDUCED-04.pdf */,
+				496C18101F68DD3B003E51A4 /* ORANGEREDUCED-03.pdf */,
+				496C18111F68DD3B003E51A4 /* GREENREDUCED-01.pdf */,
+				496C18121F68DD3B003E51A4 /* BLUEREDUCED-02.pdf */,
 			);
 			name = ReducedSchedules;
 			sourceTree = "<group>";
@@ -165,17 +183,19 @@
 		49798C311F68CEC8003C0CEB /* Razorback Transit */ = {
 			isa = PBXGroup;
 			children = (
-				496C180C1F68DD29003E51A4 /* ReducedSchedules */,
-				496C17F71F68DCE6003E51A4 /* RegularSchedules */,
+				492F69A61F6A221D009C895C /* Maps */,
 				49798C341F68CEC8003C0CEB /* LiveMapViewController.swift */,
-				496C17F51F68DC5D003E51A4 /* ScheduleWebViewController.swift */,
+				492F69A41F6A2003009C895C /* ParkingMapViewController.swift */,
 				491E24421F68F9B300B5F2A0 /* ScheduleListViewController.swift */,
+				492F69A91F6A2FCE009C895C /* ScheduleWebViewController.swift */,
 				49798C361F68CEC8003C0CEB /* Main.storyboard */,
+				495784721F6A5087001B4539 /* RouteMapWebViewController.swift */,
+				495784701F6A4F29001B4539 /* RouteMapTableViewController.swift */,
 				49798C391F68CEC8003C0CEB /* Assets.xcassets */,
 				49798C321F68CEC8003C0CEB /* AppDelegate.swift */,
 				49798C3B1F68CEC8003C0CEB /* LaunchScreen.storyboard */,
 				49798C3E1F68CEC8003C0CEB /* Info.plist */,
-				4955E4921F68FB6700586CC1 /* ScheduleTableViewCell.swift */,
+				4955E4921F68FB6700586CC1 /* CustomTableViewCell.swift */,
 			);
 			path = "Razorback Transit";
 			sourceTree = "<group>";
@@ -305,25 +325,26 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4957846D1F6A4B16001B4539 /* GREEN-11.pdf in Resources */,
 				49798C3D1F68CEC8003C0CEB /* LaunchScreen.storyboard in Resources */,
-				496C18151F68DD3B003E51A4 /* 04-PURPLEREDUCED.pdf in Resources */,
-				496C180A1F68DD16003E51A4 /* 17-BROWN.pdf in Resources */,
-				496C18041F68DD16003E51A4 /* 48-REMOTEEXPRESS.pdf in Resources */,
-				496C18181F68DD3B003E51A4 /* 02-BLUEREDUCED.pdf in Resources */,
-				496C18141F68DD3B003E51A4 /* 06-REDREDUCED.pdf in Resources */,
-				496C18081F68DD16003E51A4 /* 11-GREEN.pdf in Resources */,
-				496C18061F68DD16003E51A4 /* 44-PURPLE.pdf in Resources */,
-				496C18051F68DD16003E51A4 /* 26-RED.pdf in Resources */,
-				496C18131F68DD3B003E51A4 /* 05-TANREDUCED.pdf in Resources */,
-				496C180B1F68DD16003E51A4 /* 22-BLUE.pdf in Resources */,
+				496C18151F68DD3B003E51A4 /* PURPLEREDUCED-04.pdf in Resources */,
+				4957846B1F6A4B16001B4539 /* PURPLE-44.pdf in Resources */,
+				4957846C1F6A4B16001B4539 /* ORANGE-33.pdf in Resources */,
+				4957846F1F6A4B16001B4539 /* BROWN-17.pdf in Resources */,
+				496C18181F68DD3B003E51A4 /* BLUEREDUCED-02.pdf in Resources */,
+				496C18141F68DD3B003E51A4 /* REDREDUCED-06.pdf in Resources */,
+				496C18131F68DD3B003E51A4 /* TANREDUCED-05.pdf in Resources */,
 				49798C3A1F68CEC8003C0CEB /* Assets.xcassets in Resources */,
-				496C18091F68DD16003E51A4 /* 07-DICKSONST.pdf in Resources */,
-				496C18021F68DD16003E51A4 /* 35-TAN.pdf in Resources */,
-				496C18161F68DD3B003E51A4 /* 03-ORANGEREDUCED.pdf in Resources */,
-				496C18171F68DD3B003E51A4 /* 01-GREENREDUCED.pdf in Resources */,
-				496C18071F68DD16003E51A4 /* 33-ORANGE.pdf in Resources */,
-				496C18031F68DD16003E51A4 /* 13-ROUTE-13.pdf in Resources */,
+				496C18161F68DD3B003E51A4 /* ORANGEREDUCED-03.pdf in Resources */,
+				492F69A81F6A22AF009C895C /* parkmap.pdf in Resources */,
+				496C18171F68DD3B003E51A4 /* GREENREDUCED-01.pdf in Resources */,
+				495784681F6A4B16001B4539 /* ROUTE-13.pdf in Resources */,
+				4957846E1F6A4B16001B4539 /* DICKSONST-07.pdf in Resources */,
 				49798C381F68CEC8003C0CEB /* Main.storyboard in Resources */,
+				495784691F6A4B16001B4539 /* REMOTEEXPRESS-48.pdf in Resources */,
+				495784671F6A4B16001B4539 /* TAN-35.pdf in Resources */,
+				495784661F6A4B16001B4539 /* BLUE-22.pdf in Resources */,
+				4957846A1F6A4B16001B4539 /* RED-26.pdf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -348,8 +369,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				496C17F61F68DC5D003E51A4 /* ScheduleWebViewController.swift in Sources */,
-				4955E4931F68FB6700586CC1 /* ScheduleTableViewCell.swift in Sources */,
+				492F69AA1F6A2FCE009C895C /* ScheduleWebViewController.swift in Sources */,
+				4955E4931F68FB6700586CC1 /* CustomTableViewCell.swift in Sources */,
+				495784711F6A4F29001B4539 /* RouteMapTableViewController.swift in Sources */,
+				492F69A51F6A2003009C895C /* ParkingMapViewController.swift in Sources */,
+				495784731F6A5087001B4539 /* RouteMapWebViewController.swift in Sources */,
 				49798C351F68CEC8003C0CEB /* LiveMapViewController.swift in Sources */,
 				491E24431F68F9B300B5F2A0 /* ScheduleListViewController.swift in Sources */,
 				49798C331F68CEC8003C0CEB /* AppDelegate.swift in Sources */,
@@ -512,7 +536,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "arcu.Razorback-Transit";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -529,7 +553,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "arcu.Razorback-Transit";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
