@@ -13,7 +13,7 @@ enum RouteTypes: Int {
     case Reduced
 }
 
-class ScheduleListViewController: UITableViewController {
+class ScheduleTableViewController: UITableViewController {
 
     @IBOutlet var ScheduleListTableView: UITableView!
 
@@ -129,7 +129,7 @@ class ScheduleListViewController: UITableViewController {
  
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
-       let destination = segue.destination as? ScheduleWebViewController
+       let destination = segue.destination as? ScheduleViewController
         
         guard let section = tableView.indexPathForSelectedRow?.section else {
             return

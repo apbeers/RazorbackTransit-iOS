@@ -9,7 +9,7 @@
 import UIKit
 import WebKit
 
-class ScheduleWebViewController: UIViewController, WKUIDelegate, UIScrollViewDelegate {
+class ScheduleViewController: UIViewController, WKUIDelegate, UIScrollViewDelegate {
 
 
     @IBOutlet weak var ScheduleWebView: UIView!
