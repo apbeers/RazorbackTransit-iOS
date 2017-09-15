@@ -1,5 +1,5 @@
 //
-//  RouteMapWebViewController.swift
+//  BaseViewController.swift
 //  Razorback Transit
 //
 //  Created by Andrew Beers on 9/14/17.
@@ -7,28 +7,11 @@
 //
 
 import UIKit
-import WebKit
 
-class RouteMapWebViewController: BaseViewController, WKUIDelegate {
+class BaseViewController: UIViewController {    
     
-
-    @IBOutlet weak var RouteMapWebView: UIView!
-    
-    var webView: WKWebView!
-    var mapName: String!
-
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        webView = WKWebView(frame: RouteMapWebView.bounds, configuration: WKWebViewConfiguration())
-        RouteMapWebView.addSubview(webView)
-        
-        guard let pdf = Bundle.main.url(forResource: mapName, withExtension: "pdf") else {
-            return
-        }
-        
-        let request = URLRequest(url: pdf)
-        webView.load(request)
         
         // Do any additional setup after loading the view.
     }
@@ -50,3 +33,5 @@ class RouteMapWebViewController: BaseViewController, WKUIDelegate {
     */
 
 }
+
+

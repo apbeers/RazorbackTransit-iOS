@@ -13,17 +13,22 @@ enum RouteTypes: Int {
     case Reduced
 }
 
-class ScheduleTableViewController: UITableViewController {
+class ScheduleTableViewController: BaseTableViewController {
 
     @IBOutlet var ScheduleListTableView: UITableView!
-
-    let RegularSchedules: [String] = ["TAN-35", "ROUTE-13", "REMOTEEXPRESS-48", "RED-26", "PURPLE-44", "ORANGE-33", "GREEN-11", "DICKSONST-07", "BROWN-17", "BLUE-22"]
-    let ReducedSchedules: [String] = ["TANREDUCED-05", "REDREDUCED-06", "PURPLEREDUCED-04", "ORANGEREDUCED-03", "GREENREDUCED-01", "BLUEREDUCED-02"]
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return UIStatusBarStyle.lightContent
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
         
+        navBar.topItem?.title = "Route Schedules"
+        
+       // self.navigationController?.navigationBar.topItem?.title = "Route Schedules"
+       // self.navigationController?.navigationBar.barTintColor = Constants.Colors.razorbackRed
+       // self.tabBarController?.tabBar.barTintColor = Constants.Colors.razorbackRed
         
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -49,9 +54,9 @@ class ScheduleTableViewController: UITableViewController {
         
         switch section {
         case 0:
-            return RegularSchedules.count
+            return Constants.regularSchedules.count
         case 1:
-            return ReducedSchedules.count
+            return Constants.reducedSchedules.count
         default:
             return 0
         }
@@ -66,9 +71,9 @@ class ScheduleTableViewController: UITableViewController {
         
         switch indexPath.section {
         case 0:
-            cell.MapNameLabel.text = RegularSchedules[indexPath.row]
+            cell.MapNameLabel.text = Constants.regularSchedules[indexPath.row].title
         case 1:
-            cell.MapNameLabel.text = ReducedSchedules[indexPath.row]
+            cell.MapNameLabel.text = Constants.reducedSchedules[indexPath.row].title
         default:
             break
         }
@@ -89,7 +94,14 @@ class ScheduleTableViewController: UITableViewController {
             return ""
         }
     }
+    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 50
+    }
 
+    override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 30
+    }
     /*
     // Override to support conditional editing of the table view.
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
@@ -137,9 +149,9 @@ class ScheduleTableViewController: UITableViewController {
         
         switch section {
         case 0:
-            destination?.mapName = RegularSchedules[(tableView.indexPathForSelectedRow?.row)!]
+            destination?.mapName = Constants.regularSchedules[(tableView.indexPathForSelectedRow?.row)!].fileName
         case 1:
-            destination?.mapName = ReducedSchedules[(tableView.indexPathForSelectedRow?.row)!]
+            destination?.mapName = Constants.reducedSchedules[(tableView.indexPathForSelectedRow?.row)!].fileName
         default:
             destination?.mapName = ""
         }

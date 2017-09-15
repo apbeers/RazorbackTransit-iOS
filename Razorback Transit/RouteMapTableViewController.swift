@@ -8,16 +8,15 @@
 
 import UIKit
 
-class RouteMapTableViewController: UITableViewController {
+class RouteMapTableViewController: BaseTableViewController {
 
     @IBOutlet var RouteMapTableView: UITableView!
-    
-    let RegularRoutes: [String] = ["TAN-35-ROUTE", "ROUTE-13-ROUTE", "REMOTEEXPRESS-48-ROUTE", "RED-26-ROUTE", "PURPLE-44-ROUTE", "ORANGE-33-ROUTE", "GREEN-11-ROUTE", "DICKSONST-07-ROUTE", "BROWN-17-ROUTE", "BLUE-22-ROUTE"]
-    let ReducedRoutes: [String] = ["TANREDUCED-05-ROUTE", "REDREDUCED-06-ROUTE", "PURPLEREDUCED-04-ROUTE", "ORANGEREDUCED-03-ROUTE", "GREENREDUCED-01-ROUTE", "BLUEREDUCED-02-ROUTE"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        navBar.topItem?.title = "Route Maps"
+        
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -42,9 +41,9 @@ class RouteMapTableViewController: UITableViewController {
         
         switch section {
         case 0:
-            return RegularRoutes.count
+            return Constants.regularRoutes.count
         case 1:
-            return ReducedRoutes.count
+            return Constants.reducedRoutes.count
         default:
             return 0
         }
@@ -59,9 +58,9 @@ class RouteMapTableViewController: UITableViewController {
         
         switch indexPath.section {
         case 0:
-            cell.MapNameLabel.text = RegularRoutes[indexPath.row]
+            cell.MapNameLabel.text = Constants.regularRoutes[indexPath.row].title
         case 1:
-            cell.MapNameLabel.text = ReducedRoutes[indexPath.row]
+            cell.MapNameLabel.text = Constants.reducedRoutes[indexPath.row].title
         default:
             break
         }
@@ -81,6 +80,14 @@ class RouteMapTableViewController: UITableViewController {
         default:
             return ""
         }
+    }
+    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 50
+    }
+    
+    override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 30
     }
     
     /*
@@ -130,9 +137,9 @@ class RouteMapTableViewController: UITableViewController {
         
         switch section {
         case 0:
-            destination?.mapName = RegularRoutes[(tableView.indexPathForSelectedRow?.row)!]
+            destination?.mapName = Constants.regularRoutes[(tableView.indexPathForSelectedRow?.row)!].fileName
         case 1:
-            destination?.mapName = ReducedRoutes[(tableView.indexPathForSelectedRow?.row)!]
+            destination?.mapName = Constants.reducedRoutes[(tableView.indexPathForSelectedRow?.row)!].fileName
         default:
             destination?.mapName = ""
         }

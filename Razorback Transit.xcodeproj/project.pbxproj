@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		491E24431F68F9B300B5F2A0 /* ScheduleTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 491E24421F68F9B300B5F2A0 /* ScheduleTableViewController.swift */; };
-		492F69A51F6A2003009C895C /* ParkingMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 492F69A41F6A2003009C895C /* ParkingMapViewController.swift */; };
 		492F69A81F6A22AF009C895C /* parkmap.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 492F69A71F6A22AF009C895C /* parkmap.pdf */; };
 		492F69AA1F6A2FCE009C895C /* ScheduleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 492F69A91F6A2FCE009C895C /* ScheduleViewController.swift */; };
 		4955E4931F68FB6700586CC1 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4955E4921F68FB6700586CC1 /* CustomTableViewCell.swift */; };
@@ -53,6 +52,14 @@
 		49DE194E1F6B47E5001EA719 /* ROUTE-13-ROUTE.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 49DE19441F6B47E5001EA719 /* ROUTE-13-ROUTE.pdf */; };
 		49DE194F1F6B47E5001EA719 /* GREEN-11-ROUTE.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 49DE19451F6B47E5001EA719 /* GREEN-11-ROUTE.pdf */; };
 		49DE19501F6B47E5001EA719 /* DICKSONST-07-ROUTE.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 49DE19461F6B47E5001EA719 /* DICKSONST-07-ROUTE.pdf */; };
+		49DE19521F6B5BEF001EA719 /* ScheduleCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49DE19511F6B5BEF001EA719 /* ScheduleCollectionViewController.swift */; };
+		49DE19541F6B5C71001EA719 /* ParkingMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49DE19531F6B5C71001EA719 /* ParkingMapViewController.swift */; };
+		49DE195B1F6B6011001EA719 /* ScheduleCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49DE195A1F6B6011001EA719 /* ScheduleCollectionViewCell.swift */; };
+		49DE195D1F6B6FE4001EA719 /* PDFFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49DE195C1F6B6FE4001EA719 /* PDFFile.swift */; };
+		49DE19611F6B724D001EA719 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49DE19601F6B724D001EA719 /* Constants.swift */; };
+		49DE19631F6B7271001EA719 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49DE19621F6B7271001EA719 /* Extensions.swift */; };
+		49DE19651F6B7A33001EA719 /* BaseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49DE19641F6B7A33001EA719 /* BaseTableViewController.swift */; };
+		49DE19671F6B8058001EA719 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49DE19661F6B8058001EA719 /* BaseViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,7 +81,6 @@
 
 /* Begin PBXFileReference section */
 		491E24421F68F9B300B5F2A0 /* ScheduleTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduleTableViewController.swift; sourceTree = "<group>"; };
-		492F69A41F6A2003009C895C /* ParkingMapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ParkingMapViewController.swift; path = ../ParkingMapViewController.swift; sourceTree = "<group>"; };
 		492F69A71F6A22AF009C895C /* parkmap.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = parkmap.pdf; sourceTree = "<group>"; };
 		492F69A91F6A2FCE009C895C /* ScheduleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduleViewController.swift; sourceTree = "<group>"; };
 		4955E4921F68FB6700586CC1 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
@@ -125,6 +131,14 @@
 		49DE19441F6B47E5001EA719 /* ROUTE-13-ROUTE.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "ROUTE-13-ROUTE.pdf"; sourceTree = "<group>"; };
 		49DE19451F6B47E5001EA719 /* GREEN-11-ROUTE.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "GREEN-11-ROUTE.pdf"; sourceTree = "<group>"; };
 		49DE19461F6B47E5001EA719 /* DICKSONST-07-ROUTE.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "DICKSONST-07-ROUTE.pdf"; sourceTree = "<group>"; };
+		49DE19511F6B5BEF001EA719 /* ScheduleCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduleCollectionViewController.swift; sourceTree = "<group>"; };
+		49DE19531F6B5C71001EA719 /* ParkingMapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParkingMapViewController.swift; sourceTree = "<group>"; };
+		49DE195A1F6B6011001EA719 /* ScheduleCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduleCollectionViewCell.swift; sourceTree = "<group>"; };
+		49DE195C1F6B6FE4001EA719 /* PDFFile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PDFFile.swift; sourceTree = "<group>"; };
+		49DE19601F6B724D001EA719 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		49DE19621F6B7271001EA719 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		49DE19641F6B7A33001EA719 /* BaseTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTableViewController.swift; sourceTree = "<group>"; };
+		49DE19661F6B8058001EA719 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -217,6 +231,7 @@
 		49798C311F68CEC8003C0CEB /* Razorback Transit */ = {
 			isa = PBXGroup;
 			children = (
+				49DE19551F6B5FBA001EA719 /* Cells */,
 				49DE192E1F6B437F001EA719 /* View Controllers */,
 				492F69A61F6A221D009C895C /* Maps */,
 				49798C361F68CEC8003C0CEB /* Main.storyboard */,
@@ -224,7 +239,11 @@
 				49798C321F68CEC8003C0CEB /* AppDelegate.swift */,
 				49798C3B1F68CEC8003C0CEB /* LaunchScreen.storyboard */,
 				49798C3E1F68CEC8003C0CEB /* Info.plist */,
-				4955E4921F68FB6700586CC1 /* CustomTableViewCell.swift */,
+				49DE195C1F6B6FE4001EA719 /* PDFFile.swift */,
+				49DE19601F6B724D001EA719 /* Constants.swift */,
+				49DE19621F6B7271001EA719 /* Extensions.swift */,
+				49DE19641F6B7A33001EA719 /* BaseTableViewController.swift */,
+				49DE19661F6B8058001EA719 /* BaseViewController.swift */,
 			);
 			path = "Razorback Transit";
 			sourceTree = "<group>";
@@ -250,12 +269,13 @@
 		49DE192E1F6B437F001EA719 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				49DE19531F6B5C71001EA719 /* ParkingMapViewController.swift */,
 				49798C341F68CEC8003C0CEB /* LiveMapViewController.swift */,
-				492F69A41F6A2003009C895C /* ParkingMapViewController.swift */,
 				491E24421F68F9B300B5F2A0 /* ScheduleTableViewController.swift */,
 				492F69A91F6A2FCE009C895C /* ScheduleViewController.swift */,
 				495784721F6A5087001B4539 /* RouteMapWebViewController.swift */,
 				495784701F6A4F29001B4539 /* RouteMapTableViewController.swift */,
+				49DE19511F6B5BEF001EA719 /* ScheduleCollectionViewController.swift */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -288,6 +308,15 @@
 				49DE19361F6B47CD001EA719 /* GREENREDUCED-01-ROUTE.pdf */,
 			);
 			name = ReducedRoutes;
+			sourceTree = "<group>";
+		};
+		49DE19551F6B5FBA001EA719 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				4955E4921F68FB6700586CC1 /* CustomTableViewCell.swift */,
+				49DE195A1F6B6011001EA719 /* ScheduleCollectionViewCell.swift */,
+			);
+			name = Cells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -458,13 +487,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				492F69AA1F6A2FCE009C895C /* ScheduleViewController.swift in Sources */,
+				49DE19521F6B5BEF001EA719 /* ScheduleCollectionViewController.swift in Sources */,
 				4955E4931F68FB6700586CC1 /* CustomTableViewCell.swift in Sources */,
 				495784711F6A4F29001B4539 /* RouteMapTableViewController.swift in Sources */,
-				492F69A51F6A2003009C895C /* ParkingMapViewController.swift in Sources */,
 				495784731F6A5087001B4539 /* RouteMapWebViewController.swift in Sources */,
+				49DE19671F6B8058001EA719 /* BaseViewController.swift in Sources */,
 				49798C351F68CEC8003C0CEB /* LiveMapViewController.swift in Sources */,
+				49DE195B1F6B6011001EA719 /* ScheduleCollectionViewCell.swift in Sources */,
+				49DE195D1F6B6FE4001EA719 /* PDFFile.swift in Sources */,
+				49DE19631F6B7271001EA719 /* Extensions.swift in Sources */,
 				491E24431F68F9B300B5F2A0 /* ScheduleTableViewController.swift in Sources */,
+				49DE19651F6B7A33001EA719 /* BaseTableViewController.swift in Sources */,
 				49798C331F68CEC8003C0CEB /* AppDelegate.swift in Sources */,
+				49DE19541F6B5C71001EA719 /* ParkingMapViewController.swift in Sources */,
+				49DE19611F6B724D001EA719 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
