@@ -271,8 +271,8 @@
 				49798C341F68CEC8003C0CEB /* LiveMapViewController.swift */,
 				491E24421F68F9B300B5F2A0 /* ScheduleTableViewController.swift */,
 				492F69A91F6A2FCE009C895C /* ScheduleViewController.swift */,
-				495784721F6A5087001B4539 /* RouteMapWebViewController.swift */,
 				495784701F6A4F29001B4539 /* RouteMapTableViewController.swift */,
+				495784721F6A5087001B4539 /* RouteMapWebViewController.swift */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";

@@ -14,9 +14,15 @@ class LiveMapViewController: BaseViewController, WKUIDelegate, WKNavigationDeleg
     @IBOutlet weak var LiveWebView: UIView!
     
     var webView: WKWebView!
+    var defaults: UserDefaults!
+    var needsUpdate = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
+        defaults = UserDefaults.standard
+        NotificationCenter.default.addObserver(self, selector: #selector(self.checkIfNeedsReload), name: NSNotification.Name.UIApplicationWillEnterForeground, object: nil)
         
         webView = WKWebView(frame: LiveWebView.bounds, configuration: WKWebViewConfiguration())
         LiveWebView.addSubview(webView)
@@ -27,6 +33,25 @@ class LiveMapViewController: BaseViewController, WKUIDelegate, WKNavigationDeleg
         }
         let request = URLRequest(url: url)
         webView.load(request)
+        
+        defaults.set(Date(), forKey: "date")
+    }
+    
+    func checkIfNeedsReload() {
+        
+        defaults = UserDefaults.standard
+        guard let lastLoaded = defaults.value(forKey: "date") as? Date else {
+            return
+        }
+        
+        guard let timeInterval = TimeInterval(exactly: -300) else {
+            return
+        }
+        
+        if lastLoaded.timeIntervalSince(Date()) < timeInterval && webView != nil {
+            webView.reload()
+        }
+        
     }
     
     override func didReceiveMemoryWarning() {
