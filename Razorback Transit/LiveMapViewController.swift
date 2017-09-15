@@ -9,11 +9,9 @@
 import UIKit
 import WebKit
 
-class LiveMapViewController: BaseViewController, WKUIDelegate {
+class LiveMapViewController: BaseViewController, WKUIDelegate, WKNavigationDelegate {
 
     @IBOutlet weak var LiveWebView: UIView!
-
-    @IBOutlet weak var RefreshOutlet: UIButton!
     
     var webView: WKWebView!
     
@@ -22,6 +20,7 @@ class LiveMapViewController: BaseViewController, WKUIDelegate {
         
         webView = WKWebView(frame: LiveWebView.bounds, configuration: WKWebViewConfiguration())
         LiveWebView.addSubview(webView)
+        webView.navigationDelegate = self
         
         guard let url = URL(string: "http://campusmaps.uark.edu/embed/routes") else {
             return
@@ -34,13 +33,5 @@ class LiveMapViewController: BaseViewController, WKUIDelegate {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-    @IBAction func Refresh(_ sender: Any) {
-        webView.reload()
-    }
-    
-
-
-
 }
 
