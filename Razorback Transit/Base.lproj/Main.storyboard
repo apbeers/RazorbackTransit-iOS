@@ -49,7 +49,7 @@
                             <constraint firstItem="6M2-gT-FFl" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="35" id="kF6-vO-plp"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" systemItem="favorites" id="NbO-at-b1M"/>
+                    <tabBarItem key="tabBarItem" title="Live Map" image="LiveMap" selectedImage="LiveMap" id="NbO-at-b1M"/>
                     <connections>
                         <outlet property="LiveWebView" destination="FNK-fQ-0Ow" id="kWl-7S-bAI"/>
                     </connections>
@@ -57,59 +57,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1006" y="-647"/>
-        </scene>
-        <!--Schedule Collection View Controller-->
-        <scene sceneID="bQc-t3-kcT">
-            <objects>
-                <collectionViewController id="rnO-9K-8lh" customClass="ScheduleCollectionViewController" customModule="Razorback_Transit" customModuleProvider="target" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" id="DCz-6j-q0P">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="adr-oE-vjc">
-                            <size key="itemSize" width="50" height="50"/>
-                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                        </collectionViewFlowLayout>
-                        <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CustomCollectionViewCell" id="4bm-R5-TEf" customClass="ScheduleCollectionViewCell" customModule="Razorback_Transit" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                    <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="CustomCollectionViewCell" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="49R-VM-A1G">
-                                            <rect key="frame" x="0.0" y="0.5" width="50" height="50"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                    </subviews>
-                                </view>
-                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstItem="49R-VM-A1G" firstAttribute="height" secondItem="4bm-R5-TEf" secondAttribute="height" id="0Ch-Gz-HtG"/>
-                                    <constraint firstItem="49R-VM-A1G" firstAttribute="width" secondItem="4bm-R5-TEf" secondAttribute="width" id="426-eb-l0I"/>
-                                    <constraint firstItem="49R-VM-A1G" firstAttribute="centerX" secondItem="4bm-R5-TEf" secondAttribute="centerX" id="lSv-MW-2bi"/>
-                                    <constraint firstItem="49R-VM-A1G" firstAttribute="centerY" secondItem="4bm-R5-TEf" secondAttribute="centerY" id="r86-3D-RuL"/>
-                                </constraints>
-                                <connections>
-                                    <outlet property="label" destination="49R-VM-A1G" id="z7o-8N-wLy"/>
-                                </connections>
-                            </collectionViewCell>
-                        </cells>
-                        <connections>
-                            <outlet property="dataSource" destination="rnO-9K-8lh" id="0cL-gY-wvZ"/>
-                            <outlet property="delegate" destination="rnO-9K-8lh" id="vXV-M6-gmZ"/>
-                        </connections>
-                    </collectionView>
-                    <tabBarItem key="tabBarItem" systemItem="search" id="AzD-Fa-Vga"/>
-                </collectionViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="UFB-FX-fDA" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-132" y="-748"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="y4q-Dg-uah">
@@ -124,20 +71,19 @@
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="kqe-PS-TrK"/>
                         <segue destination="0h5-8k-NyT" kind="relationship" relationship="viewControllers" id="rm3-J0-EFx"/>
-                        <segue destination="5aO-nx-NLp" kind="relationship" relationship="viewControllers" id="Hqn-95-nyv"/>
                         <segue destination="uWY-1X-u7t" kind="relationship" relationship="viewControllers" id="gDX-EN-Gub"/>
-                        <segue destination="rnO-9K-8lh" kind="relationship" relationship="viewControllers" id="xng-RY-P9u"/>
+                        <segue destination="5aO-nx-NLp" kind="relationship" relationship="viewControllers" id="xzS-iN-MF1"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MFp-jc-Ptt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="32.799999999999997" y="76.911544227886068"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Schedules-->
         <scene sceneID="tws-7a-nHy">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="0h5-8k-NyT" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" systemItem="more" id="XK1-vj-BUM"/>
+                    <tabBarItem key="tabBarItem" title="Schedules" image="Schedule" selectedImage="Schedule" id="XK1-vj-BUM"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="9a2-6E-vco">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -228,14 +174,14 @@
                             <constraint firstItem="Lph-hZ-8Ql" firstAttribute="centerX" secondItem="XQf-GQ-CMp" secondAttribute="centerX" id="r8F-6Z-fng"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" systemItem="bookmarks" id="LIT-8Q-CBj"/>
+                    <tabBarItem key="tabBarItem" title="Parking" image="Parking" selectedImage="Parking" id="LIT-8Q-CBj"/>
                     <connections>
                         <outlet property="ParkingMapWebView" destination="Lph-hZ-8Ql" id="62g-2E-tfk"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Bbx-af-83a" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-175" y="949"/>
+            <point key="canvasLocation" x="33" y="949"/>
         </scene>
         <!--Route Table View Controller-->
         <scene sceneID="ULD-8o-Wzs">
@@ -321,11 +267,11 @@
             </objects>
             <point key="canvasLocation" x="2718" y="77"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Routes-->
         <scene sceneID="5VW-lj-jqE">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="uWY-1X-u7t" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" systemItem="mostRecent" id="ZXb-Ei-6ym"/>
+                    <tabBarItem key="tabBarItem" title="Routes" image="Route" selectedImage="Route" id="ZXb-Ei-6ym"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="9ht-W8-r9E">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -375,4 +321,10 @@
             <point key="canvasLocation" x="2718" y="949"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="LiveMap" width="25" height="25"/>
+        <image name="Parking" width="25" height="25"/>
+        <image name="Route" width="25" height="25"/>
+        <image name="Schedule" width="25" height="25"/>
+    </resources>
 </document>

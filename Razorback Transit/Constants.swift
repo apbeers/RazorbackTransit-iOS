@@ -45,7 +45,7 @@ struct Constants {
         static let purple = PDFFile(filename: "PURPLE-44-ROUTE", title: "Purple 44")
         static let orange = PDFFile(filename: "ORANGE-33-ROUTE", title: "Orange 33")
         static let green = PDFFile(filename: "GREEN-11-ROUTE", title: "Green 11")
-        static let dickson = PDFFile(filename: "DISCKSONST-07-ROUTE", title: "Dickson St")
+        static let dickson = PDFFile(filename: "DICKSONST-07-ROUTE", title: "Dickson St")
         static let brown = PDFFile(filename: "BROWN-17-ROUTE", title: "Brown 17")
         static let blueReduced = PDFFile(filename: "BLUEREDUCED-02-ROUTE", title: "Blue Reduced")
         static let greenReduced = PDFFile(filename: "GRENNREDUCED-01-ROUTE", title: "Green Reduced")
@@ -62,5 +62,7 @@ struct Constants {
     static let regularRoutes: [PDFFile] = [RouteFiles.blue, RouteFiles.tan, RouteFiles.route13, RouteFiles.remoteexpress, RouteFiles.red, RouteFiles.purple, RouteFiles.orange, RouteFiles.green, RouteFiles.dickson, RouteFiles.brown]
     
     static let reducedRoutes: [PDFFile] = [RouteFiles.blueReduced, RouteFiles.greenReduced, RouteFiles.orangeReduced, RouteFiles.purpleReduced, RouteFiles.redReduced, RouteFiles.tanReduced]
+    
+    static let parkingMap = PDFFile(filename: "parkmap", title: "Parking Map")
 }
 

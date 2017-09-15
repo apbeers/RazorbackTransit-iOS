@@ -21,7 +21,8 @@ class ParkingMapViewController: UIViewController {
         webView = WKWebView(frame: ParkingMapWebView.bounds, configuration: WKWebViewConfiguration())
         ParkingMapWebView.addSubview(webView)
         
-        guard let pdf = Bundle.main.url(forResource: "parkmap", withExtension: "pdf") else {
+        let fileName = Constants.parkingMap.fileName
+        guard let pdf = Bundle.main.url(forResource: fileName , withExtension: "pdf") else {
             return
         }
 
