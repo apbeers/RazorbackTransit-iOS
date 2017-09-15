@@ -17,8 +17,8 @@ class ScheduleTableViewController: UITableViewController {
 
     @IBOutlet var ScheduleListTableView: UITableView!
 
-    let RegularRoutes: [String] = ["TAN-35", "ROUTE-13", "REMOTEEXPRESS-48", "RED-26", "PURPLE-44", "ORANGE-33", "GREEN-11", "DICKSONST-07", "BROWN-17", "BLUE-22"]
-    let ReducedRoutes: [String] = ["TANREDUCED-05", "REDREDUCED-06", "PURPLEREDUCED-04", "ORANGEREDUCED-03", "GREENREDUCED-01", "BLUEREDUCED-02"]
+    let RegularSchedules: [String] = ["TAN-35", "ROUTE-13", "REMOTEEXPRESS-48", "RED-26", "PURPLE-44", "ORANGE-33", "GREEN-11", "DICKSONST-07", "BROWN-17", "BLUE-22"]
+    let ReducedSchedules: [String] = ["TANREDUCED-05", "REDREDUCED-06", "PURPLEREDUCED-04", "ORANGEREDUCED-03", "GREENREDUCED-01", "BLUEREDUCED-02"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -49,9 +49,9 @@ class ScheduleTableViewController: UITableViewController {
         
         switch section {
         case 0:
-            return RegularRoutes.count
+            return RegularSchedules.count
         case 1:
-            return ReducedRoutes.count
+            return ReducedSchedules.count
         default:
             return 0
         }
@@ -66,9 +66,9 @@ class ScheduleTableViewController: UITableViewController {
         
         switch indexPath.section {
         case 0:
-            cell.MapNameLabel.text = RegularRoutes[indexPath.row]
+            cell.MapNameLabel.text = RegularSchedules[indexPath.row]
         case 1:
-            cell.MapNameLabel.text = ReducedRoutes[indexPath.row]
+            cell.MapNameLabel.text = ReducedSchedules[indexPath.row]
         default:
             break
         }
@@ -129,7 +129,7 @@ class ScheduleTableViewController: UITableViewController {
  
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
-       let destination = segue.destination as? ScheduleViewController
+        let destination = segue.destination as? ScheduleViewController
         
         guard let section = tableView.indexPathForSelectedRow?.section else {
             return
@@ -137,9 +137,9 @@ class ScheduleTableViewController: UITableViewController {
         
         switch section {
         case 0:
-            destination?.mapName = RegularRoutes[(tableView.indexPathForSelectedRow?.row)!]
+            destination?.mapName = RegularSchedules[(tableView.indexPathForSelectedRow?.row)!]
         case 1:
-            destination?.mapName = ReducedRoutes[(tableView.indexPathForSelectedRow?.row)!]
+            destination?.mapName = ReducedSchedules[(tableView.indexPathForSelectedRow?.row)!]
         default:
             destination?.mapName = ""
         }

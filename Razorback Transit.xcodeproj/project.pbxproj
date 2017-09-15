@@ -37,6 +37,22 @@
 		4984DE1C1F6B40780040F1CD /* PURPLEREDUCED-04.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 4984DE161F6B40780040F1CD /* PURPLEREDUCED-04.pdf */; };
 		4984DE1D1F6B40780040F1CD /* REDREDUCED-06.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 4984DE171F6B40780040F1CD /* REDREDUCED-06.pdf */; };
 		4984DE1E1F6B40780040F1CD /* TANREDUCED-05.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 4984DE181F6B40780040F1CD /* TANREDUCED-05.pdf */; };
+		49DE19371F6B47CD001EA719 /* REDREDUCED-06-ROUTE.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 49DE19311F6B47CD001EA719 /* REDREDUCED-06-ROUTE.pdf */; };
+		49DE19381F6B47CD001EA719 /* TANREDUCED-05-ROUTE.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 49DE19321F6B47CD001EA719 /* TANREDUCED-05-ROUTE.pdf */; };
+		49DE19391F6B47CD001EA719 /* PURPLEREDUCED-04-ROUTE.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 49DE19331F6B47CD001EA719 /* PURPLEREDUCED-04-ROUTE.pdf */; };
+		49DE193A1F6B47CD001EA719 /* ORANGEREDUCED-03-ROUTE.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 49DE19341F6B47CD001EA719 /* ORANGEREDUCED-03-ROUTE.pdf */; };
+		49DE193B1F6B47CD001EA719 /* BLUEREDUCED-02-ROUTE.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 49DE19351F6B47CD001EA719 /* BLUEREDUCED-02-ROUTE.pdf */; };
+		49DE193C1F6B47CD001EA719 /* GREENREDUCED-01-ROUTE.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 49DE19361F6B47CD001EA719 /* GREENREDUCED-01-ROUTE.pdf */; };
+		49DE19471F6B47E5001EA719 /* REMOTEEXPRESS-48-ROUTE.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 49DE193D1F6B47E5001EA719 /* REMOTEEXPRESS-48-ROUTE.pdf */; };
+		49DE19481F6B47E5001EA719 /* PURPLE-44-ROUTE.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 49DE193E1F6B47E5001EA719 /* PURPLE-44-ROUTE.pdf */; };
+		49DE19491F6B47E5001EA719 /* TAN-35-ROUTE.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 49DE193F1F6B47E5001EA719 /* TAN-35-ROUTE.pdf */; };
+		49DE194A1F6B47E5001EA719 /* ORANGE-33-ROUTE.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 49DE19401F6B47E5001EA719 /* ORANGE-33-ROUTE.pdf */; };
+		49DE194B1F6B47E5001EA719 /* RED-26-ROUTE.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 49DE19411F6B47E5001EA719 /* RED-26-ROUTE.pdf */; };
+		49DE194C1F6B47E5001EA719 /* BLUE-22-ROUTE.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 49DE19421F6B47E5001EA719 /* BLUE-22-ROUTE.pdf */; };
+		49DE194D1F6B47E5001EA719 /* BROWN-17-ROUTE.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 49DE19431F6B47E5001EA719 /* BROWN-17-ROUTE.pdf */; };
+		49DE194E1F6B47E5001EA719 /* ROUTE-13-ROUTE.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 49DE19441F6B47E5001EA719 /* ROUTE-13-ROUTE.pdf */; };
+		49DE194F1F6B47E5001EA719 /* GREEN-11-ROUTE.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 49DE19451F6B47E5001EA719 /* GREEN-11-ROUTE.pdf */; };
+		49DE19501F6B47E5001EA719 /* DICKSONST-07-ROUTE.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 49DE19461F6B47E5001EA719 /* DICKSONST-07-ROUTE.pdf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -93,6 +109,22 @@
 		4984DE161F6B40780040F1CD /* PURPLEREDUCED-04.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "PURPLEREDUCED-04.pdf"; sourceTree = "<group>"; };
 		4984DE171F6B40780040F1CD /* REDREDUCED-06.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "REDREDUCED-06.pdf"; sourceTree = "<group>"; };
 		4984DE181F6B40780040F1CD /* TANREDUCED-05.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "TANREDUCED-05.pdf"; sourceTree = "<group>"; };
+		49DE19311F6B47CD001EA719 /* REDREDUCED-06-ROUTE.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "REDREDUCED-06-ROUTE.pdf"; sourceTree = "<group>"; };
+		49DE19321F6B47CD001EA719 /* TANREDUCED-05-ROUTE.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "TANREDUCED-05-ROUTE.pdf"; sourceTree = "<group>"; };
+		49DE19331F6B47CD001EA719 /* PURPLEREDUCED-04-ROUTE.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "PURPLEREDUCED-04-ROUTE.pdf"; sourceTree = "<group>"; };
+		49DE19341F6B47CD001EA719 /* ORANGEREDUCED-03-ROUTE.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "ORANGEREDUCED-03-ROUTE.pdf"; sourceTree = "<group>"; };
+		49DE19351F6B47CD001EA719 /* BLUEREDUCED-02-ROUTE.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "BLUEREDUCED-02-ROUTE.pdf"; sourceTree = "<group>"; };
+		49DE19361F6B47CD001EA719 /* GREENREDUCED-01-ROUTE.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "GREENREDUCED-01-ROUTE.pdf"; sourceTree = "<group>"; };
+		49DE193D1F6B47E5001EA719 /* REMOTEEXPRESS-48-ROUTE.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "REMOTEEXPRESS-48-ROUTE.pdf"; sourceTree = "<group>"; };
+		49DE193E1F6B47E5001EA719 /* PURPLE-44-ROUTE.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "PURPLE-44-ROUTE.pdf"; sourceTree = "<group>"; };
+		49DE193F1F6B47E5001EA719 /* TAN-35-ROUTE.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "TAN-35-ROUTE.pdf"; sourceTree = "<group>"; };
+		49DE19401F6B47E5001EA719 /* ORANGE-33-ROUTE.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "ORANGE-33-ROUTE.pdf"; sourceTree = "<group>"; };
+		49DE19411F6B47E5001EA719 /* RED-26-ROUTE.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "RED-26-ROUTE.pdf"; sourceTree = "<group>"; };
+		49DE19421F6B47E5001EA719 /* BLUE-22-ROUTE.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "BLUE-22-ROUTE.pdf"; sourceTree = "<group>"; };
+		49DE19431F6B47E5001EA719 /* BROWN-17-ROUTE.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "BROWN-17-ROUTE.pdf"; sourceTree = "<group>"; };
+		49DE19441F6B47E5001EA719 /* ROUTE-13-ROUTE.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "ROUTE-13-ROUTE.pdf"; sourceTree = "<group>"; };
+		49DE19451F6B47E5001EA719 /* GREEN-11-ROUTE.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "GREEN-11-ROUTE.pdf"; sourceTree = "<group>"; };
+		49DE19461F6B47E5001EA719 /* DICKSONST-07-ROUTE.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "DICKSONST-07-ROUTE.pdf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +155,8 @@
 		492F69A61F6A221D009C895C /* Maps */ = {
 			isa = PBXGroup;
 			children = (
+				49DE19301F6B455B001EA719 /* ReducedRoutes */,
+				49DE192F1F6B4553001EA719 /* RegularRoutes */,
 				492F69A71F6A22AF009C895C /* parkmap.pdf */,
 				496C180C1F68DD29003E51A4 /* ReducedSchedules */,
 				496C17F71F68DCE6003E51A4 /* RegularSchedules */,
@@ -183,14 +217,9 @@
 		49798C311F68CEC8003C0CEB /* Razorback Transit */ = {
 			isa = PBXGroup;
 			children = (
+				49DE192E1F6B437F001EA719 /* View Controllers */,
 				492F69A61F6A221D009C895C /* Maps */,
-				49798C341F68CEC8003C0CEB /* LiveMapViewController.swift */,
-				492F69A41F6A2003009C895C /* ParkingMapViewController.swift */,
-				491E24421F68F9B300B5F2A0 /* ScheduleTableViewController.swift */,
-				492F69A91F6A2FCE009C895C /* ScheduleViewController.swift */,
 				49798C361F68CEC8003C0CEB /* Main.storyboard */,
-				495784721F6A5087001B4539 /* RouteMapWebViewController.swift */,
-				495784701F6A4F29001B4539 /* RouteMapTableViewController.swift */,
 				49798C391F68CEC8003C0CEB /* Assets.xcassets */,
 				49798C321F68CEC8003C0CEB /* AppDelegate.swift */,
 				49798C3B1F68CEC8003C0CEB /* LaunchScreen.storyboard */,
@@ -216,6 +245,49 @@
 				49798C541F68CEC9003C0CEB /* Info.plist */,
 			);
 			path = "Razorback TransitUITests";
+			sourceTree = "<group>";
+		};
+		49DE192E1F6B437F001EA719 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				49798C341F68CEC8003C0CEB /* LiveMapViewController.swift */,
+				492F69A41F6A2003009C895C /* ParkingMapViewController.swift */,
+				491E24421F68F9B300B5F2A0 /* ScheduleTableViewController.swift */,
+				492F69A91F6A2FCE009C895C /* ScheduleViewController.swift */,
+				495784721F6A5087001B4539 /* RouteMapWebViewController.swift */,
+				495784701F6A4F29001B4539 /* RouteMapTableViewController.swift */,
+			);
+			name = "View Controllers";
+			sourceTree = "<group>";
+		};
+		49DE192F1F6B4553001EA719 /* RegularRoutes */ = {
+			isa = PBXGroup;
+			children = (
+				49DE193D1F6B47E5001EA719 /* REMOTEEXPRESS-48-ROUTE.pdf */,
+				49DE193E1F6B47E5001EA719 /* PURPLE-44-ROUTE.pdf */,
+				49DE193F1F6B47E5001EA719 /* TAN-35-ROUTE.pdf */,
+				49DE19401F6B47E5001EA719 /* ORANGE-33-ROUTE.pdf */,
+				49DE19411F6B47E5001EA719 /* RED-26-ROUTE.pdf */,
+				49DE19421F6B47E5001EA719 /* BLUE-22-ROUTE.pdf */,
+				49DE19431F6B47E5001EA719 /* BROWN-17-ROUTE.pdf */,
+				49DE19441F6B47E5001EA719 /* ROUTE-13-ROUTE.pdf */,
+				49DE19451F6B47E5001EA719 /* GREEN-11-ROUTE.pdf */,
+				49DE19461F6B47E5001EA719 /* DICKSONST-07-ROUTE.pdf */,
+			);
+			name = RegularRoutes;
+			sourceTree = "<group>";
+		};
+		49DE19301F6B455B001EA719 /* ReducedRoutes */ = {
+			isa = PBXGroup;
+			children = (
+				49DE19311F6B47CD001EA719 /* REDREDUCED-06-ROUTE.pdf */,
+				49DE19321F6B47CD001EA719 /* TANREDUCED-05-ROUTE.pdf */,
+				49DE19331F6B47CD001EA719 /* PURPLEREDUCED-04-ROUTE.pdf */,
+				49DE19341F6B47CD001EA719 /* ORANGEREDUCED-03-ROUTE.pdf */,
+				49DE19351F6B47CD001EA719 /* BLUEREDUCED-02-ROUTE.pdf */,
+				49DE19361F6B47CD001EA719 /* GREENREDUCED-01-ROUTE.pdf */,
+			);
+			name = ReducedRoutes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -326,24 +398,40 @@
 			buildActionMask = 2147483647;
 			files = (
 				4957846D1F6A4B16001B4539 /* GREEN-11.pdf in Resources */,
+				49DE19501F6B47E5001EA719 /* DICKSONST-07-ROUTE.pdf in Resources */,
+				49DE19371F6B47CD001EA719 /* REDREDUCED-06-ROUTE.pdf in Resources */,
 				49798C3D1F68CEC8003C0CEB /* LaunchScreen.storyboard in Resources */,
 				4957846B1F6A4B16001B4539 /* PURPLE-44.pdf in Resources */,
 				4957846C1F6A4B16001B4539 /* ORANGE-33.pdf in Resources */,
 				4957846F1F6A4B16001B4539 /* BROWN-17.pdf in Resources */,
 				49798C3A1F68CEC8003C0CEB /* Assets.xcassets in Resources */,
+				49DE19471F6B47E5001EA719 /* REMOTEEXPRESS-48-ROUTE.pdf in Resources */,
 				4984DE1A1F6B40780040F1CD /* GREENREDUCED-01.pdf in Resources */,
+				49DE19391F6B47CD001EA719 /* PURPLEREDUCED-04-ROUTE.pdf in Resources */,
 				492F69A81F6A22AF009C895C /* parkmap.pdf in Resources */,
+				49DE193B1F6B47CD001EA719 /* BLUEREDUCED-02-ROUTE.pdf in Resources */,
+				49DE19491F6B47E5001EA719 /* TAN-35-ROUTE.pdf in Resources */,
+				49DE19481F6B47E5001EA719 /* PURPLE-44-ROUTE.pdf in Resources */,
+				49DE194C1F6B47E5001EA719 /* BLUE-22-ROUTE.pdf in Resources */,
 				495784681F6A4B16001B4539 /* ROUTE-13.pdf in Resources */,
 				4984DE191F6B40780040F1CD /* BLUEREDUCED-02.pdf in Resources */,
+				49DE194A1F6B47E5001EA719 /* ORANGE-33-ROUTE.pdf in Resources */,
 				4957846E1F6A4B16001B4539 /* DICKSONST-07.pdf in Resources */,
 				4984DE1B1F6B40780040F1CD /* ORANGEREDUCED-03.pdf in Resources */,
+				49DE194E1F6B47E5001EA719 /* ROUTE-13-ROUTE.pdf in Resources */,
 				49798C381F68CEC8003C0CEB /* Main.storyboard in Resources */,
+				49DE19381F6B47CD001EA719 /* TANREDUCED-05-ROUTE.pdf in Resources */,
 				4984DE1D1F6B40780040F1CD /* REDREDUCED-06.pdf in Resources */,
 				4984DE1E1F6B40780040F1CD /* TANREDUCED-05.pdf in Resources */,
 				4984DE1C1F6B40780040F1CD /* PURPLEREDUCED-04.pdf in Resources */,
+				49DE194B1F6B47E5001EA719 /* RED-26-ROUTE.pdf in Resources */,
+				49DE193C1F6B47CD001EA719 /* GREENREDUCED-01-ROUTE.pdf in Resources */,
+				49DE194F1F6B47E5001EA719 /* GREEN-11-ROUTE.pdf in Resources */,
+				49DE194D1F6B47E5001EA719 /* BROWN-17-ROUTE.pdf in Resources */,
 				495784691F6A4B16001B4539 /* REMOTEEXPRESS-48.pdf in Resources */,
 				495784671F6A4B16001B4539 /* TAN-35.pdf in Resources */,
 				495784661F6A4B16001B4539 /* BLUE-22.pdf in Resources */,
+				49DE193A1F6B47CD001EA719 /* ORANGEREDUCED-03-ROUTE.pdf in Resources */,
 				4957846A1F6A4B16001B4539 /* RED-26.pdf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

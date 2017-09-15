@@ -12,8 +12,8 @@ class RouteMapTableViewController: UITableViewController {
 
     @IBOutlet var RouteMapTableView: UITableView!
     
-    let RegularRoutes: [String] = ["TAN-35", "ROUTE-13", "REMOTEEXPRESS-48", "RED-26", "PURPLE-44", "ORANGE-33", "GREEN-11", "DICKSONST-07", "BROWN-17", "BLUE-22"]
-    let ReducedRoutes: [String] = ["TANREDUCED-05", "REDREDUCED-06", "PURPLEREDUCED-04", "ORANGEREDUCED-03", "GREENREDUCED-01", "BLUEREDUCED-02"]
+    let RegularRoutes: [String] = ["TAN-35-ROUTE", "ROUTE-13-ROUTE", "REMOTEEXPRESS-48-ROUTE", "RED-26-ROUTE", "PURPLE-44-ROUTE", "ORANGE-33-ROUTE", "GREEN-11-ROUTE", "DICKSONST-07-ROUTE", "BROWN-17-ROUTE", "BLUE-22-ROUTE"]
+    let ReducedRoutes: [String] = ["TANREDUCED-05-ROUTE", "REDREDUCED-06-ROUTE", "PURPLEREDUCED-04-ROUTE", "ORANGEREDUCED-03-ROUTE", "GREENREDUCED-01-ROUTE", "BLUEREDUCED-02-ROUTE"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -65,8 +65,7 @@ class RouteMapTableViewController: UITableViewController {
         default:
             break
         }
-        
-        cell.MapNameLabel.text = RegularRoutes[indexPath.row]
+
         cell.accessoryType = UITableViewCellAccessoryType.disclosureIndicator
         
         return cell
@@ -124,7 +123,19 @@ class RouteMapTableViewController: UITableViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         let destination = segue.destination as? RouteMapWebViewController
-        destination?.mapName = RegularRoutes[(tableView.indexPathForSelectedRow?.row)!]
+        
+        guard let section = tableView.indexPathForSelectedRow?.section else {
+            return
+        }
+        
+        switch section {
+        case 0:
+            destination?.mapName = RegularRoutes[(tableView.indexPathForSelectedRow?.row)!]
+        case 1:
+            destination?.mapName = ReducedRoutes[(tableView.indexPathForSelectedRow?.row)!]
+        default:
+            destination?.mapName = ""
+        }
     }
 
 }
