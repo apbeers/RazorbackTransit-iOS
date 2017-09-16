@@ -652,7 +652,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = G3446S9BE4;
+				DEVELOPMENT_TEAM = GQQX4L6TE2;
 				INFOPLIST_FILE = "Razorback Transit/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -668,7 +668,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = G3446S9BE4;
+				DEVELOPMENT_TEAM = GQQX4L6TE2;
 				GCC_OPTIMIZATION_LEVEL = 3;
 				INFOPLIST_FILE = "Razorback Transit/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
