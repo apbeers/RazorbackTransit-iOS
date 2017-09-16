@@ -36,6 +36,7 @@
 		4984DE1C1F6B40780040F1CD /* PURPLEREDUCED-04.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 4984DE161F6B40780040F1CD /* PURPLEREDUCED-04.pdf */; };
 		4984DE1D1F6B40780040F1CD /* REDREDUCED-06.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 4984DE171F6B40780040F1CD /* REDREDUCED-06.pdf */; };
 		4984DE1E1F6B40780040F1CD /* TANREDUCED-05.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 4984DE181F6B40780040F1CD /* TANREDUCED-05.pdf */; };
+		49DD4BCE1F6D94DD0099A70B /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49DD4BCD1F6D94DD0099A70B /* Reachability.swift */; };
 		49DE19371F6B47CD001EA719 /* REDREDUCED-06-ROUTE.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 49DE19311F6B47CD001EA719 /* REDREDUCED-06-ROUTE.pdf */; };
 		49DE19381F6B47CD001EA719 /* TANREDUCED-05-ROUTE.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 49DE19321F6B47CD001EA719 /* TANREDUCED-05-ROUTE.pdf */; };
 		49DE19391F6B47CD001EA719 /* PURPLEREDUCED-04-ROUTE.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 49DE19331F6B47CD001EA719 /* PURPLEREDUCED-04-ROUTE.pdf */; };
@@ -114,6 +115,7 @@
 		4984DE161F6B40780040F1CD /* PURPLEREDUCED-04.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "PURPLEREDUCED-04.pdf"; sourceTree = "<group>"; };
 		4984DE171F6B40780040F1CD /* REDREDUCED-06.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "REDREDUCED-06.pdf"; sourceTree = "<group>"; };
 		4984DE181F6B40780040F1CD /* TANREDUCED-05.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "TANREDUCED-05.pdf"; sourceTree = "<group>"; };
+		49DD4BCD1F6D94DD0099A70B /* Reachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 		49DE19311F6B47CD001EA719 /* REDREDUCED-06-ROUTE.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "REDREDUCED-06-ROUTE.pdf"; sourceTree = "<group>"; };
 		49DE19321F6B47CD001EA719 /* TANREDUCED-05-ROUTE.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "TANREDUCED-05-ROUTE.pdf"; sourceTree = "<group>"; };
 		49DE19331F6B47CD001EA719 /* PURPLEREDUCED-04-ROUTE.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "PURPLEREDUCED-04-ROUTE.pdf"; sourceTree = "<group>"; };
@@ -242,6 +244,7 @@
 				49DE19621F6B7271001EA719 /* Extensions.swift */,
 				49DE19641F6B7A33001EA719 /* BaseTableViewController.swift */,
 				49DE19661F6B8058001EA719 /* BaseViewController.swift */,
+				49DD4BCD1F6D94DD0099A70B /* Reachability.swift */,
 			);
 			path = "Razorback Transit";
 			sourceTree = "<group>";
@@ -491,6 +494,7 @@
 				49798C351F68CEC8003C0CEB /* LiveMapViewController.swift in Sources */,
 				49DE195B1F6B6011001EA719 /* ScheduleCollectionViewCell.swift in Sources */,
 				49DE195D1F6B6FE4001EA719 /* PDFFile.swift in Sources */,
+				49DD4BCE1F6D94DD0099A70B /* Reachability.swift in Sources */,
 				49DE19631F6B7271001EA719 /* Extensions.swift in Sources */,
 				491E24431F68F9B300B5F2A0 /* ScheduleTableViewController.swift in Sources */,
 				49DE19651F6B7A33001EA719 /* BaseTableViewController.swift in Sources */,

@@ -12,7 +12,8 @@ import WebKit
 class LiveMapViewController: BaseViewController, WKUIDelegate, WKNavigationDelegate {
 
     @IBOutlet weak var LiveWebView: UIView!
-    
+    @IBOutlet weak var OfflineView: UIView!
+
     var webView: WKWebView!
     let defaults = UserDefaults.standard
     var needsUpdate = false
@@ -20,8 +21,8 @@ class LiveMapViewController: BaseViewController, WKUIDelegate, WKNavigationDeleg
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        NotificationCenter.default.addObserver(self, selector: #selector(self.checkIfNeedsReload), name: NSNotification.Name.UIApplicationWillEnterForeground, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(self.storeLastLoadedTime), name: NSNotification.Name.UIApplicationDidEnterBackground, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(self.willEnterForeground), name: NSNotification.Name.UIApplicationWillEnterForeground, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(self.didEnterBackground), name: NSNotification.Name.UIApplicationDidEnterBackground, object: nil)
         
         webView = WKWebView(frame: LiveWebView.bounds, configuration: WKWebViewConfiguration())
         LiveWebView.addSubview(webView)
@@ -32,21 +33,33 @@ class LiveMapViewController: BaseViewController, WKUIDelegate, WKNavigationDeleg
         guard let url = URL(string: "http://campusmaps.uark.edu/embed/routes") else {
             return
         }
+        
         let request = URLRequest(url: url)
         
         webView.load(request)
         
     }
     
-    func checkIfNeedsReload() {
+    func willEnterForeground() {
+        
+        let networkStatus = Reachability().connectionStatus()
+        switch networkStatus {
+        case .Unknown, .Offline:
+            self.LiveWebView.isHidden = true
+            self.OfflineView.isHidden = false
+        default:
+            self.LiveWebView.isHidden = false
+            self.OfflineView.isHidden = true
+        }
         
         DispatchQueue.global().async {
+            
             
             guard let lastLoaded = self.defaults.value(forKey: "date") as? Date else {
                 return
             }
             
-            guard let timeInterval = TimeInterval(exactly: -300) else {
+            guard let timeInterval = TimeInterval(exactly: -120) else {
                 return
             }
             
@@ -57,7 +70,7 @@ class LiveMapViewController: BaseViewController, WKUIDelegate, WKNavigationDeleg
         }
     }
     
-    func storeLastLoadedTime() {
+    func didEnterBackground() {
         
         DispatchQueue.global().async {
             
@@ -68,7 +81,8 @@ class LiveMapViewController: BaseViewController, WKUIDelegate, WKNavigationDeleg
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        
+        webView.reload()
     }
 }
 
