@@ -20,9 +20,8 @@ class LiveMapViewController: BaseViewController, WKUIDelegate, WKNavigationDeleg
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
-        defaults = UserDefaults.standard
         NotificationCenter.default.addObserver(self, selector: #selector(self.checkIfNeedsReload), name: NSNotification.Name.UIApplicationWillEnterForeground, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(self.storeLastLoadedTime), name: NSNotification.Name.UIApplicationDidEnterBackground, object: nil)
         
         webView = WKWebView(frame: LiveWebView.bounds, configuration: WKWebViewConfiguration())
         LiveWebView.addSubview(webView)
@@ -34,7 +33,6 @@ class LiveMapViewController: BaseViewController, WKUIDelegate, WKNavigationDeleg
         let request = URLRequest(url: url)
         webView.load(request)
         
-        defaults.set(Date(), forKey: "date")
     }
     
     func checkIfNeedsReload() {
@@ -50,6 +48,16 @@ class LiveMapViewController: BaseViewController, WKUIDelegate, WKNavigationDeleg
         
         if lastLoaded.timeIntervalSince(Date()) < timeInterval && webView != nil {
             webView.reload()
+        }
+    }
+    
+    func storeLastLoadedTime() {
+        
+        DispatchQueue.global().async {
+            
+            self.defaults = UserDefaults.standard
+            self.defaults.set(Date(), forKey: "date")
+            self.defaults.synchronize()
         }
         
     }
