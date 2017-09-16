@@ -9,7 +9,7 @@
 import UIKit
 import WebKit
 
-class ScheduleViewController: BaseViewController, WKUIDelegate {
+class ScheduleViewController: BaseViewController, WKUIDelegate, UIScrollViewDelegate {
 
 
     @IBOutlet weak var ScheduleWebView: UIView!
@@ -21,6 +21,8 @@ class ScheduleViewController: BaseViewController, WKUIDelegate {
         super.viewDidLoad()
         
         webView = WKWebView(frame: ScheduleWebView.bounds, configuration: WKWebViewConfiguration())
+        webView.scrollView.delegate = self
+        
         ScheduleWebView.addSubview(webView)
         
         guard let pdf = Bundle.main.url(forResource: mapName, withExtension: "pdf") else {

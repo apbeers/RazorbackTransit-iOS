@@ -14,7 +14,7 @@ class LiveMapViewController: BaseViewController, WKUIDelegate, WKNavigationDeleg
     @IBOutlet weak var LiveWebView: UIView!
     
     var webView: WKWebView!
-    var defaults: UserDefaults!
+    let defaults = UserDefaults.standard
     var needsUpdate = false
     
     override func viewDidLoad() {
@@ -25,29 +25,35 @@ class LiveMapViewController: BaseViewController, WKUIDelegate, WKNavigationDeleg
         
         webView = WKWebView(frame: LiveWebView.bounds, configuration: WKWebViewConfiguration())
         LiveWebView.addSubview(webView)
+        webView.scrollView.isScrollEnabled = false
+        
         webView.navigationDelegate = self
         
         guard let url = URL(string: "http://campusmaps.uark.edu/embed/routes") else {
             return
         }
         let request = URLRequest(url: url)
+        
         webView.load(request)
         
     }
     
     func checkIfNeedsReload() {
         
-        defaults = UserDefaults.standard
-        guard let lastLoaded = defaults.value(forKey: "date") as? Date else {
-            return
-        }
-        
-        guard let timeInterval = TimeInterval(exactly: -300) else {
-            return
-        }
-        
-        if lastLoaded.timeIntervalSince(Date()) < timeInterval && webView != nil {
-            webView.reload()
+        DispatchQueue.global().async {
+            
+            guard let lastLoaded = self.defaults.value(forKey: "date") as? Date else {
+                return
+            }
+            
+            guard let timeInterval = TimeInterval(exactly: -300) else {
+                return
+            }
+            
+            if lastLoaded.timeIntervalSince(Date()) < timeInterval && self.webView != nil {
+                
+                self.webView.reload()
+            }
         }
     }
     
@@ -55,11 +61,9 @@ class LiveMapViewController: BaseViewController, WKUIDelegate, WKNavigationDeleg
         
         DispatchQueue.global().async {
             
-            self.defaults = UserDefaults.standard
             self.defaults.set(Date(), forKey: "date")
             self.defaults.synchronize()
         }
-        
     }
     
     override func didReceiveMemoryWarning() {

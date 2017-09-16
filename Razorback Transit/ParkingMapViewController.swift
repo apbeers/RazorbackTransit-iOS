@@ -19,6 +19,7 @@ class ParkingMapViewController: UIViewController {
         super.viewDidLoad()
         
         webView = WKWebView(frame: ParkingMapWebView.bounds, configuration: WKWebViewConfiguration())
+
         ParkingMapWebView.addSubview(webView)
         
         let fileName = Constants.parkingMap.fileName
