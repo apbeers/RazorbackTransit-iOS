@@ -9,7 +9,7 @@
 import UIKit
 import WebKit
 
-class ParkingMapViewController: UIViewController {
+class ParkingMapViewController: BaseViewController, WKNavigationDelegate {
 
     
     @IBOutlet weak var ParkingMapWebView: UIView!
@@ -19,6 +19,7 @@ class ParkingMapViewController: UIViewController {
         super.viewDidLoad()
         
         webView = WKWebView(frame: ParkingMapWebView.bounds, configuration: WKWebViewConfiguration())
+        webView.navigationDelegate = self
 
         ParkingMapWebView.addSubview(webView)
         
@@ -30,6 +31,26 @@ class ParkingMapViewController: UIViewController {
         let request = URLRequest(url: pdf)
         webView.load(request)
     }
+    
+    func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
+        let webViewSubviews = self.getSubviewsOfView(v: self.webView)
+        for v in webViewSubviews {
+            if v.description.range(of:"WKPDFPageNumberIndicator") != nil {
+                v.isHidden = true // hide page indicator in upper left
+            }
+        }
+    }
+    
+    func getSubviewsOfView(v:UIView) -> [UIView] {
+        var viewArray = [UIView]()
+        for subview in v.subviews {
+            viewArray += getSubviewsOfView(v: subview)
+            viewArray.append(subview)
+        }
+        return viewArray
+    }
+
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
