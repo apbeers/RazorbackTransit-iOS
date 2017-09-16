@@ -15,7 +15,7 @@ class RouteMapTableViewController: BaseTableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        navBar.topItem?.title = "Maps"
+        navBar.topItem?.title = "Routes"
     }
 
     override func didReceiveMemoryWarning() {

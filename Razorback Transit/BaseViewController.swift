@@ -10,9 +10,11 @@ import UIKit
 
 class BaseViewController: UIViewController {    
     
+    //var navBar: UINavigationBar!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         // Do any additional setup after loading the view.
     }
 
