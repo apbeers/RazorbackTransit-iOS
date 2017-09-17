@@ -653,7 +653,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LLVM_LTO = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = "Razorback-Transit";
+				PRODUCT_BUNDLE_IDENTIFIER = arcu.razorbacktransit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -670,7 +670,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LLVM_LTO = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = "Razorback-Transit";
+				PRODUCT_BUNDLE_IDENTIFIER = arcu.razorbacktransit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 1;
