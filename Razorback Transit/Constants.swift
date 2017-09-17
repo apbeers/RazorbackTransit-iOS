@@ -63,13 +63,6 @@ struct Constants {
     
     static let reducedRoutes: [PDFFile] = [RouteFiles.blueReduced, RouteFiles.greenReduced, RouteFiles.orangeReduced, RouteFiles.purpleReduced, RouteFiles.redReduced, RouteFiles.tanReduced]
     
-    
-    
-    /*
-    static let regularRoutes: [PDFFile] = [RouteFiles.blue, RouteFiles.tan, RouteFiles.route13, RouteFiles.remoteexpress, RouteFiles.red, RouteFiles.purple, RouteFiles.orange, RouteFiles.green, RouteFiles.dickson, RouteFiles.brown]
-    
-    static let reducedRoutes: [PDFFile] = [RouteFiles.blueReduced, RouteFiles.greenReduced, RouteFiles.orangeReduced, RouteFiles.purpleReduced, RouteFiles.redReduced, RouteFiles.tanReduced]
-    */
     static let parkingMap = PDFFile(filename: "parkmap", title: "Parking Map")
 }
 

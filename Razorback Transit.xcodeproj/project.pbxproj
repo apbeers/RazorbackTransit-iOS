@@ -57,7 +57,6 @@
 		49DE195B1F6B6011001EA719 /* ScheduleCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49DE195A1F6B6011001EA719 /* ScheduleCollectionViewCell.swift */; };
 		49DE195D1F6B6FE4001EA719 /* PDFFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49DE195C1F6B6FE4001EA719 /* PDFFile.swift */; };
 		49DE19611F6B724D001EA719 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49DE19601F6B724D001EA719 /* Constants.swift */; };
-		49DE19631F6B7271001EA719 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49DE19621F6B7271001EA719 /* Extensions.swift */; };
 		49DE19651F6B7A33001EA719 /* BaseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49DE19641F6B7A33001EA719 /* BaseTableViewController.swift */; };
 		49DE19671F6B8058001EA719 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49DE19661F6B8058001EA719 /* BaseViewController.swift */; };
 /* End PBXBuildFile section */
@@ -136,7 +135,6 @@
 		49DE195A1F6B6011001EA719 /* ScheduleCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduleCollectionViewCell.swift; sourceTree = "<group>"; };
 		49DE195C1F6B6FE4001EA719 /* PDFFile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PDFFile.swift; sourceTree = "<group>"; };
 		49DE19601F6B724D001EA719 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-		49DE19621F6B7271001EA719 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		49DE19641F6B7A33001EA719 /* BaseTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTableViewController.swift; sourceTree = "<group>"; };
 		49DE19661F6B8058001EA719 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -241,7 +239,6 @@
 				49798C3E1F68CEC8003C0CEB /* Info.plist */,
 				49DE195C1F6B6FE4001EA719 /* PDFFile.swift */,
 				49DE19601F6B724D001EA719 /* Constants.swift */,
-				49DE19621F6B7271001EA719 /* Extensions.swift */,
 				49DE19641F6B7A33001EA719 /* BaseTableViewController.swift */,
 				49DE19661F6B8058001EA719 /* BaseViewController.swift */,
 				49DD4BCD1F6D94DD0099A70B /* Reachability.swift */,
@@ -495,7 +492,6 @@
 				49DE195B1F6B6011001EA719 /* ScheduleCollectionViewCell.swift in Sources */,
 				49DE195D1F6B6FE4001EA719 /* PDFFile.swift in Sources */,
 				49DD4BCE1F6D94DD0099A70B /* Reachability.swift in Sources */,
-				49DE19631F6B7271001EA719 /* Extensions.swift in Sources */,
 				491E24431F68F9B300B5F2A0 /* ScheduleTableViewController.swift in Sources */,
 				49DE19651F6B7A33001EA719 /* BaseTableViewController.swift in Sources */,
 				49798C331F68CEC8003C0CEB /* AppDelegate.swift in Sources */,
