@@ -11,10 +11,8 @@ import WebKit
 
 class ScheduleViewController: BaseViewController, WKUIDelegate, UIScrollViewDelegate {
 
-
     @IBOutlet weak var ScheduleWebView: UIView!
 
-    var webView: WKWebView!
     var mapName: String!
     
     override func viewDidLoad() {
@@ -22,6 +20,7 @@ class ScheduleViewController: BaseViewController, WKUIDelegate, UIScrollViewDele
         
         webView = WKWebView(frame: ScheduleWebView.bounds, configuration: WKWebViewConfiguration())
         webView.scrollView.delegate = self
+        webView.navigationDelegate = self
         
         ScheduleWebView.addSubview(webView)
         
@@ -35,7 +34,6 @@ class ScheduleViewController: BaseViewController, WKUIDelegate, UIScrollViewDele
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-
     }
     
     func viewForZooming(in scrollView: UIScrollView) -> UIView? {

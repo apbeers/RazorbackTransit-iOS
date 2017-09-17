@@ -48,21 +48,28 @@ struct Constants {
         static let dickson = PDFFile(filename: "DICKSONST-07-ROUTE", title: "Dickson St")
         static let brown = PDFFile(filename: "BROWN-17-ROUTE", title: "Brown 17")
         static let blueReduced = PDFFile(filename: "BLUEREDUCED-02-ROUTE", title: "Blue Reduced")
-        static let greenReduced = PDFFile(filename: "GRENNREDUCED-01-ROUTE", title: "Green Reduced")
+        static let greenReduced = PDFFile(filename: "GREENREDUCED-01-ROUTE", title: "Green Reduced")
         static let orangeReduced = PDFFile(filename: "ORANGEREDUCED-03-ROUTE", title: "Orange Reduced")
-        static let purpleReduced = PDFFile(filename: "PURPLEREDUCED-06-ROUTE", title: "Purple Reduced")
+        static let purpleReduced = PDFFile(filename: "PURPLEREDUCED-04-ROUTE", title: "Purple Reduced")
                 static let redReduced = PDFFile(filename: "REDREDUCED-06-ROUTE", title: "Red Reduced")
         static let tanReduced = PDFFile(filename: "TANREDUCED-05-ROUTE", title: "Tan Reduced")
     }
     
-    static let regularSchedules: [PDFFile] = [ScheduleFiles.blue, ScheduleFiles.tan, ScheduleFiles.route13, ScheduleFiles.remoteexpress, ScheduleFiles.red, ScheduleFiles.purple, ScheduleFiles.orange, ScheduleFiles.green, ScheduleFiles.dickson, ScheduleFiles.brown]
+    static let regularSchedules: [PDFFile] = [ScheduleFiles.blue, ScheduleFiles.brown, ScheduleFiles.dickson, ScheduleFiles.green, ScheduleFiles.orange, ScheduleFiles.purple, ScheduleFiles.red, ScheduleFiles.remoteexpress, ScheduleFiles.route13, ScheduleFiles.tan]
     
     static let reducedSchedules: [PDFFile] = [ScheduleFiles.blueReduced, ScheduleFiles.greenReduced, ScheduleFiles.orangeReduced, ScheduleFiles.purpleReduced, ScheduleFiles.redReduced, ScheduleFiles.tanReduced]
     
-    static let regularRoutes: [PDFFile] = [RouteFiles.blue, RouteFiles.tan, RouteFiles.route13, RouteFiles.remoteexpress, RouteFiles.red, RouteFiles.purple, RouteFiles.orange, RouteFiles.green, RouteFiles.dickson, RouteFiles.brown]
+    static let regularRoutes: [PDFFile] = [RouteFiles.blue, RouteFiles.brown, RouteFiles.dickson, RouteFiles.green, RouteFiles.orange, RouteFiles.purple, RouteFiles.red, RouteFiles.remoteexpress, RouteFiles.route13, RouteFiles.tan]
     
     static let reducedRoutes: [PDFFile] = [RouteFiles.blueReduced, RouteFiles.greenReduced, RouteFiles.orangeReduced, RouteFiles.purpleReduced, RouteFiles.redReduced, RouteFiles.tanReduced]
     
+    
+    
+    /*
+    static let regularRoutes: [PDFFile] = [RouteFiles.blue, RouteFiles.tan, RouteFiles.route13, RouteFiles.remoteexpress, RouteFiles.red, RouteFiles.purple, RouteFiles.orange, RouteFiles.green, RouteFiles.dickson, RouteFiles.brown]
+    
+    static let reducedRoutes: [PDFFile] = [RouteFiles.blueReduced, RouteFiles.greenReduced, RouteFiles.orangeReduced, RouteFiles.purpleReduced, RouteFiles.redReduced, RouteFiles.tanReduced]
+    */
     static let parkingMap = PDFFile(filename: "parkmap", title: "Parking Map")
 }
 

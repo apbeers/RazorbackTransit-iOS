@@ -9,12 +9,11 @@
 import UIKit
 import WebKit
 
-class LiveMapViewController: BaseViewController, WKUIDelegate, WKNavigationDelegate {
+class LiveMapViewController: BaseViewController, WKUIDelegate {
 
     @IBOutlet weak var LiveWebView: UIView!
     @IBOutlet weak var OfflineView: UIView!
 
-    var webView: WKWebView!
     let defaults = UserDefaults.standard
     var needsUpdate = false
     

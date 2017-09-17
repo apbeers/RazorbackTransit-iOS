@@ -9,12 +9,10 @@
 import UIKit
 import WebKit
 
-class RouteMapWebViewController: BaseViewController, WKUIDelegate, WKNavigationDelegate {
-    
+class RouteMapWebViewController: BaseViewController, WKUIDelegate {
 
     @IBOutlet weak var RouteMapWebView: UIView!
     
-    var webView: WKWebView!
     var mapName: String!
 
     override func viewDidLoad() {
@@ -30,24 +28,6 @@ class RouteMapWebViewController: BaseViewController, WKUIDelegate, WKNavigationD
         
         let request = URLRequest(url: pdf)
         webView.load(request)
-    }
-    
-    func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
-        let webViewSubviews = self.getSubviewsOfView(v: self.webView)
-        for v in webViewSubviews {
-            if v.description.range(of:"WKPDFPageNumberIndicator") != nil {
-                v.isHidden = true // hide page indicator in upper left
-            }
-        }
-    }
-    
-    func getSubviewsOfView(v:UIView) -> [UIView] {
-        var viewArray = [UIView]()
-        for subview in v.subviews {
-            viewArray += getSubviewsOfView(v: subview)
-            viewArray.append(subview)
-        }
-        return viewArray
     }
 
     override func didReceiveMemoryWarning() {
