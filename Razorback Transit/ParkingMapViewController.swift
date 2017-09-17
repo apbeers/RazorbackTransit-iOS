@@ -9,40 +9,28 @@
 import UIKit
 import WebKit
 
-class ParkingMapViewController: UIViewController {
+class ParkingMapViewController: BaseViewController {
 
-    
     @IBOutlet weak var ParkingMapWebView: UIView!
-    var webView: WKWebView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         webView = WKWebView(frame: ParkingMapWebView.bounds, configuration: WKWebViewConfiguration())
+        webView.navigationDelegate = self
+
         ParkingMapWebView.addSubview(webView)
         
-        guard let pdf = Bundle.main.url(forResource: "parkmap", withExtension: "pdf") else {
+        let fileName = Constants.parkingMap.fileName
+        guard let pdf = Bundle.main.url(forResource: fileName , withExtension: "pdf") else {
             return
         }
 
         let request = URLRequest(url: pdf)
         webView.load(request)
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
