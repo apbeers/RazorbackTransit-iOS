@@ -29,7 +29,7 @@ class LiveMapViewController: BaseViewController, WKUIDelegate {
         
         webView.navigationDelegate = self
         
-        guard let url = URL(string: "http://campusmaps.uark.edu/embed/routes") else {
+        guard let url = URL(string: Constants.liveMapURL) else {
             return
         }
         
