@@ -1,21 +1,26 @@
 //
-//  RouteMapTableViewController.swift
+//  ScheduleListViewController.swift
 //  Razorback Transit
 //
-//  Created by Andrew Beers on 9/14/17.
+//  Created by Andrew Beers on 9/13/17.
 //  Copyright © 2017 Andrew Beers. All rights reserved.
 //
 
 import UIKit
 
-class RouteMapTableViewController: BaseTableViewController {
+enum RouteTypes: Int {
+    case Regular
+    case Reduced
+}
 
-    @IBOutlet var RouteMapTableView: UITableView!
+class ScheduleTableViewController: BaseTableViewController {
+
+    @IBOutlet var ScheduleListTableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        navBar.topItem?.title = "Routes"
+        
+        navBar.topItem?.title = "Schedules"
     }
 
     override func didReceiveMemoryWarning() {
@@ -24,7 +29,7 @@ class RouteMapTableViewController: BaseTableViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         
-        SelectedRows.selectedRoute = IndexPath()
+        SelectedRows.selectedSchedule = IndexPath()
         tableView.reloadData()
     }
 
@@ -34,22 +39,22 @@ class RouteMapTableViewController: BaseTableViewController {
 
         return 2
     }
-    
+
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
         switch section {
         case 0:
-            return Constants.regularRoutes.count
+            return Constants.regularSchedules.count
         case 1:
-            return Constants.reducedRoutes.count
+            return Constants.reducedSchedules.count
         default:
             return 0
         }
     }
-    
+
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-        SelectedRows.selectedRoute = indexPath
+        SelectedRows.selectedSchedule = indexPath
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -60,20 +65,20 @@ class RouteMapTableViewController: BaseTableViewController {
         
         switch indexPath.section {
         case 0:
-            cell.MapNameLabel.text = Constants.regularRoutes[indexPath.row].title
+            cell.MapNameLabel.text = Constants.regularSchedules[indexPath.row].title
         case 1:
-            cell.MapNameLabel.text = Constants.reducedRoutes[indexPath.row].title
+            cell.MapNameLabel.text = Constants.reducedSchedules[indexPath.row].title
         default:
             break
         }
         
-        if indexPath == SelectedRows.selectedSchedule {
+        if indexPath == SelectedRows.selectedRoute {
             cell.MapNameLabel.font = UIFont.boldSystemFont(ofSize: Constants.cellFontSize)
         }
         else {
             cell.MapNameLabel.font = UIFont.systemFont(ofSize: Constants.cellFontSize)
         }
-
+        
         cell.accessoryType = UITableViewCellAccessoryType.disclosureIndicator
         
         return cell
@@ -92,18 +97,20 @@ class RouteMapTableViewController: BaseTableViewController {
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        
         return 50
     }
-    
+
     override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        
         return 30
     }
-        
+   
     // MARK: - Navigation
-    
+ 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
-        let destination = segue.destination as? RouteMapWebViewController
+        let destination = segue.destination as? ScheduleViewController
         
         guard let section = tableView.indexPathForSelectedRow?.section else {
             return
@@ -111,12 +118,14 @@ class RouteMapTableViewController: BaseTableViewController {
         
         switch section {
         case 0:
-            destination?.mapName = Constants.regularRoutes[(tableView.indexPathForSelectedRow?.row)!].fileName
+            destination?.mapName = Constants.regularSchedules[(tableView.indexPathForSelectedRow?.row)!].fileName
         case 1:
-            destination?.mapName = Constants.reducedRoutes[(tableView.indexPathForSelectedRow?.row)!].fileName
+            destination?.mapName = Constants.reducedSchedules[(tableView.indexPathForSelectedRow?.row)!].fileName
         default:
             destination?.mapName = ""
         }
+
     }
+    
 
 }

@@ -9,12 +9,10 @@
 import UIKit
 import WebKit
 
-class ScheduleWebViewController: UIViewController, WKUIDelegate, UIScrollViewDelegate {
-
+class ScheduleViewController: BaseViewController, WKUIDelegate, UIScrollViewDelegate {
 
     @IBOutlet weak var ScheduleWebView: UIView!
 
-    var webView: WKWebView!
     var mapName: String!
     
     override func viewDidLoad() {
@@ -22,6 +20,8 @@ class ScheduleWebViewController: UIViewController, WKUIDelegate, UIScrollViewDel
         
         webView = WKWebView(frame: ScheduleWebView.bounds, configuration: WKWebViewConfiguration())
         webView.scrollView.delegate = self
+        webView.navigationDelegate = self
+        
         ScheduleWebView.addSubview(webView)
         
         guard let pdf = Bundle.main.url(forResource: mapName, withExtension: "pdf") else {
@@ -34,7 +34,6 @@ class ScheduleWebViewController: UIViewController, WKUIDelegate, UIScrollViewDel
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-
     }
     
     func viewForZooming(in scrollView: UIScrollView) -> UIView? {
