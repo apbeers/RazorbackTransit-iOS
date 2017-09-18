@@ -18,6 +18,7 @@ struct Constants {
     }
     
     struct ScheduleFiles {
+        
         static let blue = PDFFile(filename: "BLUE-22", title: "Blue 22")
         static let tan = PDFFile(filename: "TAN-35", title: "Tan 35")
         static let route13 = PDFFile(filename: "ROUTE-13", title: "Route 13")
@@ -37,6 +38,7 @@ struct Constants {
     }
     
     struct RouteFiles {
+        
         static let blue = PDFFile(filename: "BLUE-22-ROUTE", title: "Blue 22")
         static let tan = PDFFile(filename: "TAN-35-ROUTE", title: "Tan 35")
         static let route13 = PDFFile(filename: "ROUTE-13-ROUTE", title: "Route 13")
@@ -63,6 +65,10 @@ struct Constants {
     
     static let reducedRoutes: [PDFFile] = [RouteFiles.blueReduced, RouteFiles.greenReduced, RouteFiles.orangeReduced, RouteFiles.purpleReduced, RouteFiles.redReduced, RouteFiles.tanReduced]
     
-    static let parkingMap = PDFFile(filename: "parkmap", title: "Parking Map")
+    static let parkingMap: PDFFile = PDFFile(filename: "parkmap", title: "Parking Map")
+    
+    static let liveMapURL: String = "http://campusmaps.uark.edu/embed/routes"
+    
+    static var cellFontSize: CGFloat = 17.0
 }
 

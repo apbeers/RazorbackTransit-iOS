@@ -17,10 +17,6 @@ class ScheduleTableViewController: BaseTableViewController {
 
     @IBOutlet var ScheduleListTableView: UITableView!
     
-    override var preferredStatusBarStyle: UIStatusBarStyle {
-        return UIStatusBarStyle.lightContent
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -29,6 +25,12 @@ class ScheduleTableViewController: BaseTableViewController {
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        
+        SelectedRows.selectedSchedule = IndexPath()
+        tableView.reloadData()
     }
 
     // MARK: - Table view data source
@@ -50,6 +52,10 @@ class ScheduleTableViewController: BaseTableViewController {
         }
     }
 
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        SelectedRows.selectedSchedule = indexPath
+    }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
@@ -64,6 +70,13 @@ class ScheduleTableViewController: BaseTableViewController {
             cell.MapNameLabel.text = Constants.reducedSchedules[indexPath.row].title
         default:
             break
+        }
+        
+        if indexPath == SelectedRows.selectedRoute {
+            cell.MapNameLabel.font = UIFont.boldSystemFont(ofSize: Constants.cellFontSize)
+        }
+        else {
+            cell.MapNameLabel.font = UIFont.systemFont(ofSize: Constants.cellFontSize)
         }
         
         cell.accessoryType = UITableViewCellAccessoryType.disclosureIndicator

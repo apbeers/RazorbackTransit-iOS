@@ -26,10 +26,10 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                             <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6SW-xz-F9T" userLabel="OfflineView">
-                                <rect key="frame" x="0.0" y="266.5" width="375" height="105"/>
+                                <rect key="frame" x="0.0" y="267" width="375" height="105"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Network Unavaliable" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="RyT-4h-geY">
-                                        <rect key="frame" x="19.5" y="0.0" width="335" height="32"/>
+                                        <rect key="frame" x="20" y="0.0" width="335" height="32"/>
                                         <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="27"/>
                                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
@@ -128,7 +128,7 @@
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="hFx-e9-bMm" id="Xkp-Db-K4N">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HzN-vs-OAR" userLabel="Map Name">
@@ -213,7 +213,7 @@
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="k8k-ht-AI6" id="0tb-2M-Zkt">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gQB-qZ-WXA" userLabel="Map Name">
@@ -270,14 +270,14 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OVt-eb-1kF" userLabel="WebView">
-                                <rect key="frame" x="0.0" y="64" width="375" height="553"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="lYi-4i-bc6" firstAttribute="width" secondItem="ohd-fu-agS" secondAttribute="width" id="29A-Gf-j7W"/>
-                            <constraint firstItem="OVt-eb-1kF" firstAttribute="height" secondItem="ohd-fu-agS" secondAttribute="height" constant="-114" id="2Mc-gE-pT2"/>
+                            <constraint firstItem="OVt-eb-1kF" firstAttribute="height" secondItem="ohd-fu-agS" secondAttribute="height" constant="-113" id="2Mc-gE-pT2"/>
                             <constraint firstItem="OVt-eb-1kF" firstAttribute="centerX" secondItem="ohd-fu-agS" secondAttribute="centerX" id="7gE-qV-US5"/>
                             <constraint firstItem="lYi-4i-bc6" firstAttribute="top" secondItem="ohd-fu-agS" secondAttribute="top" constant="20" id="PqG-dn-BrL"/>
                             <constraint firstItem="lYi-4i-bc6" firstAttribute="centerX" secondItem="ohd-fu-agS" secondAttribute="centerX" id="ZAz-In-MSC"/>
@@ -333,7 +333,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zgS-Kq-dyY" userLabel="WebView">
-                                <rect key="frame" x="0.0" y="64" width="375" height="553"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                         </subviews>
@@ -344,7 +344,7 @@
                             <constraint firstItem="faT-Ur-Kwt" firstAttribute="centerX" secondItem="oLB-0Y-IcD" secondAttribute="centerX" id="H2q-Pu-yZ4"/>
                             <constraint firstItem="zgS-Kq-dyY" firstAttribute="centerX" secondItem="oLB-0Y-IcD" secondAttribute="centerX" id="M2Y-oR-Sml"/>
                             <constraint firstItem="zgS-Kq-dyY" firstAttribute="width" secondItem="oLB-0Y-IcD" secondAttribute="width" id="PBu-9j-jSb"/>
-                            <constraint firstItem="zgS-Kq-dyY" firstAttribute="height" secondItem="oLB-0Y-IcD" secondAttribute="height" constant="-114" id="fRP-ar-v08"/>
+                            <constraint firstItem="zgS-Kq-dyY" firstAttribute="height" secondItem="oLB-0Y-IcD" secondAttribute="height" constant="-113" id="fRP-ar-v08"/>
                             <constraint firstItem="zgS-Kq-dyY" firstAttribute="top" secondItem="oLB-0Y-IcD" secondAttribute="top" constant="64" id="tS0-Dl-nuu"/>
                         </constraints>
                     </view>
