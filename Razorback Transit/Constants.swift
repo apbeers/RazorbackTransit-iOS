@@ -64,5 +64,7 @@ struct Constants {
     static let reducedRoutes: [PDFFile] = [RouteFiles.blueReduced, RouteFiles.greenReduced, RouteFiles.orangeReduced, RouteFiles.purpleReduced, RouteFiles.redReduced, RouteFiles.tanReduced]
     
     static let parkingMap = PDFFile(filename: "parkmap", title: "Parking Map")
+    
+    static var cellFontSize: CGFloat = 17.0
 }
 

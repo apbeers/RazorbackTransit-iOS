@@ -53,7 +53,6 @@ class LiveMapViewController: BaseViewController, WKUIDelegate {
         
         DispatchQueue.global().async {
             
-            
             guard let lastLoaded = self.defaults.value(forKey: "date") as? Date else {
                 return
             }

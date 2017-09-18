@@ -12,7 +12,6 @@ class CustomTableViewCell: UITableViewCell {
     
     @IBOutlet weak var MapNameLabel: UILabel!
     @IBOutlet weak var ContentView: UIView!
-
     
     override func awakeFromNib() {
         super.awakeFromNib()

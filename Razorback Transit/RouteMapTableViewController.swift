@@ -21,6 +21,12 @@ class RouteMapTableViewController: BaseTableViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        
+        SelectedRows.selectedRoute = IndexPath()
+        tableView.reloadData()
+    }
 
     // MARK: - Table view data source
 
@@ -41,6 +47,10 @@ class RouteMapTableViewController: BaseTableViewController {
         }
     }
     
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        SelectedRows.selectedRoute = indexPath
+    }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
@@ -55,6 +65,13 @@ class RouteMapTableViewController: BaseTableViewController {
             cell.MapNameLabel.text = Constants.reducedRoutes[indexPath.row].title
         default:
             break
+        }
+        
+        if indexPath == SelectedRows.selectedSchedule {
+            cell.MapNameLabel.font = UIFont.boldSystemFont(ofSize: Constants.cellFontSize)
+        }
+        else {
+            cell.MapNameLabel.font = UIFont.systemFont(ofSize: Constants.cellFontSize)
         }
 
         cell.accessoryType = UITableViewCellAccessoryType.disclosureIndicator
