@@ -59,6 +59,7 @@
 		49DE19611F6B724D001EA719 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49DE19601F6B724D001EA719 /* Constants.swift */; };
 		49DE19651F6B7A33001EA719 /* BaseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49DE19641F6B7A33001EA719 /* BaseTableViewController.swift */; };
 		49DE19671F6B8058001EA719 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49DE19661F6B8058001EA719 /* BaseViewController.swift */; };
+		49F8B9661F702B5400D30278 /* RequestUserReview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49F8B9651F702B5400D30278 /* RequestUserReview.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -137,6 +138,7 @@
 		49DE19601F6B724D001EA719 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		49DE19641F6B7A33001EA719 /* BaseTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTableViewController.swift; sourceTree = "<group>"; };
 		49DE19661F6B8058001EA719 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		49F8B9651F702B5400D30278 /* RequestUserReview.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestUserReview.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -243,6 +245,7 @@
 				49DE19641F6B7A33001EA719 /* BaseTableViewController.swift */,
 				49DE19661F6B8058001EA719 /* BaseViewController.swift */,
 				49DD4BCD1F6D94DD0099A70B /* Reachability.swift */,
+				49F8B9651F702B5400D30278 /* RequestUserReview.swift */,
 			);
 			path = "Razorback Transit";
 			sourceTree = "<group>";
@@ -489,6 +492,7 @@
 				495784731F6A5087001B4539 /* RouteMapWebViewController.swift in Sources */,
 				49DE19671F6B8058001EA719 /* BaseViewController.swift in Sources */,
 				49798C351F68CEC8003C0CEB /* LiveMapViewController.swift in Sources */,
+				49F8B9661F702B5400D30278 /* RequestUserReview.swift in Sources */,
 				49DE195D1F6B6FE4001EA719 /* PDFFile.swift in Sources */,
 				49DD4BCE1F6D94DD0099A70B /* Reachability.swift in Sources */,
 				491E24431F68F9B300B5F2A0 /* ScheduleTableViewController.swift in Sources */,

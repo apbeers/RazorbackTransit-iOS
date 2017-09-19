@@ -53,11 +53,11 @@ class LiveMapViewController: BaseViewController, WKUIDelegate {
         
         DispatchQueue.global().async {
             
-            guard let lastLoaded = self.defaults.value(forKey: "date") as? Date else {
+            guard let lastLoaded = self.defaults.value(forKey: Constants.keyNames.timeOfLastLiveMapReload) as? Date else {
                 return
             }
             
-            guard let timeInterval = TimeInterval(exactly: -120) else {
+            guard let timeInterval = TimeInterval(exactly: Constants.secondsBetweenLiveMapReload) else {
                 return
             }
             
@@ -72,7 +72,7 @@ class LiveMapViewController: BaseViewController, WKUIDelegate {
         
         DispatchQueue.global().async {
             
-            self.defaults.set(Date(), forKey: "date")
+            self.defaults.set(Date(), forKey: Constants.keyNames.timeOfLastLiveMapReload)
             self.defaults.synchronize()
         }
     }
