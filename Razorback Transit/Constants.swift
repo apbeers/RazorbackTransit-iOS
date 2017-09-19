@@ -57,6 +57,8 @@ struct Constants {
         static let tanReduced = PDFFile(filename: "TANREDUCED-05-ROUTE", title: "Tan Reduced")
     }
     
+    static let parkingMap: PDFFile = PDFFile(filename: "parkmap", title: "Parking Map")
+    
     struct keyNames {
         static let timeOfLastLiveMapReload = "date"
         static let numberOfRunsForReviewPrompt = "runs"
@@ -69,8 +71,6 @@ struct Constants {
     static let regularRoutes: [PDFFile] = [RouteFiles.blue, RouteFiles.brown, RouteFiles.dickson, RouteFiles.green, RouteFiles.orange, RouteFiles.purple, RouteFiles.red, RouteFiles.remoteexpress, RouteFiles.route13, RouteFiles.tan]
     
     static let reducedRoutes: [PDFFile] = [RouteFiles.blueReduced, RouteFiles.greenReduced, RouteFiles.orangeReduced, RouteFiles.purpleReduced, RouteFiles.redReduced, RouteFiles.tanReduced]
-    
-    static let parkingMap: PDFFile = PDFFile(filename: "parkmap", title: "Parking Map")
     
     static let liveMapURL: String = "http://campusmaps.uark.edu/embed/routes"
     
