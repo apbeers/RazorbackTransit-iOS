@@ -57,6 +57,11 @@ struct Constants {
         static let tanReduced = PDFFile(filename: "TANREDUCED-05-ROUTE", title: "Tan Reduced")
     }
     
+    struct keyNames {
+        static let timeOfLastLiveMapReload = "date"
+        static let numberOfRunsForReviewPrompt = "runs"
+    }
+    
     static let regularSchedules: [PDFFile] = [ScheduleFiles.blue, ScheduleFiles.brown, ScheduleFiles.dickson, ScheduleFiles.green, ScheduleFiles.orange, ScheduleFiles.purple, ScheduleFiles.red, ScheduleFiles.remoteexpress, ScheduleFiles.route13, ScheduleFiles.tan]
     
     static let reducedSchedules: [PDFFile] = [ScheduleFiles.blueReduced, ScheduleFiles.greenReduced, ScheduleFiles.orangeReduced, ScheduleFiles.purpleReduced, ScheduleFiles.redReduced, ScheduleFiles.tanReduced]
@@ -69,6 +74,10 @@ struct Constants {
     
     static let liveMapURL: String = "http://campusmaps.uark.edu/embed/routes"
     
-    static var cellFontSize: CGFloat = 17.0
+    static let cellFontSize: CGFloat = 17.0
+    
+    static let runsBeforeReviewPrompt: Int = 20
+    
+    static let secondsBetweenLiveMapReload: Int = -120
 }
 
