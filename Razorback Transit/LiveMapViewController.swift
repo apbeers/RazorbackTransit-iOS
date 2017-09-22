@@ -23,7 +23,12 @@ class LiveMapViewController: BaseViewController, WKUIDelegate {
         NotificationCenter.default.addObserver(self, selector: #selector(self.willEnterForeground), name: NSNotification.Name.UIApplicationWillEnterForeground, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(self.didEnterBackground), name: NSNotification.Name.UIApplicationDidEnterBackground, object: nil)
         
-        webView = WKWebView(frame: LiveWebView.bounds, configuration: WKWebViewConfiguration())
+        let width = screenSize.width
+        let height = screenSize.height - 69
+        let frame = CGRect(x: 0, y: 0, width: width, height: height)
+        
+        
+        webView = WKWebView(frame: frame, configuration: WKWebViewConfiguration())
         LiveWebView.addSubview(webView)
         webView.scrollView.isScrollEnabled = false
         

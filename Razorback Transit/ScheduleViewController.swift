@@ -18,7 +18,11 @@ class ScheduleViewController: BaseViewController, WKUIDelegate, UIScrollViewDele
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        webView = WKWebView(frame: ScheduleWebView.bounds, configuration: WKWebViewConfiguration())
+        let width = screenSize.width
+        let height = screenSize.height - 114
+        let frame = CGRect(x: 0, y: 0, width: width, height: height)
+        
+        webView = WKWebView(frame: frame, configuration: WKWebViewConfiguration())
         webView.scrollView.delegate = self
         webView.navigationDelegate = self
         
