@@ -17,7 +17,11 @@ class ParkingMapViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        webView = WKWebView(frame: ParkingMapWebView.bounds, configuration: WKWebViewConfiguration())
+        let width = screenSize.width
+        let height = screenSize.height - 69
+        let frame = CGRect(x: 0, y: 0, width: width, height: height)
+        
+        webView = WKWebView(frame: frame, configuration: WKWebViewConfiguration())
         webView.navigationDelegate = self
 
         ParkingMapWebView.addSubview(webView)

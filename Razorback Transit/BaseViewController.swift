@@ -12,9 +12,11 @@ import WebKit
 class BaseViewController: UIViewController, WKNavigationDelegate {
     
     var webView: WKWebView!
+    var screenSize: CGRect = UIScreen.main.bounds
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
     }
 
     override func didReceiveMemoryWarning() {

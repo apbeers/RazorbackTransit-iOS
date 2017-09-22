@@ -18,7 +18,11 @@ class RouteMapWebViewController: BaseViewController, WKUIDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        webView = WKWebView(frame: RouteMapWebView.bounds, configuration: WKWebViewConfiguration())
+        let width = screenSize.width
+        let height = screenSize.height - 114
+        let frame = CGRect(x: 0, y: 0, width: width, height: height)
+        
+        webView = WKWebView(frame: frame, configuration: WKWebViewConfiguration())
         RouteMapWebView.addSubview(webView)
         webView.navigationDelegate = self
         
