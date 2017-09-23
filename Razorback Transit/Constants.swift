@@ -13,8 +13,8 @@ struct Constants {
 
     struct Colors {
         
-        static let razorbackRed = UIColor(colorLiteralRed: 157/255, green: 34/255, blue: 53/255, alpha: 1)
-        static let razorbackRedBarColor = UIColor(colorLiteralRed: 139/255, green: 0/255, blue: 15/255, alpha: 1)
+        static let razorbackRed = UIColor(red: 157/255, green: 34/255, blue: 53/255, alpha: 1)
+        static let razorbackRedBarColor = UIColor(red: 139/255, green: 0/255, blue: 15/255, alpha: 1)
     }
     
     struct ScheduleFiles {

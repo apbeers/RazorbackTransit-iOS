@@ -20,9 +20,14 @@ class LiveMapViewController: BaseViewController, WKUIDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+    
+        NotificationCenter.default.addObserver(forName: .UIApplicationDidBecomeActive, object: nil, queue: OperationQueue.main) { _ in
+            self.didBecomeActive()
+        }
         
-        NotificationCenter.default.addObserver(self, selector: #selector(self.didBecomeActive), name: NSNotification.Name.UIApplicationDidBecomeActive, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(self.didEnterBackground), name: NSNotification.Name.UIApplicationDidEnterBackground, object: nil)
+        NotificationCenter.default.addObserver(forName: .UIApplicationDidEnterBackground, object: nil, queue: OperationQueue.main) { _ in
+            self.didEnterBackground()
+        }
         
         let width = screenSize.width
         let height = screenSize.height - 69
