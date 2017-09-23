@@ -79,5 +79,6 @@ struct Constants {
     static let runsBeforeReviewPrompt: Int = 20
     
     static let secondsBetweenLiveMapReload: Int = -120
+    static let secondsBetweenAutoRefresh: TimeInterval = 30
 }
 
