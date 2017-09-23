@@ -16,11 +16,12 @@ class LiveMapViewController: BaseViewController, WKUIDelegate {
 
     let defaults = UserDefaults.standard
     var needsUpdate = false
+    var refreshTimer: Timer!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        NotificationCenter.default.addObserver(self, selector: #selector(self.willEnterForeground), name: NSNotification.Name.UIApplicationWillEnterForeground, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(self.didBecomeActive), name: NSNotification.Name.UIApplicationDidBecomeActive, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(self.didEnterBackground), name: NSNotification.Name.UIApplicationDidEnterBackground, object: nil)
         
         let width = screenSize.width
@@ -41,10 +42,9 @@ class LiveMapViewController: BaseViewController, WKUIDelegate {
         let request = URLRequest(url: url)
         
         webView.load(request)
-        
     }
     
-    func willEnterForeground() {
+    func didBecomeActive() {
         
         let networkStatus = Reachability().connectionStatus()
         switch networkStatus {
@@ -54,6 +54,10 @@ class LiveMapViewController: BaseViewController, WKUIDelegate {
         default:
             self.LiveWebView.isHidden = false
             self.OfflineView.isHidden = true
+        }
+        
+        refreshTimer = Timer.scheduledTimer(withTimeInterval: Constants.secondsBetweenAutoRefresh, repeats: true) { _ in
+            self.webView.reload()
         }
         
         DispatchQueue.global().async {
@@ -80,6 +84,12 @@ class LiveMapViewController: BaseViewController, WKUIDelegate {
             self.defaults.set(Date(), forKey: Constants.keyNames.timeOfLastLiveMapReload)
             self.defaults.synchronize()
         }
+        
+        guard let timer = self.refreshTimer else {
+            return
+        }
+        
+        timer.invalidate()
     }
     
     override func didReceiveMemoryWarning() {

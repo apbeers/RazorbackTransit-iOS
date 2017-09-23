@@ -8,11 +8,6 @@
 
 import UIKit
 
-enum RouteTypes: Int {
-    case Regular
-    case Reduced
-}
-
 class ScheduleTableViewController: BaseTableViewController {
 
     @IBOutlet var ScheduleListTableView: UITableView!
