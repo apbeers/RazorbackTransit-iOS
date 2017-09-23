@@ -60,20 +60,17 @@ class LiveMapViewController: BaseViewController, WKUIDelegate {
             self.webView.reload()
         }
         
-        DispatchQueue.global().async {
+        guard let lastLoaded = self.defaults.value(forKey: Constants.keyNames.timeOfLastLiveMapReload) as? Date else {
+            return
+        }
+        
+        guard let timeInterval = TimeInterval(exactly: Constants.secondsBetweenLiveMapReload) else {
+            return
+        }
+        
+        if lastLoaded.timeIntervalSince(Date()) < timeInterval && self.webView != nil {
             
-            guard let lastLoaded = self.defaults.value(forKey: Constants.keyNames.timeOfLastLiveMapReload) as? Date else {
-                return
-            }
-            
-            guard let timeInterval = TimeInterval(exactly: Constants.secondsBetweenLiveMapReload) else {
-                return
-            }
-            
-            if lastLoaded.timeIntervalSince(Date()) < timeInterval && self.webView != nil {
-                
-                self.webView.reload()
-            }
+            self.webView.reload()
         }
     }
     
