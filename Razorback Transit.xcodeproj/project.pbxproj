@@ -23,6 +23,7 @@
 		4957846F1F6A4B16001B4539 /* BROWN-17.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 495784651F6A4B16001B4539 /* BROWN-17.pdf */; };
 		495784711F6A4F29001B4539 /* RouteMapTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 495784701F6A4F29001B4539 /* RouteMapTableViewController.swift */; };
 		495784731F6A5087001B4539 /* RouteMapWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 495784721F6A5087001B4539 /* RouteMapWebViewController.swift */; };
+		497528AA1F7B5A3E00AB474B /* BuildingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 497528A91F7B5A3E00AB474B /* BuildingManager.swift */; };
 		49798C331F68CEC8003C0CEB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49798C321F68CEC8003C0CEB /* AppDelegate.swift */; };
 		49798C351F68CEC8003C0CEB /* LiveMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49798C341F68CEC8003C0CEB /* LiveMapViewController.swift */; };
 		49798C381F68CEC8003C0CEB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49798C361F68CEC8003C0CEB /* Main.storyboard */; };
@@ -97,6 +98,7 @@
 		495784651F6A4B16001B4539 /* BROWN-17.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "BROWN-17.pdf"; sourceTree = "<group>"; };
 		495784701F6A4F29001B4539 /* RouteMapTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RouteMapTableViewController.swift; sourceTree = "<group>"; };
 		495784721F6A5087001B4539 /* RouteMapWebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RouteMapWebViewController.swift; sourceTree = "<group>"; };
+		497528A91F7B5A3E00AB474B /* BuildingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuildingManager.swift; sourceTree = "<group>"; };
 		49798C2F1F68CEC8003C0CEB /* Razorback Transit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Razorback Transit.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		49798C321F68CEC8003C0CEB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		49798C341F68CEC8003C0CEB /* LiveMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveMapViewController.swift; sourceTree = "<group>"; };
@@ -221,6 +223,32 @@
 			name = ReducedSchedules;
 			sourceTree = "<group>";
 		};
+		497528A61F7B593200AB474B /* UI Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				49DE192E1F6B437F001EA719 /* View Controllers */,
+				497528A71F7B594200AB474B /* BaseControllers */,
+			);
+			name = "UI Controllers";
+			sourceTree = "<group>";
+		};
+		497528A71F7B594200AB474B /* BaseControllers */ = {
+			isa = PBXGroup;
+			children = (
+				49DE19641F6B7A33001EA719 /* BaseTableViewController.swift */,
+				49DE19661F6B8058001EA719 /* BaseViewController.swift */,
+			);
+			name = BaseControllers;
+			sourceTree = "<group>";
+		};
+		497528A81F7B596100AB474B /* API */ = {
+			isa = PBXGroup;
+			children = (
+				497528A91F7B5A3E00AB474B /* BuildingManager.swift */,
+			);
+			name = API;
+			sourceTree = "<group>";
+		};
 		49798C261F68CEC8003C0CEB = {
 			isa = PBXGroup;
 			children = (
@@ -246,8 +274,9 @@
 		49798C311F68CEC8003C0CEB /* Razorback Transit */ = {
 			isa = PBXGroup;
 			children = (
+				497528A81F7B596100AB474B /* API */,
+				497528A61F7B593200AB474B /* UI Controllers */,
 				49DE19551F6B5FBA001EA719 /* Cells */,
-				49DE192E1F6B437F001EA719 /* View Controllers */,
 				492F69A61F6A221D009C895C /* Maps */,
 				49798C361F68CEC8003C0CEB /* Main.storyboard */,
 				49798C391F68CEC8003C0CEB /* Assets.xcassets */,
@@ -257,8 +286,6 @@
 				49DE195C1F6B6FE4001EA719 /* PDFFile.swift */,
 				49DE19601F6B724D001EA719 /* Constants.swift */,
 				49975BB11F6F40BE009A0D1E /* SelectedRows.swift */,
-				49DE19641F6B7A33001EA719 /* BaseTableViewController.swift */,
-				49DE19661F6B8058001EA719 /* BaseViewController.swift */,
 				49DD4BCD1F6D94DD0099A70B /* Reachability.swift */,
 				49F8B9651F702B5400D30278 /* RequestUserReview.swift */,
 			);
@@ -585,6 +612,7 @@
 				49F8B9661F702B5400D30278 /* RequestUserReview.swift in Sources */,
 				49DE195D1F6B6FE4001EA719 /* PDFFile.swift in Sources */,
 				49DD4BCE1F6D94DD0099A70B /* Reachability.swift in Sources */,
+				497528AA1F7B5A3E00AB474B /* BuildingManager.swift in Sources */,
 				491E24431F68F9B300B5F2A0 /* ScheduleTableViewController.swift in Sources */,
 				49DE19651F6B7A33001EA719 /* BaseTableViewController.swift in Sources */,
 				49798C331F68CEC8003C0CEB /* AppDelegate.swift in Sources */,
