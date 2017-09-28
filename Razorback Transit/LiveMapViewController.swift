@@ -15,6 +15,9 @@ class LiveMapViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        let bm = BuildingManager()
+        bm.getBuidings()
+        
         let camera = GMSCameraPosition.camera(withLatitude: 36.068, longitude: -94.1725, zoom: 12.0)
         let mapView = GMSMapView.map(withFrame: CGRect.zero, camera: camera)
         view = mapView
