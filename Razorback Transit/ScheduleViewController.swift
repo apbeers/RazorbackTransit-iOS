@@ -8,6 +8,7 @@
 
 import UIKit
 import WebKit
+import Firebase
 
 class ScheduleViewController: BaseViewController, WKUIDelegate, UIScrollViewDelegate {
 
@@ -33,7 +34,7 @@ class ScheduleViewController: BaseViewController, WKUIDelegate, UIScrollViewDele
         }
         
         let request = URLRequest(url: pdf)
-        webView.load(request)
+        webView.load(request)        
     }
 
     override func didReceiveMemoryWarning() {

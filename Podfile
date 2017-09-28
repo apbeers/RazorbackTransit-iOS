@@ -6,4 +6,5 @@ target 'Razorback Transit' do
   pod 'GooglePlaces'
   pod 'Alamofire'
   pod 'SwiftyJSON'
+  pod 'Firebase/Core'
 end

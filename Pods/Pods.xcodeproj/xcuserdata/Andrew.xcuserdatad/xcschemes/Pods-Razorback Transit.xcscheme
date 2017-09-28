@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "171810558298016E451BD03BC36070D3"
+               BlueprintIdentifier = "A3C1EA77B85CA14F5619B01DC04A0989"
                BuildableName = "Pods_Razorback_Transit.framework"
                BlueprintName = "Pods-Razorback Transit"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -47,7 +47,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "171810558298016E451BD03BC36070D3"
+            BlueprintIdentifier = "A3C1EA77B85CA14F5619B01DC04A0989"
             BuildableName = "Pods_Razorback_Transit.framework"
             BlueprintName = "Pods-Razorback Transit"
             ReferencedContainer = "container:Pods.xcodeproj">

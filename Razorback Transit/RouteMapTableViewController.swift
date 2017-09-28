@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class RouteMapTableViewController: BaseTableViewController {
 
@@ -14,7 +15,7 @@ class RouteMapTableViewController: BaseTableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         navBar.topItem?.title = "Routes"
     }
 
@@ -50,6 +51,23 @@ class RouteMapTableViewController: BaseTableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         SelectedRows.selectedRoute = indexPath
+    
+        var routeTitle: String!
+        
+        switch indexPath.section {
+        case 0:
+            routeTitle = Constants.regularRoutes[indexPath.row].title
+        case 1:
+            routeTitle = Constants.reducedRoutes[indexPath.row].title
+        default:
+            break;
+        }
+        
+        Analytics.logEvent(AnalyticsEventSelectContent, parameters: [
+            AnalyticsParameterItemName: routeTitle as NSObject,
+            AnalyticsParameterContentType: Constants.EventTypes.RouteSelected as NSObject
+            ])
+        
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
