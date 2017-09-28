@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import GoogleMaps
+import Firebase
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -19,7 +21,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         let statusBar = UIApplication.shared.value(forKey: "statusBar") as! UIView
         statusBar.backgroundColor = Constants.Colors.razorbackRed
-
+        
+        GMSServices.provideAPIKey("AIzaSyBMOwO5S5TeyMx1Hwlu-eiIAw1Hfw3Q9Q4")
+        FirebaseApp.configure()
+        
         return true
     }
 

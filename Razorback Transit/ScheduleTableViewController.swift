@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class ScheduleTableViewController: BaseTableViewController {
 
@@ -14,6 +15,7 @@ class ScheduleTableViewController: BaseTableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+
         
         navBar.topItem?.title = "Schedules"
     }
@@ -50,6 +52,22 @@ class ScheduleTableViewController: BaseTableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         SelectedRows.selectedSchedule = indexPath
+        
+        var scheduleTitle: String!
+        
+        switch indexPath.section {
+        case 0:
+            scheduleTitle = Constants.regularSchedules[indexPath.row].title
+        case 1:
+            scheduleTitle = Constants.reducedSchedules[indexPath.row].title
+        default:
+            break;
+        }
+        
+        Analytics.logEvent(AnalyticsEventSelectContent, parameters: [
+            AnalyticsParameterItemName: scheduleTitle as NSObject,
+            AnalyticsParameterContentType: Constants.EventTypes.ScheduleSelected as NSObject
+            ])
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

@@ -23,6 +23,7 @@
 		4957846F1F6A4B16001B4539 /* BROWN-17.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 495784651F6A4B16001B4539 /* BROWN-17.pdf */; };
 		495784711F6A4F29001B4539 /* RouteMapTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 495784701F6A4F29001B4539 /* RouteMapTableViewController.swift */; };
 		495784731F6A5087001B4539 /* RouteMapWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 495784721F6A5087001B4539 /* RouteMapWebViewController.swift */; };
+		497528AA1F7B5A3E00AB474B /* BuildingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 497528A91F7B5A3E00AB474B /* BuildingManager.swift */; };
 		49798C331F68CEC8003C0CEB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49798C321F68CEC8003C0CEB /* AppDelegate.swift */; };
 		49798C351F68CEC8003C0CEB /* LiveMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49798C341F68CEC8003C0CEB /* LiveMapViewController.swift */; };
 		49798C381F68CEC8003C0CEB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49798C361F68CEC8003C0CEB /* Main.storyboard */; };
@@ -37,6 +38,10 @@
 		4984DE1D1F6B40780040F1CD /* REDREDUCED-06.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 4984DE171F6B40780040F1CD /* REDREDUCED-06.pdf */; };
 		4984DE1E1F6B40780040F1CD /* TANREDUCED-05.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 4984DE181F6B40780040F1CD /* TANREDUCED-05.pdf */; };
 		49975BB21F6F40BE009A0D1E /* SelectedRows.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49975BB11F6F40BE009A0D1E /* SelectedRows.swift */; };
+		49A493CE1F7CBC1600CC12DB /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 49A493CD1F7CB74F00CC12DB /* GoogleService-Info.plist */; };
+		49A493D01F7CBD5200CC12DB /* FirebaseAnalytics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A493CF1F7CBD5200CC12DB /* FirebaseAnalytics.swift */; };
+		49A493D21F7CC39F00CC12DB /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A493D11F7CC39F00CC12DB /* TabBarController.swift */; };
+		49A493D51F7CC49900CC12DB /* Constants+Firebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A493D41F7CC49900CC12DB /* Constants+Firebase.swift */; };
 		49DD4BCE1F6D94DD0099A70B /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49DD4BCD1F6D94DD0099A70B /* Reachability.swift */; };
 		49DE19371F6B47CD001EA719 /* REDREDUCED-06-ROUTE.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 49DE19311F6B47CD001EA719 /* REDREDUCED-06-ROUTE.pdf */; };
 		49DE19381F6B47CD001EA719 /* TANREDUCED-05-ROUTE.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 49DE19321F6B47CD001EA719 /* TANREDUCED-05-ROUTE.pdf */; };
@@ -60,6 +65,7 @@
 		49DE19651F6B7A33001EA719 /* BaseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49DE19641F6B7A33001EA719 /* BaseTableViewController.swift */; };
 		49DE19671F6B8058001EA719 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49DE19661F6B8058001EA719 /* BaseViewController.swift */; };
 		49F8B9661F702B5400D30278 /* RequestUserReview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49F8B9651F702B5400D30278 /* RequestUserReview.swift */; };
+		E9346158F2AF8E83490DAD0B /* Pods_Razorback_Transit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 87729A2405A2FABFF1D47D14 /* Pods_Razorback_Transit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -96,6 +102,7 @@
 		495784651F6A4B16001B4539 /* BROWN-17.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "BROWN-17.pdf"; sourceTree = "<group>"; };
 		495784701F6A4F29001B4539 /* RouteMapTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RouteMapTableViewController.swift; sourceTree = "<group>"; };
 		495784721F6A5087001B4539 /* RouteMapWebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RouteMapWebViewController.swift; sourceTree = "<group>"; };
+		497528A91F7B5A3E00AB474B /* BuildingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuildingManager.swift; sourceTree = "<group>"; };
 		49798C2F1F68CEC8003C0CEB /* Razorback Transit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Razorback Transit.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		49798C321F68CEC8003C0CEB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		49798C341F68CEC8003C0CEB /* LiveMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveMapViewController.swift; sourceTree = "<group>"; };
@@ -116,6 +123,10 @@
 		4984DE171F6B40780040F1CD /* REDREDUCED-06.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "REDREDUCED-06.pdf"; sourceTree = "<group>"; };
 		4984DE181F6B40780040F1CD /* TANREDUCED-05.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "TANREDUCED-05.pdf"; sourceTree = "<group>"; };
 		49975BB11F6F40BE009A0D1E /* SelectedRows.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectedRows.swift; sourceTree = "<group>"; };
+		49A493CD1F7CB74F00CC12DB /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		49A493CF1F7CBD5200CC12DB /* FirebaseAnalytics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseAnalytics.swift; sourceTree = "<group>"; };
+		49A493D11F7CC39F00CC12DB /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		49A493D41F7CC49900CC12DB /* Constants+Firebase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Constants+Firebase.swift"; sourceTree = "<group>"; };
 		49DD4BCD1F6D94DD0099A70B /* Reachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 		49DE19311F6B47CD001EA719 /* REDREDUCED-06-ROUTE.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "REDREDUCED-06-ROUTE.pdf"; sourceTree = "<group>"; };
 		49DE19321F6B47CD001EA719 /* TANREDUCED-05-ROUTE.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "TANREDUCED-05-ROUTE.pdf"; sourceTree = "<group>"; };
@@ -139,6 +150,9 @@
 		49DE19641F6B7A33001EA719 /* BaseTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTableViewController.swift; sourceTree = "<group>"; };
 		49DE19661F6B8058001EA719 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		49F8B9651F702B5400D30278 /* RequestUserReview.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestUserReview.swift; sourceTree = "<group>"; };
+		87729A2405A2FABFF1D47D14 /* Pods_Razorback_Transit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Razorback_Transit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A1FBFB5B92368172489C61B3 /* Pods-Razorback Transit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Razorback Transit.release.xcconfig"; path = "Pods/Target Support Files/Pods-Razorback Transit/Pods-Razorback Transit.release.xcconfig"; sourceTree = "<group>"; };
+		B1FF176F6DDC13086B5E449F /* Pods-Razorback Transit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Razorback Transit.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Razorback Transit/Pods-Razorback Transit.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,6 +160,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E9346158F2AF8E83490DAD0B /* Pods_Razorback_Transit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -166,6 +181,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		12B1CF539E3E25248D9F5CA2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				87729A2405A2FABFF1D47D14 /* Pods_Razorback_Transit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		492F69A61F6A221D009C895C /* Maps */ = {
 			isa = PBXGroup;
 			children = (
@@ -208,6 +231,32 @@
 			name = ReducedSchedules;
 			sourceTree = "<group>";
 		};
+		497528A61F7B593200AB474B /* UI Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				49DE192E1F6B437F001EA719 /* View Controllers */,
+				497528A71F7B594200AB474B /* BaseControllers */,
+			);
+			name = "UI Controllers";
+			sourceTree = "<group>";
+		};
+		497528A71F7B594200AB474B /* BaseControllers */ = {
+			isa = PBXGroup;
+			children = (
+				49DE19641F6B7A33001EA719 /* BaseTableViewController.swift */,
+				49DE19661F6B8058001EA719 /* BaseViewController.swift */,
+			);
+			name = BaseControllers;
+			sourceTree = "<group>";
+		};
+		497528A81F7B596100AB474B /* API */ = {
+			isa = PBXGroup;
+			children = (
+				497528A91F7B5A3E00AB474B /* BuildingManager.swift */,
+			);
+			name = API;
+			sourceTree = "<group>";
+		};
 		49798C261F68CEC8003C0CEB = {
 			isa = PBXGroup;
 			children = (
@@ -215,6 +264,8 @@
 				49798C461F68CEC9003C0CEB /* Razorback TransitTests */,
 				49798C511F68CEC9003C0CEB /* Razorback TransitUITests */,
 				49798C301F68CEC8003C0CEB /* Products */,
+				6BEDAD48E13CEF6E13AD1F5E /* Pods */,
+				12B1CF539E3E25248D9F5CA2 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -231,21 +282,22 @@
 		49798C311F68CEC8003C0CEB /* Razorback Transit */ = {
 			isa = PBXGroup;
 			children = (
+				49A493D31F7CC47E00CC12DB /* Constants */,
+				497528A81F7B596100AB474B /* API */,
+				497528A61F7B593200AB474B /* UI Controllers */,
 				49DE19551F6B5FBA001EA719 /* Cells */,
-				49DE192E1F6B437F001EA719 /* View Controllers */,
 				492F69A61F6A221D009C895C /* Maps */,
 				49798C361F68CEC8003C0CEB /* Main.storyboard */,
 				49798C391F68CEC8003C0CEB /* Assets.xcassets */,
 				49798C321F68CEC8003C0CEB /* AppDelegate.swift */,
 				49798C3B1F68CEC8003C0CEB /* LaunchScreen.storyboard */,
 				49798C3E1F68CEC8003C0CEB /* Info.plist */,
+				49A493CD1F7CB74F00CC12DB /* GoogleService-Info.plist */,
 				49DE195C1F6B6FE4001EA719 /* PDFFile.swift */,
-				49DE19601F6B724D001EA719 /* Constants.swift */,
 				49975BB11F6F40BE009A0D1E /* SelectedRows.swift */,
-				49DE19641F6B7A33001EA719 /* BaseTableViewController.swift */,
-				49DE19661F6B8058001EA719 /* BaseViewController.swift */,
 				49DD4BCD1F6D94DD0099A70B /* Reachability.swift */,
 				49F8B9651F702B5400D30278 /* RequestUserReview.swift */,
+				49A493CF1F7CBD5200CC12DB /* FirebaseAnalytics.swift */,
 			);
 			path = "Razorback Transit";
 			sourceTree = "<group>";
@@ -268,15 +320,25 @@
 			path = "Razorback TransitUITests";
 			sourceTree = "<group>";
 		};
+		49A493D31F7CC47E00CC12DB /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				49DE19601F6B724D001EA719 /* Constants.swift */,
+				49A493D41F7CC49900CC12DB /* Constants+Firebase.swift */,
+			);
+			name = Constants;
+			sourceTree = "<group>";
+		};
 		49DE192E1F6B437F001EA719 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				49DE19531F6B5C71001EA719 /* ParkingMapViewController.swift */,
 				49798C341F68CEC8003C0CEB /* LiveMapViewController.swift */,
 				491E24421F68F9B300B5F2A0 /* ScheduleTableViewController.swift */,
 				492F69A91F6A2FCE009C895C /* ScheduleViewController.swift */,
 				495784701F6A4F29001B4539 /* RouteMapTableViewController.swift */,
 				495784721F6A5087001B4539 /* RouteMapWebViewController.swift */,
+				49DE19531F6B5C71001EA719 /* ParkingMapViewController.swift */,
+				49A493D11F7CC39F00CC12DB /* TabBarController.swift */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -319,6 +381,15 @@
 			name = Cells;
 			sourceTree = "<group>";
 		};
+		6BEDAD48E13CEF6E13AD1F5E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B1FF176F6DDC13086B5E449F /* Pods-Razorback Transit.debug.xcconfig */,
+				A1FBFB5B92368172489C61B3 /* Pods-Razorback Transit.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -326,9 +397,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 49798C571F68CEC9003C0CEB /* Build configuration list for PBXNativeTarget "Razorback Transit" */;
 			buildPhases = (
+				33CD6A90DCB1EBDB9E6D9272 /* [CP] Check Pods Manifest.lock */,
 				49798C2B1F68CEC8003C0CEB /* Sources */,
 				49798C2C1F68CEC8003C0CEB /* Frameworks */,
 				49798C2D1F68CEC8003C0CEB /* Resources */,
+				E23CD0261053D02FCBADDB7A /* [CP] Embed Pods Frameworks */,
+				EE1B40F6735B3BD6C4B3D709 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -429,6 +503,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				49A493CE1F7CBC1600CC12DB /* GoogleService-Info.plist in Resources */,
 				4957846D1F6A4B16001B4539 /* GREEN-11.pdf in Resources */,
 				49DE19501F6B47E5001EA719 /* DICKSONST-07-ROUTE.pdf in Resources */,
 				49DE19371F6B47CD001EA719 /* REDREDUCED-06-ROUTE.pdf in Resources */,
@@ -484,6 +559,68 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		33CD6A90DCB1EBDB9E6D9272 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Razorback Transit-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E23CD0261053D02FCBADDB7A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Razorback Transit/Pods-Razorback Transit-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Razorback Transit/Pods-Razorback Transit-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EE1B40F6735B3BD6C4B3D709 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Razorback Transit/Pods-Razorback Transit-resources.sh",
+				"${PODS_ROOT}/GoogleMaps/Maps/Frameworks/GoogleMaps.framework/Versions/A/Resources/GoogleMaps.bundle",
+				"${PODS_ROOT}/GooglePlaces/Frameworks/GooglePlaces.framework/Versions/A/Resources/GooglePlaces.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Razorback Transit/Pods-Razorback Transit-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		49798C2B1F68CEC8003C0CEB /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -492,12 +629,16 @@
 				492F69AA1F6A2FCE009C895C /* ScheduleViewController.swift in Sources */,
 				4955E4931F68FB6700586CC1 /* CustomTableViewCell.swift in Sources */,
 				495784711F6A4F29001B4539 /* RouteMapTableViewController.swift in Sources */,
+				49A493D21F7CC39F00CC12DB /* TabBarController.swift in Sources */,
+				49A493D51F7CC49900CC12DB /* Constants+Firebase.swift in Sources */,
 				495784731F6A5087001B4539 /* RouteMapWebViewController.swift in Sources */,
 				49DE19671F6B8058001EA719 /* BaseViewController.swift in Sources */,
 				49798C351F68CEC8003C0CEB /* LiveMapViewController.swift in Sources */,
 				49F8B9661F702B5400D30278 /* RequestUserReview.swift in Sources */,
+				49A493D01F7CBD5200CC12DB /* FirebaseAnalytics.swift in Sources */,
 				49DE195D1F6B6FE4001EA719 /* PDFFile.swift in Sources */,
 				49DD4BCE1F6D94DD0099A70B /* Reachability.swift in Sources */,
+				497528AA1F7B5A3E00AB474B /* BuildingManager.swift in Sources */,
 				491E24431F68F9B300B5F2A0 /* ScheduleTableViewController.swift in Sources */,
 				49DE19651F6B7A33001EA719 /* BaseTableViewController.swift in Sources */,
 				49798C331F68CEC8003C0CEB /* AppDelegate.swift in Sources */,
@@ -667,11 +808,12 @@
 		};
 		49798C581F68CEC9003C0CEB /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B1FF176F6DDC13086B5E449F /* Pods-Razorback Transit.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = GQQX4L6TE2;
 				INFOPLIST_FILE = "Razorback Transit/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LLVM_LTO = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = arcu.razorbacktransit;
@@ -684,12 +826,13 @@
 		};
 		49798C591F68CEC9003C0CEB /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A1FBFB5B92368172489C61B3 /* Pods-Razorback Transit.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = GQQX4L6TE2;
-				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_OPTIMIZATION_LEVEL = s;
 				INFOPLIST_FILE = "Razorback Transit/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LLVM_LTO = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = arcu.razorbacktransit;

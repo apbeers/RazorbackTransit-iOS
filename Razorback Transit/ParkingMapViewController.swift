@@ -16,6 +16,7 @@ class ParkingMapViewController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+
         
         let width = screenSize.width
         let height = screenSize.height - 69

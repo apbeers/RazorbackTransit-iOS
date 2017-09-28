@@ -1,0 +1,46 @@
+PODS:
+  - Alamofire (4.4.0)
+  - Firebase/Core (4.0.2):
+    - FirebaseAnalytics (= 4.0.1)
+    - FirebaseCore (= 4.0.2)
+  - FirebaseAnalytics (4.0.1):
+    - FirebaseCore (~> 4.0)
+    - FirebaseInstanceID (~> 2.0)
+    - GoogleToolboxForMac/NSData+zlib (~> 2.1)
+  - FirebaseCore (4.0.2):
+    - GoogleToolboxForMac/NSData+zlib (~> 2.1)
+  - FirebaseInstanceID (2.0.0):
+    - FirebaseCore (~> 4.0)
+  - GoogleMaps (2.3.0):
+    - GoogleMaps/Maps (= 2.3.0)
+  - GoogleMaps/Base (2.3.0)
+  - GoogleMaps/Maps (2.3.0):
+    - GoogleMaps/Base
+  - GooglePlaces (2.3.0):
+    - GoogleMaps/Base (= 2.3.0)
+  - GoogleToolboxForMac/Defines (2.1.1)
+  - GoogleToolboxForMac/NSData+zlib (2.1.1):
+    - GoogleToolboxForMac/Defines (= 2.1.1)
+  - SwiftyJSON (3.1.4)
+
+DEPENDENCIES:
+  - Alamofire
+  - Firebase/Core
+  - GoogleMaps
+  - GooglePlaces
+  - SwiftyJSON
+
+SPEC CHECKSUMS:
+  Alamofire: dc44b1600b800eb63da6a19039a0083d62a6a62d
+  Firebase: c7ad0731eab26d18a3fc547dd048b0f7cd9c63ae
+  FirebaseAnalytics: 4d7040fefc3cd8b291cde35f12cf063d7963f15d
+  FirebaseCore: 1a8bf6c795ad07d2918278657954ffd2552e9c17
+  FirebaseInstanceID: 9fbf536668f4d3f0880e7438456dabd1376e294b
+  GoogleMaps: 340a6a0bebd17c2db8abcd3921976c7c53c86cb8
+  GooglePlaces: 74d322c74184ea4576184089b496d291cf0dcd38
+  GoogleToolboxForMac: 8e329f1b599f2512c6b10676d45736bcc2cbbeb0
+  SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
+
+PODFILE CHECKSUM: 521bf427c2d1fa5ccd5f9cea3a14945ae6ffcf9e
+
+COCOAPODS: 1.3.1
