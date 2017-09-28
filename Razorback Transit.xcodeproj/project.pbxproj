@@ -815,7 +815,7 @@
 				INFOPLIST_FILE = "Razorback Transit/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				LLVM_LTO = NO;
+				LLVM_LTO = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = arcu.razorbacktransit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
@@ -834,7 +834,7 @@
 				INFOPLIST_FILE = "Razorback Transit/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				LLVM_LTO = NO;
+				LLVM_LTO = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = arcu.razorbacktransit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
