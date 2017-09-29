@@ -11,6 +11,9 @@
 		492F69A81F6A22AF009C895C /* parkmap.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 492F69A71F6A22AF009C895C /* parkmap.pdf */; };
 		492F69AA1F6A2FCE009C895C /* ScheduleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 492F69A91F6A2FCE009C895C /* ScheduleViewController.swift */; };
 		49488A771F7D42B8000C405A /* Building.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49488A761F7D42B8000C405A /* Building.swift */; };
+		49488A791F7D7320000C405A /* Route.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49488A781F7D7320000C405A /* Route.swift */; };
+		49488A7B1F7D73D9000C405A /* Constantes+API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49488A7A1F7D73D9000C405A /* Constantes+API.swift */; };
+		49488A7E1F7D78D3000C405A /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49488A7D1F7D78D3000C405A /* UIColor+Extension.swift */; };
 		4955E4931F68FB6700586CC1 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4955E4921F68FB6700586CC1 /* CustomTableViewCell.swift */; };
 		495784661F6A4B16001B4539 /* BLUE-22.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 4957845C1F6A4B16001B4539 /* BLUE-22.pdf */; };
 		495784671F6A4B16001B4539 /* TAN-35.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 4957845D1F6A4B16001B4539 /* TAN-35.pdf */; };
@@ -90,6 +93,9 @@
 		492F69A71F6A22AF009C895C /* parkmap.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = parkmap.pdf; sourceTree = "<group>"; };
 		492F69A91F6A2FCE009C895C /* ScheduleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduleViewController.swift; sourceTree = "<group>"; };
 		49488A761F7D42B8000C405A /* Building.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Building.swift; sourceTree = "<group>"; };
+		49488A781F7D7320000C405A /* Route.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Route.swift; sourceTree = "<group>"; };
+		49488A7A1F7D73D9000C405A /* Constantes+API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Constantes+API.swift"; sourceTree = "<group>"; };
+		49488A7D1F7D78D3000C405A /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		4955E4921F68FB6700586CC1 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
 		4957845C1F6A4B16001B4539 /* BLUE-22.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "BLUE-22.pdf"; sourceTree = "<group>"; };
 		4957845D1F6A4B16001B4539 /* TAN-35.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "TAN-35.pdf"; sourceTree = "<group>"; };
@@ -201,6 +207,14 @@
 			name = Maps;
 			sourceTree = "<group>";
 		};
+		49488A7C1F7D78AF000C405A /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				49488A7D1F7D78D3000C405A /* UIColor+Extension.swift */,
+			);
+			name = Extensions;
+			sourceTree = "<group>";
+		};
 		496C17F71F68DCE6003E51A4 /* RegularSchedules */ = {
 			isa = PBXGroup;
 			children = (
@@ -249,12 +263,13 @@
 			name = BaseControllers;
 			sourceTree = "<group>";
 		};
-		497528A81F7B596100AB474B /* API */ = {
+		497528A81F7B596100AB474B /* Map Objects */ = {
 			isa = PBXGroup;
 			children = (
 				49488A761F7D42B8000C405A /* Building.swift */,
+				49488A781F7D7320000C405A /* Route.swift */,
 			);
-			name = API;
+			name = "Map Objects";
 			sourceTree = "<group>";
 		};
 		49798C261F68CEC8003C0CEB = {
@@ -282,8 +297,9 @@
 		49798C311F68CEC8003C0CEB /* Razorback Transit */ = {
 			isa = PBXGroup;
 			children = (
+				49488A7C1F7D78AF000C405A /* Extensions */,
 				49A493D31F7CC47E00CC12DB /* Constants */,
-				497528A81F7B596100AB474B /* API */,
+				497528A81F7B596100AB474B /* Map Objects */,
 				497528A61F7B593200AB474B /* UI Controllers */,
 				49DE19551F6B5FBA001EA719 /* Cells */,
 				492F69A61F6A221D009C895C /* Maps */,
@@ -325,6 +341,7 @@
 			children = (
 				49DE19601F6B724D001EA719 /* Constants.swift */,
 				49A493D41F7CC49900CC12DB /* Constants+Firebase.swift */,
+				49488A7A1F7D73D9000C405A /* Constantes+API.swift */,
 			);
 			name = Constants;
 			sourceTree = "<group>";
@@ -626,8 +643,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				49488A7B1F7D73D9000C405A /* Constantes+API.swift in Sources */,
 				492F69AA1F6A2FCE009C895C /* ScheduleViewController.swift in Sources */,
 				4955E4931F68FB6700586CC1 /* CustomTableViewCell.swift in Sources */,
+				49488A7E1F7D78D3000C405A /* UIColor+Extension.swift in Sources */,
 				495784711F6A4F29001B4539 /* RouteMapTableViewController.swift in Sources */,
 				49A493D21F7CC39F00CC12DB /* TabBarController.swift in Sources */,
 				49A493D51F7CC49900CC12DB /* Constants+Firebase.swift in Sources */,
@@ -639,6 +658,7 @@
 				49A493D01F7CBD5200CC12DB /* FirebaseAnalytics.swift in Sources */,
 				49DE195D1F6B6FE4001EA719 /* PDFFile.swift in Sources */,
 				49DD4BCE1F6D94DD0099A70B /* Reachability.swift in Sources */,
+				49488A791F7D7320000C405A /* Route.swift in Sources */,
 				491E24431F68F9B300B5F2A0 /* ScheduleTableViewController.swift in Sources */,
 				49DE19651F6B7A33001EA719 /* BaseTableViewController.swift in Sources */,
 				49798C331F68CEC8003C0CEB /* AppDelegate.swift in Sources */,
@@ -830,7 +850,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = GQQX4L6TE2;
-				GCC_OPTIMIZATION_LEVEL = s;
+				GCC_OPTIMIZATION_LEVEL = 3;
 				INFOPLIST_FILE = "Razorback Transit/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

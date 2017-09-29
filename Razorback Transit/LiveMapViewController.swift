@@ -23,7 +23,7 @@ class LiveMapViewController: BaseViewController {
         mapView = GMSMapView.map(withFrame: CGRect.zero, camera: camera)
         view = mapView
 
-        Alamofire.request("http://campusdata.uark.edu/api/buildings?callback=Buildings").responseString { responseString in
+        Alamofire.request(Constants.API.BuildingURL).responseString { responseString in
             
             var buildings: [Building] = []
             
@@ -48,6 +48,39 @@ class LiveMapViewController: BaseViewController {
                 shape.zIndex = 5
                 shape.map = self.mapView
             }
+        }
+
+        Alamofire.request(Constants.API.RouteURL).responseString { responseString in
+            
+            var routes: [Route] = []
+            
+            var data: String = responseString.value!
+            data = String(data.characters.dropFirst(7))
+            data = String(data.characters.dropLast(2))
+            
+            let json = JSON.init(parseJSON: data)
+            
+            for (_, item) in json {
+                
+                let route = Route(name: item["name"].description, color: item["color"].description, shape: item["shape"].description, inService: item["inService"].description)
+                
+                routes.append(route)
+            }
+            
+            for route in routes {
+                
+                if route.inService == "1" {
+                
+                    let shape = GMSPolyline(path: route.getPath())
+                    shape.strokeWidth = 5
+                    shape.zIndex = 15
+                    
+                    shape.strokeColor = route.getColor()
+                    
+                    shape.map = self.mapView
+                }
+            }
+            
         }
     }
     
