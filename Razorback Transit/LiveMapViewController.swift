@@ -16,7 +16,6 @@ class LiveMapViewController: BaseViewController, WKUIDelegate {
 
     let defaults = UserDefaults.standard
     var needsUpdate = false
-    var refreshTimer: Timer!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -56,10 +55,6 @@ class LiveMapViewController: BaseViewController, WKUIDelegate {
             self.OfflineView.isHidden = true
         }
         
-        refreshTimer = Timer.scheduledTimer(withTimeInterval: Constants.secondsBetweenAutoRefresh, repeats: true) { _ in
-            self.webView.reload()
-        }
-        
         guard let lastLoaded = self.defaults.value(forKey: Constants.keyNames.timeOfLastLiveMapReload) as? Date else {
             return
         }
@@ -81,12 +76,6 @@ class LiveMapViewController: BaseViewController, WKUIDelegate {
             self.defaults.set(Date(), forKey: Constants.keyNames.timeOfLastLiveMapReload)
             self.defaults.synchronize()
         }
-        
-        guard let timer = self.refreshTimer else {
-            return
-        }
-        
-        timer.invalidate()
     }
     
     override func didReceiveMemoryWarning() {
