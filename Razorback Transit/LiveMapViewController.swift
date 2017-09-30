@@ -74,13 +74,25 @@ class LiveMapViewController: BaseViewController {
                     let shape = GMSPolyline(path: route.getPath())
                     shape.strokeWidth = 5
                     shape.zIndex = 15
-                    
                     shape.strokeColor = route.getColor()
-                    
                     shape.map = self.mapView
                 }
             }
+        }
+        
+        Alamofire.request("").responseString { responseString in
             
+            var data: String = responseString.value!
+            data = String(data.characters.dropFirst(10))
+            data = String(data.characters.dropLast(2))
+            
+            let json = JSON.init(parseJSON: data)
+            
+            for (_, item) in json {
+                
+                
+                
+            }
         }
     }
     

@@ -45,6 +45,8 @@
 		49A493D01F7CBD5200CC12DB /* FirebaseAnalytics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A493CF1F7CBD5200CC12DB /* FirebaseAnalytics.swift */; };
 		49A493D21F7CC39F00CC12DB /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A493D11F7CC39F00CC12DB /* TabBarController.swift */; };
 		49A493D51F7CC49900CC12DB /* Constants+Firebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A493D41F7CC49900CC12DB /* Constants+Firebase.swift */; };
+		49D6F4981F802CFA00B586B2 /* Bus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49D6F4971F802CFA00B586B2 /* Bus.swift */; };
+		49D6F49A1F802DAD00B586B2 /* Stop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49D6F4991F802DAD00B586B2 /* Stop.swift */; };
 		49DD4BCE1F6D94DD0099A70B /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49DD4BCD1F6D94DD0099A70B /* Reachability.swift */; };
 		49DE19371F6B47CD001EA719 /* REDREDUCED-06-ROUTE.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 49DE19311F6B47CD001EA719 /* REDREDUCED-06-ROUTE.pdf */; };
 		49DE19381F6B47CD001EA719 /* TANREDUCED-05-ROUTE.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 49DE19321F6B47CD001EA719 /* TANREDUCED-05-ROUTE.pdf */; };
@@ -133,6 +135,8 @@
 		49A493CF1F7CBD5200CC12DB /* FirebaseAnalytics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseAnalytics.swift; sourceTree = "<group>"; };
 		49A493D11F7CC39F00CC12DB /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		49A493D41F7CC49900CC12DB /* Constants+Firebase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Constants+Firebase.swift"; sourceTree = "<group>"; };
+		49D6F4971F802CFA00B586B2 /* Bus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bus.swift; sourceTree = "<group>"; };
+		49D6F4991F802DAD00B586B2 /* Stop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stop.swift; sourceTree = "<group>"; };
 		49DD4BCD1F6D94DD0099A70B /* Reachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 		49DE19311F6B47CD001EA719 /* REDREDUCED-06-ROUTE.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "REDREDUCED-06-ROUTE.pdf"; sourceTree = "<group>"; };
 		49DE19321F6B47CD001EA719 /* TANREDUCED-05-ROUTE.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "TANREDUCED-05-ROUTE.pdf"; sourceTree = "<group>"; };
@@ -268,6 +272,8 @@
 			children = (
 				49488A761F7D42B8000C405A /* Building.swift */,
 				49488A781F7D7320000C405A /* Route.swift */,
+				49D6F4971F802CFA00B586B2 /* Bus.swift */,
+				49D6F4991F802DAD00B586B2 /* Stop.swift */,
 			);
 			name = "Map Objects";
 			sourceTree = "<group>";
@@ -625,7 +631,6 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Razorback Transit/Pods-Razorback Transit-resources.sh",
 				"${PODS_ROOT}/GoogleMaps/Maps/Frameworks/GoogleMaps.framework/Versions/A/Resources/GoogleMaps.bundle",
-				"${PODS_ROOT}/GooglePlaces/Frameworks/GooglePlaces.framework/Versions/A/Resources/GooglePlaces.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
@@ -654,6 +659,7 @@
 				49DE19671F6B8058001EA719 /* BaseViewController.swift in Sources */,
 				49488A771F7D42B8000C405A /* Building.swift in Sources */,
 				49798C351F68CEC8003C0CEB /* LiveMapViewController.swift in Sources */,
+				49D6F49A1F802DAD00B586B2 /* Stop.swift in Sources */,
 				49F8B9661F702B5400D30278 /* RequestUserReview.swift in Sources */,
 				49A493D01F7CBD5200CC12DB /* FirebaseAnalytics.swift in Sources */,
 				49DE195D1F6B6FE4001EA719 /* PDFFile.swift in Sources */,
@@ -663,6 +669,7 @@
 				49DE19651F6B7A33001EA719 /* BaseTableViewController.swift in Sources */,
 				49798C331F68CEC8003C0CEB /* AppDelegate.swift in Sources */,
 				49DE19541F6B5C71001EA719 /* ParkingMapViewController.swift in Sources */,
+				49D6F4981F802CFA00B586B2 /* Bus.swift in Sources */,
 				49DE19611F6B724D001EA719 /* Constants.swift in Sources */,
 				49975BB21F6F40BE009A0D1E /* SelectedRows.swift in Sources */,
 			);
@@ -766,7 +773,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -817,7 +824,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -833,7 +840,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = GQQX4L6TE2;
 				INFOPLIST_FILE = "Razorback Transit/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LLVM_LTO = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = arcu.razorbacktransit;
@@ -852,7 +859,7 @@
 				DEVELOPMENT_TEAM = GQQX4L6TE2;
 				GCC_OPTIMIZATION_LEVEL = 3;
 				INFOPLIST_FILE = "Razorback Transit/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LLVM_LTO = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = arcu.razorbacktransit;
