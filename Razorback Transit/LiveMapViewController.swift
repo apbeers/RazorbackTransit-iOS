@@ -94,6 +94,7 @@ class LiveMapViewController: BaseViewController {
                 
             }
         }
+ 
     }
     
     override func didReceiveMemoryWarning() {

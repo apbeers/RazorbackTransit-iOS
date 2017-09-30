@@ -11,10 +11,5 @@ import GoogleMaps
 
 class Stop {
     
-    var latitude: String!
-    var longitude: String!
-    var name: String!
-    var color: String!
-    
-    
+
 }
