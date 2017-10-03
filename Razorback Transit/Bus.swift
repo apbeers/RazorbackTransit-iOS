@@ -11,6 +11,33 @@ import GoogleMaps
 
 class Bus {
     
+    var latitude: String!
+    var longitude: String!
+    var heading: String!
+    var color: String!
+    var routeName: String!
+    var zonarId: String!
     
+    init(latitude: String, longitude: String, heading: String, color: String, routeName: String, zonarId: String) {
+        self.latitude = latitude
+        self.longitude = longitude
+        self.heading = heading
+        self.color = color
+        self.routeName = routeName
+        self.zonarId = zonarId
+    }
+    
+    func getColor() -> UIColor {
+        return UIColor(hexString: color + "99")!
+    }
+    
+    func getCoordinates() -> CLLocationCoordinate2D {
+        
+        guard let latitude = Double(latitude), let longitude = Double(longitude) else {
+            return CLLocationCoordinate2D()
+        }
+        
+        return CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
+    }
     
 }

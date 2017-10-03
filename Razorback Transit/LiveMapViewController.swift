@@ -27,7 +27,10 @@ class LiveMapViewController: BaseViewController {
             
             var buildings: [Building] = []
             
-            var data: String = responseString.value!
+            guard var data: String = responseString.value else {
+                return
+            }
+            
             data = String(data.characters.dropFirst(10))
             data = String(data.characters.dropLast(2))
             
@@ -46,7 +49,7 @@ class LiveMapViewController: BaseViewController {
                 shape.strokeColor = UIColor(red: 204/255, green: 204/255, blue: 204/255, alpha: 1)
                 shape.fillColor = UIColor(red: 247/255, green: 243/255, blue: 231/255, alpha: 1)
                 shape.zIndex = 5
-                shape.map = self.mapView
+             //   shape.map = self.mapView
             }
         }
 
@@ -54,7 +57,10 @@ class LiveMapViewController: BaseViewController {
             
             var routes: [Route] = []
             
-            var data: String = responseString.value!
+            guard var data: String = responseString.value else {
+                return
+            }
+            
             data = String(data.characters.dropFirst(7))
             data = String(data.characters.dropLast(2))
             
@@ -80,17 +86,27 @@ class LiveMapViewController: BaseViewController {
             }
         }
         
-        Alamofire.request("").responseString { responseString in
+        Alamofire.request(Constants.API.BusURL).responseString { responseString in
             
-            var data: String = responseString.value!
-            data = String(data.characters.dropFirst(10))
-            data = String(data.characters.dropLast(2))
+            var busses: [Bus] = []
+            
+            guard let data: String = responseString.value else {
+                return
+            }
             
             let json = JSON.init(parseJSON: data)
             
-            for (_, item) in json {
+            for (_, item) in json["Messages"][0]["Args"][0] {
+
+                    let bus = Bus(latitude: item["latitude"].description, longitude: item["longitude"].description, heading: item["heading"].description, color: item["color"].description, routeName: item["routeName"].description, zonarId: item["zonarId"].description)
+                    busses.append(bus)
+            }
+            
+            for bus in busses {
                 
-                
+                let marker = GMSMarker(position: bus.getCoordinates())
+                marker.icon = GMSMarker.markerImage(with: bus.getColor())
+                marker.map = self.mapView
                 
             }
         }
