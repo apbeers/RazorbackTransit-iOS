@@ -36,7 +36,11 @@ class Route {
     
     private func addPathCoordinate(latitude: String, longitude: String) {
         
-        path.add(CLLocationCoordinate2D(latitude: Double(latitude)!, longitude: Double(longitude)!))
+        guard let latitude = Double(latitude), let longitude = Double(longitude) else {
+            return
+        }
+        
+        path.add(CLLocationCoordinate2D(latitude: latitude, longitude: longitude))
     }
     
     func getPath() -> GMSMutablePath {
