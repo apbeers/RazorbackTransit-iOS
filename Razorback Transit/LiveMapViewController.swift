@@ -11,18 +11,20 @@ import GoogleMaps
 import Firebase
 import Alamofire
 import SwiftyJSON
+import CoreData
 
 class LiveMapViewController: BaseViewController {
     
     var mapView: GMSMapView!
     var timer: Timer!
     var markers: [GMSMarker] = []
-    var busImages: [UIImage] = []
+    var tappedMarker: GMSMarker!
+    var userDefaults = UserDefaults.standard
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let camera = GMSCameraPosition.camera(withLatitude: 36.068, longitude: -94.1725, zoom: 12.0)
+        let camera = GMSCameraPosition.camera(withLatitude: 36.068, longitude: -94.1725, zoom: 13.0)
         mapView = GMSMapView.map(withFrame: CGRect.zero, camera: camera)
         mapView.settings.rotateGestures = false
         view = mapView
@@ -34,7 +36,6 @@ class LiveMapViewController: BaseViewController {
             }
         }
 
-        //loadBuildings()
         loadRoutes()
         loadBusses()
         loadStops()
@@ -75,22 +76,32 @@ class LiveMapViewController: BaseViewController {
                 
                 let marker = GMSMarker(position: stop.getCoordinates())
                 marker.icon = UIImage()
-                marker.map = self.mapView
                 marker.title = "This \n Some \n Text \n Text"
-                marker.icon = UIImage()
                 marker.isFlat = true
+                marker.map = self.mapView
                 
-                URLSession.shared.dataTask(with: stop.getURL(id: stop.id)) { data, response, error in
-                    guard
-                        let httpURLResponse = response as? HTTPURLResponse, httpURLResponse.statusCode == 200,
-                        let mimeType = response?.mimeType, mimeType.hasPrefix("image"),
-                        let data = data, error == nil,
-                        let image = UIImage(data: data)
-                        else { return }
-                    DispatchQueue.main.async() {
+                if let imageData = self.userDefaults.value(forKey: stop.id) as? Data {
+                    
+                    if let image = UIImage.init(data: imageData) {
+                        
                         marker.icon = image
                     }
-                }.resume()
+                } else {
+                    
+                    URLSession.shared.dataTask(with: stop.getURL(id: stop.id)) { data, response, error in
+                        guard
+                            let httpURLResponse = response as? HTTPURLResponse, httpURLResponse.statusCode == 200,
+                            let mimeType = response?.mimeType, mimeType.hasPrefix("image"),
+                            let data = data, error == nil,
+                            let image = UIImage(data: data)
+                            else { return }
+                        DispatchQueue.main.async() {
+                            
+                            self.userDefaults.set(UIImagePNGRepresentation(image), forKey: stop.id)
+                            marker.icon = image
+                        }
+                    }.resume()
+                }
             }
         }
     }
@@ -168,8 +179,8 @@ class LiveMapViewController: BaseViewController {
                         let image = UIImage(data: data)
                         else { return }
                     DispatchQueue.main.async() {
+                        
                         marker.icon = image
-                        self.busImages.append(image)
                     }
                 }.resume()
                 i += 1
@@ -212,8 +223,8 @@ class LiveMapViewController: BaseViewController {
             }
         }
     }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
 }
-
