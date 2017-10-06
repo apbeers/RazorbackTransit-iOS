@@ -27,6 +27,50 @@ class LiveMapViewController: BaseViewController {
         loadBuildings()
         loadRoutes()
         loadBusses()
+        loadStops()
+    }
+    
+    func loadStops() {
+        
+        Alamofire.request(Constants.API.StopURL).responseString { responseString in
+            
+            var stops: [Stop] = []
+            
+            guard var data: String = responseString.value else {
+                return
+            }
+            
+            data = String(data.characters.dropFirst(10))
+            data = String(data.characters.dropLast(2))
+            
+            let json = JSON.init(parseJSON: data)
+            
+            for (_, item) in json {
+                
+                let stop = Stop(id: item["id"].description, name: item["name"].description, latitude: item["latitude"].description, longitude: item["longitude"].description)
+                
+                stops.append(stop)
+            }
+            
+            for stop in stops {
+                
+                let marker = GMSMarker(position: stop.getCoordinates())
+                marker.icon = UIImage()
+                marker.map = self.mapView
+                
+                URLSession.shared.dataTask(with: stop.getURL(id: stop.id)) { data, response, error in
+                    guard
+                        let httpURLResponse = response as? HTTPURLResponse, httpURLResponse.statusCode == 200,
+                        let mimeType = response?.mimeType, mimeType.hasPrefix("image"),
+                        let data = data, error == nil,
+                        let image = UIImage(data: data)
+                        else { return }
+                    DispatchQueue.main.async() {
+                        marker.icon = image
+                    }
+                }.resume()
+            }
+        }
     }
     
     func loadRoutes() {
