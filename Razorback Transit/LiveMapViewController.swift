@@ -16,20 +16,25 @@ class LiveMapViewController: BaseViewController {
     
     var mapView: GMSMapView!
     var timer: Timer!
+    var markers: [GMSMarker] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let camera = GMSCameraPosition.camera(withLatitude: 36.068, longitude: -94.1725, zoom: 12.0)
+        mapView = GMSMapView.map(withFrame: CGRect.zero, camera: camera)
+        view = mapView
+        
         if timer == nil {
-            timer = Timer.scheduledTimer(withTimeInterval: 15, repeats: true) { _ in
+            timer = Timer.scheduledTimer(withTimeInterval: 5, repeats: true) { _ in
+                
+               // self.mapView.clear()
                 self.loadStops()
                 self.loadRoutes()
                 self.loadBusses()
             }
         }
-        let camera = GMSCameraPosition.camera(withLatitude: 36.068, longitude: -94.1725, zoom: 12.0)
-        mapView = GMSMapView.map(withFrame: CGRect.zero, camera: camera)
-        view = mapView
-        
+
         loadBuildings()
         loadRoutes()
         loadBusses()
@@ -138,21 +143,43 @@ class LiveMapViewController: BaseViewController {
                 return
             }
             
+            for marker in self.markers {
+                marker.map = nil
+            }
+            self.markers = []
+            
             let json = JSON.init(parseJSON: data)
             
             for (_, item) in json["Messages"][0]["Args"][0] {
                 
                 let bus = Bus(latitude: item["latitude"].description, longitude: item["longitude"].description, heading: item["heading"].description, color: item["color"].description, routeName: item["routeName"].description, zonarId: item["zonarId"].description)
-                busses.append(bus)
-            }
-            
-            for bus in busses {
+                
                 
                 let marker = GMSMarker(position: bus.getCoordinates())
                 marker.icon = GMSMarker.markerImage(with: bus.getColor())
+                marker.zIndex = 5
+                marker.icon = UIImage()
                 marker.map = self.mapView
                 
+                URLSession.shared.dataTask(with: bus.getImageURL()) { data, response, error in
+                    guard
+                        let httpURLResponse = response as? HTTPURLResponse, httpURLResponse.statusCode == 200,
+                        let mimeType = response?.mimeType, mimeType.hasPrefix("image"),
+                        let data = data, error == nil,
+                        let image = UIImage(data: data)
+                        else { return }
+                    DispatchQueue.main.async() {
+                        marker.icon = image
+                    }
+                    }.resume()
+                
+                
+                self.markers.append(marker)
+                
+                busses.append(bus)
             }
+            
+
         }
         
     }

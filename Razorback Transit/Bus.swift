@@ -27,6 +27,13 @@ class Bus {
         self.zonarId = zonarId
     }
     
+    func getImageURL() -> URL{
+        
+        let imageString = "https://campusdata.uark.edu/api/busimages?color=" + color.dropFirst() + "&heading=" + heading
+        
+        return URL(string: imageString)!
+    }
+    
     func getColor() -> UIColor {
         return UIColor(hexString: color + "99")!
     }
