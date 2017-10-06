@@ -15,11 +15,17 @@ import SwiftyJSON
 class LiveMapViewController: BaseViewController {
     
     var mapView: GMSMapView!
-    
+    var timer: Timer!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        if timer == nil {
+            timer = Timer.scheduledTimer(withTimeInterval: 15, repeats: true) { _ in
+                self.loadStops()
+                self.loadRoutes()
+                self.loadBusses()
+            }
+        }
         let camera = GMSCameraPosition.camera(withLatitude: 36.068, longitude: -94.1725, zoom: 12.0)
         mapView = GMSMapView.map(withFrame: CGRect.zero, camera: camera)
         view = mapView
@@ -28,6 +34,15 @@ class LiveMapViewController: BaseViewController {
         loadRoutes()
         loadBusses()
         loadStops()
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        
+        guard let timer = timer else {
+            return
+        }
+        
+        timer.invalidate()
     }
     
     func loadStops() {
@@ -57,6 +72,9 @@ class LiveMapViewController: BaseViewController {
                 let marker = GMSMarker(position: stop.getCoordinates())
                 marker.icon = UIImage()
                 marker.map = self.mapView
+                marker.title = "This \n Some \n Text \n Text"
+                
+                marker.isFlat = true
                 
                 URLSession.shared.dataTask(with: stop.getURL(id: stop.id)) { data, response, error in
                     guard
