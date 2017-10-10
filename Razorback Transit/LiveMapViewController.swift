@@ -16,7 +16,8 @@ import CoreData
 class LiveMapViewController: BaseViewController {
     
     var mapView: GMSMapView!
-    var timer: Timer!
+    var busTimer: Timer!
+    var stopTimer: Timer!
     var busMarkers: [GMSMarker] = []
     var stopMarkers: [GMSMarker] = []
     var tappedMarker: GMSMarker!
@@ -33,28 +34,75 @@ class LiveMapViewController: BaseViewController {
         mapView.settings.rotateGestures = false
         view = mapView
         
-        infoWindow = CustomInfoWindow()
-        
-        if timer == nil {
-            timer = Timer.scheduledTimer(withTimeInterval: 5, repeats: true) { _ in
-                
+        if self.busTimer == nil {
+            self.busTimer = Timer.scheduledTimer(withTimeInterval: 5, repeats: true) { _ in
                 self.loadBusses()
             }
         }
-
-        loadRoutes()
+        
+        if self.stopTimer == nil {
+            self.stopTimer = Timer.scheduledTimer(withTimeInterval: 60, repeats: true) { _ in
+                self.refeshStopNextArrival()
+            }
+        }
+        
         loadBusses()
         loadStops()
+        loadRoutes()
         //refreshStopsImageCache()
     }
     
-    override func viewWillDisappear(_ animated: Bool) {
+    override func viewDidDisappear(_ animated: Bool) {
         
-        guard let timer = timer else {
+        guard let busTimer = self.busTimer else {
             return
         }
         
-        timer.invalidate()
+        busTimer.invalidate()
+        
+        guard let stopTimer = self.stopTimer else {
+            return
+        }
+        
+        stopTimer.invalidate()
+        
+    }
+    
+    func refeshStopNextArrival() {
+        
+        for marker in stopMarkers {
+            
+            guard let id = marker.userData as? String else {
+                return
+            }
+            
+            let url = "https://campusdata.uark.edu/api/routes?callback=jQuery18004251280482585251_1507605405541&stopId=" + id + "&_=1507605550296"
+            
+            Alamofire.request(url).responseString { responseString in
+                
+                guard var data: String = responseString.value else {
+                    return
+                }
+                
+                data = String(data.characters.dropFirst(41))
+                data = String(data.characters.dropLast(2))
+                
+                let json = JSON(parseJSON: data)
+                
+                var nextArrival: String!
+                
+                for (_, item) in json {
+                    
+                    nextArrival = item["nextArrival"].description
+                    
+                    if nextArrival != "..." && nextArrival != "null" {
+                        
+                        marker.title = "Next Arrival: " + nextArrival
+                        break
+                    }
+                }
+            }
+        }
     }
     
     func refreshStopsImageCache() {
@@ -66,12 +114,6 @@ class LiveMapViewController: BaseViewController {
             guard var data: String = responseString.value else {
                 return
             }
-            
-            for marker in self.stopMarkers {
-                marker.map = nil
-            }
-            
-            self.stopMarkers = []
             
             data = String(data.characters.dropFirst(10))
             data = String(data.characters.dropLast(2))
@@ -135,11 +177,11 @@ class LiveMapViewController: BaseViewController {
             for stop in stops {
                 
                 let marker = GMSMarker(position: stop.getCoordinates())
-                marker.icon = UIImage()
+                marker.icon = nil
                 marker.isFlat = true
-                marker.title = stop.name
+                marker.snippet = stop.name
                 marker.map = self.mapView
-               // marker.userData = StopNameAndID(name: stop.name, id: stop.id)
+                marker.userData = stop.id
                 self.stopMarkers.append(marker)
                 
                 if let imageData = self.userDefaults.value(forKey: stop.id) as? Data {
@@ -187,7 +229,7 @@ class LiveMapViewController: BaseViewController {
                         
                         if nextArrival != "..." && nextArrival != "null" {
                             
-                            marker.snippet = "Next Arrival: " + nextArrival
+                            marker.title = "Next Arrival: " + nextArrival
                             break
                         }
                         
@@ -325,95 +367,7 @@ class LiveMapViewController: BaseViewController {
         }
     }
     
-    /*
-    func mapView(_ mapView: GMSMapView, didTap marker: GMSMarker) -> Bool {
-        
-        locationMarker = marker
-        infoWindow.removeFromSuperview()
-        
-        guard let stopNameAndID = marker.userData as? StopNameAndID else {
-                return false
-        }
-        
-        let url = "https://campusdata.uark.edu/api/routes?callback=jQuery18004251280482585251_1507605405541&stopId=" + stopNameAndID.id + "&_=1507605550296"
-        
-        Alamofire.request(url).responseString { responseString in
-            
-            let infoWindowData = InfoWindowData(stopName: stopNameAndID.name)
-            
-            guard var data: String = responseString.value else {
-                return
-            }
-            
-            data = String(data.characters.dropFirst(41))
-            data = String(data.characters.dropLast(2))
-            
-            let json = JSON(parseJSON: data)
-
-            for (_, item) in json {
-                
-                if item["nextArrival"].description != "..." {
-                    
-                    infoWindowData.addRoute(color: item["color"].description, name: item["name"].description, nextArrival: item["nextArrival"].description)
-                }
-            }
-            
-            var height: Int = 0
-            if infoWindowData.getNumberOfRoutes() != 0 {
-                height = infoWindowData.getNumberOfRoutes() * 50
-            } else {
-                height = 50
-            }
-            
-            let frame = CGRect(x: 0, y: 0, width: 350, height: height)
-            
-            self.infoWindow = CustomInfoWindow(frame: frame)
-            
-            self.infoWindow.setUp(infoWindowData: infoWindowData)
-            
-            let location = self.locationMarker!.position
-            
-            
-            self.infoWindow.center = mapView.projection.point(for: location)
-            
-            self.infoWindow.center.y = self.infoWindow.center.y - self.sizeForOffset(view: self.infoWindow)
-            
-            self.view.addSubview(self.infoWindow)
-            
-        }
-        return true
-    }
  
- 
-    // MARK: Needed to create the custom info window
-    func mapView(_ mapView: GMSMapView, didChange position: GMSCameraPosition) {
-        if (locationMarker != nil){
-            guard let location = locationMarker?.position else {
-                print("locationMarker is nil")
-                return
-            }
-            infoWindow.center = mapView.projection.point(for: location)
-            infoWindow.center.y = infoWindow.center.y - sizeForOffset(view: infoWindow)
-        }
-    }
-    
-    // MARK: Needed to create the custom info window
-    func mapView(_ mapView: GMSMapView, markerInfoWindow marker: GMSMarker) -> UIView? {
-        return UIView()
-    }
-    
-    
-    // MARK: Needed to create the custom info window
-    func mapView(_ mapView: GMSMapView, didTapAt coordinate: CLLocationCoordinate2D) {
-        
-        infoWindow.removeFromSuperview()
-    }
-    
-    // MARK: Needed to create the custom info window (this is optional)
-    func sizeForOffset(view: UIView) -> CGFloat {
-        return  40.0
-    }
-     */
  
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
