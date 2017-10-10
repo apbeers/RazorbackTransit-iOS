@@ -22,10 +22,8 @@ class LiveMapViewController: BaseViewController {
     var stopMarkers: [GMSMarker] = []
     var tappedMarker: GMSMarker!
     var userDefaults = UserDefaults.standard
-    
-    private var infoWindow = CustomInfoWindow()
-    fileprivate var locationMarker : GMSMarker? = GMSMarker()
-    
+    var routeIDs: [String] = []
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -47,7 +45,6 @@ class LiveMapViewController: BaseViewController {
         }
         
         loadBusses()
-        loadStops()
         loadRoutes()
         //refreshStopsImageCache()
     }
@@ -146,9 +143,21 @@ class LiveMapViewController: BaseViewController {
         }
     }
     
+    func buildStopURLString() -> String {
+        
+        var stopString = Constants.API.StopURL
+        
+        for id in routeIDs {
+            
+            stopString.append("-" + id)
+        }
+        
+        return stopString
+    }
+    
     func loadStops() {
         
-        Alamofire.request(Constants.API.StopURL).responseString { responseString in
+        Alamofire.request(buildStopURLString()).responseString { responseString in
             
             var stops: [Stop] = []
             
@@ -232,7 +241,6 @@ class LiveMapViewController: BaseViewController {
                             marker.title = "Next Arrival: " + nextArrival
                             break
                         }
-                        
                     }
                 }
             }
@@ -242,8 +250,6 @@ class LiveMapViewController: BaseViewController {
     func loadRoutes() {
         
         Alamofire.request(Constants.API.RouteURL).responseString { responseString in
-            
-            var routes: [Route] = []
             
             guard var data: String = responseString.value else {
                 return
@@ -256,14 +262,13 @@ class LiveMapViewController: BaseViewController {
             
             for (_, item) in json {
                 
-                let route = Route(name: item["name"].description, color: item["color"].description, shape: item["shape"].description, inService: item["inService"].description)
-                
-                routes.append(route)
-            }
-            
-            for route in routes {
+                let route = Route(id: item["id"].description, name: item["name"].description, color: item["color"].description, shape: item["shape"].description, inService: item["inService"].description)
                 
                 if route.inService == "1" {
+    
+                    if !self.routeIDs.contains(route.id) {
+                        self.routeIDs.append(route.id)
+                    }
                     
                     let shape = GMSPolyline(path: route.getPath())
                     shape.strokeWidth = 5
@@ -272,14 +277,14 @@ class LiveMapViewController: BaseViewController {
                     shape.map = self.mapView
                 }
             }
+            
+            self.loadStops()
         }
     }
     
     func loadBusses() {
         
         Alamofire.request(Constants.API.BusURL).responseString { responseString in
-            
-            var busses: [Bus] = []
             
             guard let data: String = responseString.value else {
                 return
@@ -301,7 +306,6 @@ class LiveMapViewController: BaseViewController {
                 marker.icon = UIImage()
                 marker.zIndex = 5
                 marker.map = self.mapView
-                
                 
                 if let imageData = self.userDefaults.value(forKey: bus.getCachedImageKey()) as? Data {
                     
@@ -328,8 +332,6 @@ class LiveMapViewController: BaseViewController {
                     }.resume()
                 }
                 self.busMarkers.append(marker)
-                
-                busses.append(bus)
             }
         }
     }
@@ -337,8 +339,6 @@ class LiveMapViewController: BaseViewController {
     func loadBuildings() {
         
         Alamofire.request(Constants.API.BuildingURL).responseString { responseString in
-            
-            var buildings: [Building] = []
             
             guard var data: String = responseString.value else {
                 return
@@ -353,11 +353,6 @@ class LiveMapViewController: BaseViewController {
                 
                 let building = Building(code: item["code"].description , address: item["address"].description, latitude: item["latitude"].description, longitude: item["longitude"].description, name: item["name"].description, shape: item["shape"].description)
                 
-                buildings.append(building)
-            }
-            
-            for building in buildings {
-                
                 let shape = GMSPolygon(path: building.getPath())
                 shape.strokeColor = UIColor(red: 204/255, green: 204/255, blue: 204/255, alpha: 1)
                 shape.fillColor = UIColor(red: 247/255, green: 243/255, blue: 231/255, alpha: 1)
@@ -366,9 +361,7 @@ class LiveMapViewController: BaseViewController {
             }
         }
     }
-    
- 
- 
+
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
