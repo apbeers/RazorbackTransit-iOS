@@ -13,7 +13,7 @@ import Alamofire
 import SwiftyJSON
 import CoreData
 
-class LiveMapViewController: BaseViewController {
+class LiveMapViewController: BaseViewController, GMSMapViewDelegate {
     
     var mapView: GMSMapView!
     var timer: Timer!
@@ -21,13 +21,19 @@ class LiveMapViewController: BaseViewController {
     var tappedMarker: GMSMarker!
     var userDefaults = UserDefaults.standard
     
+    private var infoWindow = CustomInfoWindow()
+    fileprivate var locationMarker : GMSMarker? = GMSMarker()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         let camera = GMSCameraPosition.camera(withLatitude: 36.068, longitude: -94.1725, zoom: 13.0)
         mapView = GMSMapView.map(withFrame: CGRect.zero, camera: camera)
         mapView.settings.rotateGestures = false
+        mapView.delegate = self
         view = mapView
+        
+        infoWindow = CustomInfoWindow()
         
         if timer == nil {
             timer = Timer.scheduledTimer(withTimeInterval: 20, repeats: true) { _ in
@@ -79,6 +85,7 @@ class LiveMapViewController: BaseViewController {
                 marker.title = "This \n Some \n Text \n Text"
                 marker.isFlat = true
                 marker.map = self.mapView
+                marker.userData = StopNameAndID(name: stop.name, id: stop.id)
                 
                 if let imageData = self.userDefaults.value(forKey: stop.id) as? Data {
                     
@@ -86,6 +93,7 @@ class LiveMapViewController: BaseViewController {
                         
                         marker.icon = image
                     }
+                    
                 } else {
                     
                     URLSession.shared.dataTask(with: stop.getURL(id: stop.id)) { data, response, error in
@@ -204,7 +212,7 @@ class LiveMapViewController: BaseViewController {
             data = String(data.characters.dropFirst(10))
             data = String(data.characters.dropLast(2))
             
-            let json = JSON.init(parseJSON: data)
+            let json = JSON(parseJSON: data)
             
             for (_, item) in json {
                 
@@ -222,6 +230,89 @@ class LiveMapViewController: BaseViewController {
                 shape.map = self.mapView
             }
         }
+    }
+    
+    
+    func mapView(_ mapView: GMSMapView, didTap marker: GMSMarker) -> Bool {
+        
+        locationMarker = marker
+        infoWindow.removeFromSuperview()
+        
+        guard let stopNameAndID = marker.userData as? StopNameAndID else {
+                return false
+        }
+        
+        let url = "https://campusdata.uark.edu/api/routes?callback=jQuery18004251280482585251_1507605405541&stopId=" + stopNameAndID.id + "&_=1507605550296"
+        
+        Alamofire.request(url).responseString { responseString in
+            
+            let infoWindowData = InfoWindowData(stopName: stopNameAndID.name)
+            
+            guard var data: String = responseString.value else {
+                return
+            }
+            
+            data = String(data.characters.dropFirst(41))
+            data = String(data.characters.dropLast(2))
+            
+            let json = JSON(parseJSON: data)
+            
+            for (_, item) in json {
+                
+                if item["nextArrival"].description != "" {
+                    
+                    infoWindowData.addRoute(color: item["color"].description, name: item["name"].description, nextArrival: item["nextArrival"].description)
+                }
+                
+                
+                
+                let frame = CGRect(x: 0, y: 0, width: 350, height: 50)
+                
+                self.infoWindow = CustomInfoWindow(frame: frame)
+                
+                let location = self.locationMarker!.position
+             
+                
+                self.infoWindow.center = mapView.projection.point(for: location)
+                
+                self.infoWindow.center.y = self.infoWindow.center.y - self.sizeForOffset(view: self.infoWindow)
+                
+                self.view.addSubview(self.infoWindow)
+                
+            }
+            
+        }
+        
+
+        return true
+    }
+    
+    // MARK: Needed to create the custom info window
+    func mapView(_ mapView: GMSMapView, didChange position: GMSCameraPosition) {
+        if (locationMarker != nil){
+            guard let location = locationMarker?.position else {
+                print("locationMarker is nil")
+                return
+            }
+            infoWindow.center = mapView.projection.point(for: location)
+            infoWindow.center.y = infoWindow.center.y - sizeForOffset(view: infoWindow)
+        }
+    }
+    
+    // MARK: Needed to create the custom info window
+    func mapView(_ mapView: GMSMapView, markerInfoWindow marker: GMSMarker) -> UIView? {
+        return UIView()
+    }
+    
+    
+    // MARK: Needed to create the custom info window
+    func mapView(_ mapView: GMSMapView, didTapAt coordinate: CLLocationCoordinate2D) {
+        infoWindow.removeFromSuperview()
+    }
+    
+    // MARK: Needed to create the custom info window (this is optional)
+    func sizeForOffset(view: UIView) -> CGFloat {
+        return  40.0
     }
     
     override func didReceiveMemoryWarning() {
