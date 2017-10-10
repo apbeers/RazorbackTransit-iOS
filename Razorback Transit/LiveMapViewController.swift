@@ -135,7 +135,7 @@ class LiveMapViewController: BaseViewController {
                         else { return }
                     DispatchQueue.main.async() {
                         
-                        self.userDefaults.set(UIImagePNGRepresentation(image), forKey: stop.id)
+                        self.userDefaults.set(UIImagePNGRepresentation(image.imageWithInsets(insets: Constants.StopImageInstets)!), forKey: stop.id)
 
                     }
                 }.resume()
@@ -186,7 +186,7 @@ class LiveMapViewController: BaseViewController {
             for stop in stops {
                 
                 let marker = GMSMarker(position: stop.getCoordinates())
-                marker.icon = nil
+                marker.icon = UIImage()
                 marker.isFlat = true
                 marker.snippet = stop.name
                 marker.map = self.mapView
@@ -197,7 +197,9 @@ class LiveMapViewController: BaseViewController {
                     
                     if let image = UIImage.init(data: imageData) {
                         
-                        marker.icon = image
+                        
+                        
+                        marker.icon = image.imageWithInsets(insets: Constants.StopImageInstets)
                     }
                     
                 } else {
@@ -211,7 +213,7 @@ class LiveMapViewController: BaseViewController {
                             else { return }
                         DispatchQueue.main.async() {
                             
-                            marker.icon = image
+                            marker.icon = image.imageWithInsets(insets: Constants.StopImageInstets)
                             self.userDefaults.set(UIImagePNGRepresentation(image), forKey: stop.id)
                         }
                     }.resume()
@@ -354,8 +356,8 @@ class LiveMapViewController: BaseViewController {
                 let building = Building(code: item["code"].description , address: item["address"].description, latitude: item["latitude"].description, longitude: item["longitude"].description, name: item["name"].description, shape: item["shape"].description)
                 
                 let shape = GMSPolygon(path: building.getPath())
-                shape.strokeColor = UIColor(red: 204/255, green: 204/255, blue: 204/255, alpha: 1)
-                shape.fillColor = UIColor(red: 247/255, green: 243/255, blue: 231/255, alpha: 1)
+                shape.strokeColor = Constants.Colors.buildingStrokeColor
+                shape.fillColor = Constants.Colors.buildingFillColor
                 shape.zIndex = 5
                 shape.map = self.mapView
             }

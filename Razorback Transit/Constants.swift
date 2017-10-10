@@ -10,12 +10,6 @@ import Foundation
 import UIKit
 
 struct Constants {
-
-    struct Colors {
-        
-        static let razorbackRed = UIColor(red: 157/255, green: 34/255, blue: 53/255, alpha: 1)
-        static let razorbackRedBarColor = UIColor(red: 139/255, green: 0/255, blue: 15/255, alpha: 1)
-    }
     
     struct ScheduleFiles {
         
@@ -56,6 +50,8 @@ struct Constants {
                 static let redReduced = PDFFile(filename: "REDREDUCED-06-ROUTE", title: "Red Reduced")
         static let tanReduced = PDFFile(filename: "TANREDUCED-05-ROUTE", title: "Tan Reduced")
     }
+    
+    static let StopImageInstets = UIEdgeInsets(top: 4, left: 20, bottom: 20, right: 20)
     
     static let parkingMap: PDFFile = PDFFile(filename: "parkmap", title: "Parking Map")
     

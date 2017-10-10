@@ -14,8 +14,6 @@
 		49488A791F7D7320000C405A /* Route.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49488A781F7D7320000C405A /* Route.swift */; };
 		49488A7B1F7D73D9000C405A /* Constantes+API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49488A7A1F7D73D9000C405A /* Constantes+API.swift */; };
 		49488A7E1F7D78D3000C405A /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49488A7D1F7D78D3000C405A /* UIColor+Extension.swift */; };
-		4950324F1F8C68E40069CB22 /* InfoWindowData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4950324E1F8C68E40069CB22 /* InfoWindowData.swift */; };
-		495032511F8C78210069CB22 /* StopNameAndID.swift in Sources */ = {isa = PBXBuildFile; fileRef = 495032501F8C78210069CB22 /* StopNameAndID.swift */; };
 		4955E4931F68FB6700586CC1 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4955E4921F68FB6700586CC1 /* CustomTableViewCell.swift */; };
 		495784661F6A4B16001B4539 /* BLUE-22.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 4957845C1F6A4B16001B4539 /* BLUE-22.pdf */; };
 		495784671F6A4B16001B4539 /* TAN-35.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 4957845D1F6A4B16001B4539 /* TAN-35.pdf */; };
@@ -43,6 +41,8 @@
 		4984DE1E1F6B40780040F1CD /* TANREDUCED-05.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 4984DE181F6B40780040F1CD /* TANREDUCED-05.pdf */; };
 		49975BB21F6F40BE009A0D1E /* SelectedRows.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49975BB11F6F40BE009A0D1E /* SelectedRows.swift */; };
 		499C51101F8D6AC700D654C6 /* LiveMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499C510F1F8D6AC700D654C6 /* LiveMapViewController.swift */; };
+		499C51121F8D71DC00D654C6 /* Constants+Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499C51111F8D71DC00D654C6 /* Constants+Colors.swift */; };
+		499C51141F8D739C00D654C6 /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499C51131F8D739C00D654C6 /* UIImage+Extension.swift */; };
 		49A493CE1F7CBC1600CC12DB /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 49A493CD1F7CB74F00CC12DB /* GoogleService-Info.plist */; };
 		49A493D21F7CC39F00CC12DB /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A493D11F7CC39F00CC12DB /* TabBarController.swift */; };
 		49A493D51F7CC49900CC12DB /* Constants+Firebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A493D41F7CC49900CC12DB /* Constants+Firebase.swift */; };
@@ -99,8 +99,6 @@
 		49488A781F7D7320000C405A /* Route.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Route.swift; sourceTree = "<group>"; };
 		49488A7A1F7D73D9000C405A /* Constantes+API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Constantes+API.swift"; sourceTree = "<group>"; };
 		49488A7D1F7D78D3000C405A /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
-		4950324E1F8C68E40069CB22 /* InfoWindowData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoWindowData.swift; sourceTree = "<group>"; };
-		495032501F8C78210069CB22 /* StopNameAndID.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopNameAndID.swift; sourceTree = "<group>"; };
 		4955E4921F68FB6700586CC1 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
 		4957845C1F6A4B16001B4539 /* BLUE-22.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "BLUE-22.pdf"; sourceTree = "<group>"; };
 		4957845D1F6A4B16001B4539 /* TAN-35.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "TAN-35.pdf"; sourceTree = "<group>"; };
@@ -134,6 +132,8 @@
 		4984DE181F6B40780040F1CD /* TANREDUCED-05.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "TANREDUCED-05.pdf"; sourceTree = "<group>"; };
 		49975BB11F6F40BE009A0D1E /* SelectedRows.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectedRows.swift; sourceTree = "<group>"; };
 		499C510F1F8D6AC700D654C6 /* LiveMapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LiveMapViewController.swift; sourceTree = "<group>"; };
+		499C51111F8D71DC00D654C6 /* Constants+Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Constants+Colors.swift"; sourceTree = "<group>"; };
+		499C51131F8D739C00D654C6 /* UIImage+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
 		49A493CD1F7CB74F00CC12DB /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		49A493D11F7CC39F00CC12DB /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		49A493D41F7CC49900CC12DB /* Constants+Firebase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Constants+Firebase.swift"; sourceTree = "<group>"; };
@@ -217,6 +217,7 @@
 			isa = PBXGroup;
 			children = (
 				49488A7D1F7D78D3000C405A /* UIColor+Extension.swift */,
+				499C51131F8D739C00D654C6 /* UIImage+Extension.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -276,8 +277,6 @@
 				49488A781F7D7320000C405A /* Route.swift */,
 				49D6F4971F802CFA00B586B2 /* Bus.swift */,
 				49D6F4991F802DAD00B586B2 /* Stop.swift */,
-				4950324E1F8C68E40069CB22 /* InfoWindowData.swift */,
-				495032501F8C78210069CB22 /* StopNameAndID.swift */,
 			);
 			name = "Map Objects";
 			sourceTree = "<group>";
@@ -351,6 +350,7 @@
 				49DE19601F6B724D001EA719 /* Constants.swift */,
 				49A493D41F7CC49900CC12DB /* Constants+Firebase.swift */,
 				49488A7A1F7D73D9000C405A /* Constantes+API.swift */,
+				499C51111F8D71DC00D654C6 /* Constants+Colors.swift */,
 			);
 			name = Constants;
 			sourceTree = "<group>";
@@ -651,13 +651,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4950324F1F8C68E40069CB22 /* InfoWindowData.swift in Sources */,
 				49488A7B1F7D73D9000C405A /* Constantes+API.swift in Sources */,
 				492F69AA1F6A2FCE009C895C /* ScheduleViewController.swift in Sources */,
 				4955E4931F68FB6700586CC1 /* CustomTableViewCell.swift in Sources */,
 				49488A7E1F7D78D3000C405A /* UIColor+Extension.swift in Sources */,
 				495784711F6A4F29001B4539 /* RouteMapTableViewController.swift in Sources */,
 				499C51101F8D6AC700D654C6 /* LiveMapViewController.swift in Sources */,
+				499C51121F8D71DC00D654C6 /* Constants+Colors.swift in Sources */,
 				49A493D21F7CC39F00CC12DB /* TabBarController.swift in Sources */,
 				49A493D51F7CC49900CC12DB /* Constants+Firebase.swift in Sources */,
 				495784731F6A5087001B4539 /* RouteMapWebViewController.swift in Sources */,
@@ -668,8 +668,8 @@
 				49DE195D1F6B6FE4001EA719 /* PDFFile.swift in Sources */,
 				49DD4BCE1F6D94DD0099A70B /* Reachability.swift in Sources */,
 				49488A791F7D7320000C405A /* Route.swift in Sources */,
+				499C51141F8D739C00D654C6 /* UIImage+Extension.swift in Sources */,
 				491E24431F68F9B300B5F2A0 /* ScheduleTableViewController.swift in Sources */,
-				495032511F8C78210069CB22 /* StopNameAndID.swift in Sources */,
 				49DE19651F6B7A33001EA719 /* BaseTableViewController.swift in Sources */,
 				49798C331F68CEC8003C0CEB /* AppDelegate.swift in Sources */,
 				49DE19541F6B5C71001EA719 /* ParkingMapViewController.swift in Sources */,
