@@ -140,7 +140,7 @@ class LiveMapViewController: BaseViewController, GMSMapViewDelegate {
                 marker.title = "This \n Some \n Text \n Text"
                 marker.isFlat = true
                 marker.map = self.mapView
-                marker.userData = StopNameAndID(name: stop.name, id: stop.id)
+               // marker.userData = StopNameAndID(name: stop.name, id: stop.id)
                 self.stopMarkers.append(marker)
                 
                 if let imageData = self.userDefaults.value(forKey: stop.id) as? Data {
