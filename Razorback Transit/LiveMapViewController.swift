@@ -137,7 +137,6 @@ class LiveMapViewController: BaseViewController, GMSMapViewDelegate {
                 
                 let marker = GMSMarker(position: stop.getCoordinates())
                 marker.icon = UIImage()
-                marker.title = "This \n Some \n Text \n Text"
                 marker.isFlat = true
                 marker.map = self.mapView
                // marker.userData = StopNameAndID(name: stop.name, id: stop.id)
@@ -161,8 +160,8 @@ class LiveMapViewController: BaseViewController, GMSMapViewDelegate {
                             else { return }
                         DispatchQueue.main.async() {
                             
-                            self.userDefaults.set(UIImagePNGRepresentation(image), forKey: stop.id)
                             marker.icon = image
+                            self.userDefaults.set(UIImagePNGRepresentation(image), forKey: stop.id)
                         }
                     }.resume()
                 }
