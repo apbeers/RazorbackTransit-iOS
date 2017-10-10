@@ -13,7 +13,7 @@ import Alamofire
 import SwiftyJSON
 import CoreData
 
-class LiveMapViewController: BaseViewController, GMSMapViewDelegate {
+class LiveMapViewController: BaseViewController {
     
     var mapView: GMSMapView!
     var timer: Timer!
@@ -31,7 +31,6 @@ class LiveMapViewController: BaseViewController, GMSMapViewDelegate {
         let camera = GMSCameraPosition.camera(withLatitude: 36.068, longitude: -94.1725, zoom: 13.0)
         mapView = GMSMapView.map(withFrame: CGRect.zero, camera: camera)
         mapView.settings.rotateGestures = false
-        mapView.delegate = self
         view = mapView
         
         infoWindow = CustomInfoWindow()
@@ -138,6 +137,7 @@ class LiveMapViewController: BaseViewController, GMSMapViewDelegate {
                 let marker = GMSMarker(position: stop.getCoordinates())
                 marker.icon = UIImage()
                 marker.isFlat = true
+                marker.title = stop.name
                 marker.map = self.mapView
                // marker.userData = StopNameAndID(name: stop.name, id: stop.id)
                 self.stopMarkers.append(marker)
@@ -164,6 +164,34 @@ class LiveMapViewController: BaseViewController, GMSMapViewDelegate {
                             self.userDefaults.set(UIImagePNGRepresentation(image), forKey: stop.id)
                         }
                     }.resume()
+                }
+                
+                let url = "https://campusdata.uark.edu/api/routes?callback=jQuery18004251280482585251_1507605405541&stopId=" + stop.id + "&_=1507605550296"
+                
+                Alamofire.request(url).responseString { responseString in
+                    
+                    guard var data: String = responseString.value else {
+                        return
+                    }
+                    
+                    data = String(data.characters.dropFirst(41))
+                    data = String(data.characters.dropLast(2))
+                    
+                    let json = JSON(parseJSON: data)
+                    
+                    var nextArrival: String!
+                    
+                    for (_, item) in json {
+                        
+                        nextArrival = item["nextArrival"].description
+                        
+                        if nextArrival != "..." && nextArrival != "null" {
+                            
+                            marker.snippet = "Next Arrival: " + nextArrival
+                            break
+                        }
+                        
+                    }
                 }
             }
         }
