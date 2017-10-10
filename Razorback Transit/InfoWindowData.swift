@@ -12,7 +12,8 @@ import UIKit
 class InfoWindowData {
     
     var stopName: String
-    var stopDetails: [[String]]!
+    var stopDetails: [[String]]! = []
+    var numberOfRoutes: Int = 0
     
     init(stopName: String) {
         self.stopName = stopName
@@ -25,9 +26,10 @@ class InfoWindowData {
         details.append(name)
         details.append(nextArrival)
         stopDetails.append(details)
+        numberOfRoutes += 1
     }
     
     func getNumberOfRoutes() -> Int {
-        return 1
+        return numberOfRoutes
     }
 }

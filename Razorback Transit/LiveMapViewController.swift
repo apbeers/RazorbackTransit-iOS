@@ -17,7 +17,8 @@ class LiveMapViewController: BaseViewController, GMSMapViewDelegate {
     
     var mapView: GMSMapView!
     var timer: Timer!
-    var markers: [GMSMarker] = []
+    var busMarkers: [GMSMarker] = []
+    var stopMarkers: [GMSMarker] = []
     var tappedMarker: GMSMarker!
     var userDefaults = UserDefaults.standard
     
@@ -36,7 +37,7 @@ class LiveMapViewController: BaseViewController, GMSMapViewDelegate {
         infoWindow = CustomInfoWindow()
         
         if timer == nil {
-            timer = Timer.scheduledTimer(withTimeInterval: 20, repeats: true) { _ in
+            timer = Timer.scheduledTimer(withTimeInterval: 5, repeats: true) { _ in
                 
                 self.loadBusses()
             }
@@ -45,6 +46,7 @@ class LiveMapViewController: BaseViewController, GMSMapViewDelegate {
         loadRoutes()
         loadBusses()
         loadStops()
+        //refreshStopsImageCache()
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -56,6 +58,53 @@ class LiveMapViewController: BaseViewController, GMSMapViewDelegate {
         timer.invalidate()
     }
     
+    func refreshStopsImageCache() {
+        
+        Alamofire.request(Constants.API.StopURL).responseString { responseString in
+            
+            var stops: [Stop] = []
+            
+            guard var data: String = responseString.value else {
+                return
+            }
+            
+            for marker in self.stopMarkers {
+                marker.map = nil
+            }
+            
+            self.stopMarkers = []
+            
+            data = String(data.characters.dropFirst(10))
+            data = String(data.characters.dropLast(2))
+            
+            let json = JSON.init(parseJSON: data)
+            
+            for (_, item) in json {
+                
+                let stop = Stop(id: item["id"].description, name: item["name"].description, latitude: item["latitude"].description, longitude: item["longitude"].description)
+                
+                stops.append(stop)
+            }
+            
+            for stop in stops {
+                
+                URLSession.shared.dataTask(with: stop.getURL(id: stop.id)) { data, response, error in
+                    guard
+                        let httpURLResponse = response as? HTTPURLResponse, httpURLResponse.statusCode == 200,
+                        let mimeType = response?.mimeType, mimeType.hasPrefix("image"),
+                        let data = data, error == nil,
+                        let image = UIImage(data: data)
+                        else { return }
+                    DispatchQueue.main.async() {
+                        
+                        self.userDefaults.set(UIImagePNGRepresentation(image), forKey: stop.id)
+
+                    }
+                }.resume()
+            }
+        }
+    }
+    
     func loadStops() {
         
         Alamofire.request(Constants.API.StopURL).responseString { responseString in
@@ -65,6 +114,12 @@ class LiveMapViewController: BaseViewController, GMSMapViewDelegate {
             guard var data: String = responseString.value else {
                 return
             }
+            
+            for marker in self.stopMarkers {
+                marker.map = nil
+            }
+            
+            self.stopMarkers = []
             
             data = String(data.characters.dropFirst(10))
             data = String(data.characters.dropLast(2))
@@ -86,6 +141,7 @@ class LiveMapViewController: BaseViewController, GMSMapViewDelegate {
                 marker.isFlat = true
                 marker.map = self.mapView
                 marker.userData = StopNameAndID(name: stop.name, id: stop.id)
+                self.stopMarkers.append(marker)
                 
                 if let imageData = self.userDefaults.value(forKey: stop.id) as? Data {
                     
@@ -160,15 +216,14 @@ class LiveMapViewController: BaseViewController, GMSMapViewDelegate {
                 return
             }
             
-            for marker in self.markers {
+            for marker in self.busMarkers {
                 marker.map = nil
             }
             
-            self.markers = []
+            self.busMarkers = []
             
             let json = JSON.init(parseJSON: data)
             
-            var i = 0
             for (_, item) in json["Messages"][0]["Args"][0] {
                 
                 let bus = Bus(latitude: item["latitude"].description, longitude: item["longitude"].description, heading: item["heading"].description, color: item["color"].description, routeName: item["routeName"].description, zonarId: item["zonarId"].description)
@@ -176,23 +231,34 @@ class LiveMapViewController: BaseViewController, GMSMapViewDelegate {
                 let marker = GMSMarker(position: bus.getCoordinates())
                 marker.icon = UIImage()
                 marker.zIndex = 5
-                
                 marker.map = self.mapView
                 
-                URLSession.shared.dataTask(with: bus.getImageURL()) { data, response, error in
-                    guard
-                        let httpURLResponse = response as? HTTPURLResponse, httpURLResponse.statusCode == 200,
-                        let mimeType = response?.mimeType, mimeType.hasPrefix("image"),
-                        let data = data, error == nil,
-                        let image = UIImage(data: data)
-                        else { return }
-                    DispatchQueue.main.async() {
+                
+                if let imageData = self.userDefaults.value(forKey: bus.getCachedImageKey()) as? Data {
+                    
+                    if let image = UIImage.init(data: imageData) {
                         
                         marker.icon = image
                     }
-                }.resume()
-                i += 1
-                self.markers.append(marker)
+                    
+                } else {
+                
+                    URLSession.shared.dataTask(with: bus.getImageURL()) { data, response, error in
+                        guard
+                            let httpURLResponse = response as? HTTPURLResponse, httpURLResponse.statusCode == 200,
+                            let mimeType = response?.mimeType, mimeType.hasPrefix("image"),
+                            let data = data, error == nil,
+                            let image = UIImage(data: data)
+                            else { return }
+                        DispatchQueue.main.async() {
+                            
+                            marker.icon = image
+                            self.userDefaults.set(UIImagePNGRepresentation(image), forKey: bus.getCachedImageKey())
+                            
+                        }
+                    }.resume()
+                }
+                self.busMarkers.append(marker)
                 
                 busses.append(bus)
             }
@@ -232,7 +298,7 @@ class LiveMapViewController: BaseViewController, GMSMapViewDelegate {
         }
     }
     
-    
+    /*
     func mapView(_ mapView: GMSMapView, didTap marker: GMSMarker) -> Bool {
         
         locationMarker = marker
@@ -256,37 +322,42 @@ class LiveMapViewController: BaseViewController, GMSMapViewDelegate {
             data = String(data.characters.dropLast(2))
             
             let json = JSON(parseJSON: data)
-            
+
             for (_, item) in json {
                 
-                if item["nextArrival"].description != "" {
+                if item["nextArrival"].description != "..." {
                     
                     infoWindowData.addRoute(color: item["color"].description, name: item["name"].description, nextArrival: item["nextArrival"].description)
                 }
-                
-                
-                
-                let frame = CGRect(x: 0, y: 0, width: 350, height: 50)
-                
-                self.infoWindow = CustomInfoWindow(frame: frame)
-                
-                let location = self.locationMarker!.position
-             
-                
-                self.infoWindow.center = mapView.projection.point(for: location)
-                
-                self.infoWindow.center.y = self.infoWindow.center.y - self.sizeForOffset(view: self.infoWindow)
-                
-                self.view.addSubview(self.infoWindow)
-                
             }
             
+            var height: Int = 0
+            if infoWindowData.getNumberOfRoutes() != 0 {
+                height = infoWindowData.getNumberOfRoutes() * 50
+            } else {
+                height = 50
+            }
+            
+            let frame = CGRect(x: 0, y: 0, width: 350, height: height)
+            
+            self.infoWindow = CustomInfoWindow(frame: frame)
+            
+            self.infoWindow.setUp(infoWindowData: infoWindowData)
+            
+            let location = self.locationMarker!.position
+            
+            
+            self.infoWindow.center = mapView.projection.point(for: location)
+            
+            self.infoWindow.center.y = self.infoWindow.center.y - self.sizeForOffset(view: self.infoWindow)
+            
+            self.view.addSubview(self.infoWindow)
+            
         }
-        
-
         return true
     }
-    
+ 
+ 
     // MARK: Needed to create the custom info window
     func mapView(_ mapView: GMSMapView, didChange position: GMSCameraPosition) {
         if (locationMarker != nil){
@@ -307,6 +378,7 @@ class LiveMapViewController: BaseViewController, GMSMapViewDelegate {
     
     // MARK: Needed to create the custom info window
     func mapView(_ mapView: GMSMapView, didTapAt coordinate: CLLocationCoordinate2D) {
+        
         infoWindow.removeFromSuperview()
     }
     
@@ -314,7 +386,8 @@ class LiveMapViewController: BaseViewController, GMSMapViewDelegate {
     func sizeForOffset(view: UIView) -> CGFloat {
         return  40.0
     }
-    
+     */
+ 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }

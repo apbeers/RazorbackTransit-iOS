@@ -47,4 +47,16 @@ class Bus {
         return CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
     }
     
+    func getCachedImageKey() -> String {
+        
+        guard let heading = Double(heading) else {
+            return ""
+        }
+
+        return color + String(roundHeading(x: heading))
+    }
+    
+    func roundHeading(x : Double) -> Int {
+        return 30 * Int(round(x / 30.0))
+    }
 }
