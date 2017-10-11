@@ -27,42 +27,42 @@ class LiveMapViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let camera = GMSCameraPosition.camera(withLatitude: 36.068, longitude: -94.1725, zoom: 13.0)
-        mapView = GMSMapView.map(withFrame: CGRect.zero, camera: camera)
-        mapView.settings.rotateGestures = false
-        view = mapView
-        
-        if self.busTimer == nil {
+        NotificationCenter.default.addObserver(forName: .UIApplicationDidBecomeActive, object: nil, queue: OperationQueue.main) { _ in
+            
+            self.loadBusses()
+            
             self.busTimer = Timer.scheduledTimer(withTimeInterval: 5, repeats: true) { _ in
                 self.loadBusses()
             }
-        }
         
-        if self.stopTimer == nil {
             self.stopTimer = Timer.scheduledTimer(withTimeInterval: 60, repeats: true) { _ in
                 self.refeshStopNextArrival()
             }
         }
         
-        loadBusses()
+        NotificationCenter.default.addObserver(forName: .UIApplicationDidEnterBackground, object: nil, queue: OperationQueue.main) { _ in
+            
+            guard let busTimer = self.busTimer else {
+                return
+            }
+            
+            busTimer.invalidate()
+            
+            guard let stopTimer = self.stopTimer else {
+                return
+            }
+            
+            stopTimer.invalidate()
+        }
+        
+        let camera = GMSCameraPosition.camera(withLatitude: 36.09, longitude: -94.1785, zoom: 12.8)
+        mapView = GMSMapView.map(withFrame: CGRect.zero, camera: camera)
+        mapView.settings.rotateGestures = false
+        view = mapView
+
         loadRoutes()
+        // loadStops() is called from the loadRoutes() function
         //refreshStopsImageCache()
-    }
-    
-    override func viewDidDisappear(_ animated: Bool) {
-        
-        guard let busTimer = self.busTimer else {
-            return
-        }
-        
-        busTimer.invalidate()
-        
-        guard let stopTimer = self.stopTimer else {
-            return
-        }
-        
-        stopTimer.invalidate()
-        
     }
     
     func refeshStopNextArrival() {
@@ -135,7 +135,7 @@ class LiveMapViewController: BaseViewController {
                         else { return }
                     DispatchQueue.main.async() {
                         
-                        self.userDefaults.set(UIImagePNGRepresentation(image.imageWithInsets(insets: Constants.StopImageInstets)!), forKey: stop.id)
+                        self.userDefaults.set(UIImagePNGRepresentation(image), forKey: stop.id)
 
                     }
                 }.resume()
@@ -199,7 +199,7 @@ class LiveMapViewController: BaseViewController {
                         
                         
                         
-                        marker.icon = image.imageWithInsets(insets: Constants.StopImageInstets)
+                        marker.icon = image
                     }
                     
                 } else {
@@ -213,7 +213,7 @@ class LiveMapViewController: BaseViewController {
                             else { return }
                         DispatchQueue.main.async() {
                             
-                            marker.icon = image.imageWithInsets(insets: Constants.StopImageInstets)
+                            marker.icon = image
                             self.userDefaults.set(UIImagePNGRepresentation(image), forKey: stop.id)
                         }
                     }.resume()

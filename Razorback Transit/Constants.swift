@@ -51,7 +51,7 @@ struct Constants {
         static let tanReduced = PDFFile(filename: "TANREDUCED-05-ROUTE", title: "Tan Reduced")
     }
     
-    static let StopImageInstets = UIEdgeInsets(top: 4, left: 20, bottom: 20, right: 20)
+    static let StopImageInstets = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
     
     static let parkingMap: PDFFile = PDFFile(filename: "parkmap", title: "Parking Map")
     
