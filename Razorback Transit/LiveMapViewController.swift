@@ -30,13 +30,14 @@ class LiveMapViewController: BaseViewController {
         NotificationCenter.default.addObserver(forName: .UIApplicationDidBecomeActive, object: nil, queue: OperationQueue.main) { _ in
             
             self.loadBusses()
+            self.refreshStopNextArrival()
             
             self.busTimer = Timer.scheduledTimer(withTimeInterval: 5, repeats: true) { _ in
                 self.loadBusses()
             }
         
             self.stopTimer = Timer.scheduledTimer(withTimeInterval: 60, repeats: true) { _ in
-                self.refeshStopNextArrival()
+                self.refreshStopNextArrival()
             }
         }
         
@@ -55,7 +56,7 @@ class LiveMapViewController: BaseViewController {
             stopTimer.invalidate()
         }
         
-        let camera = GMSCameraPosition.camera(withLatitude: 36.09, longitude: -94.1785, zoom: 12.8)
+        let camera = GMSCameraPosition.camera(withLatitude: 36.09, longitude: -94.1785, zoom: 12.6)
         mapView = GMSMapView.map(withFrame: CGRect.zero, camera: camera)
         mapView.settings.rotateGestures = false
         view = mapView
@@ -65,7 +66,7 @@ class LiveMapViewController: BaseViewController {
         //refreshStopsImageCache()
     }
     
-    func refeshStopNextArrival() {
+    func refreshStopNextArrival() {
         
         for marker in stopMarkers {
             
@@ -196,9 +197,7 @@ class LiveMapViewController: BaseViewController {
                 if let imageData = self.userDefaults.value(forKey: stop.id) as? Data {
                     
                     if let image = UIImage.init(data: imageData) {
-                        
-                        
-                        
+
                         marker.icon = image
                     }
                     

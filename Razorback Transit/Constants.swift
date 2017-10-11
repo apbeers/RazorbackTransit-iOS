@@ -51,8 +51,6 @@ struct Constants {
         static let tanReduced = PDFFile(filename: "TANREDUCED-05-ROUTE", title: "Tan Reduced")
     }
     
-    static let StopImageInstets = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
-    
     static let parkingMap: PDFFile = PDFFile(filename: "parkmap", title: "Parking Map")
     
     struct keyNames {
@@ -68,13 +66,8 @@ struct Constants {
     
     static let reducedRoutes: [PDFFile] = [RouteFiles.blueReduced, RouteFiles.greenReduced, RouteFiles.orangeReduced, RouteFiles.purpleReduced, RouteFiles.redReduced, RouteFiles.tanReduced]
     
-    static let liveMapURL: String = "http://campusmaps.uark.edu/embed/routes"
-    
     static let cellFontSize: CGFloat = 17.0
     
-    static let runsBeforeReviewPrompt: Int = 20
-    
-    static let secondsBetweenLiveMapReload: Int = -120
-    static let secondsBetweenAutoRefresh: TimeInterval = 30
+    static let runsBeforeReviewPrompt: Int = 15
 }
 
