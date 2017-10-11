@@ -10,6 +10,7 @@ import GoogleMaps
 
 class Route {
     
+    var id: String!
     var name: String!
     var color: String!
     var shape: String!
@@ -17,7 +18,8 @@ class Route {
     
     private var path = GMSMutablePath()
     
-    init(name: String, color: String, shape: String, inService: String) {
+    init(id: String, name: String, color: String, shape: String, inService: String) {
+        self.id = id
         self.name = name
         self.color = color
         self.shape = shape

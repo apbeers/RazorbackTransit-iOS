@@ -10,12 +10,6 @@ import Foundation
 import UIKit
 
 struct Constants {
-
-    struct Colors {
-        
-        static let razorbackRed = UIColor(red: 157/255, green: 34/255, blue: 53/255, alpha: 1)
-        static let razorbackRedBarColor = UIColor(red: 139/255, green: 0/255, blue: 15/255, alpha: 1)
-    }
     
     struct ScheduleFiles {
         
@@ -72,13 +66,8 @@ struct Constants {
     
     static let reducedRoutes: [PDFFile] = [RouteFiles.blueReduced, RouteFiles.greenReduced, RouteFiles.orangeReduced, RouteFiles.purpleReduced, RouteFiles.redReduced, RouteFiles.tanReduced]
     
-    static let liveMapURL: String = "http://campusmaps.uark.edu/embed/routes"
-    
     static let cellFontSize: CGFloat = 17.0
     
-    static let runsBeforeReviewPrompt: Int = 20
-    
-    static let secondsBetweenLiveMapReload: Int = -120
-    static let secondsBetweenAutoRefresh: TimeInterval = 30
+    static let runsBeforeReviewPrompt: Int = 15
 }
 
