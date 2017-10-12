@@ -35,7 +35,7 @@ class Stop {
             
             urlString.append("-" + id)
         }
-        
+ 
         return URL(string: urlString)!
     }
     

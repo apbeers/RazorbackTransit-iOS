@@ -30,7 +30,7 @@ class LiveMapViewController: BaseViewController {
         let camera = GMSCameraPosition.camera(withLatitude: 36.09, longitude: -94.1785, zoom: 12.6)
         mapView = GMSMapView.map(withFrame: CGRect.zero, camera: camera)
         mapView.settings.rotateGestures = false
-        mapView.setMinZoom(10, maxZoom: 20)
+        mapView.setMinZoom(10, maxZoom: 17)
         view = mapView
         
         loadRoutes()
@@ -138,7 +138,6 @@ class LiveMapViewController: BaseViewController {
                     DispatchQueue.main.async() {
                         
                         self.userDefaults.set(UIImagePNGRepresentation(image), forKey: stop.id)
-
                     }
                 }.resume()
             }
