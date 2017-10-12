@@ -279,6 +279,7 @@ class LiveMapViewController: BaseViewController {
                 
                 let marker = GMSMarker(position: bus.getCoordinates())
                 marker.icon = UIImage()
+                marker.title = bus.routeName
                 marker.zIndex = 5
                 marker.map = self.mapView
                 
