@@ -20,7 +20,7 @@ class ScheduleViewController: BaseViewController, WKUIDelegate, UIScrollViewDele
         super.viewDidLoad()
         
         let width = screenSize.width
-        let height = screenSize.height - 114
+        let height = screenSize.height - 113
         let frame = CGRect(x: 0, y: 0, width: width, height: height)
         
         webView = WKWebView(frame: frame, configuration: WKWebViewConfiguration())
