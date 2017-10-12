@@ -11,7 +11,6 @@ import GoogleMaps
 import Firebase
 import Alamofire
 import SwiftyJSON
-import CoreData
 
 class LiveMapViewController: BaseViewController {
     
@@ -295,34 +294,6 @@ class LiveMapViewController: BaseViewController {
         }
     }
     
-    func loadBuildings() {
-        
-        Alamofire.request(Constants.API.BuildingURL).responseString { responseString in
-            
-            guard var data: String = responseString.value else {
-                return
-            }
-            
-            data = String(data.characters.dropFirst(10))
-            data = String(data.characters.dropLast(2))
-            
-            let json = JSON(parseJSON: data)
-            
-            var building: Building!
-            
-            for (_, item) in json {
-                
-                building = Building(code: item["code"].description , address: item["address"].description, latitude: item["latitude"].description, longitude: item["longitude"].description, name: item["name"].description, shape: item["shape"].description)
-                
-                let shape = GMSPolygon(path: building.getPath())
-                shape.strokeColor = Constants.Colors.buildingStrokeColor
-                shape.fillColor = Constants.Colors.buildingFillColor
-                shape.zIndex = 5
-                shape.map = self.mapView
-            }
-        }
-    }
-
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }

@@ -10,7 +10,6 @@
 		491E24431F68F9B300B5F2A0 /* ScheduleTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 491E24421F68F9B300B5F2A0 /* ScheduleTableViewController.swift */; };
 		492F69A81F6A22AF009C895C /* parkmap.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 492F69A71F6A22AF009C895C /* parkmap.pdf */; };
 		492F69AA1F6A2FCE009C895C /* ScheduleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 492F69A91F6A2FCE009C895C /* ScheduleViewController.swift */; };
-		49488A771F7D42B8000C405A /* Building.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49488A761F7D42B8000C405A /* Building.swift */; };
 		49488A791F7D7320000C405A /* Route.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49488A781F7D7320000C405A /* Route.swift */; };
 		49488A7B1F7D73D9000C405A /* Constantes+API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49488A7A1F7D73D9000C405A /* Constantes+API.swift */; };
 		49488A7E1F7D78D3000C405A /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49488A7D1F7D78D3000C405A /* UIColor+Extension.swift */; };
@@ -94,7 +93,6 @@
 		491E24421F68F9B300B5F2A0 /* ScheduleTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduleTableViewController.swift; sourceTree = "<group>"; };
 		492F69A71F6A22AF009C895C /* parkmap.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = parkmap.pdf; sourceTree = "<group>"; };
 		492F69A91F6A2FCE009C895C /* ScheduleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduleViewController.swift; sourceTree = "<group>"; };
-		49488A761F7D42B8000C405A /* Building.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Building.swift; sourceTree = "<group>"; };
 		49488A781F7D7320000C405A /* Route.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Route.swift; sourceTree = "<group>"; };
 		49488A7A1F7D73D9000C405A /* Constantes+API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Constantes+API.swift"; sourceTree = "<group>"; };
 		49488A7D1F7D78D3000C405A /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
@@ -270,7 +268,6 @@
 		497528A81F7B596100AB474B /* Map Objects */ = {
 			isa = PBXGroup;
 			children = (
-				49488A761F7D42B8000C405A /* Building.swift */,
 				49488A781F7D7320000C405A /* Route.swift */,
 				49D6F4971F802CFA00B586B2 /* Bus.swift */,
 				49D6F4991F802DAD00B586B2 /* Stop.swift */,
@@ -659,7 +656,6 @@
 				49A493D51F7CC49900CC12DB /* Constants+Firebase.swift in Sources */,
 				495784731F6A5087001B4539 /* RouteMapWebViewController.swift in Sources */,
 				49DE19671F6B8058001EA719 /* BaseViewController.swift in Sources */,
-				49488A771F7D42B8000C405A /* Building.swift in Sources */,
 				49D6F49A1F802DAD00B586B2 /* Stop.swift in Sources */,
 				49F8B9661F702B5400D30278 /* RequestUserReview.swift in Sources */,
 				49DE195D1F6B6FE4001EA719 /* PDFFile.swift in Sources */,
