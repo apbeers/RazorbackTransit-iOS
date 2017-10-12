@@ -120,12 +120,10 @@ class LiveMapViewController: BaseViewController {
             
             let oldStopMarkers = self.stopMarkers
             self.stopMarkers = []
-            
-            var stop: Stop!
-            
+
             for (_, item) in json {
                 
-                stop = Stop(id: item["id"].description, name: item["name"].description, latitude: item["latitude"].description, longitude: item["longitude"].description)
+                let stop = Stop(id: item["id"].description, name: item["name"].description, latitude: item["latitude"].description, longitude: item["longitude"].description)
                 
                 let marker = GMSMarker(position: stop.getCoordinates())
                 marker.icon = UIImage()
@@ -210,11 +208,9 @@ class LiveMapViewController: BaseViewController {
             let oldPolyLines = self.routePolyLines
             self.routePolyLines = []
             
-            var route: Route!
-            
             for (_, item) in json {
                 
-                route = Route(id: item["id"].description, name: item["name"].description, color: item["color"].description, shape: item["shape"].description, inService: item["inService"].description)
+                let route = Route(id: item["id"].description, name: item["name"].description, color: item["color"].description, shape: item["shape"].description, inService: item["inService"].description)
                 
                 if route.inService == "1" {
     
@@ -255,11 +251,9 @@ class LiveMapViewController: BaseViewController {
             
             let json = JSON(parseJSON: data)
             
-            var bus: Bus!
-            
             for (_, item) in json["Messages"][0]["Args"][0] {
                 
-                bus = Bus(latitude: item["latitude"].description, longitude: item["longitude"].description, heading: item["heading"].description, color: item["color"].description, routeName: item["routeName"].description, zonarId: item["zonarId"].description)
+                let bus = Bus(latitude: item["latitude"].description, longitude: item["longitude"].description, heading: item["heading"].description, color: item["color"].description, routeName: item["routeName"].description, zonarId: item["zonarId"].description)
                 
                 let marker = GMSMarker(position: bus.getCoordinates())
                 marker.icon = UIImage()
