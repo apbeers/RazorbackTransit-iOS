@@ -20,6 +20,7 @@ class LiveMapViewController: BaseViewController {
     var stopTimer: Timer!
     var busMarkers: [GMSMarker] = []
     var stopMarkers: [GMSMarker] = []
+    var routePolyLines: [GMSPolyline] = []
     var tappedMarker: GMSMarker!
     var userDefaults = UserDefaults.standard
     var routeIDs: [String] = []
@@ -33,11 +34,10 @@ class LiveMapViewController: BaseViewController {
         mapView.setMinZoom(10, maxZoom: 17)
         view = mapView
         
-        loadRoutes()
-        
         NotificationCenter.default.addObserver(forName: .UIApplicationDidBecomeActive, object: nil, queue: OperationQueue.main) { _ in
             
             self.loadBusses()
+            self.loadRoutes()
             self.refreshStopNextArrival()
             
             self.busTimer = Timer.scheduledTimer(withTimeInterval: 5, repeats: true) { _ in
@@ -54,17 +54,13 @@ class LiveMapViewController: BaseViewController {
             guard let busTimer = self.busTimer else {
                 return
             }
-            
             busTimer.invalidate()
             
             guard let stopTimer = self.stopTimer else {
                 return
             }
-            
             stopTimer.invalidate()
         }
-        
-        // loadStops() is called from the loadRoutes() function
     }
     
     func refreshStopNextArrival() {
@@ -104,55 +100,11 @@ class LiveMapViewController: BaseViewController {
         }
     }
     
-    func refreshStopsImageCache() {
-        
-        Alamofire.request(buildStopURLString()).responseString { responseString in
-            
-            var stops: [Stop] = []
-            
-            guard var data: String = responseString.value else {
-                return
-            }
-            
-            data = String(data.characters.dropFirst(10))
-            data = String(data.characters.dropLast(2))
-            
-            let json = JSON(parseJSON: data)
-            
-            for (_, item) in json {
-                
-                let stop = Stop(id: item["id"].description, name: item["name"].description, latitude: item["latitude"].description, longitude: item["longitude"].description)
-                
-                stops.append(stop)
-            }
-            
-            for stop in stops {
-                
-                URLSession.shared.dataTask(with: stop.getURL(id: stop.id, routeIDs: self.routeIDs)) { data, response, error in
-                    guard
-                        let httpURLResponse = response as? HTTPURLResponse, httpURLResponse.statusCode == 200,
-                        let mimeType = response?.mimeType, mimeType.hasPrefix("image"),
-                        let data = data, error == nil,
-                        let image = UIImage(data: data)
-                        else { return }
-                    DispatchQueue.main.async() {
-                        
-                        self.userDefaults.set(UIImagePNGRepresentation(image), forKey: stop.id)
-                    }
-                }.resume()
-            }
-        }
-    }
-    
     func buildStopURLString() -> String {
-        
         var stopString = Constants.API.StopURL
-        
         for id in routeIDs {
-            
             stopString.append("-" + id)
         }
-        
         return stopString
     }
     
@@ -160,31 +112,23 @@ class LiveMapViewController: BaseViewController {
         
         Alamofire.request(buildStopURLString()).responseString { responseString in
             
-            var stops: [Stop] = []
-            
             guard var data: String = responseString.value else {
                 return
             }
-            
-            for marker in self.stopMarkers {
-                marker.map = nil
-            }
-            
-            self.stopMarkers = []
             
             data = String(data.characters.dropFirst(10))
             data = String(data.characters.dropLast(2))
             
             let json = JSON(parseJSON: data)
             
+            let oldStopMarkers = self.stopMarkers
+            self.stopMarkers = []
+            
+            var stop: Stop!
+            
             for (_, item) in json {
                 
-                let stop = Stop(id: item["id"].description, name: item["name"].description, latitude: item["latitude"].description, longitude: item["longitude"].description)
-                
-                stops.append(stop)
-            }
-            
-            for stop in stops {
+                stop = Stop(id: item["id"].description, name: item["name"].description, latitude: item["latitude"].description, longitude: item["longitude"].description)
                 
                 let marker = GMSMarker(position: stop.getCoordinates())
                 marker.icon = UIImage()
@@ -197,26 +141,23 @@ class LiveMapViewController: BaseViewController {
                 if let imageData = self.userDefaults.value(forKey: stop.id) as? Data {
                     
                     if let image = UIImage(data: imageData) {
-
+                        
                         marker.icon = image
                     }
-                    
-                } else {
-                    
-                    URLSession.shared.dataTask(with: stop.getURL(id: stop.id, routeIDs: self.routeIDs)) { data, response, error in
-                        guard
-                            let httpURLResponse = response as? HTTPURLResponse, httpURLResponse.statusCode == 200,
-                            let mimeType = response?.mimeType, mimeType.hasPrefix("image"),
-                            let data = data, error == nil,
-                            let image = UIImage(data: data)
-                            else { return }
-                        DispatchQueue.main.async() {
-                            
-                            marker.icon = image
-                            self.userDefaults.set(UIImagePNGRepresentation(image), forKey: stop.id)
-                        }
-                    }.resume()
                 }
+                
+                URLSession.shared.dataTask(with: stop.getURL(id: stop.id, routeIDs: self.routeIDs)) { data, response, error in
+                    guard
+                        let httpURLResponse = response as? HTTPURLResponse, httpURLResponse.statusCode == 200,
+                        let mimeType = response?.mimeType, mimeType.hasPrefix("image"),
+                        let data = data, error == nil,
+                        let image = UIImage(data: data)
+                        else { return }
+                    self.userDefaults.set(UIImagePNGRepresentation(image), forKey: stop.id)
+                    DispatchQueue.main.async() {
+                        marker.icon = image
+                    }
+                }.resume()
                 
                 let url = "https://campusdata.uark.edu/api/routes?callback=jQuery18004251280482585251_1507605405541&stopId=" + stop.id + "&_=1507605550296"
                 
@@ -246,7 +187,9 @@ class LiveMapViewController: BaseViewController {
                 }
             }
             
-            self.refreshStopsImageCache()
+            for stopMarker in oldStopMarkers {
+                stopMarker.map = nil
+            }
         }
     }
     
@@ -263,9 +206,18 @@ class LiveMapViewController: BaseViewController {
             
             let json = JSON(parseJSON: data)
             
+            for shape in self.routePolyLines {
+                shape.map = nil
+            }
+            
+            let oldPolyLines = self.routePolyLines
+            self.routePolyLines = []
+            
+            var route: Route!
+            
             for (_, item) in json {
                 
-                let route = Route(id: item["id"].description, name: item["name"].description, color: item["color"].description, shape: item["shape"].description, inService: item["inService"].description)
+                route = Route(id: item["id"].description, name: item["name"].description, color: item["color"].description, shape: item["shape"].description, inService: item["inService"].description)
                 
                 if route.inService == "1" {
     
@@ -277,8 +229,13 @@ class LiveMapViewController: BaseViewController {
                     shape.strokeWidth = 5
                     shape.zIndex = 15
                     shape.strokeColor = route.getColor()
+                    self.routePolyLines.append(shape)
                     shape.map = self.mapView
                 }
+            }
+            
+            for polyline in oldPolyLines {
+                polyline.map = nil
             }
             
             self.loadStops()
@@ -301,9 +258,11 @@ class LiveMapViewController: BaseViewController {
             
             let json = JSON(parseJSON: data)
             
+            var bus: Bus!
+            
             for (_, item) in json["Messages"][0]["Args"][0] {
                 
-                let bus = Bus(latitude: item["latitude"].description, longitude: item["longitude"].description, heading: item["heading"].description, color: item["color"].description, routeName: item["routeName"].description, zonarId: item["zonarId"].description)
+                bus = Bus(latitude: item["latitude"].description, longitude: item["longitude"].description, heading: item["heading"].description, color: item["color"].description, routeName: item["routeName"].description, zonarId: item["zonarId"].description)
                 
                 let marker = GMSMarker(position: bus.getCoordinates())
                 marker.icon = UIImage()
@@ -326,11 +285,10 @@ class LiveMapViewController: BaseViewController {
                             let data = data, error == nil,
                             let image = UIImage(data: data)
                             else { return }
+                        self.userDefaults.set(UIImagePNGRepresentation(image), forKey: bus.getCachedImageKey())
                         DispatchQueue.main.async() {
                             
                             marker.icon = image
-                            self.userDefaults.set(UIImagePNGRepresentation(image), forKey: bus.getCachedImageKey())
-                            
                         }
                     }.resume()
                 }
@@ -352,9 +310,11 @@ class LiveMapViewController: BaseViewController {
             
             let json = JSON(parseJSON: data)
             
+            var building: Building!
+            
             for (_, item) in json {
                 
-                let building = Building(code: item["code"].description , address: item["address"].description, latitude: item["latitude"].description, longitude: item["longitude"].description, name: item["name"].description, shape: item["shape"].description)
+                building = Building(code: item["code"].description , address: item["address"].description, latitude: item["latitude"].description, longitude: item["longitude"].description, name: item["name"].description, shape: item["shape"].description)
                 
                 let shape = GMSPolygon(path: building.getPath())
                 shape.strokeColor = Constants.Colors.buildingStrokeColor
