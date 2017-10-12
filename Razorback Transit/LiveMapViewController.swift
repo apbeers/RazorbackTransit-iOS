@@ -27,6 +27,14 @@ class LiveMapViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        let camera = GMSCameraPosition.camera(withLatitude: 36.09, longitude: -94.1785, zoom: 12.6)
+        mapView = GMSMapView.map(withFrame: CGRect.zero, camera: camera)
+        mapView.settings.rotateGestures = false
+        mapView.setMinZoom(10, maxZoom: 20)
+        view = mapView
+        
+        loadRoutes()
+        
         NotificationCenter.default.addObserver(forName: .UIApplicationDidBecomeActive, object: nil, queue: OperationQueue.main) { _ in
             
             self.loadBusses()
@@ -56,14 +64,7 @@ class LiveMapViewController: BaseViewController {
             stopTimer.invalidate()
         }
         
-        let camera = GMSCameraPosition.camera(withLatitude: 36.09, longitude: -94.1785, zoom: 12.6)
-        mapView = GMSMapView.map(withFrame: CGRect.zero, camera: camera)
-        mapView.settings.rotateGestures = false
-        view = mapView
-
-        loadRoutes()
         // loadStops() is called from the loadRoutes() function
-        //refreshStopsImageCache()
     }
     
     func refreshStopNextArrival() {
@@ -105,7 +106,7 @@ class LiveMapViewController: BaseViewController {
     
     func refreshStopsImageCache() {
         
-        Alamofire.request(Constants.API.StopURL).responseString { responseString in
+        Alamofire.request(buildStopURLString()).responseString { responseString in
             
             var stops: [Stop] = []
             
@@ -116,7 +117,7 @@ class LiveMapViewController: BaseViewController {
             data = String(data.characters.dropFirst(10))
             data = String(data.characters.dropLast(2))
             
-            let json = JSON.init(parseJSON: data)
+            let json = JSON(parseJSON: data)
             
             for (_, item) in json {
                 
@@ -127,7 +128,7 @@ class LiveMapViewController: BaseViewController {
             
             for stop in stops {
                 
-                URLSession.shared.dataTask(with: stop.getURL(id: stop.id)) { data, response, error in
+                URLSession.shared.dataTask(with: stop.getURL(id: stop.id, routeIDs: self.routeIDs)) { data, response, error in
                     guard
                         let httpURLResponse = response as? HTTPURLResponse, httpURLResponse.statusCode == 200,
                         let mimeType = response?.mimeType, mimeType.hasPrefix("image"),
@@ -175,7 +176,7 @@ class LiveMapViewController: BaseViewController {
             data = String(data.characters.dropFirst(10))
             data = String(data.characters.dropLast(2))
             
-            let json = JSON.init(parseJSON: data)
+            let json = JSON(parseJSON: data)
             
             for (_, item) in json {
                 
@@ -196,14 +197,14 @@ class LiveMapViewController: BaseViewController {
                 
                 if let imageData = self.userDefaults.value(forKey: stop.id) as? Data {
                     
-                    if let image = UIImage.init(data: imageData) {
+                    if let image = UIImage(data: imageData) {
 
                         marker.icon = image
                     }
                     
                 } else {
                     
-                    URLSession.shared.dataTask(with: stop.getURL(id: stop.id)) { data, response, error in
+                    URLSession.shared.dataTask(with: stop.getURL(id: stop.id, routeIDs: self.routeIDs)) { data, response, error in
                         guard
                             let httpURLResponse = response as? HTTPURLResponse, httpURLResponse.statusCode == 200,
                             let mimeType = response?.mimeType, mimeType.hasPrefix("image"),
@@ -245,6 +246,8 @@ class LiveMapViewController: BaseViewController {
                     }
                 }
             }
+            
+            self.refreshStopsImageCache()
         }
     }
     
@@ -259,7 +262,7 @@ class LiveMapViewController: BaseViewController {
             data = String(data.characters.dropFirst(7))
             data = String(data.characters.dropLast(2))
             
-            let json = JSON.init(parseJSON: data)
+            let json = JSON(parseJSON: data)
             
             for (_, item) in json {
                 
@@ -297,7 +300,7 @@ class LiveMapViewController: BaseViewController {
             
             self.busMarkers = []
             
-            let json = JSON.init(parseJSON: data)
+            let json = JSON(parseJSON: data)
             
             for (_, item) in json["Messages"][0]["Args"][0] {
                 
@@ -310,7 +313,7 @@ class LiveMapViewController: BaseViewController {
                 
                 if let imageData = self.userDefaults.value(forKey: bus.getCachedImageKey()) as? Data {
                     
-                    if let image = UIImage.init(data: imageData) {
+                    if let image = UIImage(data: imageData) {
                         
                         marker.icon = image
                     }

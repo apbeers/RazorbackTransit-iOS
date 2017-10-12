@@ -27,9 +27,16 @@ class Stop {
         self.nextArrival = nextArrival
     }
     
-    func getURL(id: String) -> URL {
+    func getURL(id: String, routeIDs: [String]) -> URL {
         
-        return URL(string: "https://campusdata.uark.edu/api/stopimages?stopId=" + id + "&routeIds=undefined-221-223-224-226-227-228-229-231-284")!
+        var urlString = "https://campusdata.uark.edu/api/stopimages?stopId=" + id + "&routeIds=undefined"
+        
+        for id in routeIDs {
+            
+            urlString.append("-" + id)
+        }
+        
+        return URL(string: urlString)!
     }
     
     func getCoordinates() -> CLLocationCoordinate2D {
