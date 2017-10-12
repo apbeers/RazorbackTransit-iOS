@@ -35,18 +35,39 @@ class LiveMapViewController: BaseViewController {
         NotificationCenter.default.addObserver(forName: .UIApplicationDidBecomeActive, object: nil, queue: OperationQueue.main) { _ in
             
             self.loadBusses()
-            self.loadRoutes()
             
             self.busTimer = Timer.scheduledTimer(withTimeInterval: 5, repeats: true) { _ in
+                
+                DispatchQueue.global().async {
+                    self.userDefaults.synchronize()
+                }
                 self.loadBusses()
             }
-        
-            self.stopTimer = Timer.scheduledTimer(withTimeInterval: 20, repeats: true) { _ in
+            
+            self.stopTimer = Timer.scheduledTimer(withTimeInterval: 23, repeats: true) { _ in
                 self.refreshStopNextArrival()
+            }
+            
+            guard let lastLoaded = self.userDefaults.value(forKey: "date") as? Date else {
+                
+                self.loadRoutes()
+                return
+            }
+            
+            guard let timeInterval = TimeInterval(exactly: -900) else {
+                return
+            }
+            
+            if lastLoaded.timeIntervalSince(Date()) < timeInterval || self.busMarkers.count == 0 || self.stopMarkers.count == 0 || self.routePolyLines.count == 0 {
+                
+                self.loadRoutes()
             }
         }
         
-        NotificationCenter.default.addObserver(forName: .UIApplicationDidEnterBackground, object: nil, queue: OperationQueue.main) { _ in
+        NotificationCenter.default.addObserver(forName: .UIApplicationWillResignActive, object: nil, queue: OperationQueue.main) { _ in
+            
+            self.userDefaults.set(Date(), forKey: "date")
+            self.userDefaults.synchronize()
             
             guard let busTimer = self.busTimer else {
                 return
