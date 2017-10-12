@@ -21,7 +21,6 @@ class LiveMapViewController: BaseViewController {
     var busMarkers: [GMSMarker] = []
     var stopMarkers: [GMSMarker] = []
     var routePolyLines: [GMSPolyline] = []
-    var tappedMarker: GMSMarker!
     var userDefaults = UserDefaults.standard
     var routeIDs: [String] = []
 
@@ -38,13 +37,12 @@ class LiveMapViewController: BaseViewController {
             
             self.loadBusses()
             self.loadRoutes()
-            self.refreshStopNextArrival()
             
             self.busTimer = Timer.scheduledTimer(withTimeInterval: 5, repeats: true) { _ in
                 self.loadBusses()
             }
         
-            self.stopTimer = Timer.scheduledTimer(withTimeInterval: 60, repeats: true) { _ in
+            self.stopTimer = Timer.scheduledTimer(withTimeInterval: 20, repeats: true) { _ in
                 self.refreshStopNextArrival()
             }
         }
