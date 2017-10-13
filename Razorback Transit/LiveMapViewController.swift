@@ -229,6 +229,7 @@ class LiveMapViewController: BaseViewController {
             
             let oldPolyLines = self.routePolyLines
             self.routePolyLines = []
+            self.routeIDs = []
             
             for (_, item) in json {
                 
@@ -236,7 +237,6 @@ class LiveMapViewController: BaseViewController {
                 
                 if route.inService == "1" {
     
-                    self.routeIDs = []
                     if !self.routeIDs.contains(route.id) {
                         self.routeIDs.append(route.id)
                     }
