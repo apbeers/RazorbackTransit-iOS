@@ -46,6 +46,7 @@
 		49A493D51F7CC49900CC12DB /* Constants+Firebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A493D41F7CC49900CC12DB /* Constants+Firebase.swift */; };
 		49D6F4981F802CFA00B586B2 /* Bus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49D6F4971F802CFA00B586B2 /* Bus.swift */; };
 		49D6F49A1F802DAD00B586B2 /* Stop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49D6F4991F802DAD00B586B2 /* Stop.swift */; };
+		49DB0B201F97863700B18F22 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 49DB0B1F1F97863700B18F22 /* Default-568h@2x.png */; };
 		49DD4BCE1F6D94DD0099A70B /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49DD4BCD1F6D94DD0099A70B /* Reachability.swift */; };
 		49DE19371F6B47CD001EA719 /* REDREDUCED-06-ROUTE.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 49DE19311F6B47CD001EA719 /* REDREDUCED-06-ROUTE.pdf */; };
 		49DE19381F6B47CD001EA719 /* TANREDUCED-05-ROUTE.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 49DE19321F6B47CD001EA719 /* TANREDUCED-05-ROUTE.pdf */; };
@@ -135,6 +136,7 @@
 		49A493D41F7CC49900CC12DB /* Constants+Firebase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Constants+Firebase.swift"; sourceTree = "<group>"; };
 		49D6F4971F802CFA00B586B2 /* Bus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bus.swift; sourceTree = "<group>"; };
 		49D6F4991F802DAD00B586B2 /* Stop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stop.swift; sourceTree = "<group>"; };
+		49DB0B1F1F97863700B18F22 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		49DD4BCD1F6D94DD0099A70B /* Reachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 		49DE19311F6B47CD001EA719 /* REDREDUCED-06-ROUTE.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "REDREDUCED-06-ROUTE.pdf"; sourceTree = "<group>"; };
 		49DE19321F6B47CD001EA719 /* TANREDUCED-05-ROUTE.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "TANREDUCED-05-ROUTE.pdf"; sourceTree = "<group>"; };
@@ -278,6 +280,7 @@
 		49798C261F68CEC8003C0CEB = {
 			isa = PBXGroup;
 			children = (
+				49DB0B1F1F97863700B18F22 /* Default-568h@2x.png */,
 				49798C311F68CEC8003C0CEB /* Razorback Transit */,
 				49798C461F68CEC9003C0CEB /* Razorback TransitTests */,
 				49798C511F68CEC9003C0CEB /* Razorback TransitUITests */,
@@ -554,6 +557,7 @@
 				49DE194B1F6B47E5001EA719 /* RED-26-ROUTE.pdf in Resources */,
 				49DE193C1F6B47CD001EA719 /* GREENREDUCED-01-ROUTE.pdf in Resources */,
 				49DE194F1F6B47E5001EA719 /* GREEN-11-ROUTE.pdf in Resources */,
+				49DB0B201F97863700B18F22 /* Default-568h@2x.png in Resources */,
 				49DE194D1F6B47E5001EA719 /* BROWN-17-ROUTE.pdf in Resources */,
 				495784691F6A4B16001B4539 /* REMOTEEXPRESS-48.pdf in Resources */,
 				495784671F6A4B16001B4539 /* TAN-35.pdf in Resources */,
