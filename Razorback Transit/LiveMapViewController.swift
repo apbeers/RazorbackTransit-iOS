@@ -33,22 +33,24 @@ class LiveMapViewController: BaseViewController {
         view = mapView
         
         NotificationCenter.default.addObserver(forName: .UIApplicationDidBecomeActive, object: nil, queue: OperationQueue.main) { _ in
-            
-            self.loadBusses()
-            self.refreshStopNextArrival()
+
+                self.loadBusses()
+                self.refreshStopNextArrival()
             
             self.refreshTimer = Timer.scheduledTimer(withTimeInterval: 5, repeats: true) { _ in
                 
                 DispatchQueue.global().async {
-                    self.userDefaults.synchronize()
                     self.refreshStopNextArrival()
+                    self.loadBusses()
+                    self.userDefaults.synchronize()
                 }
-                self.loadBusses()
             }
             
             guard let lastLoaded = self.userDefaults.value(forKey: "date") as? Date else {
                 
-                self.loadRoutes()
+                DispatchQueue.global().async {
+                    self.loadRoutes()
+                }
                 return
             }
             
@@ -58,7 +60,9 @@ class LiveMapViewController: BaseViewController {
             
             if lastLoaded.timeIntervalSince(Date()) < timeInterval || self.busMarkers.count == 0 || self.stopMarkers.count == 0 || self.routePolyLines.count == 0 {
                 
-                self.loadRoutes()
+                DispatchQueue.global().async {
+                    self.loadRoutes()
+                }
             }
         }
         
