@@ -27,7 +27,6 @@ class LiveMapViewController: BaseViewController {
         
         let camera = GMSCameraPosition.camera(withLatitude: 36.09, longitude: -94.1785, zoom: 12.6)
         mapView = GMSMapView.map(withFrame: CGRect.zero, camera: camera)
-        mapView.settings.rotateGestures = false
         mapView.settings.tiltGestures = false
         mapView.setMinZoom(10, maxZoom: 17)
         view = mapView
@@ -42,15 +41,12 @@ class LiveMapViewController: BaseViewController {
                 DispatchQueue.global().async {
                     self.refreshStopNextArrival()
                     self.loadBusses()
-                    self.userDefaults.synchronize()
                 }
             }
             
             guard let lastLoaded = self.userDefaults.value(forKey: "date") as? Date else {
                 
-                DispatchQueue.global().async {
-                    self.loadRoutes()
-                }
+                self.loadRoutes()
                 return
             }
             
@@ -278,6 +274,7 @@ class LiveMapViewController: BaseViewController {
                 marker.icon = UIImage()
                 marker.title = bus.routeName
                 marker.zIndex = 5
+                marker.isFlat = true
                 marker.map = self.mapView
                 
                 if let imageData = self.userDefaults.value(forKey: bus.getCachedImageKey()) as? Data {
