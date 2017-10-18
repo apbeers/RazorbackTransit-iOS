@@ -36,6 +36,7 @@ class LiveMapViewController: BaseViewController {
         NotificationCenter.default.addObserver(forName: .UIApplicationDidBecomeActive, object: nil, queue: OperationQueue.main) { _ in
             
             self.loadBusses()
+            self.refreshStopNextArrival()
             
             self.busTimer = Timer.scheduledTimer(withTimeInterval: 5, repeats: true) { _ in
                 
