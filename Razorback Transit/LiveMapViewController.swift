@@ -15,8 +15,7 @@ import SwiftyJSON
 class LiveMapViewController: BaseViewController {
     
     var mapView: GMSMapView!
-    var busTimer: Timer!
-    var stopTimer: Timer!
+    var refreshTimer: Timer!
     var busMarkers: [GMSMarker] = []
     var stopMarkers: [GMSMarker] = []
     var routePolyLines: [GMSPolyline] = []
@@ -38,16 +37,13 @@ class LiveMapViewController: BaseViewController {
             self.loadBusses()
             self.refreshStopNextArrival()
             
-            self.busTimer = Timer.scheduledTimer(withTimeInterval: 5, repeats: true) { _ in
+            self.refreshTimer = Timer.scheduledTimer(withTimeInterval: 5, repeats: true) { _ in
                 
                 DispatchQueue.global().async {
                     self.userDefaults.synchronize()
+                    self.refreshStopNextArrival()
                 }
                 self.loadBusses()
-            }
-            
-            self.stopTimer = Timer.scheduledTimer(withTimeInterval: 23, repeats: true) { _ in
-                self.refreshStopNextArrival()
             }
             
             guard let lastLoaded = self.userDefaults.value(forKey: "date") as? Date else {
@@ -71,15 +67,10 @@ class LiveMapViewController: BaseViewController {
             self.userDefaults.set(Date(), forKey: "date")
             self.userDefaults.synchronize()
             
-            guard let busTimer = self.busTimer else {
+            guard let refreshTimer = self.refreshTimer else {
                 return
             }
-            busTimer.invalidate()
-            
-            guard let stopTimer = self.stopTimer else {
-                return
-            }
-            stopTimer.invalidate()
+            refreshTimer.invalidate()
         }
     }
     
