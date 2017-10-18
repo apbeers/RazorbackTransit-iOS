@@ -15,7 +15,7 @@ extension Constants {
         static let AppClosed = "App Closed"
         static let ScheduleSelected = "Schedule Viewed"
         static let RouteSelected = "Route Viewed"
-        static let ParkingMapViewed = "Parking Map Viewed"
+        static let ParkingMapViewed = "Parking Map"
     }
     
 }
