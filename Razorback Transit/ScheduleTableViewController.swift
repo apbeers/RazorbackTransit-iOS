@@ -65,7 +65,7 @@ class ScheduleTableViewController: BaseTableViewController {
         }
         
         Analytics.logEvent(AnalyticsEventSelectContent, parameters: [
-            AnalyticsParameterItemName: scheduleTitle as NSObject,
+            AnalyticsParameterItemID: scheduleTitle as NSObject,
             AnalyticsParameterContentType: Constants.EventTypes.ScheduleSelected as NSObject
             ])
     }

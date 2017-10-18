@@ -64,7 +64,7 @@ class RouteMapTableViewController: BaseTableViewController {
         }
         
         Analytics.logEvent(AnalyticsEventSelectContent, parameters: [
-            AnalyticsParameterItemName: routeTitle as NSObject,
+            AnalyticsParameterItemID: routeTitle as NSObject,
             AnalyticsParameterContentType: Constants.EventTypes.RouteSelected as NSObject
             ])
         

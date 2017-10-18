@@ -20,7 +20,7 @@ class TabBarController: UITabBarController, UITabBarControllerDelegate {
     override func tabBar(_ tabBar: UITabBar, didSelect item: UITabBarItem) {
         
         Analytics.logEvent(AnalyticsEventSelectContent, parameters: [
-            AnalyticsParameterItemName: item.title! as NSObject,
+            AnalyticsParameterItemID: item.title! as NSObject,
             AnalyticsParameterContentType: Constants.EventTypes.TabSelected as NSObject
             ])
     }
