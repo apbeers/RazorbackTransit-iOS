@@ -28,7 +28,7 @@ class LiveMapViewController: BaseViewController, GMSMapViewDelegate {
         let camera = GMSCameraPosition.camera(withLatitude: 36.09, longitude: -94.1785, zoom: 12.6)
         mapView = GMSMapView.map(withFrame: CGRect.zero, camera: camera)
         mapView.settings.tiltGestures = false
-        mapView.setMinZoom(10, maxZoom: 100)
+        mapView.setMinZoom(10, maxZoom: mapView.maxZoom)
         mapView.delegate = self
         view = mapView
         
