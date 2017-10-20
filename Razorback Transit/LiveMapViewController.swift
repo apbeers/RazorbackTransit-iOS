@@ -12,11 +12,10 @@ import Firebase
 import Alamofire
 import SwiftyJSON
 
-class LiveMapViewController: BaseViewController {
+class LiveMapViewController: BaseViewController, GMSMapViewDelegate {
     
     var mapView: GMSMapView!
     var busTimer: Timer!
-    var stopTimer: Timer!
     var busMarkers: [GMSMarker] = []
     var stopMarkers: [GMSMarker] = []
     var routePolyLines: [GMSPolyline] = []
@@ -28,25 +27,20 @@ class LiveMapViewController: BaseViewController {
         
         let camera = GMSCameraPosition.camera(withLatitude: 36.09, longitude: -94.1785, zoom: 12.6)
         mapView = GMSMapView.map(withFrame: CGRect.zero, camera: camera)
-        mapView.settings.rotateGestures = false
         mapView.settings.tiltGestures = false
-        mapView.setMinZoom(10, maxZoom: 17)
+        mapView.setMinZoom(10, maxZoom: mapView.maxZoom)
+        mapView.delegate = self
         view = mapView
         
         NotificationCenter.default.addObserver(forName: .UIApplicationDidBecomeActive, object: nil, queue: OperationQueue.main) { _ in
-            
-            self.loadBusses()
+
+                self.loadBusses()
             
             self.busTimer = Timer.scheduledTimer(withTimeInterval: 5, repeats: true) { _ in
                 
                 DispatchQueue.global().async {
-                    self.userDefaults.synchronize()
+                    self.loadBusses()
                 }
-                self.loadBusses()
-            }
-            
-            self.stopTimer = Timer.scheduledTimer(withTimeInterval: 23, repeats: true) { _ in
-                self.refreshStopNextArrival()
             }
             
             guard let lastLoaded = self.userDefaults.value(forKey: "date") as? Date else {
@@ -61,7 +55,9 @@ class LiveMapViewController: BaseViewController {
             
             if lastLoaded.timeIntervalSince(Date()) < timeInterval || self.busMarkers.count == 0 || self.stopMarkers.count == 0 || self.routePolyLines.count == 0 {
                 
-                self.loadRoutes()
+                DispatchQueue.global().async {
+                    self.loadRoutes()
+                }
             }
         }
         
@@ -74,48 +70,6 @@ class LiveMapViewController: BaseViewController {
                 return
             }
             busTimer.invalidate()
-            
-            guard let stopTimer = self.stopTimer else {
-                return
-            }
-            stopTimer.invalidate()
-        }
-    }
-    
-    func refreshStopNextArrival() {
-        
-        for marker in stopMarkers {
-            
-            guard let id = marker.userData as? String else {
-                return
-            }
-            
-            let url = "https://campusdata.uark.edu/api/routes?callback=jQuery18004251280482585251_1507605405541&stopId=" + id + "&_=1507605550296"
-            
-            Alamofire.request(url).responseString { responseString in
-                
-                guard var data: String = responseString.value else {
-                    return
-                }
-                
-                data = String(data.characters.dropFirst(41))
-                data = String(data.characters.dropLast(2))
-                
-                let json = JSON(parseJSON: data)
-                
-                var nextArrival: String!
-                
-                for (_, item) in json {
-                    
-                    nextArrival = item["nextArrival"].description
-                    
-                    if nextArrival != "..." && nextArrival != "null" {
-                        
-                        marker.title = "Next Arrival: " + nextArrival
-                        break
-                    }
-                }
-            }
         }
     }
     
@@ -175,33 +129,6 @@ class LiveMapViewController: BaseViewController {
                         marker.icon = image
                     }
                 }.resume()
-                
-                let url = "https://campusdata.uark.edu/api/routes?callback=jQuery18004251280482585251_1507605405541&stopId=" + stop.id + "&_=1507605550296"
-                
-                Alamofire.request(url).responseString { responseString in
-                    
-                    guard var data: String = responseString.value else {
-                        return
-                    }
-                    
-                    data = String(data.characters.dropFirst(41))
-                    data = String(data.characters.dropLast(2))
-                    
-                    let json = JSON(parseJSON: data)
-                    
-                    var nextArrival: String!
-                    
-                    for (_, item) in json {
-                        
-                        nextArrival = item["nextArrival"].description
-                        
-                        if nextArrival != "..." && nextArrival != "null" {
-                            
-                            marker.title = "Next Arrival: " + nextArrival
-                            break
-                        }
-                    }
-                }
             }
             
             for stopMarker in oldStopMarkers {
@@ -282,6 +209,7 @@ class LiveMapViewController: BaseViewController {
                 marker.icon = UIImage()
                 marker.title = bus.routeName
                 marker.zIndex = 5
+                marker.isFlat = true
                 marker.map = self.mapView
                 
                 if let imageData = self.userDefaults.value(forKey: bus.getCachedImageKey()) as? Data {
@@ -310,6 +238,40 @@ class LiveMapViewController: BaseViewController {
                 self.busMarkers.append(marker)
             }
         }
+    }
+    
+    func mapView(_ mapView: GMSMapView, didTap marker: GMSMarker) -> Bool {
+        
+        guard let id = marker.userData as? String else {
+            return false
+        }
+        
+        let url = "https://campusdata.uark.edu/api/routes?callback=jQuery18004251280482585251_1507605405541&stopId=" + id + "&_=1507605550296"
+        
+        Alamofire.request(url).responseString { responseString in
+            
+            guard var data: String = responseString.value else {
+                return
+            }
+            
+            data = String(data.characters.dropFirst(41))
+            data = String(data.characters.dropLast(2))
+            
+            let json = JSON(parseJSON: data)
+            
+            for (_, item) in json {
+                
+                let nextArrival = item["nextArrival"].description
+                
+                if nextArrival != "..." && nextArrival != "null" {
+                    
+                    marker.title = "Next Arrival: " + nextArrival
+                    break
+                }
+            }
+        }
+        
+        return false
     }
     
     override func didReceiveMemoryWarning() {
