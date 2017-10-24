@@ -93,6 +93,7 @@
 		491E24421F68F9B300B5F2A0 /* ScheduleTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduleTableViewController.swift; sourceTree = "<group>"; };
 		492F69A71F6A22AF009C895C /* parkmap.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = parkmap.pdf; sourceTree = "<group>"; };
 		492F69A91F6A2FCE009C895C /* ScheduleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduleViewController.swift; sourceTree = "<group>"; };
+		493451F21F9EDF83001C6986 /* Razorback Transit.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Razorback Transit.entitlements"; sourceTree = "<group>"; };
 		49488A781F7D7320000C405A /* Route.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Route.swift; sourceTree = "<group>"; };
 		49488A7A1F7D73D9000C405A /* Constantes+API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Constantes+API.swift"; sourceTree = "<group>"; };
 		49488A7D1F7D78D3000C405A /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
@@ -300,6 +301,7 @@
 		49798C311F68CEC8003C0CEB /* Razorback Transit */ = {
 			isa = PBXGroup;
 			children = (
+				493451F21F9EDF83001C6986 /* Razorback Transit.entitlements */,
 				49488A7C1F7D78AF000C405A /* Extensions */,
 				49A493D31F7CC47E00CC12DB /* Constants */,
 				497528A81F7B596100AB474B /* Map Objects */,
@@ -483,6 +485,11 @@
 						CreatedOnToolsVersion = 8.3.3;
 						LastSwiftMigration = 0900;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 					49798C421F68CEC9003C0CEB = {
 						CreatedOnToolsVersion = 8.3.3;
@@ -841,6 +848,7 @@
 			baseConfigurationReference = B1FF176F6DDC13086B5E449F /* Pods-Razorback Transit.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Razorback Transit/Razorback Transit.entitlements";
 				DEVELOPMENT_TEAM = GQQX4L6TE2;
 				INFOPLIST_FILE = "Razorback Transit/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
@@ -859,6 +867,7 @@
 			baseConfigurationReference = A1FBFB5B92368172489C61B3 /* Pods-Razorback Transit.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Razorback Transit/Razorback Transit.entitlements";
 				DEVELOPMENT_TEAM = GQQX4L6TE2;
 				GCC_OPTIMIZATION_LEVEL = 3;
 				INFOPLIST_FILE = "Razorback Transit/Info.plist";
