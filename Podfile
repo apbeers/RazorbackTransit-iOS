@@ -7,4 +7,7 @@ target 'Razorback Transit' do
   pod 'SwiftyJSON'
   pod 'Firebase/Core'
   pod 'Firebase/Performance'
+  pod 'Firebase/Messaging'
+  pod 'Firebase/RemoteConfig'
+  pod 'Firebase/DynamicLinks'
 end
