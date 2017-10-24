@@ -27,6 +27,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
         
         GMSServices.provideAPIKey("AIzaSyBMOwO5S5TeyMx1Hwlu-eiIAw1Hfw3Q9Q4")
         FirebaseApp.configure()
+        self.remoteConfig = RemoteConfig.remoteConfig()
         
         if #available(iOS 10.0, *) {
             // For iOS 10 display notification (sent via APNS)
