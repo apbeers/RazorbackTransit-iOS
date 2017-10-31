@@ -21,7 +21,10 @@ class ScheduleViewController: BaseViewController, WKUIDelegate, UIScrollViewDele
         
         let width = screenSize.width
         let height = screenSize.height - 113
-        let frame = CGRect(x: 0, y: 0, width: width, height: height)
+        var frame = CGRect(x: 0, y: 0, width: width, height: height)
+        if #available(iOS 11.0, *) {
+            frame = CGRect(x: 0.0, y: view.safeAreaInsets.top , width: width, height: height - view.safeAreaInsets.top - view.safeAreaInsets.bottom)
+        }
         
         webView = WKWebView(frame: frame, configuration: WKWebViewConfiguration())
         webView.scrollView.delegate = self
