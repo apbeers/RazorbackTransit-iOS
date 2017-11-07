@@ -182,6 +182,7 @@ class LiveMapViewController: BaseViewController, GMSMapViewDelegate {
             }
             
             self.loadStops()
+            self.loadBusses()
         }
     }
     
