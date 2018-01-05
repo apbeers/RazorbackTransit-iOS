@@ -182,16 +182,33 @@ class LiveMapViewController: BaseViewController, GMSMapViewDelegate {
             }
             
             self.loadStops()
+            self.loadBusses()
         }
+    }
+    
+    func buildBusURLString() -> String {
+       // var busString = Constants.API.BusURL
+        
+        var part1 = "https://campusdata.uark.edu/api/buses?callback=jQuery18002674589609856972_1510069338014&routeIds=undefined"
+        let part2 = "&_=1510069339459"
+        
+        for id in routeIDs {
+            part1.append("-" + id)
+        }
+        part1.append(part2)
+        return part1
     }
     
     func loadBusses() {
         
-        Alamofire.request(Constants.API.BusURL).responseString { responseString in
+        Alamofire.request(buildBusURLString()).responseString { responseString in
             
-            guard let data: String = responseString.value else {
+            guard var data: String = responseString.value else {
                 return
             }
+            
+            data = String(data.characters.dropFirst(41))
+            data = String(data.characters.dropLast(2))
             
             for marker in self.busMarkers {
                 marker.map = nil
@@ -201,7 +218,7 @@ class LiveMapViewController: BaseViewController, GMSMapViewDelegate {
             
             let json = JSON(parseJSON: data)
             
-            for (_, item) in json["Messages"][0]["Args"][0] {
+            for (_, item) in json {
                 
                 let bus = Bus(latitude: item["latitude"].description, longitude: item["longitude"].description, heading: item["heading"].description, color: item["color"].description, routeName: item["routeName"].description, zonarId: item["zonarId"].description)
                 
