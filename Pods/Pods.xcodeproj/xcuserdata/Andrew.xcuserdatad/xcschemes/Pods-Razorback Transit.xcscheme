@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0900"
+   LastUpgradeVersion = "0920"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "A3C1EA77B85CA14F5619B01DC04A0989"
+               BlueprintIdentifier = "6C5E93602824A5B16107C008F7A65673"
                BuildableName = "Pods_Razorback_Transit.framework"
                BlueprintName = "Pods-Razorback Transit"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -47,7 +47,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "A3C1EA77B85CA14F5619B01DC04A0989"
+            BlueprintIdentifier = "6C5E93602824A5B16107C008F7A65673"
             BuildableName = "Pods_Razorback_Transit.framework"
             BlueprintName = "Pods-Razorback Transit"
             ReferencedContainer = "container:Pods.xcodeproj">
