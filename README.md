@@ -1,6 +1,6 @@
 # RazorbackTransit-iOS
 
-<img src="https://github.com/apbeers/RazorbackTransit-iOS/blob/develop/assets/FeatureGraphic.png" width="35%">
+<img src="https://storage.googleapis.com/razorback-transit-assets/FeatureGraphic.png" width="35%">
 
 ## Welcome to the Razorback Transit repository!
 
