@@ -21,7 +21,7 @@ If you would like to contribute but don't know where to start, here are a few fe
 - Unit/UI tests
 - Types or code style cleanup
 
-Feel free to reach out to me  at [apbeers@gmail.com](mailto:apbeers@gmail.com) about any ideas you have for the app, or questions about getting into app development/technology. The reason I'm open sourcing is to give people a chance to learn and have an opportunity to build something that people will use.
+Feel free to reach out to me  at [apbeers@gmail.com](mailto:apbeers@gmail.com) about any ideas you have for the app, or questions about getting into app development/technology. The reason I'm open sourcing is to give you a chance to learn and have an opportunity to build something that people will use.
 
 ## Releases
 
