@@ -89,8 +89,8 @@ class LiveMapViewController: BaseViewController, GMSMapViewDelegate {
                 return
             }
             
-            data = String(data.characters.dropFirst(10))
-            data = String(data.characters.dropLast(2))
+            data = String(data.dropFirst(10))
+            data = String(data.dropLast(2))
             
             let json = JSON(parseJSON: data)
             
@@ -145,8 +145,8 @@ class LiveMapViewController: BaseViewController, GMSMapViewDelegate {
                 return
             }
             
-            data = String(data.characters.dropFirst(7))
-            data = String(data.characters.dropLast(2))
+            data = String(data.dropFirst(7))
+            data = String(data.dropLast(2))
             
             let json = JSON(parseJSON: data)
             
@@ -207,8 +207,8 @@ class LiveMapViewController: BaseViewController, GMSMapViewDelegate {
                 return
             }
             
-            data = String(data.characters.dropFirst(41))
-            data = String(data.characters.dropLast(2))
+            data = String(data.dropFirst(41))
+            data = String(data.dropLast(2))
             
             for marker in self.busMarkers {
                 marker.map = nil
@@ -271,8 +271,9 @@ class LiveMapViewController: BaseViewController, GMSMapViewDelegate {
                 return
             }
             
-            data = String(data.characters.dropFirst(41))
-            data = String(data.characters.dropLast(2))
+         //   data = data
+            data = String(data.dropFirst(41))
+            data = String(data.dropLast(2))
             
             let json = JSON(parseJSON: data)
             
