@@ -17,8 +17,10 @@ class BaseTableViewController: UITableViewController {
         super.viewDidLoad()
         
         navBar = navigationController?.navigationBar
-        navigationController?.navigationBar.barTintColor = Constants.Colors.razorbackRedBarColor
-        navigationController?.navigationBar.tintColor = UIColor.white
+        navBar.barTintColor = Constants.Colors.razorbackRed
+        navBar.tintColor = UIColor.white
+        navBar.isTranslucent = false
+        
     }
 }
 
