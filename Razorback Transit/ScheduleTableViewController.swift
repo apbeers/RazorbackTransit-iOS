@@ -9,14 +9,14 @@
 import UIKit
 import Firebase
 
-class ScheduleTableViewController: BaseTableViewController {
-
+class ScheduleTableViewController: BaseTableViewController, UIViewControllerPreviewingDelegate {
+    
     @IBOutlet var ScheduleListTableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        
+        registerForPreviewing(with: self, sourceView: ScheduleListTableView)
         navBar.topItem?.title = "Schedules"
     }
 
@@ -129,16 +129,43 @@ class ScheduleTableViewController: BaseTableViewController {
             return
         }
         
+        guard let row: Int = tableView.indexPathForSelectedRow?.row else {
+            return
+        }
+        
         switch section {
         case 0:
-            destination?.mapName = Constants.regularSchedules[(tableView.indexPathForSelectedRow?.row)!].fileName
+            destination?.mapName = Constants.regularSchedules[row].fileName
         case 1:
-            destination?.mapName = Constants.reducedSchedules[(tableView.indexPathForSelectedRow?.row)!].fileName
+            destination?.mapName = Constants.reducedSchedules[row].fileName
         default:
             destination?.mapName = ""
         }
-
     }
     
-
+    func previewingContext(_ previewingContext: UIViewControllerPreviewing, viewControllerForLocation location: CGPoint) -> UIViewController? {
+        
+        guard let indexPath = ScheduleListTableView.indexPathForRow(at: location) else {
+            return UIViewController()
+        }
+        
+        guard let destination = storyboard?.instantiateViewController(withIdentifier: "ScheduleView") as? ScheduleViewController else {
+            return UIViewController()
+        }
+        
+        switch indexPath.section {
+        case 0:
+            destination.mapName = Constants.regularSchedules[indexPath.row].fileName
+        case 1:
+            destination.mapName = Constants.reducedSchedules[indexPath.row].fileName
+        default:
+            destination.mapName = ""
+        }
+        
+        return destination
+    }
+    
+    func previewingContext(_ previewingContext: UIViewControllerPreviewing, commit viewControllerToCommit: UIViewController) {
+        navigationController?.pushViewController(viewControllerToCommit, animated: true)
+    }
 }
