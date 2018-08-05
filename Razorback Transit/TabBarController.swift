@@ -15,6 +15,14 @@ class TabBarController: UITabBarController, UITabBarControllerDelegate {
         super.viewDidLoad()
 
         self.delegate = self
+        
+        let left = UISwipeGestureRecognizer(target: self, action: #selector(swipeLeft))
+        left.direction = .left
+        self.view.addGestureRecognizer(left)
+        
+        let right = UISwipeGestureRecognizer(target: self, action: #selector(swipeRight))
+        right.direction = .right
+        self.view.addGestureRecognizer(right)
     }
 
     override func tabBar(_ tabBar: UITabBar, didSelect item: UITabBarItem) {
@@ -23,6 +31,20 @@ class TabBarController: UITabBarController, UITabBarControllerDelegate {
             AnalyticsParameterItemID: item.title! as NSObject,
             AnalyticsParameterContentType: Constants.EventTypes.TabSelected as NSObject
             ])
+    }
+    
+    @objc func swipeLeft() {
+        
+        guard let total = viewControllers?.count else {
+            return
+        }
+        
+        selectedIndex = min(total - 1, selectedIndex + 1)
+    }
+    
+    @objc func swipeRight() {
+        
+        selectedIndex = max(0, selectedIndex - 1)
     }
     
     override func didReceiveMemoryWarning() {
