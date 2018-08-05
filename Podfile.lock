@@ -5,6 +5,9 @@ PODS:
     - FirebaseAnalytics (= 5.0.1)
   - Firebase/CoreOnly (5.2.0):
     - FirebaseCore (= 5.0.3)
+  - Firebase/Messaging (5.2.0):
+    - Firebase/CoreOnly
+    - FirebaseMessaging (= 3.0.2)
   - FirebaseAnalytics (5.0.1):
     - FirebaseCore (~> 5.0)
     - FirebaseInstanceID (~> 3.0)
@@ -14,12 +17,19 @@ PODS:
     - "GoogleToolboxForMac/NSData+zlib (~> 2.1)"
   - FirebaseInstanceID (3.1.0):
     - FirebaseCore (~> 5.0)
+  - FirebaseMessaging (3.0.2):
+    - FirebaseCore (~> 5.0)
+    - FirebaseInstanceID (~> 3.0)
+    - GoogleToolboxForMac/Logger (~> 2.1)
+    - Protobuf (~> 3.1)
   - GoogleMaps (2.7.0):
     - GoogleMaps/Maps (= 2.7.0)
   - GoogleMaps/Base (2.7.0)
   - GoogleMaps/Maps (2.7.0):
     - GoogleMaps/Base
   - GoogleToolboxForMac/Defines (2.1.4)
+  - GoogleToolboxForMac/Logger (2.1.4):
+    - GoogleToolboxForMac/Defines (= 2.1.4)
   - "GoogleToolboxForMac/NSData+zlib (2.1.4)":
     - GoogleToolboxForMac/Defines (= 2.1.4)
   - nanopb (0.3.8):
@@ -27,11 +37,13 @@ PODS:
     - nanopb/encode (= 0.3.8)
   - nanopb/decode (0.3.8)
   - nanopb/encode (0.3.8)
+  - Protobuf (3.6.0)
   - SwiftyJSON (4.1.0)
 
 DEPENDENCIES:
   - Alamofire
   - Firebase/Core
+  - Firebase/Messaging
   - GoogleMaps
   - SwiftyJSON
 
@@ -42,9 +54,11 @@ SPEC REPOS:
     - FirebaseAnalytics
     - FirebaseCore
     - FirebaseInstanceID
+    - FirebaseMessaging
     - GoogleMaps
     - GoogleToolboxForMac
     - nanopb
+    - Protobuf
     - SwiftyJSON
 
 SPEC CHECKSUMS:
@@ -53,11 +67,13 @@ SPEC CHECKSUMS:
   FirebaseAnalytics: b3628aea54c50464c32c393fb2ea032566e7ecc2
   FirebaseCore: a3c87242451633fff8490183898075ce77d168d2
   FirebaseInstanceID: 05d779cbb97bd5bd5c51a38a903fc9cfe1b2454a
+  FirebaseMessaging: 6894b8fe0a0cf26c3b13dad729f1131654ae0bdb
   GoogleMaps: f79af95cb24d869457b1f961c93d3ce8b2f3b848
   GoogleToolboxForMac: 91c824d21e85b31c2aae9bb011c5027c9b4e738f
   nanopb: 5601e6bca2dbf1ed831b519092ec110f66982ca3
+  Protobuf: 0fc0ad8bec688b2a3017a139953e01374fedbd5f
   SwiftyJSON: c29297daf073d2aa016295d5809cdd68045c39b3
 
-PODFILE CHECKSUM: da1bd3ccf68a01089956cd0f68ec1ab82842d726
+PODFILE CHECKSUM: d56d23f5c595379a1e9502f85b94088c92ee83e3
 
 COCOAPODS: 1.5.3

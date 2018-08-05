@@ -133,6 +133,7 @@
 		49A493CD1F7CB74F00CC12DB /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		49A493D11F7CC39F00CC12DB /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		49A493D41F7CC49900CC12DB /* Constants+Firebase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Constants+Firebase.swift"; sourceTree = "<group>"; };
+		49AADD73211745FA005C74BF /* Razorback Transit.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Razorback Transit.entitlements"; sourceTree = "<group>"; };
 		49D6F4971F802CFA00B586B2 /* Bus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bus.swift; sourceTree = "<group>"; };
 		49D6F4991F802DAD00B586B2 /* Stop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stop.swift; sourceTree = "<group>"; };
 		49DD4BCD1F6D94DD0099A70B /* Reachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
@@ -300,6 +301,7 @@
 		49798C311F68CEC8003C0CEB /* Razorback Transit */ = {
 			isa = PBXGroup;
 			children = (
+				49AADD73211745FA005C74BF /* Razorback Transit.entitlements */,
 				49488A7C1F7D78AF000C405A /* Extensions */,
 				49A493D31F7CC47E00CC12DB /* Constants */,
 				497528A81F7B596100AB474B /* Map Objects */,
@@ -483,6 +485,14 @@
 						CreatedOnToolsVersion = 8.3.3;
 						LastSwiftMigration = 0900;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 0;
+							};
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 					49798C421F68CEC9003C0CEB = {
 						CreatedOnToolsVersion = 8.3.3;
@@ -607,6 +617,7 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-Razorback Transit/Pods-Razorback Transit-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
@@ -614,6 +625,7 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
@@ -843,6 +855,7 @@
 			baseConfigurationReference = B1FF176F6DDC13086B5E449F /* Pods-Razorback Transit.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Razorback Transit/Razorback Transit.entitlements";
 				DEVELOPMENT_TEAM = GQQX4L6TE2;
 				INFOPLIST_FILE = "Razorback Transit/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
@@ -861,6 +874,7 @@
 			baseConfigurationReference = A1FBFB5B92368172489C61B3 /* Pods-Razorback Transit.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Razorback Transit/Razorback Transit.entitlements";
 				DEVELOPMENT_TEAM = GQQX4L6TE2;
 				GCC_OPTIMIZATION_LEVEL = 3;
 				INFOPLIST_FILE = "Razorback Transit/Info.plist";

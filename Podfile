@@ -6,4 +6,5 @@ target 'Razorback Transit' do
   pod 'Alamofire'
   pod 'SwiftyJSON'
   pod 'Firebase/Core'
+  pod 'Firebase/Messaging'
 end
