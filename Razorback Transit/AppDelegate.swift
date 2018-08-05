@@ -103,6 +103,30 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
         
         // Print message ID.
     }
+    
+    func application(_ application: UIApplication, performActionFor shortcutItem: UIApplicationShortcutItem, completionHandler: @escaping (Bool) -> Void) {
+        
+        var tabIndex: Int = 0
+        
+        switch shortcutItem.type {
+        case "arcu.razorbacktransit.livemap":
+            tabIndex = 0
+        case "arcu.razorbacktransit.schedules":
+            tabIndex = 1
+        case "arcu.razorbacktransit.routes":
+            tabIndex = 2
+        case "arcu.razorbacktransit.parking":
+            tabIndex = 3
+        default:
+            tabIndex = 0
+        }
+        
+        guard let tabBarController = self.window?.rootViewController as? UITabBarController else {
+            return
+        }
+        
+        tabBarController.selectedIndex = tabIndex
+    }
 }
 
 extension AppDelegate : MessagingDelegate {
@@ -118,5 +142,4 @@ extension AppDelegate : MessagingDelegate {
         print("Received data message: \(remoteMessage.appData)")
     }
     // [END ios_10_data_message]
-    
 }
