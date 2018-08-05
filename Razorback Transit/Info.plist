@@ -2,6 +2,43 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>UIApplicationShortcutItems</key>
+	<array>
+		<dict>
+			<key>UIApplicationShortcutItemIconFile</key>
+			<string>LiveMap</string>
+			<key>UIApplicationShortcutItemTitle</key>
+			<string>Live Map</string>
+			<key>UIApplicationShortcutItemType</key>
+			<string>arcu.razorbacktransit.livemap</string>
+		</dict>
+		<dict>
+			<key>UIApplicationShortcutItemIconFile</key>
+			<string>Schedule</string>
+			<key>UIApplicationShortcutItemTitle</key>
+			<string>Schedules</string>
+			<key>UIApplicationShortcutItemType</key>
+			<string>arcu.razorbacktransit.schedules</string>
+		</dict>
+		<dict>
+			<key>UIApplicationShortcutItemIconFile</key>
+			<string>Route</string>
+			<key>UIApplicationShortcutItemTitle</key>
+			<string>Routes</string>
+			<key>UIApplicationShortcutItemType</key>
+			<string>arcu.razorbacktransit.routes</string>
+		</dict>
+		<dict>
+			<key>UIApplicationShortcutItemIconFile</key>
+			<string>Parking</string>
+			<key>UIApplicationShortcutItemTitle</key>
+			<string>Parking</string>
+			<key>UIApplicationShortcutItemType</key>
+			<string>arcu.razorbacktransit.parking</string>
+		</dict>
+	</array>
+	<key>LSApplicationCategoryType</key>
+	<string></string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleDisplayName</key>

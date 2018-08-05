@@ -103,6 +103,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
         
         // Print message ID.
     }
+    
+    func application(_ application: UIApplication, performActionFor shortcutItem: UIApplicationShortcutItem, completionHandler: @escaping (Bool) -> Void) {
+        switch shortcutItem.type {
+        case "arcu.razorbacktransit.livemap":
+            print("livemap")
+        case "arcu.razorbacktransit.schedules":
+            print("schedules")
+        case "arcu.razorbacktransit.routes":
+            print("routes")
+        case "arcu.razorbacktransit.parking":
+            print("parking")
+        default:
+            print("default")
+        }
+    }
 }
 
 extension AppDelegate : MessagingDelegate {
@@ -118,5 +133,4 @@ extension AppDelegate : MessagingDelegate {
         print("Received data message: \(remoteMessage.appData)")
     }
     // [END ios_10_data_message]
-    
 }
