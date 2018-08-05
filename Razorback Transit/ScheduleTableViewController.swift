@@ -12,6 +12,7 @@ import Firebase
 class ScheduleTableViewController: BaseTableViewController, UIViewControllerPreviewingDelegate {
     
     @IBOutlet var ScheduleListTableView: UITableView!
+    var selectedIndexPath: IndexPath!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -153,6 +154,8 @@ class ScheduleTableViewController: BaseTableViewController, UIViewControllerPrev
             return UIViewController()
         }
         
+        selectedIndexPath = indexPath
+        
         switch indexPath.section {
         case 0:
             destination.mapName = Constants.regularSchedules[indexPath.row].fileName
@@ -166,6 +169,7 @@ class ScheduleTableViewController: BaseTableViewController, UIViewControllerPrev
     }
     
     func previewingContext(_ previewingContext: UIViewControllerPreviewing, commit viewControllerToCommit: UIViewController) {
+        SelectedRows.selectedSchedule = selectedIndexPath
         navigationController?.pushViewController(viewControllerToCommit, animated: true)
     }
 }
