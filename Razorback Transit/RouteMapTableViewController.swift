@@ -9,13 +9,15 @@
 import UIKit
 import Firebase
 
-class RouteMapTableViewController: BaseTableViewController {
-
+class RouteMapTableViewController: BaseTableViewController, UIViewControllerPreviewingDelegate {
+    
     @IBOutlet var RouteMapTableView: UITableView!
+    var selectedIndexPath: IndexPath!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        registerForPreviewing(with: self, sourceView: RouteMapTableView)
         navBar.topItem?.title = "Routes"
     }
 
@@ -127,14 +129,47 @@ class RouteMapTableViewController: BaseTableViewController {
             return
         }
         
+        guard let row: Int = tableView.indexPathForSelectedRow?.row else {
+            return
+        }
+        
         switch section {
         case 0:
-            destination?.mapName = Constants.regularRoutes[(tableView.indexPathForSelectedRow?.row)!].fileName
+            destination?.mapName = Constants.regularRoutes[row].fileName
         case 1:
-            destination?.mapName = Constants.reducedRoutes[(tableView.indexPathForSelectedRow?.row)!].fileName
+            destination?.mapName = Constants.reducedRoutes[row].fileName
         default:
             destination?.mapName = ""
         }
+    }
+    
+    func previewingContext(_ previewingContext: UIViewControllerPreviewing, viewControllerForLocation location: CGPoint) -> UIViewController? {
+        
+        guard let indexPath = RouteMapTableView.indexPathForRow(at: location) else {
+            return UIViewController()
+        }
+        
+        selectedIndexPath = indexPath
+        
+        guard let destination = storyboard?.instantiateViewController(withIdentifier: "RouteView") as? RouteMapWebViewController else {
+            return UIViewController()
+        }
+        
+        switch indexPath.section {
+        case 0:
+            destination.mapName = Constants.regularRoutes[indexPath.row].fileName
+        case 1:
+            destination.mapName = Constants.reducedRoutes[indexPath.row].fileName
+        default:
+            destination.mapName = ""
+        }
+        
+        return destination
+    }
+    
+    func previewingContext(_ previewingContext: UIViewControllerPreviewing, commit viewControllerToCommit: UIViewController) {
+        SelectedRows.selectedRoute = selectedIndexPath
+        navigationController?.pushViewController(viewControllerToCommit, animated: true)
     }
 
 }
