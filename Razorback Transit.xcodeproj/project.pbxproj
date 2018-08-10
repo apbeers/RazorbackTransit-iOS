@@ -302,6 +302,7 @@
 			isa = PBXGroup;
 			children = (
 				49AADD73211745FA005C74BF /* Razorback Transit.entitlements */,
+				49DCE42A211DEAD100E32112 /* Utilities */,
 				49488A7C1F7D78AF000C405A /* Extensions */,
 				49A493D31F7CC47E00CC12DB /* Constants */,
 				497528A81F7B596100AB474B /* Map Objects */,
@@ -310,14 +311,9 @@
 				492F69A61F6A221D009C895C /* Maps */,
 				49798C361F68CEC8003C0CEB /* Main.storyboard */,
 				49798C391F68CEC8003C0CEB /* Assets.xcassets */,
-				49798C321F68CEC8003C0CEB /* AppDelegate.swift */,
 				49798C3B1F68CEC8003C0CEB /* LaunchScreen.storyboard */,
 				49798C3E1F68CEC8003C0CEB /* Info.plist */,
 				49A493CD1F7CB74F00CC12DB /* GoogleService-Info.plist */,
-				49DE195C1F6B6FE4001EA719 /* PDFFile.swift */,
-				49975BB11F6F40BE009A0D1E /* SelectedRows.swift */,
-				49DD4BCD1F6D94DD0099A70B /* Reachability.swift */,
-				49F8B9651F702B5400D30278 /* RequestUserReview.swift */,
 			);
 			path = "Razorback Transit";
 			sourceTree = "<group>";
@@ -349,6 +345,18 @@
 				499C51111F8D71DC00D654C6 /* Constants+Colors.swift */,
 			);
 			name = Constants;
+			sourceTree = "<group>";
+		};
+		49DCE42A211DEAD100E32112 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				49798C321F68CEC8003C0CEB /* AppDelegate.swift */,
+				49DE195C1F6B6FE4001EA719 /* PDFFile.swift */,
+				49975BB11F6F40BE009A0D1E /* SelectedRows.swift */,
+				49DD4BCD1F6D94DD0099A70B /* Reachability.swift */,
+				49F8B9651F702B5400D30278 /* RequestUserReview.swift */,
+			);
+			name = Utilities;
 			sourceTree = "<group>";
 		};
 		49DE192E1F6B437F001EA719 /* View Controllers */ = {
