@@ -46,7 +46,7 @@ struct Constants {
         static let brown = PDFFile(filename: "BROWN_17_ROUTE", title: "Brown 17")
         static let gray = PDFFile(filename: "GRAY_21_ROUTE", title: "Gray 21")
         static let yellow = PDFFile(filename: "YELLOW_12_ROUTE", title: "Yellow 12")
-        static let blueReduced = PDFFile(filename: "BLUEREDUCED_02_ROUTE", title: "Blue Reduced 02)")
+        static let blueReduced = PDFFile(filename: "BLUEREDUCED_02_ROUTE", title: "Blue Reduced 02")
         static let greenReduced = PDFFile(filename: "GREENREDUCED_01_ROUTE", title: "Green Reduced 01")
         static let orangeReduced = PDFFile(filename: "ORANGEREDUCED_03_ROUTE", title: "Orange Reduced 03")
         static let purpleReduced = PDFFile(filename: "PURPLEREDUCED_04_ROUTE", title: "Purple Reduced 04")
