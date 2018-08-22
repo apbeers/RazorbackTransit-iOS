@@ -46,7 +46,6 @@
 		49A493D51F7CC49900CC12DB /* Constants+Firebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A493D41F7CC49900CC12DB /* Constants+Firebase.swift */; };
 		49D6F4981F802CFA00B586B2 /* Bus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49D6F4971F802CFA00B586B2 /* Bus.swift */; };
 		49D6F49A1F802DAD00B586B2 /* Stop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49D6F4991F802DAD00B586B2 /* Stop.swift */; };
-		49DB0B201F97863700B18F22 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 49DB0B1F1F97863700B18F22 /* Default-568h@2x.png */; };
 		49DD4BCE1F6D94DD0099A70B /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49DD4BCD1F6D94DD0099A70B /* Reachability.swift */; };
 		49DE19371F6B47CD001EA719 /* REDREDUCED-06-ROUTE.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 49DE19311F6B47CD001EA719 /* REDREDUCED-06-ROUTE.pdf */; };
 		49DE19381F6B47CD001EA719 /* TANREDUCED-05-ROUTE.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 49DE19321F6B47CD001EA719 /* TANREDUCED-05-ROUTE.pdf */; };
@@ -134,9 +133,9 @@
 		49A493CD1F7CB74F00CC12DB /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		49A493D11F7CC39F00CC12DB /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		49A493D41F7CC49900CC12DB /* Constants+Firebase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Constants+Firebase.swift"; sourceTree = "<group>"; };
+		49AADD73211745FA005C74BF /* Razorback Transit.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Razorback Transit.entitlements"; sourceTree = "<group>"; };
 		49D6F4971F802CFA00B586B2 /* Bus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bus.swift; sourceTree = "<group>"; };
 		49D6F4991F802DAD00B586B2 /* Stop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stop.swift; sourceTree = "<group>"; };
-		49DB0B1F1F97863700B18F22 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		49DD4BCD1F6D94DD0099A70B /* Reachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 		49DE19311F6B47CD001EA719 /* REDREDUCED-06-ROUTE.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "REDREDUCED-06-ROUTE.pdf"; sourceTree = "<group>"; };
 		49DE19321F6B47CD001EA719 /* TANREDUCED-05-ROUTE.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "TANREDUCED-05-ROUTE.pdf"; sourceTree = "<group>"; };
@@ -280,7 +279,6 @@
 		49798C261F68CEC8003C0CEB = {
 			isa = PBXGroup;
 			children = (
-				49DB0B1F1F97863700B18F22 /* Default-568h@2x.png */,
 				49798C311F68CEC8003C0CEB /* Razorback Transit */,
 				49798C461F68CEC9003C0CEB /* Razorback TransitTests */,
 				49798C511F68CEC9003C0CEB /* Razorback TransitUITests */,
@@ -303,6 +301,8 @@
 		49798C311F68CEC8003C0CEB /* Razorback Transit */ = {
 			isa = PBXGroup;
 			children = (
+				49AADD73211745FA005C74BF /* Razorback Transit.entitlements */,
+				49DCE42A211DEAD100E32112 /* Utilities */,
 				49488A7C1F7D78AF000C405A /* Extensions */,
 				49A493D31F7CC47E00CC12DB /* Constants */,
 				497528A81F7B596100AB474B /* Map Objects */,
@@ -311,14 +311,9 @@
 				492F69A61F6A221D009C895C /* Maps */,
 				49798C361F68CEC8003C0CEB /* Main.storyboard */,
 				49798C391F68CEC8003C0CEB /* Assets.xcassets */,
-				49798C321F68CEC8003C0CEB /* AppDelegate.swift */,
 				49798C3B1F68CEC8003C0CEB /* LaunchScreen.storyboard */,
 				49798C3E1F68CEC8003C0CEB /* Info.plist */,
 				49A493CD1F7CB74F00CC12DB /* GoogleService-Info.plist */,
-				49DE195C1F6B6FE4001EA719 /* PDFFile.swift */,
-				49975BB11F6F40BE009A0D1E /* SelectedRows.swift */,
-				49DD4BCD1F6D94DD0099A70B /* Reachability.swift */,
-				49F8B9651F702B5400D30278 /* RequestUserReview.swift */,
 			);
 			path = "Razorback Transit";
 			sourceTree = "<group>";
@@ -350,6 +345,18 @@
 				499C51111F8D71DC00D654C6 /* Constants+Colors.swift */,
 			);
 			name = Constants;
+			sourceTree = "<group>";
+		};
+		49DCE42A211DEAD100E32112 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				49798C321F68CEC8003C0CEB /* AppDelegate.swift */,
+				49DE195C1F6B6FE4001EA719 /* PDFFile.swift */,
+				49975BB11F6F40BE009A0D1E /* SelectedRows.swift */,
+				49DD4BCD1F6D94DD0099A70B /* Reachability.swift */,
+				49F8B9651F702B5400D30278 /* RequestUserReview.swift */,
+			);
+			name = Utilities;
 			sourceTree = "<group>";
 		};
 		49DE192E1F6B437F001EA719 /* View Controllers */ = {
@@ -486,6 +493,14 @@
 						CreatedOnToolsVersion = 8.3.3;
 						LastSwiftMigration = 0900;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 0;
+							};
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 					49798C421F68CEC9003C0CEB = {
 						CreatedOnToolsVersion = 8.3.3;
@@ -557,7 +572,6 @@
 				49DE194B1F6B47E5001EA719 /* RED-26-ROUTE.pdf in Resources */,
 				49DE193C1F6B47CD001EA719 /* GREENREDUCED-01-ROUTE.pdf in Resources */,
 				49DE194F1F6B47E5001EA719 /* GREEN-11-ROUTE.pdf in Resources */,
-				49DB0B201F97863700B18F22 /* Default-568h@2x.png in Resources */,
 				49DE194D1F6B47E5001EA719 /* BROWN-17-ROUTE.pdf in Resources */,
 				495784691F6A4B16001B4539 /* REMOTEEXPRESS-48.pdf in Resources */,
 				495784671F6A4B16001B4539 /* TAN-35.pdf in Resources */,
@@ -610,14 +624,16 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Razorback Transit/Pods-Razorback Transit-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
-				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
@@ -847,6 +863,7 @@
 			baseConfigurationReference = B1FF176F6DDC13086B5E449F /* Pods-Razorback Transit.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Razorback Transit/Razorback Transit.entitlements";
 				DEVELOPMENT_TEAM = GQQX4L6TE2;
 				INFOPLIST_FILE = "Razorback Transit/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
@@ -856,7 +873,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -865,6 +882,7 @@
 			baseConfigurationReference = A1FBFB5B92368172489C61B3 /* Pods-Razorback Transit.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Razorback Transit/Razorback Transit.entitlements";
 				DEVELOPMENT_TEAM = GQQX4L6TE2;
 				GCC_OPTIMIZATION_LEVEL = 3;
 				INFOPLIST_FILE = "Razorback Transit/Info.plist";
@@ -875,7 +893,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};

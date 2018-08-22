@@ -20,7 +20,6 @@ class BaseTableViewController: UITableViewController {
         navBar.barTintColor = Constants.Colors.razorbackRed
         navBar.tintColor = UIColor.white
         navBar.isTranslucent = false
-        
     }
 }
 

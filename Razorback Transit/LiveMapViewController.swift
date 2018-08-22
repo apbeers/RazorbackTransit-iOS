@@ -25,7 +25,7 @@ class LiveMapViewController: BaseViewController, GMSMapViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let camera = GMSCameraPosition.camera(withLatitude: 36.09, longitude: -94.1785, zoom: 12.6)
+        let camera = GMSCameraPosition.camera(withLatitude: 36.09, longitude: -94.1785, zoom: 12)
         mapView = GMSMapView.map(withFrame: CGRect.zero, camera: camera)
         mapView.settings.tiltGestures = false
         mapView.setMinZoom(10, maxZoom: mapView.maxZoom)
@@ -134,7 +134,27 @@ class LiveMapViewController: BaseViewController, GMSMapViewDelegate {
             for stopMarker in oldStopMarkers {
                 stopMarker.map = nil
             }
+            
+            self.focusMapToShowAllMarkers()
         }
+    }
+    
+    func focusMapToShowAllMarkers() {
+        
+        guard let firstMarker = stopMarkers.first else {
+            return
+        }
+        
+        let firstLocation = firstMarker.position
+        
+        var bounds = GMSCoordinateBounds(coordinate: firstLocation, coordinate: firstLocation)
+
+        for marker in stopMarkers {
+            bounds = bounds.includingCoordinate(marker.position)
+        }
+        
+        let update = GMSCameraUpdate.fit(bounds, withPadding: CGFloat(40))
+        mapView.animate(with: update)
     }
     
     func loadRoutes() {
