@@ -5,6 +5,8 @@
     </device>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -110,7 +112,18 @@
                             <outlet property="delegate" destination="oD4-A8-WqC" id="U9c-CY-jGy"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="Xvs-RO-aDu"/>
+                    <navigationItem key="navigationItem" id="Xvs-RO-aDu">
+                        <barButtonItem key="rightBarButtonItem" id="Ggu-Q5-cV5">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="lor-gL-gdc">
+                                <rect key="frame" x="276" y="7" width="83" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Tip Jar"/>
+                                <connections>
+                                    <segue destination="8fS-3r-uoZ" kind="presentation" id="IJp-0q-Ry5"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="ScheduleListTableView" destination="DJB-3e-PP2" id="1sF-1x-5ay"/>
                     </connections>
@@ -195,7 +208,18 @@
                             <outlet property="delegate" destination="VMZ-RS-i8u" id="zAW-fQ-dtI"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="kXi-MF-1K9"/>
+                    <navigationItem key="navigationItem" id="kXi-MF-1K9">
+                        <barButtonItem key="rightBarButtonItem" id="VwR-3w-Tar">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="ERW-Sv-Loa">
+                                <rect key="frame" x="276" y="7" width="83" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Tip Jar"/>
+                                <connections>
+                                    <segue destination="8fS-3r-uoZ" kind="presentation" id="KvT-oR-CMS"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="RouteMapTableView" destination="hol-4Q-PcE" id="hB6-hz-WUy"/>
                     </connections>
@@ -203,6 +227,110 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jtE-Nu-PJf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1865" y="949"/>
+        </scene>
+        <!--Donate View Controller-->
+        <scene sceneID="p7Y-ny-cMo">
+            <objects>
+                <viewController id="8fS-3r-uoZ" customClass="DonateViewController" customModule="Razorback_Transit" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="bOu-Qx-eIZ"/>
+                        <viewControllerLayoutGuide type="bottom" id="KzD-8b-147"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="5Ho-TF-2fa">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EZN-In-jax">
+                                <rect key="frame" x="26" y="30" width="41" height="33"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="Done"/>
+                                <connections>
+                                    <action selector="DoneUIButtonTapped:" destination="8fS-3r-uoZ" eventType="touchUpInside" id="M3t-Rw-mCn"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hey there! My name is Andrew Beers and I developed and maintin this app in my free time" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bk2-ay-Ztt">
+                                <rect key="frame" x="37.5" y="143" width="300" height="59.5"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="IEM-Rx-OSK">
+                                <rect key="frame" x="77" y="295.5" width="222" height="76"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="42" translatesAutoresizingMaskIntoConstraints="NO" id="Hzr-dn-rQi">
+                                        <rect key="frame" x="0.0" y="0.0" width="222" height="30"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pLi-d7-B0f">
+                                                <rect key="frame" x="0.0" y="0.0" width="46" height="30"/>
+                                                <state key="normal" title="Button"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gno-gV-WsB">
+                                                <rect key="frame" x="88" y="0.0" width="46" height="30"/>
+                                                <state key="normal" title="Button"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hJF-rh-CW9">
+                                                <rect key="frame" x="176" y="0.0" width="46" height="30"/>
+                                                <state key="normal" title="Button"/>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="42" translatesAutoresizingMaskIntoConstraints="NO" id="VsU-Fe-wmI">
+                                        <rect key="frame" x="0.0" y="46" width="222" height="30"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h98-Kd-Hh8">
+                                                <rect key="frame" x="0.0" y="0.0" width="46" height="30"/>
+                                                <state key="normal" title="Button"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="czy-ee-OgA">
+                                                <rect key="frame" x="88" y="0.0" width="46" height="30"/>
+                                                <state key="normal" title="Button"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UNb-bi-Fb6">
+                                                <rect key="frame" x="176" y="0.0" width="46" height="30"/>
+                                                <state key="normal" title="Button"/>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Let's keep in touch!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="esf-et-rMi">
+                                <rect key="frame" x="104" y="448" width="167" height="20"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="19"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hoY-ve-C6Z">
+                                <rect key="frame" x="158" y="495" width="58" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="LinkedIn"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zXr-PP-v8k">
+                                <rect key="frame" x="113" y="533" width="152" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="www.andrewbeers.me"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="IEM-Rx-OSK" firstAttribute="centerY" secondItem="5Ho-TF-2fa" secondAttribute="centerY" id="LZX-Ec-Ubr"/>
+                            <constraint firstItem="IEM-Rx-OSK" firstAttribute="centerX" secondItem="5Ho-TF-2fa" secondAttribute="centerX" id="POh-XM-Pjc"/>
+                            <constraint firstItem="esf-et-rMi" firstAttribute="centerX" secondItem="5Ho-TF-2fa" secondAttribute="centerX" id="YGm-Xg-hpJ"/>
+                            <constraint firstItem="bk2-ay-Ztt" firstAttribute="width" secondItem="5Ho-TF-2fa" secondAttribute="width" multiplier="0.8" id="duE-n1-ffr"/>
+                            <constraint firstItem="EZN-In-jax" firstAttribute="leading" secondItem="5Ho-TF-2fa" secondAttribute="leadingMargin" constant="10" id="fqs-K4-R6y"/>
+                            <constraint firstItem="bk2-ay-Ztt" firstAttribute="centerX" secondItem="5Ho-TF-2fa" secondAttribute="centerX" id="wts-vw-zyC"/>
+                            <constraint firstItem="EZN-In-jax" firstAttribute="top" secondItem="bOu-Qx-eIZ" secondAttribute="bottom" constant="10" id="wyS-aR-6UY"/>
+                            <constraint firstItem="bk2-ay-Ztt" firstAttribute="top" secondItem="EZN-In-jax" secondAttribute="bottom" constant="80" id="x2R-m4-mrD"/>
+                        </constraints>
+                    </view>
+                    <toolbarItems/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="DoneUIButton" destination="EZN-In-jax" id="2HN-3s-zVG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cUi-7F-7jN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3690" y="460"/>
         </scene>
         <!--Schedule-->
         <scene sceneID="ZB4-hR-E1h">
@@ -318,4 +446,7 @@
         <image name="Route" width="25" height="25"/>
         <image name="Schedule" width="25" height="25"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="KvT-oR-CMS"/>
+    </inferredMetricsTieBreakers>
 </document>

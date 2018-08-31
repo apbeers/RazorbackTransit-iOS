@@ -61,6 +61,7 @@
 		49975BB21F6F40BE009A0D1E /* SelectedRows.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49975BB11F6F40BE009A0D1E /* SelectedRows.swift */; };
 		499C51101F8D6AC700D654C6 /* LiveMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499C510F1F8D6AC700D654C6 /* LiveMapViewController.swift */; };
 		499C51121F8D71DC00D654C6 /* Constants+Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499C51111F8D71DC00D654C6 /* Constants+Colors.swift */; };
+		49A115602139A01B00D50743 /* DonateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A1155F2139A01B00D50743 /* DonateViewController.swift */; };
 		49A493CE1F7CBC1600CC12DB /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 49A493CD1F7CB74F00CC12DB /* GoogleService-Info.plist */; };
 		49A493D21F7CC39F00CC12DB /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A493D11F7CC39F00CC12DB /* TabBarController.swift */; };
 		49A493D51F7CC49900CC12DB /* Constants+Firebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A493D41F7CC49900CC12DB /* Constants+Firebase.swift */; };
@@ -154,6 +155,7 @@
 		49975BB11F6F40BE009A0D1E /* SelectedRows.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectedRows.swift; sourceTree = "<group>"; };
 		499C510F1F8D6AC700D654C6 /* LiveMapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LiveMapViewController.swift; sourceTree = "<group>"; };
 		499C51111F8D71DC00D654C6 /* Constants+Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Constants+Colors.swift"; sourceTree = "<group>"; };
+		49A1155F2139A01B00D50743 /* DonateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonateViewController.swift; sourceTree = "<group>"; };
 		49A493CD1F7CB74F00CC12DB /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		49A493D11F7CC39F00CC12DB /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		49A493D41F7CC49900CC12DB /* Constants+Firebase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Constants+Firebase.swift"; sourceTree = "<group>"; };
@@ -379,6 +381,7 @@
 				495784721F6A5087001B4539 /* RouteMapWebViewController.swift */,
 				49DE19531F6B5C71001EA719 /* ParkingMapViewController.swift */,
 				49A493D11F7CC39F00CC12DB /* TabBarController.swift */,
+				49A1155F2139A01B00D50743 /* DonateViewController.swift */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -506,10 +509,16 @@
 						LastSwiftMigration = 0900;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
+							com.apple.ApplePay = {
+								enabled = 1;
+							};
 							com.apple.BackgroundModes = {
 								enabled = 0;
 							};
 							com.apple.Push = {
+								enabled = 1;
+							};
+							com.apple.iCloud = {
 								enabled = 1;
 							};
 						};
@@ -642,6 +651,7 @@
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
 				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
+				"${BUILT_PRODUCTS_DIR}/SAConfettiView/SAConfettiView.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
@@ -650,6 +660,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SAConfettiView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
@@ -690,6 +701,7 @@
 				495784711F6A4F29001B4539 /* RouteMapTableViewController.swift in Sources */,
 				499C51101F8D6AC700D654C6 /* LiveMapViewController.swift in Sources */,
 				499C51121F8D71DC00D654C6 /* Constants+Colors.swift in Sources */,
+				49A115602139A01B00D50743 /* DonateViewController.swift in Sources */,
 				49A493D21F7CC39F00CC12DB /* TabBarController.swift in Sources */,
 				49A493D51F7CC49900CC12DB /* Constants+Firebase.swift in Sources */,
 				495784731F6A5087001B4539 /* RouteMapWebViewController.swift in Sources */,

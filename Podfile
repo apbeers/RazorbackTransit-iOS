@@ -7,4 +7,5 @@ target 'Razorback Transit' do
   pod 'SwiftyJSON'
   pod 'Firebase/Core'
   pod 'Firebase/Messaging'
+  pod 'SAConfettiView'
 end
