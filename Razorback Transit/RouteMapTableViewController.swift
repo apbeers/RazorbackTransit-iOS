@@ -94,7 +94,7 @@ class RouteMapTableViewController: BaseTableViewController, UIViewControllerPrev
             cell.MapNameLabel.font = UIFont.systemFont(ofSize: Constants.cellFontSize)
         }
 
-        cell.accessoryType = UITableViewCellAccessoryType.disclosureIndicator
+        cell.accessoryType = UITableViewCell.AccessoryType.disclosureIndicator
         
         return cell
     }

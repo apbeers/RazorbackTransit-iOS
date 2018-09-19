@@ -32,7 +32,7 @@ class LiveMapViewController: BaseViewController, GMSMapViewDelegate {
         mapView.delegate = self
         view = mapView
         
-        NotificationCenter.default.addObserver(forName: .UIApplicationDidBecomeActive, object: nil, queue: OperationQueue.main) { _ in
+        NotificationCenter.default.addObserver(forName: UIApplication.didBecomeActiveNotification, object: nil, queue: OperationQueue.main) { _ in
 
                 self.loadBusses()
             
@@ -61,7 +61,7 @@ class LiveMapViewController: BaseViewController, GMSMapViewDelegate {
             }
         }
         
-        NotificationCenter.default.addObserver(forName: .UIApplicationWillResignActive, object: nil, queue: OperationQueue.main) { _ in
+        NotificationCenter.default.addObserver(forName: UIApplication.willResignActiveNotification, object: nil, queue: OperationQueue.main) { _ in
             
             self.userDefaults.set(Date(), forKey: "date")
             self.userDefaults.synchronize()
@@ -124,7 +124,7 @@ class LiveMapViewController: BaseViewController, GMSMapViewDelegate {
                         let data = data, error == nil,
                         let image = UIImage(data: data)
                         else { return }
-                    self.userDefaults.set(UIImagePNGRepresentation(image), forKey: stop.id)
+                    self.userDefaults.set(image.pngData(), forKey: stop.id)
                     DispatchQueue.main.async() {
                         marker.icon = image
                     }
@@ -265,7 +265,7 @@ class LiveMapViewController: BaseViewController, GMSMapViewDelegate {
                             let data = data, error == nil,
                             let image = UIImage(data: data)
                             else { return }
-                        self.userDefaults.set(UIImagePNGRepresentation(image), forKey: bus.getCachedImageKey())
+                        self.userDefaults.set(image.pngData(), forKey: bus.getCachedImageKey())
                         DispatchQueue.main.async() {
                             
                             marker.icon = image
