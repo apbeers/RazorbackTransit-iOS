@@ -31,15 +31,17 @@ class ScheduleViewController: BaseViewController, WKUIDelegate, UIScrollViewDele
         webView.navigationDelegate = self
         
         ScheduleWebView.addSubview(webView)
-        
+    }
+
+    override func viewDidAppear(_ animated: Bool) {
         guard let pdf = Bundle.main.url(forResource: mapName, withExtension: "pdf") else {
             return
         }
         
         let request = URLRequest(url: pdf)
-        webView.load(request)        
+        webView.load(request)
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
