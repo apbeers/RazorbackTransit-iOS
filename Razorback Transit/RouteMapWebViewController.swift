@@ -28,6 +28,9 @@ class RouteMapWebViewController: BaseViewController, WKUIDelegate {
         webView = WKWebView(frame: frame, configuration: WKWebViewConfiguration())
         RouteMapWebView.addSubview(webView)
         webView.navigationDelegate = self
+    }
+
+    override func viewDidAppear(_ animated: Bool) {
         
         guard let pdf = Bundle.main.url(forResource: mapName, withExtension: "pdf") else {
             return
@@ -36,7 +39,7 @@ class RouteMapWebViewController: BaseViewController, WKUIDelegate {
         let request = URLRequest(url: pdf)
         webView.load(request)
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }

@@ -29,14 +29,6 @@ class ParkingMapViewController: BaseViewController {
         webView.navigationDelegate = self
 
         ParkingMapWebView.addSubview(webView)
-        
-        let fileName = Constants.parkingMap.fileName
-        guard let pdf = Bundle.main.url(forResource: fileName , withExtension: "pdf") else {
-            return
-        }
-
-        let request = URLRequest(url: pdf)
-        webView.load(request)
     }
     
     override func viewDidAppear(_ animated: Bool) {
