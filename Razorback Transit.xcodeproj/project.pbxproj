@@ -28,7 +28,6 @@
 		494F4B23212D205D00A3FD2E /* RED_26_ROUTE.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 494F4B18212D205C00A3FD2E /* RED_26_ROUTE.pdf */; };
 		494F4B24212D205D00A3FD2E /* TAN_35_ROUTE.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 494F4B19212D205C00A3FD2E /* TAN_35_ROUTE.pdf */; };
 		494F4B25212D205D00A3FD2E /* REMOTEEXPRESS_48_ROUTE.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 494F4B1A212D205C00A3FD2E /* REMOTEEXPRESS_48_ROUTE.pdf */; };
-		494F4B26212D205D00A3FD2E /* PURPLE_44_ROUTE.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 494F4B1B212D205D00A3FD2E /* PURPLE_44_ROUTE.pdf */; };
 		494F4B27212D205D00A3FD2E /* ORANGE_33_ROUTE.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 494F4B1C212D205D00A3FD2E /* ORANGE_33_ROUTE.pdf */; };
 		494F4B33212DC02700A3FD2E /* REMOTEEXPRESS_48_SCHEDULE.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 494F4B28212DC02600A3FD2E /* REMOTEEXPRESS_48_SCHEDULE.pdf */; };
 		494F4B34212DC02700A3FD2E /* YELLOW_12_SCHEDULE.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 494F4B29212DC02700A3FD2E /* YELLOW_12_SCHEDULE.pdf */; };
@@ -36,7 +35,6 @@
 		494F4B36212DC02700A3FD2E /* GRAY_21_SCHEDULE.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 494F4B2B212DC02700A3FD2E /* GRAY_21_SCHEDULE.pdf */; };
 		494F4B37212DC02700A3FD2E /* GREEN_11_SCHEDULE.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 494F4B2C212DC02700A3FD2E /* GREEN_11_SCHEDULE.pdf */; };
 		494F4B38212DC02700A3FD2E /* BLUE_22_SCHEDULE.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 494F4B2D212DC02700A3FD2E /* BLUE_22_SCHEDULE.pdf */; };
-		494F4B39212DC02700A3FD2E /* PURPLE_44_SCHEDULE.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 494F4B2E212DC02700A3FD2E /* PURPLE_44_SCHEDULE.pdf */; };
 		494F4B3A212DC02700A3FD2E /* BROWN_17_SCHEDULE.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 494F4B2F212DC02700A3FD2E /* BROWN_17_SCHEDULE.pdf */; };
 		494F4B3B212DC02700A3FD2E /* RED_26_SCHEDULE.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 494F4B30212DC02700A3FD2E /* RED_26_SCHEDULE.pdf */; };
 		494F4B3C212DC02700A3FD2E /* TAN_35_SCHEDULE.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 494F4B31212DC02700A3FD2E /* TAN_35_SCHEDULE.pdf */; };
@@ -72,6 +70,8 @@
 		49DE19611F6B724D001EA719 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49DE19601F6B724D001EA719 /* Constants.swift */; };
 		49DE19651F6B7A33001EA719 /* BaseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49DE19641F6B7A33001EA719 /* BaseTableViewController.swift */; };
 		49DE19671F6B8058001EA719 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49DE19661F6B8058001EA719 /* BaseViewController.swift */; };
+		49E8B5EA217138BC00BC29BC /* PURPLE_44_SCHEDULE.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 49E8B5E9217138BC00BC29BC /* PURPLE_44_SCHEDULE.pdf */; };
+		49E8B5EC217138E600BC29BC /* PURPLE_44_ROUTE.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 49E8B5EB217138E500BC29BC /* PURPLE_44_ROUTE.pdf */; };
 		49F8B9661F702B5400D30278 /* RequestUserReview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49F8B9651F702B5400D30278 /* RequestUserReview.swift */; };
 		E9346158F2AF8E83490DAD0B /* Pods_Razorback_Transit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 87729A2405A2FABFF1D47D14 /* Pods_Razorback_Transit.framework */; };
 /* End PBXBuildFile section */
@@ -115,7 +115,6 @@
 		494F4B18212D205C00A3FD2E /* RED_26_ROUTE.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = RED_26_ROUTE.pdf; sourceTree = "<group>"; };
 		494F4B19212D205C00A3FD2E /* TAN_35_ROUTE.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = TAN_35_ROUTE.pdf; sourceTree = "<group>"; };
 		494F4B1A212D205C00A3FD2E /* REMOTEEXPRESS_48_ROUTE.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = REMOTEEXPRESS_48_ROUTE.pdf; sourceTree = "<group>"; };
-		494F4B1B212D205D00A3FD2E /* PURPLE_44_ROUTE.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = PURPLE_44_ROUTE.pdf; sourceTree = "<group>"; };
 		494F4B1C212D205D00A3FD2E /* ORANGE_33_ROUTE.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = ORANGE_33_ROUTE.pdf; sourceTree = "<group>"; };
 		494F4B28212DC02600A3FD2E /* REMOTEEXPRESS_48_SCHEDULE.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = REMOTEEXPRESS_48_SCHEDULE.pdf; sourceTree = "<group>"; };
 		494F4B29212DC02700A3FD2E /* YELLOW_12_SCHEDULE.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = YELLOW_12_SCHEDULE.pdf; sourceTree = "<group>"; };
@@ -123,7 +122,6 @@
 		494F4B2B212DC02700A3FD2E /* GRAY_21_SCHEDULE.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = GRAY_21_SCHEDULE.pdf; sourceTree = "<group>"; };
 		494F4B2C212DC02700A3FD2E /* GREEN_11_SCHEDULE.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = GREEN_11_SCHEDULE.pdf; sourceTree = "<group>"; };
 		494F4B2D212DC02700A3FD2E /* BLUE_22_SCHEDULE.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = BLUE_22_SCHEDULE.pdf; sourceTree = "<group>"; };
-		494F4B2E212DC02700A3FD2E /* PURPLE_44_SCHEDULE.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = PURPLE_44_SCHEDULE.pdf; sourceTree = "<group>"; };
 		494F4B2F212DC02700A3FD2E /* BROWN_17_SCHEDULE.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = BROWN_17_SCHEDULE.pdf; sourceTree = "<group>"; };
 		494F4B30212DC02700A3FD2E /* RED_26_SCHEDULE.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = RED_26_SCHEDULE.pdf; sourceTree = "<group>"; };
 		494F4B31212DC02700A3FD2E /* TAN_35_SCHEDULE.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = TAN_35_SCHEDULE.pdf; sourceTree = "<group>"; };
@@ -166,6 +164,8 @@
 		49DE19601F6B724D001EA719 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		49DE19641F6B7A33001EA719 /* BaseTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTableViewController.swift; sourceTree = "<group>"; };
 		49DE19661F6B8058001EA719 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		49E8B5E9217138BC00BC29BC /* PURPLE_44_SCHEDULE.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = PURPLE_44_SCHEDULE.pdf; sourceTree = "<group>"; };
+		49E8B5EB217138E500BC29BC /* PURPLE_44_ROUTE.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = PURPLE_44_ROUTE.pdf; sourceTree = "<group>"; };
 		49F8B9651F702B5400D30278 /* RequestUserReview.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestUserReview.swift; sourceTree = "<group>"; };
 		87729A2405A2FABFF1D47D14 /* Pods_Razorback_Transit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Razorback_Transit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1FBFB5B92368172489C61B3 /* Pods-Razorback Transit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Razorback Transit.release.xcconfig"; path = "Pods/Target Support Files/Pods-Razorback Transit/Pods-Razorback Transit.release.xcconfig"; sourceTree = "<group>"; };
@@ -233,8 +233,8 @@
 				494F4B2F212DC02700A3FD2E /* BROWN_17_SCHEDULE.pdf */,
 				494F4B2B212DC02700A3FD2E /* GRAY_21_SCHEDULE.pdf */,
 				494F4B2C212DC02700A3FD2E /* GREEN_11_SCHEDULE.pdf */,
+				49E8B5E9217138BC00BC29BC /* PURPLE_44_SCHEDULE.pdf */,
 				494F4B2A212DC02700A3FD2E /* ORANGE_33_SCHEDULE.pdf */,
-				494F4B2E212DC02700A3FD2E /* PURPLE_44_SCHEDULE.pdf */,
 				494F4B30212DC02700A3FD2E /* RED_26_SCHEDULE.pdf */,
 				494F4B28212DC02600A3FD2E /* REMOTEEXPRESS_48_SCHEDULE.pdf */,
 				494F4B32212DC02700A3FD2E /* ROUTE_13_SCHEDULE.pdf */,
@@ -391,7 +391,7 @@
 				494F4B12212D205C00A3FD2E /* GRAY_21_ROUTE.pdf */,
 				494F4B16212D205C00A3FD2E /* GREEN_11_ROUTE.pdf */,
 				494F4B1C212D205D00A3FD2E /* ORANGE_33_ROUTE.pdf */,
-				494F4B1B212D205D00A3FD2E /* PURPLE_44_ROUTE.pdf */,
+				49E8B5EB217138E500BC29BC /* PURPLE_44_ROUTE.pdf */,
 				494F4B18212D205C00A3FD2E /* RED_26_ROUTE.pdf */,
 				494F4B1A212D205C00A3FD2E /* REMOTEEXPRESS_48_ROUTE.pdf */,
 				494F4B14212D205C00A3FD2E /* ROUTE_13_ROUTE.pdf */,
@@ -503,7 +503,7 @@
 				TargetAttributes = {
 					49798C2E1F68CEC8003C0CEB = {
 						CreatedOnToolsVersion = 8.3.3;
-						LastSwiftMigration = 0900;
+						LastSwiftMigration = 1000;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
@@ -516,13 +516,13 @@
 					};
 					49798C421F68CEC9003C0CEB = {
 						CreatedOnToolsVersion = 8.3.3;
-						LastSwiftMigration = 0900;
+						LastSwiftMigration = 1000;
 						ProvisioningStyle = Automatic;
 						TestTargetID = 49798C2E1F68CEC8003C0CEB;
 					};
 					49798C4D1F68CEC9003C0CEB = {
 						CreatedOnToolsVersion = 8.3.3;
-						LastSwiftMigration = 0900;
+						LastSwiftMigration = 1000;
 						ProvisioningStyle = Automatic;
 						TestTargetID = 49798C2E1F68CEC8003C0CEB;
 					};
@@ -562,8 +562,8 @@
 				49798C3D1F68CEC8003C0CEB /* LaunchScreen.storyboard in Resources */,
 				494F4B11212D1F2100A3FD2E /* BLUEREDUCED_02_ROUTE.pdf in Resources */,
 				494F4B20212D205D00A3FD2E /* YELLOW_12_ROUTE.pdf in Resources */,
+				49E8B5EA217138BC00BC29BC /* PURPLE_44_SCHEDULE.pdf in Resources */,
 				494F4B1E212D205D00A3FD2E /* BROWN_17_ROUTE.pdf in Resources */,
-				494F4B26212D205D00A3FD2E /* PURPLE_44_ROUTE.pdf in Resources */,
 				494F4B3D212DC02700A3FD2E /* ROUTE_13_SCHEDULE.pdf in Resources */,
 				494F4B0B212D1F2100A3FD2E /* PURPLEREDUCED_04_ROUTE.pdf in Resources */,
 				494F4B35212DC02700A3FD2E /* ORANGE_33_SCHEDULE.pdf in Resources */,
@@ -571,7 +571,6 @@
 				494F4B21212D205D00A3FD2E /* GREEN_11_ROUTE.pdf in Resources */,
 				494F4B3B212DC02700A3FD2E /* RED_26_SCHEDULE.pdf in Resources */,
 				494F4B4A212DC16200A3FD2E /* TANREDUCED_05_SCHEDULE.pdf in Resources */,
-				494F4B39212DC02700A3FD2E /* PURPLE_44_SCHEDULE.pdf in Resources */,
 				494F4B27212D205D00A3FD2E /* ORANGE_33_ROUTE.pdf in Resources */,
 				494F4B3A212DC02700A3FD2E /* BROWN_17_SCHEDULE.pdf in Resources */,
 				494F4B1F212D205D00A3FD2E /* ROUTE_13_ROUTE.pdf in Resources */,
@@ -589,6 +588,7 @@
 				49798C381F68CEC8003C0CEB /* Main.storyboard in Resources */,
 				494F4B47212DC16200A3FD2E /* GREENREDUCED_01_SCHEDULE.pdf in Resources */,
 				494F4B38212DC02700A3FD2E /* BLUE_22_SCHEDULE.pdf in Resources */,
+				49E8B5EC217138E600BC29BC /* PURPLE_44_ROUTE.pdf in Resources */,
 				494F4B10212D1F2100A3FD2E /* REDREDUCED_06_ROUTE.pdf in Resources */,
 				494F4B0C212D1F2100A3FD2E /* GREENREDUCED_01_ROUTE.pdf in Resources */,
 				494F4B0E212D1F2100A3FD2E /* TANREDUCED_05_ROUTE.pdf in Resources */,
@@ -887,8 +887,7 @@
 				LLVM_LTO = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = arcu.razorbacktransit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -907,8 +906,7 @@
 				LLVM_LTO = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = arcu.razorbacktransit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -923,8 +921,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "arcu.Razorback-TransitTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Razorback Transit.app/Razorback Transit";
 			};
 			name = Debug;
@@ -939,8 +936,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "arcu.Razorback-TransitTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Razorback Transit.app/Razorback Transit";
 			};
 			name = Release;
@@ -954,8 +950,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "arcu.Razorback-TransitUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TEST_TARGET_NAME = "Razorback Transit";
 			};
 			name = Debug;
@@ -969,8 +964,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "arcu.Razorback-TransitUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TEST_TARGET_NAME = "Razorback Transit";
 			};
 			name = Release;
