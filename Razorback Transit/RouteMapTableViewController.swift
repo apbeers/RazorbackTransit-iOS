@@ -8,6 +8,9 @@
 
 import UIKit
 import Firebase
+import AppCenter
+import AppCenterAnalytics
+import AppCenterCrashes
 
 class RouteMapTableViewController: BaseTableViewController, UIViewControllerPreviewingDelegate {
     
@@ -21,6 +24,11 @@ class RouteMapTableViewController: BaseTableViewController, UIViewControllerPrev
         navBar.topItem?.title = "Routes"
     }
 
+    override func viewDidAppear(_ animated: Bool) {
+        
+        MSAnalytics.trackEvent("Route Map Viewed")
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }

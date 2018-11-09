@@ -11,6 +11,9 @@ import GoogleMaps
 import Firebase
 import Alamofire
 import SwiftyJSON
+import AppCenter
+import AppCenterAnalytics
+import AppCenterCrashes
 
 class LiveMapViewController: BaseViewController, GMSMapViewDelegate {
     
@@ -71,6 +74,11 @@ class LiveMapViewController: BaseViewController, GMSMapViewDelegate {
             }
             busTimer.invalidate()
         }
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        
+        MSAnalytics.trackEvent("Live Map Viewed")
     }
     
     func buildStopURLString() -> String {

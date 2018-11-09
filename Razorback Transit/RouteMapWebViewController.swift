@@ -8,6 +8,9 @@
 
 import UIKit
 import WebKit
+import AppCenter
+import AppCenterAnalytics
+import AppCenterCrashes
 
 class RouteMapWebViewController: BaseViewController, WKUIDelegate {
 
@@ -38,6 +41,8 @@ class RouteMapWebViewController: BaseViewController, WKUIDelegate {
         
         let request = URLRequest(url: pdf)
         webView.load(request)
+        
+        MSAnalytics.trackEvent("Route Map Viewed", withProperties: ["name": mapName])
     }
     
     override func didReceiveMemoryWarning() {

@@ -8,6 +8,9 @@
 
 import UIKit
 import Firebase
+import AppCenter
+import AppCenterAnalytics
+import AppCenterCrashes
 
 class ScheduleTableViewController: BaseTableViewController, UIViewControllerPreviewingDelegate {
     
@@ -21,6 +24,11 @@ class ScheduleTableViewController: BaseTableViewController, UIViewControllerPrev
         navBar.topItem?.title = "Schedules"
     }
 
+    override func viewDidAppear(_ animated: Bool) {
+        
+        MSAnalytics.trackEvent("Schedule List Viewed")
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }

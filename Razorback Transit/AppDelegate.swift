@@ -11,6 +11,10 @@ import GoogleMaps
 import Firebase
 import UserNotifications
 import FirebaseMessaging
+import AppCenter
+import AppCenterAnalytics
+import AppCenterCrashes
+
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterDelegate {
@@ -38,6 +42,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
         UNUserNotificationCenter.current().requestAuthorization(
             options: authOptions,
             completionHandler: {_, _ in })
+        
+        MSAppCenter.start("c47e2cfa-12dd-4de3-ad87-b5545839a45e", withServices:[
+            MSAnalytics.self,
+            MSCrashes.self
+        ])
         
         return true
     }
