@@ -291,6 +291,8 @@ class LiveMapViewController: BaseViewController, GMSMapViewDelegate {
             return false
         }
         
+        MSAnalytics.trackEvent("Marker Tapped", withProperties: ["id": id])
+        
         let url = "https://campusdata.uark.edu/api/routes?callback=jQuery18004251280482585251_1507605405541&stopId=" + id + "&_=1507605550296"
         
         Alamofire.request(url).responseString { responseString in
