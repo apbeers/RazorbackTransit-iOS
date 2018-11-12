@@ -11,6 +11,9 @@ import GoogleMaps
 import Firebase
 import Alamofire
 import SwiftyJSON
+import AppCenter
+import AppCenterAnalytics
+import AppCenterCrashes
 
 class LiveMapViewController: BaseViewController, GMSMapViewDelegate {
     
@@ -71,6 +74,11 @@ class LiveMapViewController: BaseViewController, GMSMapViewDelegate {
             }
             busTimer.invalidate()
         }
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        
+        MSAnalytics.trackEvent("Live Map Viewed")
     }
     
     func buildStopURLString() -> String {
@@ -282,6 +290,8 @@ class LiveMapViewController: BaseViewController, GMSMapViewDelegate {
         guard let id = marker.userData as? String else {
             return false
         }
+        
+        MSAnalytics.trackEvent("Marker Tapped", withProperties: ["id": id])
         
         let url = "https://campusdata.uark.edu/api/routes?callback=jQuery18004251280482585251_1507605405541&stopId=" + id + "&_=1507605550296"
         

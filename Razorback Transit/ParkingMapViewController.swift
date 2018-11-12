@@ -8,7 +8,9 @@
 
 import UIKit
 import WebKit
-import StoreKit
+import AppCenter
+import AppCenterAnalytics
+import AppCenterCrashes
 
 class ParkingMapViewController: BaseViewController {
 
@@ -32,6 +34,7 @@ class ParkingMapViewController: BaseViewController {
     }
     
     override func viewDidAppear(_ animated: Bool) {
+    
         let fileName = Constants.parkingMap.fileName
         guard let pdf = Bundle.main.url(forResource: fileName , withExtension: "pdf") else {
             return
@@ -39,6 +42,8 @@ class ParkingMapViewController: BaseViewController {
         
         let request = URLRequest(url: pdf)
         webView.load(request)
+        
+        MSAnalytics.trackEvent("Parking Map Viewed")
     }
     
     override func didReceiveMemoryWarning() {
