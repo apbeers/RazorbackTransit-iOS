@@ -9,6 +9,9 @@
 import UIKit
 import WebKit
 import Firebase
+import AppCenter
+import AppCenterAnalytics
+import AppCenterCrashes
 
 class ScheduleViewController: BaseViewController, WKUIDelegate, UIScrollViewDelegate {
 
@@ -40,6 +43,8 @@ class ScheduleViewController: BaseViewController, WKUIDelegate, UIScrollViewDele
         
         let request = URLRequest(url: pdf)
         webView.load(request)
+        
+        MSAnalytics.trackEvent("Schedule Viewed", withProperties: ["name": mapName])
     }
     
     override func didReceiveMemoryWarning() {
