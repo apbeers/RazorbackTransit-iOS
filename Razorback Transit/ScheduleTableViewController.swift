@@ -43,19 +43,12 @@ class ScheduleTableViewController: BaseTableViewController, UIViewControllerPrev
 
     override func numberOfSections(in tableView: UITableView) -> Int {
 
-        return 2
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        switch section {
-        case 0:
             return Constants.regularSchedules.count
-        case 1:
-            return Constants.reducedSchedules.count
-        default:
-            return 0
-        }
     }
 
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -64,15 +57,8 @@ class ScheduleTableViewController: BaseTableViewController, UIViewControllerPrev
         
         var scheduleTitle: String!
         
-        switch indexPath.section {
-        case 0:
-            scheduleTitle = Constants.regularSchedules[indexPath.row].title
-        case 1:
-            scheduleTitle = Constants.reducedSchedules[indexPath.row].title
-        default:
-            break;
-        }
-        
+        scheduleTitle = Constants.regularSchedules[indexPath.row].title
+
         Analytics.logEvent(AnalyticsEventSelectContent, parameters: [
             AnalyticsParameterItemID: scheduleTitle as NSObject,
             AnalyticsParameterContentType: Constants.EventTypes.ScheduleSelected as NSObject
@@ -85,15 +71,8 @@ class ScheduleTableViewController: BaseTableViewController, UIViewControllerPrev
             return UITableViewCell()
         }
         
-        switch indexPath.section {
-        case 0:
-            cell.MapNameLabel.text = Constants.regularSchedules[indexPath.row].title
-        case 1:
-            cell.MapNameLabel.text = Constants.reducedSchedules[indexPath.row].title
-        default:
-            break
-        }
-        
+        cell.MapNameLabel.text = Constants.regularSchedules[indexPath.row].title
+
         if indexPath == SelectedRows.selectedRoute {
             cell.MapNameLabel.font = UIFont.boldSystemFont(ofSize: Constants.cellFontSize)
         }
@@ -106,26 +85,9 @@ class ScheduleTableViewController: BaseTableViewController, UIViewControllerPrev
         return cell
     }
     
-    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        
-        switch section {
-        case 0:
-            return "Regular Service"
-        case 1:
-            return "Reduced Service"
-        default:
-            return ""
-        }
-    }
-    
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         
         return 50
-    }
-
-    override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        
-        return 30
     }
    
     // MARK: - Navigation
@@ -134,22 +96,11 @@ class ScheduleTableViewController: BaseTableViewController, UIViewControllerPrev
         
         let destination = segue.destination as? ScheduleViewController
         
-        guard let section = tableView.indexPathForSelectedRow?.section else {
-            return
-        }
-        
         guard let row: Int = tableView.indexPathForSelectedRow?.row else {
             return
         }
-        
-        switch section {
-        case 0:
-            destination?.mapName = Constants.regularSchedules[row].fileName
-        case 1:
-            destination?.mapName = Constants.reducedSchedules[row].fileName
-        default:
-            destination?.mapName = ""
-        }
+
+        destination?.mapName = Constants.regularSchedules[row].fileName
     }
     
     func previewingContext(_ previewingContext: UIViewControllerPreviewing, viewControllerForLocation location: CGPoint) -> UIViewController? {
@@ -164,15 +115,8 @@ class ScheduleTableViewController: BaseTableViewController, UIViewControllerPrev
         
         selectedIndexPath = indexPath
         
-        switch indexPath.section {
-        case 0:
-            destination.mapName = Constants.regularSchedules[indexPath.row].fileName
-        case 1:
-            destination.mapName = Constants.reducedSchedules[indexPath.row].fileName
-        default:
-            destination.mapName = ""
-        }
-        
+        destination.mapName = Constants.regularSchedules[indexPath.row].fileName
+ 
         return destination
     }
     
