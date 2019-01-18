@@ -15,36 +15,26 @@ import AppCenterCrashes
 
 class ScheduleViewController: BaseViewController, WKUIDelegate, UIScrollViewDelegate {
 
-    @IBOutlet weak var ScheduleWebView: UIView!
-
-    var mapName: String!
+    @IBOutlet weak var ScheduleWebView: WKWebView!
+    
+    var filename: String!
+    var name: String!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let width = screenSize.width
-        let height = screenSize.height - 113
-        var frame = CGRect(x: 0, y: 0, width: width, height: height)
-        if #available(iOS 11.0, *) {
-            frame = CGRect(x: 0.0, y: view.safeAreaInsets.top , width: width, height: height - view.safeAreaInsets.top - view.safeAreaInsets.bottom)
-        }
-        
-        webView = WKWebView(frame: frame, configuration: WKWebViewConfiguration())
-        webView.scrollView.delegate = self
-        webView.navigationDelegate = self
-        
-        ScheduleWebView.addSubview(webView)
+        self.navigationItem.title = name
     }
 
     override func viewDidAppear(_ animated: Bool) {
-        guard let pdf = Bundle.main.url(forResource: mapName, withExtension: "pdf") else {
+        guard let pdf = Bundle.main.url(forResource: filename, withExtension: "pdf") else {
             return
         }
         
         let request = URLRequest(url: pdf)
-        webView.load(request)
+        ScheduleWebView.load(request)
         
-        MSAnalytics.trackEvent("Schedule Viewed", withProperties: ["name": mapName])
+        MSAnalytics.trackEvent("Schedule Viewed", withProperties: ["name": filename])
     }
     
     override func didReceiveMemoryWarning() {
