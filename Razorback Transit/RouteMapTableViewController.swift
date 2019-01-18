@@ -102,7 +102,8 @@ class RouteMapTableViewController: BaseTableViewController, UIViewControllerPrev
             return
         }
         
-        destination?.mapName = Constants.regularRoutes[row].fileName
+        destination?.filename = Constants.regularRoutes[row].fileName
+        destination?.name = Constants.regularRoutes[row].title
 
     }
     
@@ -118,7 +119,8 @@ class RouteMapTableViewController: BaseTableViewController, UIViewControllerPrev
             return UIViewController()
         }
 
-        destination.mapName = Constants.regularRoutes[indexPath.row].fileName
+        destination.filename = Constants.regularRoutes[indexPath.row].fileName
+        destination.name = Constants.regularRoutes[indexPath.row].title
         
         return destination
     }

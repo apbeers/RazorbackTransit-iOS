@@ -17,10 +17,13 @@ class ScheduleViewController: BaseViewController, WKUIDelegate, UIScrollViewDele
 
     @IBOutlet weak var ScheduleWebView: UIView!
 
-    var mapName: String!
+    var filename: String!
+    var name: String!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.navigationItem.title = name
         
         let width = screenSize.width
         let height = screenSize.height - 113
@@ -37,14 +40,14 @@ class ScheduleViewController: BaseViewController, WKUIDelegate, UIScrollViewDele
     }
 
     override func viewDidAppear(_ animated: Bool) {
-        guard let pdf = Bundle.main.url(forResource: mapName, withExtension: "pdf") else {
+        guard let pdf = Bundle.main.url(forResource: filename, withExtension: "pdf") else {
             return
         }
         
         let request = URLRequest(url: pdf)
         webView.load(request)
         
-        MSAnalytics.trackEvent("Schedule Viewed", withProperties: ["name": mapName])
+        MSAnalytics.trackEvent("Schedule Viewed", withProperties: ["name": filename])
     }
     
     override func didReceiveMemoryWarning() {

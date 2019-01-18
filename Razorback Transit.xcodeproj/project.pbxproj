@@ -21,12 +21,13 @@
 		490B84C221F1A3DC005718F5 /* schedule35.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 490B84C121F1A3DC005718F5 /* schedule35.pdf */; };
 		490B84C421F1A3E3005718F5 /* schedule44.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 490B84C321F1A3E3005718F5 /* schedule44.pdf */; };
 		490B84C621F1A3EB005718F5 /* schedule48.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 490B84C521F1A3EB005718F5 /* schedule48.pdf */; };
+		490B84C821F1A737005718F5 /* route48.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 490B84C721F1A737005718F5 /* route48.pdf */; };
+		490B84CA21F1A81A005718F5 /* parkmap.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 490B84C921F1A81A005718F5 /* parkmap.pdf */; };
 		491E24431F68F9B300B5F2A0 /* ScheduleTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 491E24421F68F9B300B5F2A0 /* ScheduleTableViewController.swift */; };
 		492F69AA1F6A2FCE009C895C /* ScheduleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 492F69A91F6A2FCE009C895C /* ScheduleViewController.swift */; };
 		49488A791F7D7320000C405A /* Route.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49488A781F7D7320000C405A /* Route.swift */; };
 		49488A7B1F7D73D9000C405A /* Constantes+API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49488A7A1F7D73D9000C405A /* Constantes+API.swift */; };
 		49488A7E1F7D78D3000C405A /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49488A7D1F7D78D3000C405A /* UIColor+Extension.swift */; };
-		494F4B4D212DC1FD00A3FD2E /* parkmap.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 494F4B4C212DC1FC00A3FD2E /* parkmap.pdf */; };
 		4955E4931F68FB6700586CC1 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4955E4921F68FB6700586CC1 /* CustomTableViewCell.swift */; };
 		495784711F6A4F29001B4539 /* RouteMapTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 495784701F6A4F29001B4539 /* RouteMapTableViewController.swift */; };
 		495784731F6A5087001B4539 /* RouteMapWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 495784721F6A5087001B4539 /* RouteMapWebViewController.swift */; };
@@ -90,12 +91,13 @@
 		490B84C121F1A3DC005718F5 /* schedule35.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = schedule35.pdf; sourceTree = "<group>"; };
 		490B84C321F1A3E3005718F5 /* schedule44.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = schedule44.pdf; sourceTree = "<group>"; };
 		490B84C521F1A3EB005718F5 /* schedule48.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = schedule48.pdf; sourceTree = "<group>"; };
+		490B84C721F1A737005718F5 /* route48.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = route48.pdf; path = ../../../Downloads/RT/48/route48.pdf; sourceTree = "<group>"; };
+		490B84C921F1A81A005718F5 /* parkmap.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = parkmap.pdf; sourceTree = "<group>"; };
 		491E24421F68F9B300B5F2A0 /* ScheduleTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduleTableViewController.swift; sourceTree = "<group>"; };
 		492F69A91F6A2FCE009C895C /* ScheduleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduleViewController.swift; sourceTree = "<group>"; };
 		49488A781F7D7320000C405A /* Route.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Route.swift; sourceTree = "<group>"; };
 		49488A7A1F7D73D9000C405A /* Constantes+API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Constantes+API.swift"; sourceTree = "<group>"; };
 		49488A7D1F7D78D3000C405A /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
-		494F4B4C212DC1FC00A3FD2E /* parkmap.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = parkmap.pdf; sourceTree = "<group>"; };
 		4955E4921F68FB6700586CC1 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
 		495784701F6A4F29001B4539 /* RouteMapTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RouteMapTableViewController.swift; sourceTree = "<group>"; };
 		495784721F6A5087001B4539 /* RouteMapWebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RouteMapWebViewController.swift; sourceTree = "<group>"; };
@@ -173,7 +175,7 @@
 		492F69A61F6A221D009C895C /* Maps */ = {
 			isa = PBXGroup;
 			children = (
-				494F4B4C212DC1FC00A3FD2E /* parkmap.pdf */,
+				490B84C921F1A81A005718F5 /* parkmap.pdf */,
 				49DE192F1F6B4553001EA719 /* RegularRoutes */,
 				496C17F71F68DCE6003E51A4 /* RegularSchedules */,
 			);
@@ -340,6 +342,7 @@
 				4903DBD621F19F30001E791F /* route21.pdf */,
 				49C7972621F19EC800B808DF /* route35.pdf */,
 				4903DBD421F19F29001E791F /* route26.pdf */,
+				490B84C721F1A737005718F5 /* route48.pdf */,
 				49C7972421F19EC100B808DF /* route44.pdf */,
 			);
 			name = RegularRoutes;
@@ -489,6 +492,7 @@
 				490B84C421F1A3E3005718F5 /* schedule44.pdf in Resources */,
 				4903DBDB21F19F3E001E791F /* route13.pdf in Resources */,
 				490B84B621F1A3A8005718F5 /* schedule11.pdf in Resources */,
+				490B84C821F1A737005718F5 /* route48.pdf in Resources */,
 				490B84BC21F1A3C3005718F5 /* schedule21.pdf in Resources */,
 				490B84C621F1A3EB005718F5 /* schedule48.pdf in Resources */,
 				4903DBD521F19F29001E791F /* route26.pdf in Resources */,
@@ -497,10 +501,10 @@
 				49798C3D1F68CEC8003C0CEB /* LaunchScreen.storyboard in Resources */,
 				490B84B821F1A3B4005718F5 /* schedule13.pdf in Resources */,
 				49C7972321F19EB800B808DF /* route48.pdf in Resources */,
+				490B84CA21F1A81A005718F5 /* parkmap.pdf in Resources */,
 				490B84BA21F1A3BB005718F5 /* schedule17.pdf in Resources */,
 				49798C3A1F68CEC8003C0CEB /* Assets.xcassets in Resources */,
 				490B84C021F1A3D5005718F5 /* schedule33.pdf in Resources */,
-				494F4B4D212DC1FD00A3FD2E /* parkmap.pdf in Resources */,
 				4903DBD921F19F38001E791F /* route17.pdf in Resources */,
 				49C7972921F19ED100B808DF /* route33.pdf in Resources */,
 				49C7972521F19EC100B808DF /* route44.pdf in Resources */,

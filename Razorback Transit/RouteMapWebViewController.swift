@@ -16,11 +16,14 @@ class RouteMapWebViewController: BaseViewController, WKUIDelegate {
 
     @IBOutlet weak var RouteMapWebView: UIView!
     
-    var mapName: String!
+    var filename: String!
+    var name: String!
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        navigationItem.title = name
+        
         let width = screenSize.width
         let height = screenSize.height - 113
         var frame = CGRect(x: 0, y: 0, width: width, height: height)
@@ -35,14 +38,14 @@ class RouteMapWebViewController: BaseViewController, WKUIDelegate {
 
     override func viewDidAppear(_ animated: Bool) {
         
-        guard let pdf = Bundle.main.url(forResource: mapName, withExtension: "pdf") else {
+        guard let pdf = Bundle.main.url(forResource: filename, withExtension: "pdf") else {
             return
         }
         
         let request = URLRequest(url: pdf)
         webView.load(request)
         
-        MSAnalytics.trackEvent("Route Map Viewed", withProperties: ["name": mapName])
+        MSAnalytics.trackEvent("Route Map Viewed", withProperties: ["name": filename])
     }
     
     override func didReceiveMemoryWarning() {

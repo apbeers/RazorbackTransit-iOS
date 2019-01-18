@@ -100,7 +100,8 @@ class ScheduleTableViewController: BaseTableViewController, UIViewControllerPrev
             return
         }
 
-        destination?.mapName = Constants.regularSchedules[row].fileName
+        destination?.filename = Constants.regularSchedules[row].fileName
+        destination?.name = Constants.regularSchedules[row].title
     }
     
     func previewingContext(_ previewingContext: UIViewControllerPreviewing, viewControllerForLocation location: CGPoint) -> UIViewController? {
@@ -115,7 +116,8 @@ class ScheduleTableViewController: BaseTableViewController, UIViewControllerPrev
         
         selectedIndexPath = indexPath
         
-        destination.mapName = Constants.regularSchedules[indexPath.row].fileName
+        destination.filename = Constants.regularSchedules[indexPath.row].fileName
+        destination.name = Constants.regularSchedules[indexPath.row].title
  
         return destination
     }

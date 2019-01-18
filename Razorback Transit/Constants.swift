@@ -13,15 +13,15 @@ struct Constants {
     
     struct ScheduleFiles {
         
-        static let schedule11 = PDFFile(filename: "schedule11", title: "schedule 11")
-        static let schedule13 = PDFFile(filename: "schedule13", title: "schedule 13")
-        static let schedule17 = PDFFile(filename: "schedule17", title: "schedule 17")
-        static let schedule21 = PDFFile(filename: "schedule21", title: "schedule 21")
-        static let schedule26 = PDFFile(filename: "schedule26", title: "schedule 26")
-        static let schedule33 = PDFFile(filename: "schedule33", title: "schedule 33")
-        static let schedule35 = PDFFile(filename: "schedule35", title: "schedule 35")
-        static let schedule44 = PDFFile(filename: "schedule44", title: "schedule 44")
-        static let schedule48 = PDFFile(filename: "schedule48", title: "schedule 48")
+        static let schedule11 = PDFFile(filename: "schedule11", title: "Schedule 11")
+        static let schedule13 = PDFFile(filename: "schedule13", title: "Schedule 13")
+        static let schedule17 = PDFFile(filename: "schedule17", title: "Schedule 17")
+        static let schedule21 = PDFFile(filename: "schedule21", title: "Schedule 21")
+        static let schedule26 = PDFFile(filename: "schedule26", title: "Schedule 26")
+        static let schedule33 = PDFFile(filename: "schedule33", title: "Schedule 33")
+        static let schedule35 = PDFFile(filename: "schedule35", title: "Schedule 35")
+        static let schedule44 = PDFFile(filename: "schedule44", title: "Schedule 44")
+        static let schedule48 = PDFFile(filename: "schedule48", title: "Schedule 48")
     
     }
     
@@ -35,7 +35,7 @@ struct Constants {
         static let route33 = PDFFile(filename: "route33", title: "Route 33")
         static let route35 = PDFFile(filename: "route35", title: "Route 35")
         static let route44 = PDFFile(filename: "route44", title: "Route 44")
-        static let route48 = PDFFile(filename: "Route48", title: "Route 48")
+        static let route48 = PDFFile(filename: "route48", title: "Route 48")
     }
     
     static let parkingMap: PDFFile = PDFFile(filename: "parkmap", title: "Parking Map")
