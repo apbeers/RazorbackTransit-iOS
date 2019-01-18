@@ -14,7 +14,7 @@ import AppCenterCrashes
 
 class RouteMapWebViewController: BaseViewController, WKUIDelegate {
 
-    @IBOutlet weak var RouteMapWebView: UIView!
+    @IBOutlet weak var RouteMapWebView: WKWebView!
     
     var filename: String!
     var name: String!
@@ -23,17 +23,6 @@ class RouteMapWebViewController: BaseViewController, WKUIDelegate {
         super.viewDidLoad()
 
         navigationItem.title = name
-        
-        let width = screenSize.width
-        let height = screenSize.height - 113
-        var frame = CGRect(x: 0, y: 0, width: width, height: height)
-        if #available(iOS 11.0, *) {
-            frame = CGRect(x: 0.0, y: view.safeAreaInsets.top , width: width, height: height - view.safeAreaInsets.top - view.safeAreaInsets.bottom)
-        }
-        
-        webView = WKWebView(frame: frame, configuration: WKWebViewConfiguration())
-        RouteMapWebView.addSubview(webView)
-        webView.navigationDelegate = self
     }
 
     override func viewDidAppear(_ animated: Bool) {
@@ -43,7 +32,7 @@ class RouteMapWebViewController: BaseViewController, WKUIDelegate {
         }
         
         let request = URLRequest(url: pdf)
-        webView.load(request)
+        RouteMapWebView.load(request)
         
         MSAnalytics.trackEvent("Route Map Viewed", withProperties: ["name": filename])
     }

@@ -14,23 +14,11 @@ import AppCenterCrashes
 
 class ParkingMapViewController: BaseViewController {
 
-    @IBOutlet weak var ParkingMapWebView: UIView!
+    @IBOutlet weak var ParkingMapWebView: WKWebView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        
-        let width = screenSize.width
-        let height = screenSize.height - 69
-        var frame = CGRect(x: 0, y: 0, width: width, height: height)
-        if #available(iOS 11.0, *) {
-            frame = CGRect(x: 0.0, y: view.safeAreaInsets.top , width: width, height: height - view.safeAreaInsets.top - view.safeAreaInsets.bottom)
-        }
-        
-        webView = WKWebView(frame: frame, configuration: WKWebViewConfiguration())
-        webView.navigationDelegate = self
-
-        ParkingMapWebView.addSubview(webView)
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -41,7 +29,7 @@ class ParkingMapViewController: BaseViewController {
         }
         
         let request = URLRequest(url: pdf)
-        webView.load(request)
+        ParkingMapWebView.load(request)
         
         MSAnalytics.trackEvent("Parking Map Viewed")
     }
