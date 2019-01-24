@@ -43,19 +43,13 @@ class RouteMapTableViewController: BaseTableViewController, UIViewControllerPrev
 
     override func numberOfSections(in tableView: UITableView) -> Int {
 
-        return 2
+        return 1
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        switch section {
-        case 0:
-            return Constants.regularRoutes.count
-        case 1:
-            return Constants.reducedRoutes.count
-        default:
-            return 0
-        }
+        return Constants.regularRoutes.count
+
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -64,15 +58,8 @@ class RouteMapTableViewController: BaseTableViewController, UIViewControllerPrev
     
         var routeTitle: String!
         
-        switch indexPath.section {
-        case 0:
-            routeTitle = Constants.regularRoutes[indexPath.row].title
-        case 1:
-            routeTitle = Constants.reducedRoutes[indexPath.row].title
-        default:
-            break;
-        }
-        
+        routeTitle = Constants.regularRoutes[indexPath.row].title
+
         Analytics.logEvent(AnalyticsEventSelectContent, parameters: [
             AnalyticsParameterItemID: routeTitle as NSObject,
             AnalyticsParameterContentType: Constants.EventTypes.RouteSelected as NSObject
@@ -85,15 +72,9 @@ class RouteMapTableViewController: BaseTableViewController, UIViewControllerPrev
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "CustomTableViewCell", for: indexPath) as? CustomTableViewCell else {
             return UITableViewCell()
         }
-        
-        switch indexPath.section {
-        case 0:
-            cell.MapNameLabel.text = Constants.regularRoutes[indexPath.row].title
-        case 1:
-            cell.MapNameLabel.text = Constants.reducedRoutes[indexPath.row].title
-        default:
-            break
-        }
+
+        cell.MapNameLabel.text = Constants.regularRoutes[indexPath.row].title
+
         
         if indexPath == SelectedRows.selectedSchedule {
             cell.MapNameLabel.font = UIFont.boldSystemFont(ofSize: Constants.cellFontSize)
@@ -107,24 +88,8 @@ class RouteMapTableViewController: BaseTableViewController, UIViewControllerPrev
         return cell
     }
     
-    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        
-        switch section {
-        case 0:
-            return "Regular Service"
-        case 1:
-            return "Reduced Service"
-        default:
-            return ""
-        }
-    }
-    
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 50
-    }
-    
-    override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 30
     }
         
     // MARK: - Navigation
@@ -133,22 +98,13 @@ class RouteMapTableViewController: BaseTableViewController, UIViewControllerPrev
         
         let destination = segue.destination as? RouteMapWebViewController
         
-        guard let section = tableView.indexPathForSelectedRow?.section else {
-            return
-        }
-        
         guard let row: Int = tableView.indexPathForSelectedRow?.row else {
             return
         }
         
-        switch section {
-        case 0:
-            destination?.mapName = Constants.regularRoutes[row].fileName
-        case 1:
-            destination?.mapName = Constants.reducedRoutes[row].fileName
-        default:
-            destination?.mapName = ""
-        }
+        destination?.filename = Constants.regularRoutes[row].fileName
+        destination?.name = Constants.regularRoutes[row].title
+
     }
     
     func previewingContext(_ previewingContext: UIViewControllerPreviewing, viewControllerForLocation location: CGPoint) -> UIViewController? {
@@ -162,15 +118,9 @@ class RouteMapTableViewController: BaseTableViewController, UIViewControllerPrev
         guard let destination = storyboard?.instantiateViewController(withIdentifier: "RouteView") as? RouteMapWebViewController else {
             return UIViewController()
         }
-        
-        switch indexPath.section {
-        case 0:
-            destination.mapName = Constants.regularRoutes[indexPath.row].fileName
-        case 1:
-            destination.mapName = Constants.reducedRoutes[indexPath.row].fileName
-        default:
-            destination.mapName = ""
-        }
+
+        destination.filename = Constants.regularRoutes[indexPath.row].fileName
+        destination.name = Constants.regularRoutes[indexPath.row].title
         
         return destination
     }

@@ -7,46 +7,26 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4903DBD521F19F29001E791F /* route26.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 4903DBD421F19F29001E791F /* route26.pdf */; };
+		4903DBD721F19F30001E791F /* route21.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 4903DBD621F19F30001E791F /* route21.pdf */; };
+		4903DBD921F19F38001E791F /* route17.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 4903DBD821F19F38001E791F /* route17.pdf */; };
+		4903DBDB21F19F3E001E791F /* route13.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 4903DBDA21F19F3E001E791F /* route13.pdf */; };
+		4903DBDD21F19F46001E791F /* route11.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 4903DBDC21F19F46001E791F /* route11.pdf */; };
+		490B84B621F1A3A8005718F5 /* schedule11.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 490B84B521F1A3A8005718F5 /* schedule11.pdf */; };
+		490B84B821F1A3B4005718F5 /* schedule13.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 490B84B721F1A3B4005718F5 /* schedule13.pdf */; };
+		490B84BA21F1A3BB005718F5 /* schedule17.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 490B84B921F1A3BB005718F5 /* schedule17.pdf */; };
+		490B84BC21F1A3C3005718F5 /* schedule21.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 490B84BB21F1A3C3005718F5 /* schedule21.pdf */; };
+		490B84BE21F1A3CB005718F5 /* schedule26.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 490B84BD21F1A3CB005718F5 /* schedule26.pdf */; };
+		490B84C021F1A3D5005718F5 /* schedule33.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 490B84BF21F1A3D5005718F5 /* schedule33.pdf */; };
+		490B84C221F1A3DC005718F5 /* schedule35.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 490B84C121F1A3DC005718F5 /* schedule35.pdf */; };
+		490B84C421F1A3E3005718F5 /* schedule44.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 490B84C321F1A3E3005718F5 /* schedule44.pdf */; };
+		490B84C621F1A3EB005718F5 /* schedule48.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 490B84C521F1A3EB005718F5 /* schedule48.pdf */; };
+		490B84CA21F1A81A005718F5 /* parkmap.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 490B84C921F1A81A005718F5 /* parkmap.pdf */; };
 		491E24431F68F9B300B5F2A0 /* ScheduleTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 491E24421F68F9B300B5F2A0 /* ScheduleTableViewController.swift */; };
 		492F69AA1F6A2FCE009C895C /* ScheduleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 492F69A91F6A2FCE009C895C /* ScheduleViewController.swift */; };
 		49488A791F7D7320000C405A /* Route.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49488A781F7D7320000C405A /* Route.swift */; };
 		49488A7B1F7D73D9000C405A /* Constantes+API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49488A7A1F7D73D9000C405A /* Constantes+API.swift */; };
 		49488A7E1F7D78D3000C405A /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49488A7D1F7D78D3000C405A /* UIColor+Extension.swift */; };
-		494F4B0B212D1F2100A3FD2E /* PURPLEREDUCED_04_ROUTE.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 494F4B04212D1F2000A3FD2E /* PURPLEREDUCED_04_ROUTE.pdf */; };
-		494F4B0C212D1F2100A3FD2E /* GREENREDUCED_01_ROUTE.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 494F4B05212D1F2000A3FD2E /* GREENREDUCED_01_ROUTE.pdf */; };
-		494F4B0D212D1F2100A3FD2E /* BROWNREDUCED_07_ROUTE.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 494F4B06212D1F2000A3FD2E /* BROWNREDUCED_07_ROUTE.pdf */; };
-		494F4B0E212D1F2100A3FD2E /* TANREDUCED_05_ROUTE.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 494F4B07212D1F2000A3FD2E /* TANREDUCED_05_ROUTE.pdf */; };
-		494F4B0F212D1F2100A3FD2E /* ORANGEREDUCED_03_ROUTE.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 494F4B08212D1F2000A3FD2E /* ORANGEREDUCED_03_ROUTE.pdf */; };
-		494F4B10212D1F2100A3FD2E /* REDREDUCED_06_ROUTE.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 494F4B09212D1F2100A3FD2E /* REDREDUCED_06_ROUTE.pdf */; };
-		494F4B11212D1F2100A3FD2E /* BLUEREDUCED_02_ROUTE.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 494F4B0A212D1F2100A3FD2E /* BLUEREDUCED_02_ROUTE.pdf */; };
-		494F4B1D212D205D00A3FD2E /* GRAY_21_ROUTE.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 494F4B12212D205C00A3FD2E /* GRAY_21_ROUTE.pdf */; };
-		494F4B1E212D205D00A3FD2E /* BROWN_17_ROUTE.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 494F4B13212D205C00A3FD2E /* BROWN_17_ROUTE.pdf */; };
-		494F4B1F212D205D00A3FD2E /* ROUTE_13_ROUTE.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 494F4B14212D205C00A3FD2E /* ROUTE_13_ROUTE.pdf */; };
-		494F4B20212D205D00A3FD2E /* YELLOW_12_ROUTE.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 494F4B15212D205C00A3FD2E /* YELLOW_12_ROUTE.pdf */; };
-		494F4B21212D205D00A3FD2E /* GREEN_11_ROUTE.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 494F4B16212D205C00A3FD2E /* GREEN_11_ROUTE.pdf */; };
-		494F4B22212D205D00A3FD2E /* BLUE_22_ROUTE.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 494F4B17212D205C00A3FD2E /* BLUE_22_ROUTE.pdf */; };
-		494F4B23212D205D00A3FD2E /* RED_26_ROUTE.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 494F4B18212D205C00A3FD2E /* RED_26_ROUTE.pdf */; };
-		494F4B24212D205D00A3FD2E /* TAN_35_ROUTE.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 494F4B19212D205C00A3FD2E /* TAN_35_ROUTE.pdf */; };
-		494F4B25212D205D00A3FD2E /* REMOTEEXPRESS_48_ROUTE.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 494F4B1A212D205C00A3FD2E /* REMOTEEXPRESS_48_ROUTE.pdf */; };
-		494F4B27212D205D00A3FD2E /* ORANGE_33_ROUTE.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 494F4B1C212D205D00A3FD2E /* ORANGE_33_ROUTE.pdf */; };
-		494F4B33212DC02700A3FD2E /* REMOTEEXPRESS_48_SCHEDULE.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 494F4B28212DC02600A3FD2E /* REMOTEEXPRESS_48_SCHEDULE.pdf */; };
-		494F4B34212DC02700A3FD2E /* YELLOW_12_SCHEDULE.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 494F4B29212DC02700A3FD2E /* YELLOW_12_SCHEDULE.pdf */; };
-		494F4B35212DC02700A3FD2E /* ORANGE_33_SCHEDULE.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 494F4B2A212DC02700A3FD2E /* ORANGE_33_SCHEDULE.pdf */; };
-		494F4B36212DC02700A3FD2E /* GRAY_21_SCHEDULE.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 494F4B2B212DC02700A3FD2E /* GRAY_21_SCHEDULE.pdf */; };
-		494F4B37212DC02700A3FD2E /* GREEN_11_SCHEDULE.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 494F4B2C212DC02700A3FD2E /* GREEN_11_SCHEDULE.pdf */; };
-		494F4B38212DC02700A3FD2E /* BLUE_22_SCHEDULE.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 494F4B2D212DC02700A3FD2E /* BLUE_22_SCHEDULE.pdf */; };
-		494F4B3A212DC02700A3FD2E /* BROWN_17_SCHEDULE.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 494F4B2F212DC02700A3FD2E /* BROWN_17_SCHEDULE.pdf */; };
-		494F4B3B212DC02700A3FD2E /* RED_26_SCHEDULE.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 494F4B30212DC02700A3FD2E /* RED_26_SCHEDULE.pdf */; };
-		494F4B3C212DC02700A3FD2E /* TAN_35_SCHEDULE.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 494F4B31212DC02700A3FD2E /* TAN_35_SCHEDULE.pdf */; };
-		494F4B3D212DC02700A3FD2E /* ROUTE_13_SCHEDULE.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 494F4B32212DC02700A3FD2E /* ROUTE_13_SCHEDULE.pdf */; };
-		494F4B45212DC16200A3FD2E /* BROWNREDUCED_07_SCHEDULE.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 494F4B3E212DC16200A3FD2E /* BROWNREDUCED_07_SCHEDULE.pdf */; };
-		494F4B46212DC16200A3FD2E /* REDREDUCED_06_SCHEDULE.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 494F4B3F212DC16200A3FD2E /* REDREDUCED_06_SCHEDULE.pdf */; };
-		494F4B47212DC16200A3FD2E /* GREENREDUCED_01_SCHEDULE.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 494F4B40212DC16200A3FD2E /* GREENREDUCED_01_SCHEDULE.pdf */; };
-		494F4B48212DC16200A3FD2E /* BLUEREDUCED_02_SCHEDULE.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 494F4B41212DC16200A3FD2E /* BLUEREDUCED_02_SCHEDULE.pdf */; };
-		494F4B49212DC16200A3FD2E /* ORANGEREDUCED_03_SCHEDULE.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 494F4B42212DC16200A3FD2E /* ORANGEREDUCED_03_SCHEDULE.pdf */; };
-		494F4B4A212DC16200A3FD2E /* TANREDUCED_05_SCHEDULE.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 494F4B43212DC16200A3FD2E /* TANREDUCED_05_SCHEDULE.pdf */; };
-		494F4B4B212DC16200A3FD2E /* PURPLEREDUCED_04_SCHEDULE.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 494F4B44212DC16200A3FD2E /* PURPLEREDUCED_04_SCHEDULE.pdf */; };
-		494F4B4D212DC1FD00A3FD2E /* parkmap.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 494F4B4C212DC1FC00A3FD2E /* parkmap.pdf */; };
 		4955E4931F68FB6700586CC1 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4955E4921F68FB6700586CC1 /* CustomTableViewCell.swift */; };
 		495784711F6A4F29001B4539 /* RouteMapTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 495784701F6A4F29001B4539 /* RouteMapTableViewController.swift */; };
 		495784731F6A5087001B4539 /* RouteMapWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 495784721F6A5087001B4539 /* RouteMapWebViewController.swift */; };
@@ -62,6 +42,10 @@
 		49A493CE1F7CBC1600CC12DB /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 49A493CD1F7CB74F00CC12DB /* GoogleService-Info.plist */; };
 		49A493D21F7CC39F00CC12DB /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A493D11F7CC39F00CC12DB /* TabBarController.swift */; };
 		49A493D51F7CC49900CC12DB /* Constants+Firebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A493D41F7CC49900CC12DB /* Constants+Firebase.swift */; };
+		49C7972321F19EB800B808DF /* route48.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 49C7972221F19EB800B808DF /* route48.pdf */; };
+		49C7972521F19EC100B808DF /* route44.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 49C7972421F19EC100B808DF /* route44.pdf */; };
+		49C7972721F19EC800B808DF /* route35.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 49C7972621F19EC800B808DF /* route35.pdf */; };
+		49C7972921F19ED100B808DF /* route33.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 49C7972821F19ED100B808DF /* route33.pdf */; };
 		49D6F4981F802CFA00B586B2 /* Bus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49D6F4971F802CFA00B586B2 /* Bus.swift */; };
 		49D6F49A1F802DAD00B586B2 /* Stop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49D6F4991F802DAD00B586B2 /* Stop.swift */; };
 		49DD4BCE1F6D94DD0099A70B /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49DD4BCD1F6D94DD0099A70B /* Reachability.swift */; };
@@ -70,8 +54,6 @@
 		49DE19611F6B724D001EA719 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49DE19601F6B724D001EA719 /* Constants.swift */; };
 		49DE19651F6B7A33001EA719 /* BaseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49DE19641F6B7A33001EA719 /* BaseTableViewController.swift */; };
 		49DE19671F6B8058001EA719 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49DE19661F6B8058001EA719 /* BaseViewController.swift */; };
-		49E8B5EA217138BC00BC29BC /* PURPLE_44_SCHEDULE.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 49E8B5E9217138BC00BC29BC /* PURPLE_44_SCHEDULE.pdf */; };
-		49E8B5EC217138E600BC29BC /* PURPLE_44_ROUTE.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 49E8B5EB217138E500BC29BC /* PURPLE_44_ROUTE.pdf */; };
 		49F8B9661F702B5400D30278 /* RequestUserReview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49F8B9651F702B5400D30278 /* RequestUserReview.swift */; };
 		E9346158F2AF8E83490DAD0B /* Pods_Razorback_Transit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 87729A2405A2FABFF1D47D14 /* Pods_Razorback_Transit.framework */; };
 /* End PBXBuildFile section */
@@ -94,46 +76,26 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4903DBD421F19F29001E791F /* route26.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = route26.pdf; sourceTree = "<group>"; };
+		4903DBD621F19F30001E791F /* route21.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = route21.pdf; sourceTree = "<group>"; };
+		4903DBD821F19F38001E791F /* route17.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = route17.pdf; sourceTree = "<group>"; };
+		4903DBDA21F19F3E001E791F /* route13.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = route13.pdf; sourceTree = "<group>"; };
+		4903DBDC21F19F46001E791F /* route11.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = route11.pdf; sourceTree = "<group>"; };
+		490B84B521F1A3A8005718F5 /* schedule11.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = schedule11.pdf; sourceTree = "<group>"; };
+		490B84B721F1A3B4005718F5 /* schedule13.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = schedule13.pdf; sourceTree = "<group>"; };
+		490B84B921F1A3BB005718F5 /* schedule17.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = schedule17.pdf; sourceTree = "<group>"; };
+		490B84BB21F1A3C3005718F5 /* schedule21.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = schedule21.pdf; sourceTree = "<group>"; };
+		490B84BD21F1A3CB005718F5 /* schedule26.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = schedule26.pdf; sourceTree = "<group>"; };
+		490B84BF21F1A3D5005718F5 /* schedule33.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = schedule33.pdf; sourceTree = "<group>"; };
+		490B84C121F1A3DC005718F5 /* schedule35.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = schedule35.pdf; sourceTree = "<group>"; };
+		490B84C321F1A3E3005718F5 /* schedule44.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = schedule44.pdf; sourceTree = "<group>"; };
+		490B84C521F1A3EB005718F5 /* schedule48.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = schedule48.pdf; sourceTree = "<group>"; };
+		490B84C921F1A81A005718F5 /* parkmap.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = parkmap.pdf; sourceTree = "<group>"; };
 		491E24421F68F9B300B5F2A0 /* ScheduleTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduleTableViewController.swift; sourceTree = "<group>"; };
 		492F69A91F6A2FCE009C895C /* ScheduleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduleViewController.swift; sourceTree = "<group>"; };
 		49488A781F7D7320000C405A /* Route.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Route.swift; sourceTree = "<group>"; };
 		49488A7A1F7D73D9000C405A /* Constantes+API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Constantes+API.swift"; sourceTree = "<group>"; };
 		49488A7D1F7D78D3000C405A /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
-		494F4B04212D1F2000A3FD2E /* PURPLEREDUCED_04_ROUTE.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = PURPLEREDUCED_04_ROUTE.pdf; sourceTree = "<group>"; };
-		494F4B05212D1F2000A3FD2E /* GREENREDUCED_01_ROUTE.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = GREENREDUCED_01_ROUTE.pdf; sourceTree = "<group>"; };
-		494F4B06212D1F2000A3FD2E /* BROWNREDUCED_07_ROUTE.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = BROWNREDUCED_07_ROUTE.pdf; sourceTree = "<group>"; };
-		494F4B07212D1F2000A3FD2E /* TANREDUCED_05_ROUTE.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = TANREDUCED_05_ROUTE.pdf; sourceTree = "<group>"; };
-		494F4B08212D1F2000A3FD2E /* ORANGEREDUCED_03_ROUTE.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = ORANGEREDUCED_03_ROUTE.pdf; sourceTree = "<group>"; };
-		494F4B09212D1F2100A3FD2E /* REDREDUCED_06_ROUTE.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = REDREDUCED_06_ROUTE.pdf; sourceTree = "<group>"; };
-		494F4B0A212D1F2100A3FD2E /* BLUEREDUCED_02_ROUTE.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = BLUEREDUCED_02_ROUTE.pdf; sourceTree = "<group>"; };
-		494F4B12212D205C00A3FD2E /* GRAY_21_ROUTE.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = GRAY_21_ROUTE.pdf; sourceTree = "<group>"; };
-		494F4B13212D205C00A3FD2E /* BROWN_17_ROUTE.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = BROWN_17_ROUTE.pdf; sourceTree = "<group>"; };
-		494F4B14212D205C00A3FD2E /* ROUTE_13_ROUTE.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = ROUTE_13_ROUTE.pdf; sourceTree = "<group>"; };
-		494F4B15212D205C00A3FD2E /* YELLOW_12_ROUTE.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = YELLOW_12_ROUTE.pdf; sourceTree = "<group>"; };
-		494F4B16212D205C00A3FD2E /* GREEN_11_ROUTE.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = GREEN_11_ROUTE.pdf; sourceTree = "<group>"; };
-		494F4B17212D205C00A3FD2E /* BLUE_22_ROUTE.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = BLUE_22_ROUTE.pdf; sourceTree = "<group>"; };
-		494F4B18212D205C00A3FD2E /* RED_26_ROUTE.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = RED_26_ROUTE.pdf; sourceTree = "<group>"; };
-		494F4B19212D205C00A3FD2E /* TAN_35_ROUTE.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = TAN_35_ROUTE.pdf; sourceTree = "<group>"; };
-		494F4B1A212D205C00A3FD2E /* REMOTEEXPRESS_48_ROUTE.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = REMOTEEXPRESS_48_ROUTE.pdf; sourceTree = "<group>"; };
-		494F4B1C212D205D00A3FD2E /* ORANGE_33_ROUTE.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = ORANGE_33_ROUTE.pdf; sourceTree = "<group>"; };
-		494F4B28212DC02600A3FD2E /* REMOTEEXPRESS_48_SCHEDULE.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = REMOTEEXPRESS_48_SCHEDULE.pdf; sourceTree = "<group>"; };
-		494F4B29212DC02700A3FD2E /* YELLOW_12_SCHEDULE.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = YELLOW_12_SCHEDULE.pdf; sourceTree = "<group>"; };
-		494F4B2A212DC02700A3FD2E /* ORANGE_33_SCHEDULE.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = ORANGE_33_SCHEDULE.pdf; sourceTree = "<group>"; };
-		494F4B2B212DC02700A3FD2E /* GRAY_21_SCHEDULE.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = GRAY_21_SCHEDULE.pdf; sourceTree = "<group>"; };
-		494F4B2C212DC02700A3FD2E /* GREEN_11_SCHEDULE.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = GREEN_11_SCHEDULE.pdf; sourceTree = "<group>"; };
-		494F4B2D212DC02700A3FD2E /* BLUE_22_SCHEDULE.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = BLUE_22_SCHEDULE.pdf; sourceTree = "<group>"; };
-		494F4B2F212DC02700A3FD2E /* BROWN_17_SCHEDULE.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = BROWN_17_SCHEDULE.pdf; sourceTree = "<group>"; };
-		494F4B30212DC02700A3FD2E /* RED_26_SCHEDULE.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = RED_26_SCHEDULE.pdf; sourceTree = "<group>"; };
-		494F4B31212DC02700A3FD2E /* TAN_35_SCHEDULE.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = TAN_35_SCHEDULE.pdf; sourceTree = "<group>"; };
-		494F4B32212DC02700A3FD2E /* ROUTE_13_SCHEDULE.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = ROUTE_13_SCHEDULE.pdf; sourceTree = "<group>"; };
-		494F4B3E212DC16200A3FD2E /* BROWNREDUCED_07_SCHEDULE.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = BROWNREDUCED_07_SCHEDULE.pdf; sourceTree = "<group>"; };
-		494F4B3F212DC16200A3FD2E /* REDREDUCED_06_SCHEDULE.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = REDREDUCED_06_SCHEDULE.pdf; sourceTree = "<group>"; };
-		494F4B40212DC16200A3FD2E /* GREENREDUCED_01_SCHEDULE.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = GREENREDUCED_01_SCHEDULE.pdf; sourceTree = "<group>"; };
-		494F4B41212DC16200A3FD2E /* BLUEREDUCED_02_SCHEDULE.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = BLUEREDUCED_02_SCHEDULE.pdf; sourceTree = "<group>"; };
-		494F4B42212DC16200A3FD2E /* ORANGEREDUCED_03_SCHEDULE.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = ORANGEREDUCED_03_SCHEDULE.pdf; sourceTree = "<group>"; };
-		494F4B43212DC16200A3FD2E /* TANREDUCED_05_SCHEDULE.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = TANREDUCED_05_SCHEDULE.pdf; sourceTree = "<group>"; };
-		494F4B44212DC16200A3FD2E /* PURPLEREDUCED_04_SCHEDULE.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = PURPLEREDUCED_04_SCHEDULE.pdf; sourceTree = "<group>"; };
-		494F4B4C212DC1FC00A3FD2E /* parkmap.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = parkmap.pdf; sourceTree = "<group>"; };
 		4955E4921F68FB6700586CC1 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
 		495784701F6A4F29001B4539 /* RouteMapTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RouteMapTableViewController.swift; sourceTree = "<group>"; };
 		495784721F6A5087001B4539 /* RouteMapWebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RouteMapWebViewController.swift; sourceTree = "<group>"; };
@@ -156,6 +118,10 @@
 		49A493D11F7CC39F00CC12DB /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		49A493D41F7CC49900CC12DB /* Constants+Firebase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Constants+Firebase.swift"; sourceTree = "<group>"; };
 		49AADD73211745FA005C74BF /* Razorback Transit.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Razorback Transit.entitlements"; sourceTree = "<group>"; };
+		49C7972221F19EB800B808DF /* route48.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = route48.pdf; sourceTree = "<group>"; };
+		49C7972421F19EC100B808DF /* route44.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = route44.pdf; sourceTree = "<group>"; };
+		49C7972621F19EC800B808DF /* route35.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = route35.pdf; sourceTree = "<group>"; };
+		49C7972821F19ED100B808DF /* route33.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = route33.pdf; sourceTree = "<group>"; };
 		49D6F4971F802CFA00B586B2 /* Bus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bus.swift; sourceTree = "<group>"; };
 		49D6F4991F802DAD00B586B2 /* Stop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stop.swift; sourceTree = "<group>"; };
 		49DD4BCD1F6D94DD0099A70B /* Reachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
@@ -164,8 +130,6 @@
 		49DE19601F6B724D001EA719 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		49DE19641F6B7A33001EA719 /* BaseTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTableViewController.swift; sourceTree = "<group>"; };
 		49DE19661F6B8058001EA719 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
-		49E8B5E9217138BC00BC29BC /* PURPLE_44_SCHEDULE.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = PURPLE_44_SCHEDULE.pdf; sourceTree = "<group>"; };
-		49E8B5EB217138E500BC29BC /* PURPLE_44_ROUTE.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = PURPLE_44_ROUTE.pdf; sourceTree = "<group>"; };
 		49F8B9651F702B5400D30278 /* RequestUserReview.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestUserReview.swift; sourceTree = "<group>"; };
 		87729A2405A2FABFF1D47D14 /* Pods_Razorback_Transit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Razorback_Transit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1FBFB5B92368172489C61B3 /* Pods-Razorback Transit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Razorback Transit.release.xcconfig"; path = "Pods/Target Support Files/Pods-Razorback Transit/Pods-Razorback Transit.release.xcconfig"; sourceTree = "<group>"; };
@@ -209,10 +173,8 @@
 		492F69A61F6A221D009C895C /* Maps */ = {
 			isa = PBXGroup;
 			children = (
-				494F4B4C212DC1FC00A3FD2E /* parkmap.pdf */,
-				49DE19301F6B455B001EA719 /* ReducedRoutes */,
+				490B84C921F1A81A005718F5 /* parkmap.pdf */,
 				49DE192F1F6B4553001EA719 /* RegularRoutes */,
-				496C180C1F68DD29003E51A4 /* ReducedSchedules */,
 				496C17F71F68DCE6003E51A4 /* RegularSchedules */,
 			);
 			name = Maps;
@@ -229,33 +191,17 @@
 		496C17F71F68DCE6003E51A4 /* RegularSchedules */ = {
 			isa = PBXGroup;
 			children = (
-				494F4B2D212DC02700A3FD2E /* BLUE_22_SCHEDULE.pdf */,
-				494F4B2F212DC02700A3FD2E /* BROWN_17_SCHEDULE.pdf */,
-				494F4B2B212DC02700A3FD2E /* GRAY_21_SCHEDULE.pdf */,
-				494F4B2C212DC02700A3FD2E /* GREEN_11_SCHEDULE.pdf */,
-				49E8B5E9217138BC00BC29BC /* PURPLE_44_SCHEDULE.pdf */,
-				494F4B2A212DC02700A3FD2E /* ORANGE_33_SCHEDULE.pdf */,
-				494F4B30212DC02700A3FD2E /* RED_26_SCHEDULE.pdf */,
-				494F4B28212DC02600A3FD2E /* REMOTEEXPRESS_48_SCHEDULE.pdf */,
-				494F4B32212DC02700A3FD2E /* ROUTE_13_SCHEDULE.pdf */,
-				494F4B31212DC02700A3FD2E /* TAN_35_SCHEDULE.pdf */,
-				494F4B29212DC02700A3FD2E /* YELLOW_12_SCHEDULE.pdf */,
+				490B84B521F1A3A8005718F5 /* schedule11.pdf */,
+				490B84B721F1A3B4005718F5 /* schedule13.pdf */,
+				490B84B921F1A3BB005718F5 /* schedule17.pdf */,
+				490B84BB21F1A3C3005718F5 /* schedule21.pdf */,
+				490B84BD21F1A3CB005718F5 /* schedule26.pdf */,
+				490B84BF21F1A3D5005718F5 /* schedule33.pdf */,
+				490B84C121F1A3DC005718F5 /* schedule35.pdf */,
+				490B84C321F1A3E3005718F5 /* schedule44.pdf */,
+				490B84C521F1A3EB005718F5 /* schedule48.pdf */,
 			);
 			name = RegularSchedules;
-			sourceTree = "<group>";
-		};
-		496C180C1F68DD29003E51A4 /* ReducedSchedules */ = {
-			isa = PBXGroup;
-			children = (
-				494F4B41212DC16200A3FD2E /* BLUEREDUCED_02_SCHEDULE.pdf */,
-				494F4B3E212DC16200A3FD2E /* BROWNREDUCED_07_SCHEDULE.pdf */,
-				494F4B40212DC16200A3FD2E /* GREENREDUCED_01_SCHEDULE.pdf */,
-				494F4B42212DC16200A3FD2E /* ORANGEREDUCED_03_SCHEDULE.pdf */,
-				494F4B44212DC16200A3FD2E /* PURPLEREDUCED_04_SCHEDULE.pdf */,
-				494F4B3F212DC16200A3FD2E /* REDREDUCED_06_SCHEDULE.pdf */,
-				494F4B43212DC16200A3FD2E /* TANREDUCED_05_SCHEDULE.pdf */,
-			);
-			name = ReducedSchedules;
 			sourceTree = "<group>";
 		};
 		497528A61F7B593200AB474B /* UI Controllers */ = {
@@ -386,33 +332,17 @@
 		49DE192F1F6B4553001EA719 /* RegularRoutes */ = {
 			isa = PBXGroup;
 			children = (
-				494F4B17212D205C00A3FD2E /* BLUE_22_ROUTE.pdf */,
-				494F4B13212D205C00A3FD2E /* BROWN_17_ROUTE.pdf */,
-				494F4B12212D205C00A3FD2E /* GRAY_21_ROUTE.pdf */,
-				494F4B16212D205C00A3FD2E /* GREEN_11_ROUTE.pdf */,
-				494F4B1C212D205D00A3FD2E /* ORANGE_33_ROUTE.pdf */,
-				49E8B5EB217138E500BC29BC /* PURPLE_44_ROUTE.pdf */,
-				494F4B18212D205C00A3FD2E /* RED_26_ROUTE.pdf */,
-				494F4B1A212D205C00A3FD2E /* REMOTEEXPRESS_48_ROUTE.pdf */,
-				494F4B14212D205C00A3FD2E /* ROUTE_13_ROUTE.pdf */,
-				494F4B19212D205C00A3FD2E /* TAN_35_ROUTE.pdf */,
-				494F4B15212D205C00A3FD2E /* YELLOW_12_ROUTE.pdf */,
+				49C7972221F19EB800B808DF /* route48.pdf */,
+				49C7972821F19ED100B808DF /* route33.pdf */,
+				4903DBDA21F19F3E001E791F /* route13.pdf */,
+				4903DBD821F19F38001E791F /* route17.pdf */,
+				4903DBDC21F19F46001E791F /* route11.pdf */,
+				4903DBD621F19F30001E791F /* route21.pdf */,
+				49C7972621F19EC800B808DF /* route35.pdf */,
+				4903DBD421F19F29001E791F /* route26.pdf */,
+				49C7972421F19EC100B808DF /* route44.pdf */,
 			);
 			name = RegularRoutes;
-			sourceTree = "<group>";
-		};
-		49DE19301F6B455B001EA719 /* ReducedRoutes */ = {
-			isa = PBXGroup;
-			children = (
-				494F4B0A212D1F2100A3FD2E /* BLUEREDUCED_02_ROUTE.pdf */,
-				494F4B06212D1F2000A3FD2E /* BROWNREDUCED_07_ROUTE.pdf */,
-				494F4B05212D1F2000A3FD2E /* GREENREDUCED_01_ROUTE.pdf */,
-				494F4B08212D1F2000A3FD2E /* ORANGEREDUCED_03_ROUTE.pdf */,
-				494F4B04212D1F2000A3FD2E /* PURPLEREDUCED_04_ROUTE.pdf */,
-				494F4B09212D1F2100A3FD2E /* REDREDUCED_06_ROUTE.pdf */,
-				494F4B07212D1F2000A3FD2E /* TANREDUCED_05_ROUTE.pdf */,
-			);
-			name = ReducedRoutes;
 			sourceTree = "<group>";
 		};
 		49DE19551F6B5FBA001EA719 /* Cells */ = {
@@ -553,47 +483,29 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				494F4B1D212D205D00A3FD2E /* GRAY_21_ROUTE.pdf in Resources */,
+				490B84BE21F1A3CB005718F5 /* schedule26.pdf in Resources */,
 				49A493CE1F7CBC1600CC12DB /* GoogleService-Info.plist in Resources */,
-				494F4B22212D205D00A3FD2E /* BLUE_22_ROUTE.pdf in Resources */,
-				494F4B37212DC02700A3FD2E /* GREEN_11_SCHEDULE.pdf in Resources */,
-				494F4B0F212D1F2100A3FD2E /* ORANGEREDUCED_03_ROUTE.pdf in Resources */,
-				494F4B33212DC02700A3FD2E /* REMOTEEXPRESS_48_SCHEDULE.pdf in Resources */,
+				49C7972721F19EC800B808DF /* route35.pdf in Resources */,
+				490B84C421F1A3E3005718F5 /* schedule44.pdf in Resources */,
+				4903DBDB21F19F3E001E791F /* route13.pdf in Resources */,
+				490B84B621F1A3A8005718F5 /* schedule11.pdf in Resources */,
+				490B84BC21F1A3C3005718F5 /* schedule21.pdf in Resources */,
+				490B84C621F1A3EB005718F5 /* schedule48.pdf in Resources */,
+				4903DBD521F19F29001E791F /* route26.pdf in Resources */,
+				490B84C221F1A3DC005718F5 /* schedule35.pdf in Resources */,
+				4903DBDD21F19F46001E791F /* route11.pdf in Resources */,
 				49798C3D1F68CEC8003C0CEB /* LaunchScreen.storyboard in Resources */,
-				494F4B11212D1F2100A3FD2E /* BLUEREDUCED_02_ROUTE.pdf in Resources */,
-				494F4B20212D205D00A3FD2E /* YELLOW_12_ROUTE.pdf in Resources */,
-				49E8B5EA217138BC00BC29BC /* PURPLE_44_SCHEDULE.pdf in Resources */,
-				494F4B1E212D205D00A3FD2E /* BROWN_17_ROUTE.pdf in Resources */,
-				494F4B3D212DC02700A3FD2E /* ROUTE_13_SCHEDULE.pdf in Resources */,
-				494F4B0B212D1F2100A3FD2E /* PURPLEREDUCED_04_ROUTE.pdf in Resources */,
-				494F4B35212DC02700A3FD2E /* ORANGE_33_SCHEDULE.pdf in Resources */,
+				490B84B821F1A3B4005718F5 /* schedule13.pdf in Resources */,
+				49C7972321F19EB800B808DF /* route48.pdf in Resources */,
+				490B84CA21F1A81A005718F5 /* parkmap.pdf in Resources */,
+				490B84BA21F1A3BB005718F5 /* schedule17.pdf in Resources */,
 				49798C3A1F68CEC8003C0CEB /* Assets.xcassets in Resources */,
-				494F4B21212D205D00A3FD2E /* GREEN_11_ROUTE.pdf in Resources */,
-				494F4B3B212DC02700A3FD2E /* RED_26_SCHEDULE.pdf in Resources */,
-				494F4B4A212DC16200A3FD2E /* TANREDUCED_05_SCHEDULE.pdf in Resources */,
-				494F4B27212D205D00A3FD2E /* ORANGE_33_ROUTE.pdf in Resources */,
-				494F4B3A212DC02700A3FD2E /* BROWN_17_SCHEDULE.pdf in Resources */,
-				494F4B1F212D205D00A3FD2E /* ROUTE_13_ROUTE.pdf in Resources */,
-				494F4B25212D205D00A3FD2E /* REMOTEEXPRESS_48_ROUTE.pdf in Resources */,
-				494F4B4D212DC1FD00A3FD2E /* parkmap.pdf in Resources */,
-				494F4B0D212D1F2100A3FD2E /* BROWNREDUCED_07_ROUTE.pdf in Resources */,
-				494F4B23212D205D00A3FD2E /* RED_26_ROUTE.pdf in Resources */,
-				494F4B24212D205D00A3FD2E /* TAN_35_ROUTE.pdf in Resources */,
-				494F4B48212DC16200A3FD2E /* BLUEREDUCED_02_SCHEDULE.pdf in Resources */,
-				494F4B46212DC16200A3FD2E /* REDREDUCED_06_SCHEDULE.pdf in Resources */,
-				494F4B4B212DC16200A3FD2E /* PURPLEREDUCED_04_SCHEDULE.pdf in Resources */,
-				494F4B34212DC02700A3FD2E /* YELLOW_12_SCHEDULE.pdf in Resources */,
-				494F4B36212DC02700A3FD2E /* GRAY_21_SCHEDULE.pdf in Resources */,
-				494F4B45212DC16200A3FD2E /* BROWNREDUCED_07_SCHEDULE.pdf in Resources */,
+				490B84C021F1A3D5005718F5 /* schedule33.pdf in Resources */,
+				4903DBD921F19F38001E791F /* route17.pdf in Resources */,
+				49C7972921F19ED100B808DF /* route33.pdf in Resources */,
+				49C7972521F19EC100B808DF /* route44.pdf in Resources */,
 				49798C381F68CEC8003C0CEB /* Main.storyboard in Resources */,
-				494F4B47212DC16200A3FD2E /* GREENREDUCED_01_SCHEDULE.pdf in Resources */,
-				494F4B38212DC02700A3FD2E /* BLUE_22_SCHEDULE.pdf in Resources */,
-				49E8B5EC217138E600BC29BC /* PURPLE_44_ROUTE.pdf in Resources */,
-				494F4B10212D1F2100A3FD2E /* REDREDUCED_06_ROUTE.pdf in Resources */,
-				494F4B0C212D1F2100A3FD2E /* GREENREDUCED_01_ROUTE.pdf in Resources */,
-				494F4B0E212D1F2100A3FD2E /* TANREDUCED_05_ROUTE.pdf in Resources */,
-				494F4B49212DC16200A3FD2E /* ORANGEREDUCED_03_SCHEDULE.pdf in Resources */,
-				494F4B3C212DC02700A3FD2E /* TAN_35_SCHEDULE.pdf in Resources */,
+				4903DBD721F19F30001E791F /* route21.pdf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
