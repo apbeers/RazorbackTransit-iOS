@@ -54,6 +54,7 @@
 		49DE19611F6B724D001EA719 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49DE19601F6B724D001EA719 /* Constants.swift */; };
 		49DE19651F6B7A33001EA719 /* BaseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49DE19641F6B7A33001EA719 /* BaseTableViewController.swift */; };
 		49DE19671F6B8058001EA719 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49DE19661F6B8058001EA719 /* BaseViewController.swift */; };
+		49F76A6521F93EF3004848FE /* scheduleenrc.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 49F76A6421F93EF3004848FE /* scheduleenrc.pdf */; };
 		49F8B9661F702B5400D30278 /* RequestUserReview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49F8B9651F702B5400D30278 /* RequestUserReview.swift */; };
 		E9346158F2AF8E83490DAD0B /* Pods_Razorback_Transit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 87729A2405A2FABFF1D47D14 /* Pods_Razorback_Transit.framework */; };
 /* End PBXBuildFile section */
@@ -130,6 +131,7 @@
 		49DE19601F6B724D001EA719 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		49DE19641F6B7A33001EA719 /* BaseTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTableViewController.swift; sourceTree = "<group>"; };
 		49DE19661F6B8058001EA719 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		49F76A6421F93EF3004848FE /* scheduleenrc.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = scheduleenrc.pdf; sourceTree = "<group>"; };
 		49F8B9651F702B5400D30278 /* RequestUserReview.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestUserReview.swift; sourceTree = "<group>"; };
 		87729A2405A2FABFF1D47D14 /* Pods_Razorback_Transit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Razorback_Transit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1FBFB5B92368172489C61B3 /* Pods-Razorback Transit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Razorback Transit.release.xcconfig"; path = "Pods/Target Support Files/Pods-Razorback Transit/Pods-Razorback Transit.release.xcconfig"; sourceTree = "<group>"; };
@@ -196,6 +198,7 @@
 				490B84B921F1A3BB005718F5 /* schedule17.pdf */,
 				490B84BB21F1A3C3005718F5 /* schedule21.pdf */,
 				490B84BD21F1A3CB005718F5 /* schedule26.pdf */,
+				49F76A6421F93EF3004848FE /* scheduleenrc.pdf */,
 				490B84BF21F1A3D5005718F5 /* schedule33.pdf */,
 				490B84C121F1A3DC005718F5 /* schedule35.pdf */,
 				490B84C321F1A3E3005718F5 /* schedule44.pdf */,
@@ -488,6 +491,7 @@
 				49C7972721F19EC800B808DF /* route35.pdf in Resources */,
 				490B84C421F1A3E3005718F5 /* schedule44.pdf in Resources */,
 				4903DBDB21F19F3E001E791F /* route13.pdf in Resources */,
+				49F76A6521F93EF3004848FE /* scheduleenrc.pdf in Resources */,
 				490B84B621F1A3A8005718F5 /* schedule11.pdf in Resources */,
 				490B84BC21F1A3C3005718F5 /* schedule21.pdf in Resources */,
 				490B84C621F1A3EB005718F5 /* schedule48.pdf in Resources */,

@@ -22,6 +22,7 @@ struct Constants {
         static let schedule35 = PDFFile(filename: "schedule35", title: "Schedule 35")
         static let schedule44 = PDFFile(filename: "schedule44", title: "Schedule 44")
         static let schedule48 = PDFFile(filename: "schedule48", title: "Schedule 48")
+        static let scheduleenrc = PDFFile(filename: "scheduleenrc", title: "ENRC Shuttle")
     
     }
     
@@ -45,7 +46,7 @@ struct Constants {
         static let numberOfRunsForReviewPrompt = "runs"
     }
     
-    static let regularSchedules: [PDFFile] = [ScheduleFiles.schedule11, ScheduleFiles.schedule13, ScheduleFiles.schedule17, ScheduleFiles.schedule21, ScheduleFiles.schedule26, ScheduleFiles.schedule33, ScheduleFiles.schedule35, ScheduleFiles.schedule44, ScheduleFiles.schedule48]
+    static let regularSchedules: [PDFFile] = [ScheduleFiles.schedule11, ScheduleFiles.schedule13, ScheduleFiles.schedule17, ScheduleFiles.schedule21, ScheduleFiles.schedule26, ScheduleFiles.schedule33, ScheduleFiles.schedule35, ScheduleFiles.schedule44, ScheduleFiles.schedule48, ScheduleFiles.scheduleenrc]
     
     static let regularRoutes: [PDFFile] = [RouteFiles.route11, RouteFiles.route13, RouteFiles.route17, RouteFiles.route21, RouteFiles.route26, RouteFiles.route33, RouteFiles.route35, RouteFiles.route44, RouteFiles.route48]
     
