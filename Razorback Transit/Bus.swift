@@ -5,7 +5,7 @@
 //  Created by Andrew Beers on 9/30/17.
 //  Copyright © 2017 Andrew Beers. All rights reserved.
 //
-
+/*
 import Foundation
 import GoogleMaps
 
@@ -60,3 +60,4 @@ class Bus {
         return 30 * Int(round(x / 30.0))
     }
 }
+*/

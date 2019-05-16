@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import GoogleMaps
+//import GoogleMaps
 import Firebase
 import UserNotifications
 import FirebaseMessaging
@@ -29,7 +29,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
         let statusBar = UIApplication.shared.value(forKey: "statusBar") as! UIView
         statusBar.backgroundColor = Constants.Colors.razorbackRed
         
-        GMSServices.provideAPIKey("AIzaSyBMOwO5S5TeyMx1Hwlu-eiIAw1Hfw3Q9Q4")
+      //  GMSServices.provideAPIKey("AIzaSyBMOwO5S5TeyMx1Hwlu-eiIAw1Hfw3Q9Q4")
         UIApplication.shared.registerForRemoteNotifications()
         FirebaseApp.configure()
         

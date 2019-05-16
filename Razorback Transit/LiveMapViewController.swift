@@ -5,7 +5,7 @@
 //  Created by Andrew Beers on 9/12/17.
 //  Copyright © 2017 Andrew Beers. All rights reserved.
 //
-
+/*
 import UIKit
 import GoogleMaps
 import Firebase
@@ -326,3 +326,4 @@ class LiveMapViewController: BaseViewController, GMSMapViewDelegate {
         super.didReceiveMemoryWarning()
     }
 }
+*/

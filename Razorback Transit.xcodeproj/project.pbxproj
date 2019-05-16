@@ -42,6 +42,7 @@
 		49A493CE1F7CBC1600CC12DB /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 49A493CD1F7CB74F00CC12DB /* GoogleService-Info.plist */; };
 		49A493D21F7CC39F00CC12DB /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A493D11F7CC39F00CC12DB /* TabBarController.swift */; };
 		49A493D51F7CC49900CC12DB /* Constants+Firebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A493D41F7CC49900CC12DB /* Constants+Firebase.swift */; };
+		49B12C27228DD8D500DFA3F6 /* PassiogoLiveMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B12C26228DD8D500DFA3F6 /* PassiogoLiveMapViewController.swift */; };
 		49C7972321F19EB800B808DF /* route48.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 49C7972221F19EB800B808DF /* route48.pdf */; };
 		49C7972521F19EC100B808DF /* route44.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 49C7972421F19EC100B808DF /* route44.pdf */; };
 		49C7972721F19EC800B808DF /* route35.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 49C7972621F19EC800B808DF /* route35.pdf */; };
@@ -118,6 +119,7 @@
 		49A493D11F7CC39F00CC12DB /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		49A493D41F7CC49900CC12DB /* Constants+Firebase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Constants+Firebase.swift"; sourceTree = "<group>"; };
 		49AADD73211745FA005C74BF /* Razorback Transit.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Razorback Transit.entitlements"; sourceTree = "<group>"; };
+		49B12C26228DD8D500DFA3F6 /* PassiogoLiveMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PassiogoLiveMapViewController.swift; sourceTree = "<group>"; };
 		49C7972221F19EB800B808DF /* route48.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = route48.pdf; sourceTree = "<group>"; };
 		49C7972421F19EC100B808DF /* route44.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = route44.pdf; sourceTree = "<group>"; };
 		49C7972621F19EC800B808DF /* route35.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = route35.pdf; sourceTree = "<group>"; };
@@ -325,6 +327,7 @@
 				495784721F6A5087001B4539 /* RouteMapWebViewController.swift */,
 				49DE19531F6B5C71001EA719 /* ParkingMapViewController.swift */,
 				49A493D11F7CC39F00CC12DB /* TabBarController.swift */,
+				49B12C26228DD8D500DFA3F6 /* PassiogoLiveMapViewController.swift */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -374,7 +377,6 @@
 				49798C2C1F68CEC8003C0CEB /* Frameworks */,
 				49798C2D1F68CEC8003C0CEB /* Resources */,
 				E23CD0261053D02FCBADDB7A /* [CP] Embed Pods Frameworks */,
-				EE1B40F6735B3BD6C4B3D709 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -433,7 +435,7 @@
 				TargetAttributes = {
 					49798C2E1F68CEC8003C0CEB = {
 						CreatedOnToolsVersion = 8.3.3;
-						LastSwiftMigration = 1000;
+						LastSwiftMigration = 1020;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
@@ -446,13 +448,13 @@
 					};
 					49798C421F68CEC9003C0CEB = {
 						CreatedOnToolsVersion = 8.3.3;
-						LastSwiftMigration = 1000;
+						LastSwiftMigration = 1020;
 						ProvisioningStyle = Automatic;
 						TestTargetID = 49798C2E1F68CEC8003C0CEB;
 					};
 					49798C4D1F68CEC9003C0CEB = {
 						CreatedOnToolsVersion = 8.3.3;
-						LastSwiftMigration = 1000;
+						LastSwiftMigration = 1020;
 						ProvisioningStyle = Automatic;
 						TestTargetID = 49798C2E1F68CEC8003C0CEB;
 					};
@@ -463,6 +465,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -551,41 +554,19 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Razorback Transit/Pods-Razorback Transit-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
 				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
-				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Razorback Transit/Pods-Razorback Transit-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		EE1B40F6735B3BD6C4B3D709 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-Razorback Transit/Pods-Razorback Transit-resources.sh",
-				"${PODS_ROOT}/GoogleMaps/Maps/Frameworks/GoogleMaps.framework/Resources/GoogleMaps.bundle",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleMaps.bundle",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Razorback Transit/Pods-Razorback Transit-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -611,6 +592,7 @@
 				49DE195D1F6B6FE4001EA719 /* PDFFile.swift in Sources */,
 				49DD4BCE1F6D94DD0099A70B /* Reachability.swift in Sources */,
 				49488A791F7D7320000C405A /* Route.swift in Sources */,
+				49B12C27228DD8D500DFA3F6 /* PassiogoLiveMapViewController.swift in Sources */,
 				491E24431F68F9B300B5F2A0 /* ScheduleTableViewController.swift in Sources */,
 				49DE19651F6B7A33001EA719 /* BaseTableViewController.swift in Sources */,
 				49798C331F68CEC8003C0CEB /* AppDelegate.swift in Sources */,
@@ -799,7 +781,7 @@
 				LLVM_LTO = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = arcu.razorbacktransit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -818,7 +800,7 @@
 				LLVM_LTO = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = arcu.razorbacktransit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -833,7 +815,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "arcu.Razorback-TransitTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Razorback Transit.app/Razorback Transit";
 			};
 			name = Debug;
@@ -848,7 +830,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "arcu.Razorback-TransitTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Razorback Transit.app/Razorback Transit";
 			};
 			name = Release;
@@ -862,7 +844,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "arcu.Razorback-TransitUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TEST_TARGET_NAME = "Razorback Transit";
 			};
 			name = Debug;
@@ -876,7 +858,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "arcu.Razorback-TransitUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TEST_TARGET_NAME = "Razorback Transit";
 			};
 			name = Release;
