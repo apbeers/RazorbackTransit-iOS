@@ -5,7 +5,7 @@
 //  Created by Andrew Beers on 9/30/17.
 //  Copyright © 2017 Andrew Beers. All rights reserved.
 //
-
+/*
 import Foundation
 import GoogleMaps
 import Alamofire
@@ -48,3 +48,4 @@ class Stop {
         return CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
     }
 }
+*/
